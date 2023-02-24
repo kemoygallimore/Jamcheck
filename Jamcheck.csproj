@@ -64,6 +64,12 @@
     <Compile Include="JamcheckLogin.Designer.cs">
       <DependentUpon>JamcheckLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Listings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Listings.Designer.cs">
+      <DependentUpon>Listings.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AddVehicleForm.resx">
@@ -74,6 +80,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="JamcheckLogin.resx">
       <DependentUpon>JamcheckLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Listings.resx">
+      <DependentUpon>Listings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
