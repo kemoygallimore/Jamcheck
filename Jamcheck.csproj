@@ -64,11 +64,17 @@
     <Compile Include="JamcheckLogin.Designer.cs">
       <DependentUpon>JamcheckLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListingsLogin.cs">
+    <Compile Include="AllListing.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ListingsLogin.Designer.cs">
-      <DependentUpon>ListingsLogin.cs</DependentUpon>
+    <Compile Include="AllListing.Designer.cs">
+      <DependentUpon>AllListing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffLogin.Designer.cs">
+      <DependentUpon>StaffLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="ListingsMain.cs">
       <SubType>Form</SubType>
@@ -93,8 +99,11 @@
     <EmbeddedResource Include="JamcheckLogin.resx">
       <DependentUpon>JamcheckLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ListingsLogin.resx">
-      <DependentUpon>ListingsLogin.cs</DependentUpon>
+    <EmbeddedResource Include="AllListing.resx">
+      <DependentUpon>AllListing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffLogin.resx">
+      <DependentUpon>StaffLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListingsMain.resx">
       <DependentUpon>ListingsMain.cs</DependentUpon>

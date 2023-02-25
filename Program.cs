@@ -16,7 +16,7 @@ namespace Jamcheck
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new JamCheck());
+            Application.Run(new ListingsMainAll());
         }
     }
 }
