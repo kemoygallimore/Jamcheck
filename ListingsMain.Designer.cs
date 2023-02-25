@@ -40,6 +40,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnViewAll = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picBxListingMain)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -53,9 +54,9 @@
             this.picBxListingMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picBxListingMain.Image = ((System.Drawing.Image)(resources.GetObject("picBxListingMain.Image")));
             this.picBxListingMain.Location = new System.Drawing.Point(2, 2);
-            this.picBxListingMain.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picBxListingMain.Margin = new System.Windows.Forms.Padding(2);
             this.picBxListingMain.Name = "picBxListingMain";
-            this.picBxListingMain.Size = new System.Drawing.Size(187, 52);
+            this.picBxListingMain.Size = new System.Drawing.Size(191, 52);
             this.picBxListingMain.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBxListingMain.TabIndex = 1;
             this.picBxListingMain.TabStop = false;
@@ -63,9 +64,9 @@
             // lblVehicleID
             // 
             this.lblVehicleID.AutoSize = true;
-            this.lblVehicleID.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblVehicleID.BackColor = System.Drawing.Color.DodgerBlue;
             this.lblVehicleID.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblVehicleID.Font = new System.Drawing.Font("Bernard MT Condensed", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVehicleID.Font = new System.Drawing.Font("Bernard MT Condensed", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVehicleID.ForeColor = System.Drawing.Color.Black;
             this.lblVehicleID.Location = new System.Drawing.Point(2, 0);
             this.lblVehicleID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -78,9 +79,9 @@
             // lblMake
             // 
             this.lblMake.AutoSize = true;
-            this.lblMake.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblMake.BackColor = System.Drawing.Color.DodgerBlue;
             this.lblMake.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblMake.Font = new System.Drawing.Font("Bernard MT Condensed", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMake.Font = new System.Drawing.Font("Bernard MT Condensed", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMake.ForeColor = System.Drawing.Color.Black;
             this.lblMake.Location = new System.Drawing.Point(195, 0);
             this.lblMake.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -93,9 +94,9 @@
             // lblModel
             // 
             this.lblModel.AutoSize = true;
-            this.lblModel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblModel.BackColor = System.Drawing.Color.DodgerBlue;
             this.lblModel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblModel.Font = new System.Drawing.Font("Bernard MT Condensed", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblModel.Font = new System.Drawing.Font("Bernard MT Condensed", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblModel.ForeColor = System.Drawing.Color.Black;
             this.lblModel.Location = new System.Drawing.Point(388, 0);
             this.lblModel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -108,9 +109,9 @@
             // lblVIN
             // 
             this.lblVIN.AutoSize = true;
-            this.lblVIN.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblVIN.BackColor = System.Drawing.Color.DodgerBlue;
             this.lblVIN.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblVIN.Font = new System.Drawing.Font("Bernard MT Condensed", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVIN.Font = new System.Drawing.Font("Bernard MT Condensed", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVIN.ForeColor = System.Drawing.Color.Black;
             this.lblVIN.Location = new System.Drawing.Point(581, 0);
             this.lblVIN.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -123,9 +124,9 @@
             // lblYear
             // 
             this.lblYear.AutoSize = true;
-            this.lblYear.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblYear.BackColor = System.Drawing.Color.DodgerBlue;
             this.lblYear.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblYear.Font = new System.Drawing.Font("Bernard MT Condensed", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblYear.Font = new System.Drawing.Font("Bernard MT Condensed", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblYear.ForeColor = System.Drawing.Color.Black;
             this.lblYear.Location = new System.Drawing.Point(774, 0);
             this.lblYear.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -150,7 +151,7 @@
             this.tableLayoutPanel1.Controls.Add(this.lblModel, 2, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 10;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.83871F));
@@ -171,7 +172,7 @@
             this.panel1.Controls.Add(this.tableLayoutPanel1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(2, 64);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(965, 558);
             this.panel1.TabIndex = 9;
@@ -188,10 +189,13 @@
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.93769F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80.0623F));
+            this.tableLayoutPanel2.ColumnCount = 4;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.65957F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 72.34042F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 237F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Controls.Add(this.picBxListingMain, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnViewAll, 2, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -215,16 +219,32 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(969, 624);
             this.tableLayoutPanel3.TabIndex = 11;
             // 
+            // btnViewAll
+            // 
+            this.btnViewAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnViewAll.BackColor = System.Drawing.Color.Chartreuse;
+            this.btnViewAll.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnViewAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewAll.Location = new System.Drawing.Point(708, 20);
+            this.btnViewAll.Name = "btnViewAll";
+            this.btnViewAll.Padding = new System.Windows.Forms.Padding(5);
+            this.btnViewAll.Size = new System.Drawing.Size(147, 33);
+            this.btnViewAll.TabIndex = 2;
+            this.btnViewAll.Text = "View All Vehicles";
+            this.btnViewAll.UseVisualStyleBackColor = false;
+            // 
             // ListingsMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(969, 624);
             this.Controls.Add(this.tableLayoutPanel3);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ListingsMain";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ListingsMain";
+            this.Text = "Recent Vehicles";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ListingsMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picBxListingMain)).EndInit();
@@ -251,5 +271,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Button btnViewAll;
     }
 }
