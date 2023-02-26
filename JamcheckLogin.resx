@@ -126,10 +126,14 @@
     <value>Times New Roman, 20pt</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 20</value>
+    <value>4, 31</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 31</value>
+    <value>181, 46</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -155,15 +159,17 @@
   <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 20pt</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 72</value>
+    <value>4, 111</value>
+  </data>
+  <data name="label2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>117, 31</value>
+    <value>173, 46</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -193,10 +199,13 @@
     <value>Microsoft Sans Serif, 15pt, style=Bold</value>
   </data>
   <data name="btnLogin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>75, 162</value>
+    <value>112, 249</value>
+  </data>
+  <data name="btnLogin.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
   </data>
   <data name="btnLogin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 35</value>
+    <value>158, 71</value>
   </data>
   <data name="btnLogin.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -229,10 +238,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnExit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>251, 162</value>
+    <value>376, 249</value>
+  </data>
+  <data name="btnExit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
   </data>
   <data name="btnExit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 35</value>
+    <value>118, 71</value>
   </data>
   <data name="btnExit.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -261,13 +273,16 @@
   <data name="splitContainer1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="splitContainer1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
   <data name="pictureBox1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABVYAAAMACAIAAABAXKuVAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EwAACxMBAJqcGAAA/7JJREFUeF7s3QdYFNf6P/DQ7BpNTDGmYBexoUhRVFAUEMQCKvYWxJpETTTNlJvc
+        EgAACxIB0t1+/AAA/7JJREFUeF7s3QdYFNf6P/DQ7BpNTDGmYBexoUhRVFAUEMQCKvYWxJpETTTNlJvc
         JDc3N7kxxfTuFTWCYqNvofcmxA5WmkovKvj/vzAn/JahLbBlduf7ed7HxxjYnTkzc+a875yZeej/AQAA
         AAAAAIAIoAQAAAAAAAAAIAooAQAAAAAAAACIAkoAAAAAAAAAAKKAEgAAAAAAAACAKKAEAAAAAAAAACAK
         KAEAAAAAAAAAiAJKAAAAAAAAAACigBIAAAAAAAAAgCigBAAAAAAAAAAgCigBAAAAAAAAAIgCSgAAAAAA
@@ -2340,7 +2355,7 @@
   <data name="pictureBox1.InitialImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABVYAAAMACAIAAABAXKuVAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EwAACxMBAJqcGAAA/7JJREFUeF7s3QdYFNf6P/DQ7BpNTDGmYBexoUhRVFAUEMQCKvYWxJpETTTNlJvc
+        EgAACxIB0t1+/AAA/7JJREFUeF7s3QdYFNf6P/DQ7BpNTDGmYBexoUhRVFAUEMQCKvYWxJpETTTNlJvc
         JDc3N7kxxfTuFTWCYqNvofcmxA5WmkovKvj/vzAn/JahLbBlduf7ed7HxxjYnTkzc+a875yZeej/AQAA
         AAAAAIAIoAQAAAAAAAAAIAooAQAAAAAAAACIAkoAAAAAAAAAAKKAEgAAAAAAAACAKKAEAAAAAAAAACAK
         KAEAAAAAAAAAiAJKAAAAAAAAAACigBIAAAAAAAAAgCigBAAAAAAAAAAgCigBAAAAAAAAAIgCSgAAAAAA
@@ -4413,8 +4428,11 @@
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="pictureBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
   <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>450, 541</value>
+    <value>675, 832</value>
   </data>
   <data name="pictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>Zoom</value>
@@ -4452,6 +4470,21 @@
   <data name="panel1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="txtbxPassword.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 15pt</value>
+  </data>
+  <data name="txtbxPassword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>232, 111</value>
+  </data>
+  <data name="txtbxPassword.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="txtbxPassword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>379, 41</value>
+  </data>
+  <data name="txtbxPassword.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
   <data name="&gt;&gt;txtbxPassword.Name" xml:space="preserve">
     <value>txtbxPassword</value>
   </data>
@@ -4463,6 +4496,21 @@
   </data>
   <data name="&gt;&gt;txtbxPassword.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="txtbxUsername.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 15pt</value>
+  </data>
+  <data name="txtbxUsername.Location" type="System.Drawing.Point, System.Drawing">
+    <value>232, 32</value>
+  </data>
+  <data name="txtbxUsername.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="txtbxUsername.Size" type="System.Drawing.Size, System.Drawing">
+    <value>379, 41</value>
+  </data>
+  <data name="txtbxUsername.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
   <data name="&gt;&gt;txtbxUsername.Name" xml:space="preserve">
     <value>txtbxUsername</value>
@@ -4477,10 +4525,13 @@
     <value>1</value>
   </data>
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 174</value>
+    <value>14, 268</value>
+  </data>
+  <data name="panel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>412, 200</value>
+    <value>618, 325</value>
   </data>
   <data name="panel1.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -4510,13 +4561,13 @@
     <value>1</value>
   </data>
   <data name="splitContainer1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>998, 541</value>
+    <value>1497, 832</value>
   </data>
   <data name="splitContainer1.SplitterDistance" type="System.Int32, mscorlib">
-    <value>450</value>
+    <value>675</value>
   </data>
   <data name="splitContainer1.SplitterWidth" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="splitContainer1.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -4533,62 +4584,17 @@
   <data name="&gt;&gt;splitContainer1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="txtbxUsername.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 15pt</value>
-  </data>
-  <data name="txtbxUsername.Location" type="System.Drawing.Point, System.Drawing">
-    <value>155, 21</value>
-  </data>
-  <data name="txtbxUsername.Size" type="System.Drawing.Size, System.Drawing">
-    <value>254, 30</value>
-  </data>
-  <data name="txtbxUsername.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;txtbxUsername.Name" xml:space="preserve">
-    <value>txtbxUsername</value>
-  </data>
-  <data name="&gt;&gt;txtbxUsername.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtbxUsername.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;txtbxUsername.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="txtbxPassword.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 15pt</value>
-  </data>
-  <data name="txtbxPassword.Location" type="System.Drawing.Point, System.Drawing">
-    <value>155, 72</value>
-  </data>
-  <data name="txtbxPassword.Size" type="System.Drawing.Size, System.Drawing">
-    <value>254, 30</value>
-  </data>
-  <data name="txtbxPassword.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;txtbxPassword.Name" xml:space="preserve">
-    <value>txtbxPassword</value>
-  </data>
-  <data name="&gt;&gt;txtbxPassword.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtbxPassword.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;txtbxPassword.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+    <value>9, 20</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>998, 541</value>
+    <value>1497, 832</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterParent</value>

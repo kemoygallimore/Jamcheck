@@ -37,8 +37,8 @@ namespace Jamcheck
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtbxUsername = new System.Windows.Forms.TextBox();
             this.txtbxPassword = new System.Windows.Forms.TextBox();
+            this.txtbxUsername = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -104,19 +104,19 @@ namespace Jamcheck
             this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Name = "panel1";
             // 
-            // txtbxUsername
-            // 
-            this.txtbxUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            resources.ApplyResources(this.txtbxUsername, "txtbxUsername");
-            this.txtbxUsername.Name = "txtbxUsername";
-            this.txtbxUsername.TextChanged += new System.EventHandler(this.txtbxUsername_TextChanged);
-            // 
             // txtbxPassword
             // 
             this.txtbxPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             resources.ApplyResources(this.txtbxPassword, "txtbxPassword");
             this.txtbxPassword.Name = "txtbxPassword";
             this.txtbxPassword.TextChanged += new System.EventHandler(this.txtbxPassword_TextChanged);
+            // 
+            // txtbxUsername
+            // 
+            this.txtbxUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            resources.ApplyResources(this.txtbxUsername, "txtbxUsername");
+            this.txtbxUsername.Name = "txtbxUsername";
+            this.txtbxUsername.TextChanged += new System.EventHandler(this.txtbxUsername_TextChanged);
             // 
             // FrmJamcheckLogin
             // 
