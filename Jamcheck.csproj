@@ -84,6 +84,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VAddition - Copy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VAddition - Copy.Designer.cs">
+      <DependentUpon>VAddition - Copy.cs</DependentUpon>
+    </Compile>
     <Compile Include="VAddition.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="VAddition - Copy.resx">
+      <DependentUpon>VAddition - Copy.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VAddition.resx">
       <DependentUpon>VAddition.cs</DependentUpon>
     </EmbeddedResource>
