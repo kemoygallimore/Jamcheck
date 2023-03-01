@@ -153,6 +153,9 @@
     <EmbeddedResource Include="AddVehicleForm.resx">
       <DependentUpon>AddVehicleForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="JamCheck.resx">
       <DependentUpon>JamCheck.cs</DependentUpon>
     </EmbeddedResource>
