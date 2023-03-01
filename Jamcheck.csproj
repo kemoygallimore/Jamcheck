@@ -52,6 +52,12 @@
     <Compile Include="AddVehicleForm.Designer.cs">
       <DependentUpon>AddVehicleForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CarDealership.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CarDealership.Designer.cs">
+      <DependentUpon>CarDealership.cs</DependentUpon>
+    </Compile>
     <Compile Include="JamCheck.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +98,9 @@
     </Compile>
     <EmbeddedResource Include="AddVehicleForm.resx">
       <DependentUpon>AddVehicleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CarDealership.resx">
+      <DependentUpon>CarDealership.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="JamCheck.resx">
       <DependentUpon>JamCheck.cs</DependentUpon>
