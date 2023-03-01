@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace Jamcheck
 {
-    public partial class ListingsMain : Form
+    public partial class Form1 : Form
     {
-        public ListingsMain()
+        public Form1()
         {
             InitializeComponent();
-        }
-
-        private void ListingsMain_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

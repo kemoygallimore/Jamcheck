@@ -39,8 +39,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.btnViewAll = new System.Windows.Forms.Button();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.picBxListingMain)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -64,7 +64,7 @@
             // lblVehicleID
             // 
             this.lblVehicleID.AutoSize = true;
-            this.lblVehicleID.BackColor = System.Drawing.Color.DodgerBlue;
+            this.lblVehicleID.BackColor = System.Drawing.Color.LimeGreen;
             this.lblVehicleID.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblVehicleID.Font = new System.Drawing.Font("Bernard MT Condensed", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVehicleID.ForeColor = System.Drawing.Color.Black;
@@ -79,7 +79,7 @@
             // lblMake
             // 
             this.lblMake.AutoSize = true;
-            this.lblMake.BackColor = System.Drawing.Color.DodgerBlue;
+            this.lblMake.BackColor = System.Drawing.Color.LimeGreen;
             this.lblMake.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblMake.Font = new System.Drawing.Font("Bernard MT Condensed", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMake.ForeColor = System.Drawing.Color.Black;
@@ -94,7 +94,7 @@
             // lblModel
             // 
             this.lblModel.AutoSize = true;
-            this.lblModel.BackColor = System.Drawing.Color.DodgerBlue;
+            this.lblModel.BackColor = System.Drawing.Color.LimeGreen;
             this.lblModel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblModel.Font = new System.Drawing.Font("Bernard MT Condensed", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblModel.ForeColor = System.Drawing.Color.Black;
@@ -109,7 +109,7 @@
             // lblVIN
             // 
             this.lblVIN.AutoSize = true;
-            this.lblVIN.BackColor = System.Drawing.Color.DodgerBlue;
+            this.lblVIN.BackColor = System.Drawing.Color.LimeGreen;
             this.lblVIN.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblVIN.Font = new System.Drawing.Font("Bernard MT Condensed", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVIN.ForeColor = System.Drawing.Color.Black;
@@ -124,7 +124,7 @@
             // lblYear
             // 
             this.lblYear.AutoSize = true;
-            this.lblYear.BackColor = System.Drawing.Color.DodgerBlue;
+            this.lblYear.BackColor = System.Drawing.Color.LimeGreen;
             this.lblYear.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblYear.Font = new System.Drawing.Font("Bernard MT Condensed", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblYear.ForeColor = System.Drawing.Color.Black;
@@ -166,6 +166,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(965, 558);
             this.tableLayoutPanel1.TabIndex = 8;
+            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // panel1
             // 
@@ -193,7 +194,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.65957F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 72.34042F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 237F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21F));
             this.tableLayoutPanel2.Controls.Add(this.picBxListingMain, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnViewAll, 2, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -203,6 +204,20 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(963, 56);
             this.tableLayoutPanel2.TabIndex = 0;
+            // 
+            // btnViewAll
+            // 
+            this.btnViewAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnViewAll.BackColor = System.Drawing.Color.Chartreuse;
+            this.btnViewAll.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnViewAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewAll.Location = new System.Drawing.Point(708, 20);
+            this.btnViewAll.Name = "btnViewAll";
+            this.btnViewAll.Padding = new System.Windows.Forms.Padding(5);
+            this.btnViewAll.Size = new System.Drawing.Size(147, 33);
+            this.btnViewAll.TabIndex = 2;
+            this.btnViewAll.Text = "View All Vehicles";
+            this.btnViewAll.UseVisualStyleBackColor = false;
             // 
             // tableLayoutPanel3
             // 
@@ -218,20 +233,6 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(969, 624);
             this.tableLayoutPanel3.TabIndex = 11;
-            // 
-            // btnViewAll
-            // 
-            this.btnViewAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnViewAll.BackColor = System.Drawing.Color.Chartreuse;
-            this.btnViewAll.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnViewAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewAll.Location = new System.Drawing.Point(708, 20);
-            this.btnViewAll.Name = "btnViewAll";
-            this.btnViewAll.Padding = new System.Windows.Forms.Padding(5);
-            this.btnViewAll.Size = new System.Drawing.Size(147, 33);
-            this.btnViewAll.TabIndex = 2;
-            this.btnViewAll.Text = "View All Vehicles";
-            this.btnViewAll.UseVisualStyleBackColor = false;
             // 
             // ListingsMain
             // 
