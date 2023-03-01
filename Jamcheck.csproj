@@ -90,11 +90,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="VAddition.cs">
+    <Compile Include="StaffLogIn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VAddition.Designer.cs">
-      <DependentUpon>VAddition.cs</DependentUpon>
+    <Compile Include="StaffLogIn.Designer.cs">
+      <DependentUpon>StaffLogIn.cs</DependentUpon>
     </Compile>
     <Compile Include="VehicleDetailsForm.cs">
       <SubType>Form</SubType>
@@ -129,8 +129,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="VAddition.resx">
-      <DependentUpon>VAddition.cs</DependentUpon>
+    <EmbeddedResource Include="StaffLogIn.resx">
+      <DependentUpon>StaffLogIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VehicleDetailsForm.resx">
       <DependentUpon>VehicleDetailsForm.cs</DependentUpon>
