@@ -72,9 +72,9 @@ namespace Jamcheck
 
         private void btnAddVehicle_Click(object sender, EventArgs e)
         {
-            sql.Open();
+            /*sql.Open();
             add = new SqlCommand($"insert into UsedCars(year, Makeid, model, bodytypeid, chassisnum, transnum, transtypeid, mileage, dealerid)" +
-                $"values({numYear.Value}, {cobxMake.SelectedIndex),")
+                $"values({numYear.Value}, {cobxMake.SelectedIndex),");*/
         }
     }
 }
