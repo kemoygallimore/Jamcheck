@@ -16,5 +16,10 @@ namespace Jamcheck
         {
             InitializeComponent();
         }
+
+        private void FormLayout_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
