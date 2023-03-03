@@ -76,5 +76,10 @@ namespace Jamcheck
             add = new SqlCommand($"insert into UsedCars(year, Makeid, model, bodytypeid, chassisnum, transnum, transtypeid, mileage, dealerid)" +
                 $"values({numYear.Value}, {cobxMake.SelectedIndex),");*/
         }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

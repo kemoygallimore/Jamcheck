@@ -36,7 +36,7 @@ namespace Jamcheck
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtbxChassisNo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel12 = new System.Windows.Forms.Panel();
+            this.importerPanel = new System.Windows.Forms.Panel();
             this.cobxImporter = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -88,10 +88,13 @@ namespace Jamcheck
             this.panel4 = new System.Windows.Forms.Panel();
             this.numYear = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
+            this.datePickerPanel = new System.Windows.Forms.Panel();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label14 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel12.SuspendLayout();
+            this.importerPanel.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel13.SuspendLayout();
@@ -115,18 +118,21 @@ namespace Jamcheck
             ((System.ComponentModel.ISupportInitialize)(this.numSeating)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numYear)).BeginInit();
+            this.datePickerPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.White;
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.09524F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.90476F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 256F));
+            this.tableLayoutPanel1.ColumnCount = 4;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.71154F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.28846F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 275F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 310F));
             this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.panel12, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.importerPanel, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.datePickerPanel, 3, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 103);
@@ -135,16 +141,17 @@ namespace Jamcheck
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1102, 105);
             this.tableLayoutPanel1.TabIndex = 8;
+            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.txtbxModelNo);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(426, 3);
+            this.panel2.Location = new System.Drawing.Point(234, 3);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(10);
-            this.panel2.Size = new System.Drawing.Size(416, 99);
+            this.panel2.Size = new System.Drawing.Size(279, 99);
             this.panel2.TabIndex = 4;
             // 
             // txtbxModelNo
@@ -155,7 +162,7 @@ namespace Jamcheck
             this.txtbxModelNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbxModelNo.Location = new System.Drawing.Point(10, 62);
             this.txtbxModelNo.Name = "txtbxModelNo";
-            this.txtbxModelNo.Size = new System.Drawing.Size(396, 27);
+            this.txtbxModelNo.Size = new System.Drawing.Size(259, 27);
             this.txtbxModelNo.TabIndex = 1;
             this.txtbxModelNo.TextChanged += new System.EventHandler(this.txtbxModelNo_TextChanged);
             // 
@@ -178,7 +185,7 @@ namespace Jamcheck
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(10);
-            this.panel1.Size = new System.Drawing.Size(417, 99);
+            this.panel1.Size = new System.Drawing.Size(225, 99);
             this.panel1.TabIndex = 3;
             // 
             // txtbxChassisNo
@@ -189,7 +196,7 @@ namespace Jamcheck
             this.txtbxChassisNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbxChassisNo.Location = new System.Drawing.Point(10, 62);
             this.txtbxChassisNo.Name = "txtbxChassisNo";
-            this.txtbxChassisNo.Size = new System.Drawing.Size(397, 27);
+            this.txtbxChassisNo.Size = new System.Drawing.Size(205, 27);
             this.txtbxChassisNo.TabIndex = 1;
             this.txtbxChassisNo.TextChanged += new System.EventHandler(this.txtbxChassisNo_TextChanged);
             // 
@@ -204,17 +211,17 @@ namespace Jamcheck
             this.label1.TabIndex = 0;
             this.label1.Text = "Chasis Number";
             // 
-            // panel12
+            // importerPanel
             // 
-            this.panel12.BackColor = System.Drawing.Color.Transparent;
-            this.panel12.Controls.Add(this.cobxImporter);
-            this.panel12.Controls.Add(this.label12);
-            this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel12.Location = new System.Drawing.Point(848, 3);
-            this.panel12.Name = "panel12";
-            this.panel12.Padding = new System.Windows.Forms.Padding(10);
-            this.panel12.Size = new System.Drawing.Size(251, 99);
-            this.panel12.TabIndex = 4;
+            this.importerPanel.BackColor = System.Drawing.Color.Transparent;
+            this.importerPanel.Controls.Add(this.cobxImporter);
+            this.importerPanel.Controls.Add(this.label12);
+            this.importerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.importerPanel.Location = new System.Drawing.Point(519, 3);
+            this.importerPanel.Name = "importerPanel";
+            this.importerPanel.Padding = new System.Windows.Forms.Padding(10);
+            this.importerPanel.Size = new System.Drawing.Size(269, 99);
+            this.importerPanel.TabIndex = 4;
             // 
             // cobxImporter
             // 
@@ -223,7 +230,7 @@ namespace Jamcheck
             this.cobxImporter.FormattingEnabled = true;
             this.cobxImporter.Location = new System.Drawing.Point(10, 61);
             this.cobxImporter.Name = "cobxImporter";
-            this.cobxImporter.Size = new System.Drawing.Size(231, 28);
+            this.cobxImporter.Size = new System.Drawing.Size(249, 28);
             this.cobxImporter.TabIndex = 1;
             this.cobxImporter.SelectedIndexChanged += new System.EventHandler(this.cobxImporter_SelectedIndexChanged);
             // 
@@ -232,7 +239,7 @@ namespace Jamcheck
             this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(13, 29);
+            this.label12.Location = new System.Drawing.Point(13, 30);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(83, 25);
             this.label12.TabIndex = 0;
@@ -686,9 +693,9 @@ namespace Jamcheck
             this.tableLayoutPanel6.ColumnCount = 1;
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel1, 0, 1);
             this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel8, 0, 0);
             this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel3, 0, 3);
-            this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel1, 0, 1);
             this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel2, 0, 2);
             this.tableLayoutPanel6.Controls.Add(this.btnAddVehicle, 0, 4);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -883,6 +890,35 @@ namespace Jamcheck
             this.label4.TabIndex = 0;
             this.label4.Text = "Year";
             // 
+            // datePickerPanel
+            // 
+            this.datePickerPanel.Controls.Add(this.label14);
+            this.datePickerPanel.Controls.Add(this.dateTimePicker1);
+            this.datePickerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.datePickerPanel.Location = new System.Drawing.Point(794, 3);
+            this.datePickerPanel.Name = "datePickerPanel";
+            this.datePickerPanel.Size = new System.Drawing.Size(305, 99);
+            this.datePickerPanel.TabIndex = 5;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(13, 59);
+            this.dateTimePicker1.MinDate = new System.DateTime(2023, 1, 1, 0, 0, 0, 0);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(285, 27);
+            this.dateTimePicker1.TabIndex = 0;
+            this.dateTimePicker1.UseWaitCursor = true;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(23, 30);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(134, 25);
+            this.label14.TabIndex = 1;
+            this.label14.Text = "Date Imported";
+            // 
             // FrmAddVehicle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -902,8 +938,8 @@ namespace Jamcheck
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel12.ResumeLayout(false);
-            this.panel12.PerformLayout();
+            this.importerPanel.ResumeLayout(false);
+            this.importerPanel.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
@@ -940,6 +976,8 @@ namespace Jamcheck
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numYear)).EndInit();
+            this.datePickerPanel.ResumeLayout(false);
+            this.datePickerPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -952,7 +990,7 @@ namespace Jamcheck
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtbxChassisNo;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Panel importerPanel;
         private System.Windows.Forms.ComboBox cobxImporter;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
@@ -1004,5 +1042,8 @@ namespace Jamcheck
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.NumericUpDown numYear;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel datePickerPanel;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
