@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StaffLogin));
             this.lblStaffLogin = new System.Windows.Forms.Label();
             this.txtBxUserName = new System.Windows.Forms.TextBox();
@@ -39,11 +40,15 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.LblTime = new System.Windows.Forms.Label();
+            this.LblDate = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.picBxStfLoginPg)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblStaffLogin
@@ -51,9 +56,10 @@
             this.lblStaffLogin.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblStaffLogin.AutoSize = true;
             this.lblStaffLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStaffLogin.Location = new System.Drawing.Point(279, 0);
+            this.lblStaffLogin.Location = new System.Drawing.Point(307, 7);
+            this.lblStaffLogin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblStaffLogin.Name = "lblStaffLogin";
-            this.lblStaffLogin.Size = new System.Drawing.Size(332, 65);
+            this.lblStaffLogin.Size = new System.Drawing.Size(212, 44);
             this.lblStaffLogin.TabIndex = 0;
             this.lblStaffLogin.Text = "Staff Log In";
             this.lblStaffLogin.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -62,9 +68,10 @@
             // txtBxUserName
             // 
             this.txtBxUserName.BackColor = System.Drawing.Color.White;
-            this.txtBxUserName.Location = new System.Drawing.Point(216, 92);
+            this.txtBxUserName.Location = new System.Drawing.Point(129, 60);
+            this.txtBxUserName.Margin = new System.Windows.Forms.Padding(2);
             this.txtBxUserName.Name = "txtBxUserName";
-            this.txtBxUserName.Size = new System.Drawing.Size(199, 26);
+            this.txtBxUserName.Size = new System.Drawing.Size(158, 20);
             this.txtBxUserName.TabIndex = 1;
             this.txtBxUserName.TextChanged += new System.EventHandler(this.txtBxUserName_TextChanged);
             // 
@@ -72,9 +79,10 @@
             // 
             this.lblStfUserName.AutoSize = true;
             this.lblStfUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStfUserName.Location = new System.Drawing.Point(41, 92);
+            this.lblStfUserName.Location = new System.Drawing.Point(20, 60);
+            this.lblStfUserName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblStfUserName.Name = "lblStfUserName";
-            this.lblStfUserName.Size = new System.Drawing.Size(155, 32);
+            this.lblStfUserName.Size = new System.Drawing.Size(105, 24);
             this.lblStfUserName.TabIndex = 2;
             this.lblStfUserName.Text = "User Name";
             this.lblStfUserName.Click += new System.EventHandler(this.lblStfUserName_Click);
@@ -83,9 +91,10 @@
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(58, 154);
+            this.lblPassword.Location = new System.Drawing.Point(20, 100);
+            this.lblPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(138, 32);
+            this.lblPassword.Size = new System.Drawing.Size(92, 24);
             this.lblPassword.TabIndex = 3;
             this.lblPassword.Text = "Password";
             this.lblPassword.Click += new System.EventHandler(this.lblPassword_Click);
@@ -93,10 +102,11 @@
             // txtBxStfPassword
             // 
             this.txtBxStfPassword.BackColor = System.Drawing.Color.White;
-            this.txtBxStfPassword.Location = new System.Drawing.Point(216, 154);
+            this.txtBxStfPassword.Location = new System.Drawing.Point(129, 100);
+            this.txtBxStfPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtBxStfPassword.Name = "txtBxStfPassword";
             this.txtBxStfPassword.PasswordChar = '*';
-            this.txtBxStfPassword.Size = new System.Drawing.Size(199, 26);
+            this.txtBxStfPassword.Size = new System.Drawing.Size(158, 20);
             this.txtBxStfPassword.TabIndex = 4;
             this.txtBxStfPassword.TextChanged += new System.EventHandler(this.txtBxStfPassword_TextChanged);
             // 
@@ -105,23 +115,38 @@
             this.btnStfLogin.BackColor = System.Drawing.Color.Chartreuse;
             this.btnStfLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnStfLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStfLogin.Location = new System.Drawing.Point(91, 229);
+            this.btnStfLogin.Location = new System.Drawing.Point(61, 149);
+            this.btnStfLogin.Margin = new System.Windows.Forms.Padding(2);
             this.btnStfLogin.Name = "btnStfLogin";
-            this.btnStfLogin.Size = new System.Drawing.Size(105, 43);
+            this.btnStfLogin.Size = new System.Drawing.Size(70, 28);
             this.btnStfLogin.TabIndex = 5;
             this.btnStfLogin.Text = "ENTER";
             this.btnStfLogin.UseVisualStyleBackColor = false;
             this.btnStfLogin.Click += new System.EventHandler(this.btnStfLogin_Click);
             // 
+            // btnStfExit
+            // 
+            this.btnStfExit.BackColor = System.Drawing.Color.Chartreuse;
+            this.btnStfExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnStfExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStfExit.Location = new System.Drawing.Point(160, 149);
+            this.btnStfExit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnStfExit.Name = "btnStfExit";
+            this.btnStfExit.Size = new System.Drawing.Size(80, 28);
+            this.btnStfExit.TabIndex = 6;
+            this.btnStfExit.Text = "EXIT";
+            this.btnStfExit.UseVisualStyleBackColor = false;
+            this.btnStfExit.Click += new System.EventHandler(this.btnStfExit_Click);
+            // 
             // picBxStfLoginPg
             // 
             this.picBxStfLoginPg.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picBxStfLoginPg.Image = ((System.Drawing.Image)(resources.GetObject("picBxStfLoginPg.Image")));
-            this.picBxStfLoginPg.Location = new System.Drawing.Point(8, 8);
-            this.picBxStfLoginPg.Margin = new System.Windows.Forms.Padding(8);
+            this.picBxStfLoginPg.Location = new System.Drawing.Point(5, 5);
+            this.picBxStfLoginPg.Margin = new System.Windows.Forms.Padding(5);
             this.picBxStfLoginPg.Name = "picBxStfLoginPg";
-            this.picBxStfLoginPg.Padding = new System.Windows.Forms.Padding(8);
-            this.picBxStfLoginPg.Size = new System.Drawing.Size(432, 283);
+            this.picBxStfLoginPg.Padding = new System.Windows.Forms.Padding(5);
+            this.picBxStfLoginPg.Size = new System.Drawing.Size(385, 281);
             this.picBxStfLoginPg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBxStfLoginPg.TabIndex = 7;
             this.picBxStfLoginPg.TabStop = false;
@@ -133,17 +158,18 @@
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.lblStaffLogin, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panel2, 0, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Enabled = false;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 61.74863F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.38798F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(891, 502);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.01518F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 64.42516F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.55965F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(784, 461);
             this.tableLayoutPanel1.TabIndex = 8;
+            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // tableLayoutPanel2
             // 
@@ -153,12 +179,11 @@
             this.tableLayoutPanel2.Controls.Add(this.picBxStfLoginPg, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.panel1, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 130);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 62);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(883, 299);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(778, 291);
             this.tableLayoutPanel2.TabIndex = 8;
             // 
             // panel1
@@ -171,36 +196,59 @@
             this.panel1.Controls.Add(this.txtBxStfPassword);
             this.panel1.Controls.Add(this.txtBxUserName);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(452, 5);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel1.Location = new System.Drawing.Point(398, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(427, 289);
+            this.panel1.Size = new System.Drawing.Size(377, 285);
             this.panel1.TabIndex = 8;
             // 
-            // button1
+            // panel2
             // 
-            this.button1.BackColor = System.Drawing.Color.Chartreuse;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(263, 229);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(124, 51);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "EXIT";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.panel2.Controls.Add(this.LblDate);
+            this.panel2.Controls.Add(this.LblTime);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(3, 359);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(778, 99);
+            this.panel2.TabIndex = 9;
+            // 
+            // LblTime
+            // 
+            this.LblTime.AutoSize = true;
+            this.LblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTime.Location = new System.Drawing.Point(362, 21);
+            this.LblTime.Name = "LblTime";
+            this.LblTime.Size = new System.Drawing.Size(56, 25);
+            this.LblTime.TabIndex = 0;
+            this.LblTime.Text = "Time";
+            // 
+            // LblDate
+            // 
+            this.LblDate.AutoSize = true;
+            this.LblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblDate.Location = new System.Drawing.Point(365, 46);
+            this.LblDate.Name = "LblDate";
+            this.LblDate.Size = new System.Drawing.Size(53, 25);
+            this.LblDate.TabIndex = 1;
+            this.LblDate.Text = "Date";
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // StaffLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(891, 502);
+            this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.lblStaffLogin);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(913, 558);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(913, 558);
+            this.MinimumSize = new System.Drawing.Size(800, 500);
             this.Name = "StaffLogin";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -212,6 +260,8 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -228,6 +278,9 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label LblDate;
+        private System.Windows.Forms.Label LblTime;
+        private System.Windows.Forms.Timer timer1;
     }
 }

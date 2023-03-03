@@ -1,0 +1,452 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="JamCheckDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="BodyType">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="type" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="CustomStaff">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" />
+          <Property Name="email" Type="nvarchar" MaxLength="50" />
+          <Property Name="password" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="JamCheckStaff">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" />
+          <Property Name="email" Type="nvarchar" MaxLength="50" />
+          <Property Name="password" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Make">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Parish">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Transtype">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="UsedCarDealers">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Streetname" Type="nvarchar" MaxLength="100" />
+          <Property Name="ParishID" Type="int" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="UsedCars">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Year" Type="int" />
+          <Property Name="Makeid" Type="int" />
+          <Property Name="Model" Type="nvarchar" MaxLength="50" />
+          <Property Name="Bodytpyeid" Type="int" />
+          <Property Name="chassisnum" Type="nvarchar" MaxLength="30" />
+          <Property Name="Transnum" Type="nvarchar" MaxLength="30" />
+          <Property Name="TransTypeid" Type="int" />
+          <Property Name="Mileage" Type="float" />
+          <Property Name="DealerID" Type="int" />
+        </EntityType>
+        <Association Name="FK__UsedCarDe__Paris__34C8D9D1">
+          <End Role="Parish" Type="Self.Parish" Multiplicity="0..1" />
+          <End Role="UsedCarDealers" Type="Self.UsedCarDealers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Parish">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="UsedCarDealers">
+              <PropertyRef Name="ParishID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__UsedCars__Bodytp__38996AB5">
+          <End Role="BodyType" Type="Self.BodyType" Multiplicity="0..1" />
+          <End Role="UsedCars" Type="Self.UsedCars" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BodyType">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="UsedCars">
+              <PropertyRef Name="Bodytpyeid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__UsedCars__Dealer__3A81B327">
+          <End Role="UsedCarDealers" Type="Self.UsedCarDealers" Multiplicity="0..1" />
+          <End Role="UsedCars" Type="Self.UsedCars" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UsedCarDealers">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="UsedCars">
+              <PropertyRef Name="DealerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__UsedCars__Makeid__37A5467C">
+          <End Role="Make" Type="Self.Make" Multiplicity="0..1" />
+          <End Role="UsedCars" Type="Self.UsedCars" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Make">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="UsedCars">
+              <PropertyRef Name="Makeid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__UsedCars__TransT__398D8EEE">
+          <End Role="Transtype" Type="Self.Transtype" Multiplicity="0..1" />
+          <End Role="UsedCars" Type="Self.UsedCars" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Transtype">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="UsedCars">
+              <PropertyRef Name="TransTypeid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="JamCheckDBModelStoreContainer">
+          <EntitySet Name="BodyType" EntityType="Self.BodyType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CustomStaff" EntityType="Self.CustomStaff" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="JamCheckStaff" EntityType="Self.JamCheckStaff" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Make" EntityType="Self.Make" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Parish" EntityType="Self.Parish" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Transtype" EntityType="Self.Transtype" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UsedCarDealers" EntityType="Self.UsedCarDealers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UsedCars" EntityType="Self.UsedCars" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__UsedCarDe__Paris__34C8D9D1" Association="Self.FK__UsedCarDe__Paris__34C8D9D1">
+            <End Role="Parish" EntitySet="Parish" />
+            <End Role="UsedCarDealers" EntitySet="UsedCarDealers" />
+          </AssociationSet>
+          <AssociationSet Name="FK__UsedCars__Bodytp__38996AB5" Association="Self.FK__UsedCars__Bodytp__38996AB5">
+            <End Role="BodyType" EntitySet="BodyType" />
+            <End Role="UsedCars" EntitySet="UsedCars" />
+          </AssociationSet>
+          <AssociationSet Name="FK__UsedCars__Dealer__3A81B327" Association="Self.FK__UsedCars__Dealer__3A81B327">
+            <End Role="UsedCarDealers" EntitySet="UsedCarDealers" />
+            <End Role="UsedCars" EntitySet="UsedCars" />
+          </AssociationSet>
+          <AssociationSet Name="FK__UsedCars__Makeid__37A5467C" Association="Self.FK__UsedCars__Makeid__37A5467C">
+            <End Role="Make" EntitySet="Make" />
+            <End Role="UsedCars" EntitySet="UsedCars" />
+          </AssociationSet>
+          <AssociationSet Name="FK__UsedCars__TransT__398D8EEE" Association="Self.FK__UsedCars__TransT__398D8EEE">
+            <End Role="Transtype" EntitySet="Transtype" />
+            <End Role="UsedCars" EntitySet="UsedCars" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="JamCheckDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CustomStaff">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="password" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="JamCheckStaff">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="password" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="JamCheckDB" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CustomStaffs" EntityType="Self.CustomStaff" />
+          <EntitySet Name="JamCheckStaffs" EntityType="Self.JamCheckStaff" />
+          <EntitySet Name="BodyTypes" EntityType="JamCheckDBModel.BodyType" />
+          <EntitySet Name="Makes" EntityType="JamCheckDBModel.Make" />
+          <EntitySet Name="Parishes" EntityType="JamCheckDBModel.Parish" />
+          <EntitySet Name="Transtypes" EntityType="JamCheckDBModel.Transtype" />
+          <EntitySet Name="UsedCarDealers" EntityType="JamCheckDBModel.UsedCarDealer" />
+          <EntitySet Name="UsedCars" EntityType="JamCheckDBModel.UsedCar" />
+          <AssociationSet Name="FK__UsedCars__Bodytp__38996AB5" Association="JamCheckDBModel.FK__UsedCars__Bodytp__38996AB5">
+            <End Role="BodyType" EntitySet="BodyTypes" />
+            <End Role="UsedCar" EntitySet="UsedCars" />
+          </AssociationSet>
+          <AssociationSet Name="FK__UsedCars__Makeid__37A5467C" Association="JamCheckDBModel.FK__UsedCars__Makeid__37A5467C">
+            <End Role="Make" EntitySet="Makes" />
+            <End Role="UsedCar" EntitySet="UsedCars" />
+          </AssociationSet>
+          <AssociationSet Name="FK__UsedCarDe__Paris__34C8D9D1" Association="JamCheckDBModel.FK__UsedCarDe__Paris__34C8D9D1">
+            <End Role="Parish" EntitySet="Parishes" />
+            <End Role="UsedCarDealer" EntitySet="UsedCarDealers" />
+          </AssociationSet>
+          <AssociationSet Name="FK__UsedCars__TransT__398D8EEE" Association="JamCheckDBModel.FK__UsedCars__TransT__398D8EEE">
+            <End Role="Transtype" EntitySet="Transtypes" />
+            <End Role="UsedCar" EntitySet="UsedCars" />
+          </AssociationSet>
+          <AssociationSet Name="FK__UsedCars__Dealer__3A81B327" Association="JamCheckDBModel.FK__UsedCars__Dealer__3A81B327">
+            <End Role="UsedCarDealer" EntitySet="UsedCarDealers" />
+            <End Role="UsedCar" EntitySet="UsedCars" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="BodyType">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="type" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="UsedCars" Relationship="JamCheckDBModel.FK__UsedCars__Bodytp__38996AB5" FromRole="BodyType" ToRole="UsedCar" />
+        </EntityType>
+        <EntityType Name="Make">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="UsedCars" Relationship="JamCheckDBModel.FK__UsedCars__Makeid__37A5467C" FromRole="Make" ToRole="UsedCar" />
+        </EntityType>
+        <EntityType Name="Parish">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="UsedCarDealers" Relationship="JamCheckDBModel.FK__UsedCarDe__Paris__34C8D9D1" FromRole="Parish" ToRole="UsedCarDealer" />
+        </EntityType>
+        <EntityType Name="Transtype">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="UsedCars" Relationship="JamCheckDBModel.FK__UsedCars__TransT__398D8EEE" FromRole="Transtype" ToRole="UsedCar" />
+        </EntityType>
+        <EntityType Name="UsedCarDealer">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Streetname" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ParishID" Type="Int32" />
+          <Property Name="Phone" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Parish" Relationship="JamCheckDBModel.FK__UsedCarDe__Paris__34C8D9D1" FromRole="UsedCarDealer" ToRole="Parish" />
+          <NavigationProperty Name="UsedCars" Relationship="JamCheckDBModel.FK__UsedCars__Dealer__3A81B327" FromRole="UsedCarDealer" ToRole="UsedCar" />
+        </EntityType>
+        <EntityType Name="UsedCar">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Year" Type="Int32" />
+          <Property Name="Makeid" Type="Int32" />
+          <Property Name="Model" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Bodytpyeid" Type="Int32" />
+          <Property Name="chassisnum" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Transnum" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="TransTypeid" Type="Int32" />
+          <Property Name="Mileage" Type="Double" />
+          <Property Name="DealerID" Type="Int32" />
+          <NavigationProperty Name="BodyType" Relationship="JamCheckDBModel.FK__UsedCars__Bodytp__38996AB5" FromRole="UsedCar" ToRole="BodyType" />
+          <NavigationProperty Name="Make" Relationship="JamCheckDBModel.FK__UsedCars__Makeid__37A5467C" FromRole="UsedCar" ToRole="Make" />
+          <NavigationProperty Name="Transtype" Relationship="JamCheckDBModel.FK__UsedCars__TransT__398D8EEE" FromRole="UsedCar" ToRole="Transtype" />
+          <NavigationProperty Name="UsedCarDealer" Relationship="JamCheckDBModel.FK__UsedCars__Dealer__3A81B327" FromRole="UsedCar" ToRole="UsedCarDealer" />
+        </EntityType>
+        <Association Name="FK__UsedCars__Bodytp__38996AB5">
+          <End Type="JamCheckDBModel.BodyType" Role="BodyType" Multiplicity="0..1" />
+          <End Type="JamCheckDBModel.UsedCar" Role="UsedCar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BodyType">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="UsedCar">
+              <PropertyRef Name="Bodytpyeid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__UsedCars__Makeid__37A5467C">
+          <End Type="JamCheckDBModel.Make" Role="Make" Multiplicity="0..1" />
+          <End Type="JamCheckDBModel.UsedCar" Role="UsedCar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Make">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="UsedCar">
+              <PropertyRef Name="Makeid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__UsedCarDe__Paris__34C8D9D1">
+          <End Type="JamCheckDBModel.Parish" Role="Parish" Multiplicity="0..1" />
+          <End Type="JamCheckDBModel.UsedCarDealer" Role="UsedCarDealer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Parish">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="UsedCarDealer">
+              <PropertyRef Name="ParishID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__UsedCars__TransT__398D8EEE">
+          <End Type="JamCheckDBModel.Transtype" Role="Transtype" Multiplicity="0..1" />
+          <End Type="JamCheckDBModel.UsedCar" Role="UsedCar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Transtype">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="UsedCar">
+              <PropertyRef Name="TransTypeid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__UsedCars__Dealer__3A81B327">
+          <End Type="JamCheckDBModel.UsedCarDealer" Role="UsedCarDealer" Multiplicity="0..1" />
+          <End Type="JamCheckDBModel.UsedCar" Role="UsedCar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UsedCarDealer">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="UsedCar">
+              <PropertyRef Name="DealerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="JamCheckDBModelStoreContainer" CdmEntityContainer="JamCheckDB">
+          <EntitySetMapping Name="CustomStaffs">
+            <EntityTypeMapping TypeName="JamCheckDBModel.CustomStaff">
+              <MappingFragment StoreEntitySet="CustomStaff">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="password" ColumnName="password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="JamCheckStaffs">
+            <EntityTypeMapping TypeName="JamCheckDBModel.JamCheckStaff">
+              <MappingFragment StoreEntitySet="JamCheckStaff">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="password" ColumnName="password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BodyTypes">
+            <EntityTypeMapping TypeName="JamCheckDBModel.BodyType">
+              <MappingFragment StoreEntitySet="BodyType">
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Makes">
+            <EntityTypeMapping TypeName="JamCheckDBModel.Make">
+              <MappingFragment StoreEntitySet="Make">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Parishes">
+            <EntityTypeMapping TypeName="JamCheckDBModel.Parish">
+              <MappingFragment StoreEntitySet="Parish">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Transtypes">
+            <EntityTypeMapping TypeName="JamCheckDBModel.Transtype">
+              <MappingFragment StoreEntitySet="Transtype">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UsedCarDealers">
+            <EntityTypeMapping TypeName="JamCheckDBModel.UsedCarDealer">
+              <MappingFragment StoreEntitySet="UsedCarDealers">
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="ParishID" ColumnName="ParishID" />
+                <ScalarProperty Name="Streetname" ColumnName="Streetname" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UsedCars">
+            <EntityTypeMapping TypeName="JamCheckDBModel.UsedCar">
+              <MappingFragment StoreEntitySet="UsedCars">
+                <ScalarProperty Name="DealerID" ColumnName="DealerID" />
+                <ScalarProperty Name="Mileage" ColumnName="Mileage" />
+                <ScalarProperty Name="TransTypeid" ColumnName="TransTypeid" />
+                <ScalarProperty Name="Transnum" ColumnName="Transnum" />
+                <ScalarProperty Name="chassisnum" ColumnName="chassisnum" />
+                <ScalarProperty Name="Bodytpyeid" ColumnName="Bodytpyeid" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="Makeid" ColumnName="Makeid" />
+                <ScalarProperty Name="Year" ColumnName="Year" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
