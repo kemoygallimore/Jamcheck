@@ -37,6 +37,7 @@
             this.VehicleType = new System.Windows.Forms.Label();
             this.txBoxMake = new System.Windows.Forms.TextBox();
             this.txBoxVehicleType = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -77,6 +78,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.txBoxVehicleType);
             this.panel2.Controls.Add(this.txBoxMake);
             this.panel2.Controls.Add(this.VehicleType);
@@ -129,6 +131,16 @@
             this.txBoxVehicleType.Size = new System.Drawing.Size(269, 26);
             this.txBoxVehicleType.TabIndex = 3;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Chartreuse;
+            this.button1.Location = new System.Drawing.Point(221, 441);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(135, 56);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "SUMBIT";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // CustomsVehicleAddForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -159,5 +171,6 @@
         private System.Windows.Forms.TextBox txBoxMake;
         private System.Windows.Forms.Label VehicleType;
         private System.Windows.Forms.Label Make;
+        private System.Windows.Forms.Button button1;
     }
 }
