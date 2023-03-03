@@ -72,22 +72,22 @@ namespace Jamcheck
             this.btnAddVehicle = new System.Windows.Forms.Button();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.numYear = new System.Windows.Forms.NumericUpDown();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.numSeating = new System.Windows.Forms.NumericUpDown();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtbxModel = new System.Windows.Forms.TextBox();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.cobxMake = new System.Windows.Forms.ComboBox();
-            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.cobxMake = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.txtbxModel = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.numSeating = new System.Windows.Forms.NumericUpDown();
+            this.label10 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.numYear = new System.Windows.Forms.NumericUpDown();
+            this.label4 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -106,15 +106,15 @@ namespace Jamcheck
             ((System.ComponentModel.ISupportInitialize)(this.numMileage)).BeginInit();
             this.tableLayoutPanel10.SuspendLayout();
             this.tableLayoutPanel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numYear)).BeginInit();
+            this.panel6.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numSeating)).BeginInit();
-            this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.tableLayoutPanel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numYear)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -123,7 +123,7 @@ namespace Jamcheck
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.09524F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.90476F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 255F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 256F));
             this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel12, 2, 0);
@@ -143,8 +143,8 @@ namespace Jamcheck
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(341, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
-            this.panel2.Size = new System.Drawing.Size(331, 117);
+            this.panel2.Padding = new System.Windows.Forms.Padding(10);
+            this.panel2.Size = new System.Drawing.Size(330, 117);
             this.panel2.TabIndex = 4;
             // 
             // txtbxModelNo
@@ -155,7 +155,7 @@ namespace Jamcheck
             this.txtbxModelNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbxModelNo.Location = new System.Drawing.Point(10, 80);
             this.txtbxModelNo.Name = "txtbxModelNo";
-            this.txtbxModelNo.Size = new System.Drawing.Size(311, 27);
+            this.txtbxModelNo.Size = new System.Drawing.Size(310, 27);
             this.txtbxModelNo.TabIndex = 1;
             this.txtbxModelNo.TextChanged += new System.EventHandler(this.txtbxModelNo_TextChanged);
             // 
@@ -177,7 +177,7 @@ namespace Jamcheck
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.panel1.Padding = new System.Windows.Forms.Padding(10);
             this.panel1.Size = new System.Drawing.Size(332, 117);
             this.panel1.TabIndex = 3;
             // 
@@ -210,10 +210,10 @@ namespace Jamcheck
             this.panel12.Controls.Add(this.cobxImporter);
             this.panel12.Controls.Add(this.label12);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel12.Location = new System.Drawing.Point(678, 3);
+            this.panel12.Location = new System.Drawing.Point(677, 3);
             this.panel12.Name = "panel12";
-            this.panel12.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
-            this.panel12.Size = new System.Drawing.Size(250, 117);
+            this.panel12.Padding = new System.Windows.Forms.Padding(10);
+            this.panel12.Size = new System.Drawing.Size(251, 117);
             this.panel12.TabIndex = 4;
             // 
             // cobxImporter
@@ -223,7 +223,7 @@ namespace Jamcheck
             this.cobxImporter.FormattingEnabled = true;
             this.cobxImporter.Location = new System.Drawing.Point(10, 79);
             this.cobxImporter.Name = "cobxImporter";
-            this.cobxImporter.Size = new System.Drawing.Size(230, 28);
+            this.cobxImporter.Size = new System.Drawing.Size(231, 28);
             this.cobxImporter.TabIndex = 1;
             this.cobxImporter.SelectedIndexChanged += new System.EventHandler(this.cobxImporter_SelectedIndexChanged);
             // 
@@ -265,7 +265,7 @@ namespace Jamcheck
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Location = new System.Drawing.Point(3, 3);
             this.panel7.Name = "panel7";
-            this.panel7.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.panel7.Padding = new System.Windows.Forms.Padding(10);
             this.panel7.Size = new System.Drawing.Size(304, 112);
             this.panel7.TabIndex = 5;
             // 
@@ -304,7 +304,7 @@ namespace Jamcheck
             this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel13.Location = new System.Drawing.Point(623, 3);
             this.panel13.Name = "panel13";
-            this.panel13.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.panel13.Padding = new System.Windows.Forms.Padding(10);
             this.panel13.Size = new System.Drawing.Size(305, 112);
             this.panel13.TabIndex = 5;
             // 
@@ -338,7 +338,7 @@ namespace Jamcheck
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel8.Location = new System.Drawing.Point(313, 3);
             this.panel8.Name = "panel8";
-            this.panel8.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.panel8.Padding = new System.Windows.Forms.Padding(10);
             this.panel8.Size = new System.Drawing.Size(304, 112);
             this.panel8.TabIndex = 4;
             // 
@@ -430,7 +430,7 @@ namespace Jamcheck
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(3, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.panel3.Padding = new System.Windows.Forms.Padding(10);
             this.panel3.Size = new System.Drawing.Size(304, 77);
             this.panel3.TabIndex = 12;
             // 
@@ -492,7 +492,7 @@ namespace Jamcheck
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel11.Location = new System.Drawing.Point(623, 3);
             this.panel11.Name = "panel11";
-            this.panel11.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.panel11.Padding = new System.Windows.Forms.Padding(10);
             this.panel11.Size = new System.Drawing.Size(305, 77);
             this.panel11.TabIndex = 4;
             // 
@@ -566,7 +566,7 @@ namespace Jamcheck
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel9.Location = new System.Drawing.Point(313, 3);
             this.panel9.Name = "panel9";
-            this.panel9.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.panel9.Padding = new System.Windows.Forms.Padding(10);
             this.panel9.Size = new System.Drawing.Size(304, 77);
             this.panel9.TabIndex = 4;
             // 
@@ -660,6 +660,17 @@ namespace Jamcheck
             this.tableLayoutPanel11.Size = new System.Drawing.Size(200, 100);
             this.tableLayoutPanel11.TabIndex = 0;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox2.Image = global::Jamcheck.Properties.Resources.Jamcheck_logo_transparent;
+            this.pictureBox2.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(194, 94);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
             // panel14
             // 
             this.panel14.BackColor = System.Drawing.Color.LimeGreen;
@@ -669,6 +680,28 @@ namespace Jamcheck
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(943, 5);
             this.panel14.TabIndex = 2;
+            // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.ColumnCount = 1;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel8, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel3, 0, 3);
+            this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel1, 0, 1);
+            this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel2, 0, 2);
+            this.tableLayoutPanel6.Controls.Add(this.btnAddVehicle, 0, 4);
+            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 123);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 5;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.94061F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.86677F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.44623F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.16372F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(937, 623);
+            this.tableLayoutPanel6.TabIndex = 3;
             // 
             // tableLayoutPanel8
             // 
@@ -696,6 +729,111 @@ namespace Jamcheck
             this.tableLayoutPanel8.Size = new System.Drawing.Size(937, 117);
             this.tableLayoutPanel8.TabIndex = 7;
             // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.cobxMake);
+            this.panel6.Controls.Add(this.label6);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Location = new System.Drawing.Point(3, 3);
+            this.panel6.Name = "panel6";
+            this.panel6.Padding = new System.Windows.Forms.Padding(10);
+            this.panel6.Size = new System.Drawing.Size(242, 111);
+            this.panel6.TabIndex = 0;
+            // 
+            // cobxMake
+            // 
+            this.cobxMake.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.cobxMake.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cobxMake.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cobxMake.FormattingEnabled = true;
+            this.cobxMake.Items.AddRange(new object[] {
+            "Mercedez-Benz"});
+            this.cobxMake.Location = new System.Drawing.Point(20, 73);
+            this.cobxMake.Name = "cobxMake";
+            this.cobxMake.Size = new System.Drawing.Size(203, 28);
+            this.cobxMake.TabIndex = 1;
+            this.cobxMake.Text = "Mercedez-Benz";
+            this.cobxMake.SelectedIndexChanged += new System.EventHandler(this.cobxMake_SelectedIndexChanged);
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(20, 41);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(61, 25);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Make";
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.txtbxModel);
+            this.panel5.Controls.Add(this.label5);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(251, 3);
+            this.panel5.Name = "panel5";
+            this.panel5.Padding = new System.Windows.Forms.Padding(10);
+            this.panel5.Size = new System.Drawing.Size(235, 111);
+            this.panel5.TabIndex = 2;
+            // 
+            // txtbxModel
+            // 
+            this.txtbxModel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.txtbxModel.BackColor = System.Drawing.Color.White;
+            this.txtbxModel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtbxModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbxModel.Location = new System.Drawing.Point(20, 74);
+            this.txtbxModel.Name = "txtbxModel";
+            this.txtbxModel.Size = new System.Drawing.Size(197, 27);
+            this.txtbxModel.TabIndex = 1;
+            this.txtbxModel.Text = "S-Class";
+            this.txtbxModel.TextChanged += new System.EventHandler(this.txtbxModel_TextChanged);
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(20, 41);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(66, 25);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Model";
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.numSeating);
+            this.panel10.Controls.Add(this.label10);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel10.Location = new System.Drawing.Point(743, 3);
+            this.panel10.Name = "panel10";
+            this.panel10.Padding = new System.Windows.Forms.Padding(10);
+            this.panel10.Size = new System.Drawing.Size(191, 111);
+            this.panel10.TabIndex = 4;
+            // 
+            // numSeating
+            // 
+            this.numSeating.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.numSeating.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numSeating.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.numSeating.Location = new System.Drawing.Point(10, 74);
+            this.numSeating.Name = "numSeating";
+            this.numSeating.Size = new System.Drawing.Size(171, 27);
+            this.numSeating.TabIndex = 1;
+            this.numSeating.ValueChanged += new System.EventHandler(this.numSeating_ValueChanged);
+            // 
+            // label10
+            // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(16, 45);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(161, 25);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Seating Capacity";
+            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.numYear);
@@ -706,17 +844,6 @@ namespace Jamcheck
             this.panel4.Padding = new System.Windows.Forms.Padding(10);
             this.panel4.Size = new System.Drawing.Size(245, 111);
             this.panel4.TabIndex = 3;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(20, 41);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 25);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Year";
             // 
             // numYear
             // 
@@ -745,155 +872,27 @@ namespace Jamcheck
             0});
             this.numYear.ValueChanged += new System.EventHandler(this.numYear_ValueChanged);
             // 
-            // panel10
+            // label4
             // 
-            this.panel10.Controls.Add(this.numSeating);
-            this.panel10.Controls.Add(this.label10);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(743, 3);
-            this.panel10.Name = "panel10";
-            this.panel10.Padding = new System.Windows.Forms.Padding(10);
-            this.panel10.Size = new System.Drawing.Size(191, 111);
-            this.panel10.TabIndex = 4;
-            // 
-            // label10
-            // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(16, 45);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(161, 25);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Seating Capacity";
-            // 
-            // numSeating
-            // 
-            this.numSeating.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.numSeating.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.numSeating.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.numSeating.Location = new System.Drawing.Point(10, 74);
-            this.numSeating.Name = "numSeating";
-            this.numSeating.Size = new System.Drawing.Size(171, 27);
-            this.numSeating.TabIndex = 1;
-            this.numSeating.ValueChanged += new System.EventHandler(this.numSeating_ValueChanged);
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.txtbxModel);
-            this.panel5.Controls.Add(this.label5);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(251, 3);
-            this.panel5.Name = "panel5";
-            this.panel5.Padding = new System.Windows.Forms.Padding(10);
-            this.panel5.Size = new System.Drawing.Size(235, 111);
-            this.panel5.TabIndex = 2;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(20, 41);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(66, 25);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Model";
-            // 
-            // txtbxModel
-            // 
-            this.txtbxModel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.txtbxModel.BackColor = System.Drawing.Color.White;
-            this.txtbxModel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtbxModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxModel.Location = new System.Drawing.Point(20, 74);
-            this.txtbxModel.Name = "txtbxModel";
-            this.txtbxModel.Size = new System.Drawing.Size(197, 27);
-            this.txtbxModel.TabIndex = 1;
-            this.txtbxModel.Text = "S-Class";
-            this.txtbxModel.TextChanged += new System.EventHandler(this.txtbxModel_TextChanged);
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.cobxMake);
-            this.panel6.Controls.Add(this.label6);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(3, 3);
-            this.panel6.Name = "panel6";
-            this.panel6.Padding = new System.Windows.Forms.Padding(10);
-            this.panel6.Size = new System.Drawing.Size(242, 111);
-            this.panel6.TabIndex = 0;
-            // 
-            // label6
-            // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(20, 41);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(61, 25);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Make";
-            // 
-            // cobxMake
-            // 
-            this.cobxMake.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.cobxMake.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.cobxMake.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cobxMake.FormattingEnabled = true;
-            this.cobxMake.Items.AddRange(new object[] {
-            "Mercedez-Benz"});
-            this.cobxMake.Location = new System.Drawing.Point(20, 73);
-            this.cobxMake.Name = "cobxMake";
-            this.cobxMake.Size = new System.Drawing.Size(203, 28);
-            this.cobxMake.TabIndex = 1;
-            this.cobxMake.Text = "Mercedez-Benz";
-            this.cobxMake.SelectedIndexChanged += new System.EventHandler(this.cobxMake_SelectedIndexChanged);
-            // 
-            // tableLayoutPanel6
-            // 
-            this.tableLayoutPanel6.ColumnCount = 1;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel8, 0, 0);
-            this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel3, 0, 3);
-            this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel1, 0, 1);
-            this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel2, 0, 2);
-            this.tableLayoutPanel6.Controls.Add(this.btnAddVehicle, 0, 4);
-            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 123);
-            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 5;
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.94061F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.86677F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.44623F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.16372F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(937, 623);
-            this.tableLayoutPanel6.TabIndex = 3;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox2.Image = global::Jamcheck.Properties.Resources.Jamcheck_logo_transparent;
-            this.pictureBox2.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(194, 94);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(20, 41);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(53, 25);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Year";
             // 
             // FrmAddVehicle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(943, 749);
             this.Controls.Add(this.tableLayoutPanel10);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MaximizeBox = false;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MinimizeBox = false;
             this.Name = "FrmAddVehicle";
             this.ShowIcon = false;
@@ -930,19 +929,19 @@ namespace Jamcheck
             ((System.ComponentModel.ISupportInitialize)(this.numMileage)).EndInit();
             this.tableLayoutPanel10.ResumeLayout(false);
             this.tableLayoutPanel11.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel8.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numYear)).EndInit();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numSeating)).EndInit();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.tableLayoutPanel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numYear)).EndInit();
             this.ResumeLayout(false);
 
         }
