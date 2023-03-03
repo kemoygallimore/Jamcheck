@@ -61,5 +61,16 @@ namespace Jamcheck
         {
 
         }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            LblTime.Text = DateTime.Now.ToString();
+            LblDate.Text = DateTime.Now.ToString();
+        }
     }
 }
