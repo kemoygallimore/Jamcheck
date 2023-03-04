@@ -36,7 +36,6 @@
             this.lblPassword = new System.Windows.Forms.Label();
             this.txtBxStfPassword = new System.Windows.Forms.TextBox();
             this.btnStfLogin = new System.Windows.Forms.Button();
-            this.btnStfExit = new System.Windows.Forms.Button();
             this.picBxStfLoginPg = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -62,7 +61,7 @@
             this.lblStaffLogin.Name = "lblStaffLogin";
             this.lblStaffLogin.Size = new System.Drawing.Size(212, 44);
             this.lblStaffLogin.TabIndex = 0;
-            this.lblStaffLogin.Text = "Staff Login";
+            this.lblStaffLogin.Text = "Staff Log In";
             this.lblStaffLogin.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lblStaffLogin.Click += new System.EventHandler(this.lblStaffLogin_Click);
             // 
@@ -121,7 +120,7 @@
             this.btnStfLogin.Name = "btnStfLogin";
             this.btnStfLogin.Size = new System.Drawing.Size(70, 28);
             this.btnStfLogin.TabIndex = 5;
-            this.btnStfLogin.Text = "LOGIN";
+            this.btnStfLogin.Text = "ENTER";
             this.btnStfLogin.UseVisualStyleBackColor = false;
             this.btnStfLogin.Click += new System.EventHandler(this.btnStfLogin_Click);
             // 
@@ -190,7 +189,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.btnStfExit);
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.lblPassword);
             this.panel1.Controls.Add(this.btnStfLogin);
             this.panel1.Controls.Add(this.lblStfUserName);
@@ -254,16 +253,17 @@
             this.Name = "StaffLogin";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "VehicleAddForm";
             this.Load += new System.EventHandler(this.Listings_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picBxStfLoginPg)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -275,7 +275,6 @@
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.TextBox txtBxStfPassword;
         private System.Windows.Forms.Button btnStfLogin;
-        private System.Windows.Forms.Button btnStfExit;
         private System.Windows.Forms.PictureBox picBxStfLoginPg;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
