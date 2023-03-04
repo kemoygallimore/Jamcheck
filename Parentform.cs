@@ -19,7 +19,7 @@ namespace Jamcheck
 
         private void JamcheckMenu_Click(object sender, EventArgs e)
         {
-            FrmJamcheckLogin customslogin = new FrmJamcheckLogin();
+            CustomsLoginFrm customslogin = new CustomsLoginFrm();
             customslogin.MdiParent = this;
             customslogin.Dock = DockStyle.Fill;
             customslogin.Show();

@@ -10,29 +10,14 @@ using System.Windows.Forms;
 
 namespace Jamcheck
 {
-    public partial class StaffLogin : Form
+    public partial class StaffLoginFrm : Form
     {
-        public StaffLogin()
+        public StaffLoginFrm()
         {
             InitializeComponent();
         }
 
-        private void lblStaffLogin_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblStfUserName_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void txtBxUserName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblPassword_Click(object sender, EventArgs e)
         {
 
         }
@@ -47,17 +32,7 @@ namespace Jamcheck
 
         }
 
-        private void btnStfExit_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Listings_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void picBxStfLoginPg_Click(object sender, EventArgs e)
+        private void btnStaffExit_Click(object sender, EventArgs e)
         {
 
         }
@@ -72,5 +47,7 @@ namespace Jamcheck
             LblTime.Text = DateTime.Now.ToString();
             LblDate.Text = DateTime.Now.ToString();
         }
+
+        
     }
 }

@@ -19,7 +19,7 @@ namespace Jamcheck
 
         private void JamCheck_Load(object sender, EventArgs e)
         {
-            FrmJamcheckLogin frmJamcheckLogin = new FrmJamcheckLogin();
+            CustomsLoginFrm frmJamcheckLogin = new CustomsLoginFrm();
             frmJamcheckLogin.MdiParent = this;
             frmJamcheckLogin.Show();
 

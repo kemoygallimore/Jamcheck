@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace Jamcheck
 {
-    public partial class FrmJamcheckLogin : Form
+    public partial class CustomsLoginFrm : Form
     {
         private readonly JamCheckDB jamCheckDB;
-        public FrmJamcheckLogin()
+        public CustomsLoginFrm()
         {
             InitializeComponent();
             jamCheckDB = new JamCheckDB();
@@ -64,11 +64,6 @@ namespace Jamcheck
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void FrmJamcheckLogin_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void FrmJamcheckLogin_FormClosed(object sender, FormClosedEventArgs e)
