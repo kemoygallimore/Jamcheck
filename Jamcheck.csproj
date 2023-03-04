@@ -73,6 +73,12 @@
     <Compile Include="CustomStaff.cs">
       <DependentUpon>JamCheckDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="test.Designer.cs">
+      <DependentUpon>test.cs</DependentUpon>
+    </Compile>
     <Compile Include="JamCheck.cs">
       <SubType>Form</SubType>
     </Compile>
