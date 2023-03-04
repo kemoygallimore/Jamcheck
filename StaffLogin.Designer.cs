@@ -44,6 +44,7 @@
             this.LblDate = new System.Windows.Forms.Label();
             this.LblTime = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picBxStfLoginPg)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -59,7 +60,7 @@
             this.lblStaffLogin.Location = new System.Drawing.Point(307, 7);
             this.lblStaffLogin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblStaffLogin.Name = "lblStaffLogin";
-            this.lblStaffLogin.Size = new System.Drawing.Size(212, 44);
+            this.lblStaffLogin.Size = new System.Drawing.Size(224, 44);
             this.lblStaffLogin.TabIndex = 0;
             this.lblStaffLogin.Text = "Staff Log In";
             this.lblStaffLogin.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -68,21 +69,22 @@
             // txtBxUserName
             // 
             this.txtBxUserName.BackColor = System.Drawing.Color.White;
+            this.txtBxUserName.Font = new System.Drawing.Font("Corbel", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBxUserName.Location = new System.Drawing.Point(129, 90);
             this.txtBxUserName.Margin = new System.Windows.Forms.Padding(2);
             this.txtBxUserName.Name = "txtBxUserName";
-            this.txtBxUserName.Size = new System.Drawing.Size(158, 20);
+            this.txtBxUserName.Size = new System.Drawing.Size(158, 21);
             this.txtBxUserName.TabIndex = 1;
             this.txtBxUserName.TextChanged += new System.EventHandler(this.txtBxUserName_TextChanged);
             // 
             // lblStfUserName
             // 
             this.lblStfUserName.AutoSize = true;
-            this.lblStfUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStfUserName.Font = new System.Drawing.Font("Corbel", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStfUserName.Location = new System.Drawing.Point(20, 90);
             this.lblStfUserName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblStfUserName.Name = "lblStfUserName";
-            this.lblStfUserName.Size = new System.Drawing.Size(105, 24);
+            this.lblStfUserName.Size = new System.Drawing.Size(56, 13);
             this.lblStfUserName.TabIndex = 2;
             this.lblStfUserName.Text = "User Name";
             this.lblStfUserName.Click += new System.EventHandler(this.lblStfUserName_Click);
@@ -90,11 +92,11 @@
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassword.Font = new System.Drawing.Font("Corbel", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPassword.Location = new System.Drawing.Point(20, 130);
             this.lblPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(92, 24);
+            this.lblPassword.Size = new System.Drawing.Size(50, 13);
             this.lblPassword.TabIndex = 3;
             this.lblPassword.Text = "Password";
             this.lblPassword.Click += new System.EventHandler(this.lblPassword_Click);
@@ -102,11 +104,12 @@
             // txtBxStfPassword
             // 
             this.txtBxStfPassword.BackColor = System.Drawing.Color.White;
+            this.txtBxStfPassword.Font = new System.Drawing.Font("Corbel", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBxStfPassword.Location = new System.Drawing.Point(129, 130);
             this.txtBxStfPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtBxStfPassword.Name = "txtBxStfPassword";
             this.txtBxStfPassword.PasswordChar = '*';
-            this.txtBxStfPassword.Size = new System.Drawing.Size(158, 20);
+            this.txtBxStfPassword.Size = new System.Drawing.Size(158, 21);
             this.txtBxStfPassword.TabIndex = 4;
             this.txtBxStfPassword.TextChanged += new System.EventHandler(this.txtBxStfPassword_TextChanged);
             // 
@@ -114,7 +117,7 @@
             // 
             this.btnStfLogin.BackColor = System.Drawing.Color.Chartreuse;
             this.btnStfLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnStfLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStfLogin.Font = new System.Drawing.Font("Corbel", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStfLogin.Location = new System.Drawing.Point(61, 179);
             this.btnStfLogin.Margin = new System.Windows.Forms.Padding(2);
             this.btnStfLogin.Name = "btnStfLogin";
@@ -123,20 +126,6 @@
             this.btnStfLogin.Text = "ENTER";
             this.btnStfLogin.UseVisualStyleBackColor = false;
             this.btnStfLogin.Click += new System.EventHandler(this.btnStfLogin_Click);
-            // 
-            // btnStfExit
-            // 
-            this.btnStfExit.BackColor = System.Drawing.Color.Chartreuse;
-            this.btnStfExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnStfExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStfExit.Location = new System.Drawing.Point(160, 179);
-            this.btnStfExit.Margin = new System.Windows.Forms.Padding(2);
-            this.btnStfExit.Name = "btnStfExit";
-            this.btnStfExit.Size = new System.Drawing.Size(80, 28);
-            this.btnStfExit.TabIndex = 6;
-            this.btnStfExit.Text = "EXIT";
-            this.btnStfExit.UseVisualStyleBackColor = false;
-            this.btnStfExit.Click += new System.EventHandler(this.btnStfExit_Click);
             // 
             // picBxStfLoginPg
             // 
@@ -189,13 +178,14 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.lblPassword);
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnStfLogin);
             this.panel1.Controls.Add(this.lblStfUserName);
             this.panel1.Controls.Add(this.txtBxStfPassword);
             this.panel1.Controls.Add(this.txtBxUserName);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Font = new System.Drawing.Font("Corbel", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(398, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(377, 285);
@@ -236,6 +226,20 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Chartreuse;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Corbel", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(190, 180);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(70, 28);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "ENTER";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.btnStfLogin_Click);
+            // 
             // StaffLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -257,13 +261,13 @@
             this.Load += new System.EventHandler(this.Listings_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picBxStfLoginPg)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -283,5 +287,7 @@
         private System.Windows.Forms.Label LblDate;
         private System.Windows.Forms.Label LblTime;
         private System.Windows.Forms.Timer timer1;
+        private object btnStfExit;
+        private System.Windows.Forms.Button button1;
     }
 }
