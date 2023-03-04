@@ -53,16 +53,15 @@
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.Header = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2All = new System.Windows.Forms.TableLayoutPanel();
             this.Body = new System.Windows.Forms.TableLayoutPanel();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picBxListingMainAll)).BeginInit();
             this.RightColumn.SuspendLayout();
             this.Content.SuspendLayout();
             this.ContenTable.SuspendLayout();
             this.LeftPanel.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.Header.SuspendLayout();
             this.tableLayoutPanel2All.SuspendLayout();
             this.Body.SuspendLayout();
             this.SuspendLayout();
@@ -71,10 +70,10 @@
             // 
             this.picBxListingMainAll.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picBxListingMainAll.Image = ((System.Drawing.Image)(resources.GetObject("picBxListingMainAll.Image")));
-            this.picBxListingMainAll.Location = new System.Drawing.Point(2, 2);
+            this.picBxListingMainAll.Location = new System.Drawing.Point(12, 2);
             this.picBxListingMainAll.Margin = new System.Windows.Forms.Padding(2);
             this.picBxListingMainAll.Name = "picBxListingMainAll";
-            this.picBxListingMainAll.Size = new System.Drawing.Size(185, 52);
+            this.picBxListingMainAll.Size = new System.Drawing.Size(183, 76);
             this.picBxListingMainAll.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBxListingMainAll.TabIndex = 1;
             this.picBxListingMainAll.TabStop = false;
@@ -84,12 +83,12 @@
             this.lblVehicleIDAll.AutoSize = true;
             this.lblVehicleIDAll.BackColor = System.Drawing.Color.LimeGreen;
             this.lblVehicleIDAll.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblVehicleIDAll.Font = new System.Drawing.Font("Bernard MT Condensed", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVehicleIDAll.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVehicleIDAll.ForeColor = System.Drawing.Color.Black;
             this.lblVehicleIDAll.Location = new System.Drawing.Point(0, 0);
             this.lblVehicleIDAll.Margin = new System.Windows.Forms.Padding(0);
             this.lblVehicleIDAll.Name = "lblVehicleIDAll";
-            this.lblVehicleIDAll.Size = new System.Drawing.Size(153, 27);
+            this.lblVehicleIDAll.Size = new System.Drawing.Size(153, 26);
             this.lblVehicleIDAll.TabIndex = 2;
             this.lblVehicleIDAll.Text = "Vehicle ID";
             this.lblVehicleIDAll.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -99,12 +98,12 @@
             this.lblMakeAll.AutoSize = true;
             this.lblMakeAll.BackColor = System.Drawing.Color.LimeGreen;
             this.lblMakeAll.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblMakeAll.Font = new System.Drawing.Font("Bernard MT Condensed", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMakeAll.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMakeAll.ForeColor = System.Drawing.Color.Black;
             this.lblMakeAll.Location = new System.Drawing.Point(153, 0);
             this.lblMakeAll.Margin = new System.Windows.Forms.Padding(0);
             this.lblMakeAll.Name = "lblMakeAll";
-            this.lblMakeAll.Size = new System.Drawing.Size(153, 27);
+            this.lblMakeAll.Size = new System.Drawing.Size(153, 26);
             this.lblMakeAll.TabIndex = 4;
             this.lblMakeAll.Text = "Make";
             this.lblMakeAll.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -114,12 +113,12 @@
             this.lblModelAll.AutoSize = true;
             this.lblModelAll.BackColor = System.Drawing.Color.LimeGreen;
             this.lblModelAll.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblModelAll.Font = new System.Drawing.Font("Bernard MT Condensed", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblModelAll.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblModelAll.ForeColor = System.Drawing.Color.Black;
             this.lblModelAll.Location = new System.Drawing.Point(306, 0);
             this.lblModelAll.Margin = new System.Windows.Forms.Padding(0);
             this.lblModelAll.Name = "lblModelAll";
-            this.lblModelAll.Size = new System.Drawing.Size(153, 27);
+            this.lblModelAll.Size = new System.Drawing.Size(153, 26);
             this.lblModelAll.TabIndex = 5;
             this.lblModelAll.Text = "Model";
             this.lblModelAll.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -129,12 +128,12 @@
             this.lblVINAll.AutoSize = true;
             this.lblVINAll.BackColor = System.Drawing.Color.LimeGreen;
             this.lblVINAll.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblVINAll.Font = new System.Drawing.Font("Bernard MT Condensed", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVINAll.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVINAll.ForeColor = System.Drawing.Color.Black;
             this.lblVINAll.Location = new System.Drawing.Point(459, 0);
             this.lblVINAll.Margin = new System.Windows.Forms.Padding(0);
             this.lblVINAll.Name = "lblVINAll";
-            this.lblVINAll.Size = new System.Drawing.Size(153, 27);
+            this.lblVINAll.Size = new System.Drawing.Size(153, 26);
             this.lblVINAll.TabIndex = 6;
             this.lblVINAll.Text = "VIN";
             this.lblVINAll.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -144,12 +143,12 @@
             this.lblYearAll.AutoSize = true;
             this.lblYearAll.BackColor = System.Drawing.Color.LimeGreen;
             this.lblYearAll.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblYearAll.Font = new System.Drawing.Font("Bernard MT Condensed", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblYearAll.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblYearAll.ForeColor = System.Drawing.Color.Black;
             this.lblYearAll.Location = new System.Drawing.Point(612, 0);
             this.lblYearAll.Margin = new System.Windows.Forms.Padding(0);
             this.lblYearAll.Name = "lblYearAll";
-            this.lblYearAll.Size = new System.Drawing.Size(153, 27);
+            this.lblYearAll.Size = new System.Drawing.Size(153, 26);
             this.lblYearAll.TabIndex = 7;
             this.lblYearAll.Text = "Year";
             this.lblYearAll.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -183,17 +182,17 @@
             this.RightColumn.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.RightColumn.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.RightColumn.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.RightColumn.Size = new System.Drawing.Size(765, 558);
+            this.RightColumn.Size = new System.Drawing.Size(765, 540);
             this.RightColumn.TabIndex = 8;
             // 
             // Content
             // 
             this.Content.Controls.Add(this.ContenTable);
             this.Content.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Content.Location = new System.Drawing.Point(2, 64);
+            this.Content.Location = new System.Drawing.Point(2, 82);
             this.Content.Margin = new System.Windows.Forms.Padding(2);
             this.Content.Name = "Content";
-            this.Content.Size = new System.Drawing.Size(965, 558);
+            this.Content.Size = new System.Drawing.Size(965, 540);
             this.Content.TabIndex = 9;
             this.Content.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1All_Paint);
             // 
@@ -209,7 +208,7 @@
             this.ContenTable.Name = "ContenTable";
             this.ContenTable.RowCount = 1;
             this.ContenTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.ContenTable.Size = new System.Drawing.Size(965, 558);
+            this.ContenTable.Size = new System.Drawing.Size(965, 540);
             this.ContenTable.TabIndex = 9;
             // 
             // LeftPanel
@@ -220,7 +219,7 @@
             this.LeftPanel.Location = new System.Drawing.Point(0, 0);
             this.LeftPanel.Margin = new System.Windows.Forms.Padding(0);
             this.LeftPanel.Name = "LeftPanel";
-            this.LeftPanel.Size = new System.Drawing.Size(200, 558);
+            this.LeftPanel.Size = new System.Drawing.Size(200, 540);
             this.LeftPanel.TabIndex = 9;
             // 
             // tableLayoutPanel1
@@ -261,17 +260,17 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(200, 558);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(200, 540);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Bernard MT Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(43, 444);
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(43, 435);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(46, 19);
+            this.label7.Size = new System.Drawing.Size(60, 20);
             this.label7.TabIndex = 0;
             this.label7.Text = "label1";
             // 
@@ -279,10 +278,10 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Bernard MT Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(43, 374);
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(43, 365);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 19);
+            this.label6.Size = new System.Drawing.Size(46, 20);
             this.label6.TabIndex = 0;
             this.label6.Text = "Fuel";
             // 
@@ -290,10 +289,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Bernard MT Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(43, 304);
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(43, 295);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 19);
+            this.label5.Size = new System.Drawing.Size(100, 20);
             this.label5.TabIndex = 0;
             this.label5.Text = "Body Type";
             // 
@@ -301,10 +300,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Bernard MT Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(43, 234);
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(43, 225);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 19);
+            this.label4.Size = new System.Drawing.Size(49, 20);
             this.label4.TabIndex = 0;
             this.label4.Text = "Year";
             // 
@@ -312,10 +311,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Bernard MT Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(43, 164);
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(43, 155);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 19);
+            this.label3.Size = new System.Drawing.Size(71, 20);
             this.label3.TabIndex = 0;
             this.label3.Text = "Models";
             // 
@@ -323,20 +322,20 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Bernard MT Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(43, 94);
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(43, 85);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 19);
+            this.label2.Size = new System.Drawing.Size(59, 20);
             this.label2.TabIndex = 0;
             this.label2.Text = "Make";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Bernard MT Condensed", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(43, 44);
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(43, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 26);
+            this.label1.Size = new System.Drawing.Size(80, 26);
             this.label1.TabIndex = 0;
             this.label1.Text = "Filters";
             // 
@@ -344,7 +343,7 @@
             // 
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(43, 117);
+            this.comboBox1.Location = new System.Drawing.Point(43, 108);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(137, 26);
             this.comboBox1.TabIndex = 1;
@@ -353,7 +352,7 @@
             // 
             this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(43, 187);
+            this.comboBox2.Location = new System.Drawing.Point(43, 178);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(137, 26);
             this.comboBox2.TabIndex = 1;
@@ -362,7 +361,7 @@
             // 
             this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(43, 257);
+            this.comboBox3.Location = new System.Drawing.Point(43, 248);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(137, 26);
             this.comboBox3.TabIndex = 1;
@@ -371,7 +370,7 @@
             // 
             this.comboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(43, 327);
+            this.comboBox4.Location = new System.Drawing.Point(43, 318);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(137, 26);
             this.comboBox4.TabIndex = 1;
@@ -380,7 +379,7 @@
             // 
             this.comboBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(43, 397);
+            this.comboBox5.Location = new System.Drawing.Point(43, 388);
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(137, 26);
             this.comboBox5.TabIndex = 1;
@@ -389,20 +388,10 @@
             // 
             this.comboBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(43, 467);
+            this.comboBox6.Location = new System.Drawing.Point(43, 458);
             this.comboBox6.Name = "comboBox6";
             this.comboBox6.Size = new System.Drawing.Size(137, 26);
             this.comboBox6.TabIndex = 1;
-            // 
-            // Header
-            // 
-            this.Header.BackColor = System.Drawing.Color.White;
-            this.Header.Controls.Add(this.tableLayoutPanel2All);
-            this.Header.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Header.Location = new System.Drawing.Point(3, 3);
-            this.Header.Name = "Header";
-            this.Header.Size = new System.Drawing.Size(963, 56);
-            this.Header.TabIndex = 10;
             // 
             // tableLayoutPanel2All
             // 
@@ -410,28 +399,43 @@
             this.tableLayoutPanel2All.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.73001F));
             this.tableLayoutPanel2All.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80.26999F));
             this.tableLayoutPanel2All.Controls.Add(this.picBxListingMainAll, 0, 0);
+            this.tableLayoutPanel2All.Controls.Add(this.label8, 1, 0);
             this.tableLayoutPanel2All.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2All.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel2All.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel2All.Name = "tableLayoutPanel2All";
+            this.tableLayoutPanel2All.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.tableLayoutPanel2All.RowCount = 1;
             this.tableLayoutPanel2All.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2All.Size = new System.Drawing.Size(963, 56);
+            this.tableLayoutPanel2All.Size = new System.Drawing.Size(969, 80);
             this.tableLayoutPanel2All.TabIndex = 0;
             // 
             // Body
             // 
             this.Body.ColumnCount = 1;
             this.Body.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.Body.Controls.Add(this.Header, 0, 0);
+            this.Body.Controls.Add(this.tableLayoutPanel2All, 0, 0);
             this.Body.Controls.Add(this.Content, 0, 1);
             this.Body.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Body.Location = new System.Drawing.Point(0, 0);
             this.Body.Name = "Body";
             this.Body.RowCount = 2;
-            this.Body.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.Body.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.Body.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.Body.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.Body.Size = new System.Drawing.Size(969, 624);
             this.Body.TabIndex = 11;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label8.Font = new System.Drawing.Font("Corbel", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(200, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(756, 80);
+            this.label8.TabIndex = 2;
+            this.label8.Text = "ALL VEHICLES";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ListingsMainAll
             // 
@@ -454,8 +458,8 @@
             this.LeftPanel.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            this.Header.ResumeLayout(false);
             this.tableLayoutPanel2All.ResumeLayout(false);
+            this.tableLayoutPanel2All.PerformLayout();
             this.Body.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -471,7 +475,6 @@
         private System.Windows.Forms.Label lblYearAll;
         private System.Windows.Forms.TableLayoutPanel RightColumn;
         private System.Windows.Forms.Panel Content;
-        private System.Windows.Forms.Panel Header;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2All;
         private System.Windows.Forms.TableLayoutPanel Body;
         private System.Windows.Forms.TableLayoutPanel ContenTable;
@@ -490,5 +493,6 @@
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.Label label8;
     }
 }
