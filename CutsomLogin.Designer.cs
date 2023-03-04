@@ -100,6 +100,7 @@ namespace Jamcheck
             resources.ApplyResources(this.btnExit, "btnExit");
             this.btnExit.Name = "btnExit";
             this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnLogin
             // 
@@ -107,18 +108,21 @@ namespace Jamcheck
             resources.ApplyResources(this.btnLogin, "btnLogin");
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // txtbxUsername
             // 
             this.txtbxUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.txtbxUsername, "txtbxUsername");
             this.txtbxUsername.Name = "txtbxUsername";
+            this.txtbxUsername.TextChanged += new System.EventHandler(this.txtbxUsername_TextChanged);
             // 
             // txtbxPassword
             // 
             this.txtbxPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.txtbxPassword, "txtbxPassword");
             this.txtbxPassword.Name = "txtbxPassword";
+            this.txtbxPassword.TextChanged += new System.EventHandler(this.txtbxPassword_TextChanged);
             // 
             // CustomsLoginFrm
             // 

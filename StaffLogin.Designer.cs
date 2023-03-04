@@ -75,7 +75,7 @@
             this.txtBxStfUserName.Name = "txtBxStfUserName";
             this.txtBxStfUserName.Size = new System.Drawing.Size(220, 28);
             this.txtBxStfUserName.TabIndex = 1;
-            this.txtBxStfUserName.TextChanged += new System.EventHandler(this.txtBxUserName_TextChanged);
+            this.txtBxStfUserName.TextChanged += new System.EventHandler(this.txtBxStfUserName_TextChanged);
             // 
             // lblStfUserName
             // 
