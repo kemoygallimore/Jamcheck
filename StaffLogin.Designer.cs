@@ -54,15 +54,15 @@
             // 
             // lblStaffLogin
             // 
-            this.lblStaffLogin.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblStaffLogin.AutoSize = true;
+            this.lblStaffLogin.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblStaffLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStaffLogin.Location = new System.Drawing.Point(307, 7);
+            this.lblStaffLogin.Location = new System.Drawing.Point(2, 0);
             this.lblStaffLogin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblStaffLogin.Name = "lblStaffLogin";
-            this.lblStaffLogin.Size = new System.Drawing.Size(224, 44);
+            this.lblStaffLogin.Size = new System.Drawing.Size(780, 59);
             this.lblStaffLogin.TabIndex = 0;
-            this.lblStaffLogin.Text = "Staff Log In";
+            this.lblStaffLogin.Text = "STAFF LOGIN";
             this.lblStaffLogin.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lblStaffLogin.Click += new System.EventHandler(this.lblStaffLogin_Click);
             // 
@@ -146,6 +146,7 @@
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.lblStaffLogin, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 0, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -247,7 +248,6 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(784, 461);
-            this.Controls.Add(this.lblStaffLogin);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
@@ -261,13 +261,13 @@
             this.Load += new System.EventHandler(this.Listings_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picBxStfLoginPg)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
