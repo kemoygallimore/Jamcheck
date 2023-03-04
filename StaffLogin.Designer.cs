@@ -42,8 +42,8 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.LblTime = new System.Windows.Forms.Label();
             this.LblDate = new System.Windows.Forms.Label();
+            this.LblTime = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.picBxStfLoginPg)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -69,7 +69,7 @@
             // txtBxUserName
             // 
             this.txtBxUserName.BackColor = System.Drawing.Color.White;
-            this.txtBxUserName.Location = new System.Drawing.Point(129, 60);
+            this.txtBxUserName.Location = new System.Drawing.Point(129, 90);
             this.txtBxUserName.Margin = new System.Windows.Forms.Padding(2);
             this.txtBxUserName.Name = "txtBxUserName";
             this.txtBxUserName.Size = new System.Drawing.Size(158, 20);
@@ -80,7 +80,7 @@
             // 
             this.lblStfUserName.AutoSize = true;
             this.lblStfUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStfUserName.Location = new System.Drawing.Point(20, 60);
+            this.lblStfUserName.Location = new System.Drawing.Point(20, 90);
             this.lblStfUserName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblStfUserName.Name = "lblStfUserName";
             this.lblStfUserName.Size = new System.Drawing.Size(105, 24);
@@ -92,7 +92,7 @@
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(20, 100);
+            this.lblPassword.Location = new System.Drawing.Point(20, 130);
             this.lblPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(92, 24);
@@ -103,7 +103,7 @@
             // txtBxStfPassword
             // 
             this.txtBxStfPassword.BackColor = System.Drawing.Color.White;
-            this.txtBxStfPassword.Location = new System.Drawing.Point(129, 100);
+            this.txtBxStfPassword.Location = new System.Drawing.Point(129, 130);
             this.txtBxStfPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtBxStfPassword.Name = "txtBxStfPassword";
             this.txtBxStfPassword.PasswordChar = '*';
@@ -116,7 +116,7 @@
             this.btnStfLogin.BackColor = System.Drawing.Color.Chartreuse;
             this.btnStfLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnStfLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStfLogin.Location = new System.Drawing.Point(61, 149);
+            this.btnStfLogin.Location = new System.Drawing.Point(61, 179);
             this.btnStfLogin.Margin = new System.Windows.Forms.Padding(2);
             this.btnStfLogin.Name = "btnStfLogin";
             this.btnStfLogin.Size = new System.Drawing.Size(70, 28);
@@ -130,7 +130,7 @@
             this.btnStfExit.BackColor = System.Drawing.Color.Chartreuse;
             this.btnStfExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnStfExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStfExit.Location = new System.Drawing.Point(160, 149);
+            this.btnStfExit.Location = new System.Drawing.Point(160, 179);
             this.btnStfExit.Margin = new System.Windows.Forms.Padding(2);
             this.btnStfExit.Name = "btnStfExit";
             this.btnStfExit.Size = new System.Drawing.Size(80, 28);
@@ -212,16 +212,6 @@
             this.panel2.Size = new System.Drawing.Size(778, 99);
             this.panel2.TabIndex = 9;
             // 
-            // LblTime
-            // 
-            this.LblTime.AutoSize = true;
-            this.LblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTime.Location = new System.Drawing.Point(362, 21);
-            this.LblTime.Name = "LblTime";
-            this.LblTime.Size = new System.Drawing.Size(56, 25);
-            this.LblTime.TabIndex = 0;
-            this.LblTime.Text = "Time";
-            // 
             // LblDate
             // 
             this.LblDate.AutoSize = true;
@@ -231,6 +221,16 @@
             this.LblDate.Size = new System.Drawing.Size(53, 25);
             this.LblDate.TabIndex = 1;
             this.LblDate.Text = "Date";
+            // 
+            // LblTime
+            // 
+            this.LblTime.AutoSize = true;
+            this.LblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTime.Location = new System.Drawing.Point(362, 21);
+            this.LblTime.Name = "LblTime";
+            this.LblTime.Size = new System.Drawing.Size(56, 25);
+            this.LblTime.TabIndex = 0;
+            this.LblTime.Text = "Time";
             // 
             // timer1
             // 
@@ -248,6 +248,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(800, 500);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(800, 500);
             this.Name = "StaffLogin";
