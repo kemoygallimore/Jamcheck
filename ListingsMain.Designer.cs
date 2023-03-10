@@ -39,13 +39,13 @@
             this.Header = new System.Windows.Forms.TableLayoutPanel();
             this.btnViewAll = new System.Windows.Forms.Button();
             this.Mainlayout = new System.Windows.Forms.TableLayoutPanel();
-            this.BtnExit = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.VehicleID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Make = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Model = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.VIN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Year = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BtnExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picBxListingMain)).BeginInit();
             this.ListingHeader.SuspendLayout();
             this.Header.SuspendLayout();
@@ -75,7 +75,7 @@
             this.lblVehicleID.Location = new System.Drawing.Point(2, 0);
             this.lblVehicleID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblVehicleID.Name = "lblVehicleID";
-            this.lblVehicleID.Size = new System.Drawing.Size(189, 35);
+            this.lblVehicleID.Size = new System.Drawing.Size(210, 40);
             this.lblVehicleID.TabIndex = 2;
             this.lblVehicleID.Text = "Vehicle ID";
             this.lblVehicleID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -87,10 +87,10 @@
             this.lblMake.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblMake.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMake.ForeColor = System.Drawing.Color.Black;
-            this.lblMake.Location = new System.Drawing.Point(195, 0);
+            this.lblMake.Location = new System.Drawing.Point(216, 0);
             this.lblMake.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMake.Name = "lblMake";
-            this.lblMake.Size = new System.Drawing.Size(189, 35);
+            this.lblMake.Size = new System.Drawing.Size(210, 40);
             this.lblMake.TabIndex = 4;
             this.lblMake.Text = "Make";
             this.lblMake.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -102,10 +102,10 @@
             this.lblModel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblModel.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblModel.ForeColor = System.Drawing.Color.Black;
-            this.lblModel.Location = new System.Drawing.Point(388, 0);
+            this.lblModel.Location = new System.Drawing.Point(430, 0);
             this.lblModel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblModel.Name = "lblModel";
-            this.lblModel.Size = new System.Drawing.Size(189, 35);
+            this.lblModel.Size = new System.Drawing.Size(210, 40);
             this.lblModel.TabIndex = 5;
             this.lblModel.Text = "Model";
             this.lblModel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -117,10 +117,10 @@
             this.lblVIN.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblVIN.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVIN.ForeColor = System.Drawing.Color.Black;
-            this.lblVIN.Location = new System.Drawing.Point(581, 0);
+            this.lblVIN.Location = new System.Drawing.Point(644, 0);
             this.lblVIN.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblVIN.Name = "lblVIN";
-            this.lblVIN.Size = new System.Drawing.Size(189, 35);
+            this.lblVIN.Size = new System.Drawing.Size(210, 40);
             this.lblVIN.TabIndex = 6;
             this.lblVIN.Text = "VIN";
             this.lblVIN.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -132,10 +132,10 @@
             this.lblYear.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblYear.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblYear.ForeColor = System.Drawing.Color.Black;
-            this.lblYear.Location = new System.Drawing.Point(774, 0);
+            this.lblYear.Location = new System.Drawing.Point(858, 0);
             this.lblYear.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblYear.Name = "lblYear";
-            this.lblYear.Size = new System.Drawing.Size(189, 35);
+            this.lblYear.Size = new System.Drawing.Size(211, 40);
             this.lblYear.TabIndex = 7;
             this.lblYear.Text = "Year";
             this.lblYear.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -153,12 +153,13 @@
             this.ListingHeader.Controls.Add(this.lblMake, 1, 0);
             this.ListingHeader.Controls.Add(this.lblVIN, 3, 0);
             this.ListingHeader.Controls.Add(this.lblModel, 2, 0);
-            this.ListingHeader.Location = new System.Drawing.Point(2, 82);
-            this.ListingHeader.Margin = new System.Windows.Forms.Padding(2);
+            this.ListingHeader.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ListingHeader.Location = new System.Drawing.Point(0, 80);
+            this.ListingHeader.Margin = new System.Windows.Forms.Padding(0);
             this.ListingHeader.Name = "ListingHeader";
             this.ListingHeader.RowCount = 1;
             this.ListingHeader.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.83871F));
-            this.ListingHeader.Size = new System.Drawing.Size(965, 35);
+            this.ListingHeader.Size = new System.Drawing.Size(1071, 40);
             this.ListingHeader.TabIndex = 8;
             this.ListingHeader.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
@@ -177,7 +178,7 @@
             this.Header.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
             this.Header.RowCount = 1;
             this.Header.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.Header.Size = new System.Drawing.Size(969, 80);
+            this.Header.Size = new System.Drawing.Size(1071, 80);
             this.Header.TabIndex = 0;
             // 
             // btnViewAll
@@ -186,13 +187,14 @@
             this.btnViewAll.BackColor = System.Drawing.Color.Chartreuse;
             this.btnViewAll.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnViewAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewAll.Location = new System.Drawing.Point(792, 23);
+            this.btnViewAll.Location = new System.Drawing.Point(894, 23);
             this.btnViewAll.Name = "btnViewAll";
             this.btnViewAll.Padding = new System.Windows.Forms.Padding(5);
             this.btnViewAll.Size = new System.Drawing.Size(147, 33);
             this.btnViewAll.TabIndex = 2;
             this.btnViewAll.Text = "View All Vehicles";
             this.btnViewAll.UseVisualStyleBackColor = false;
+            this.btnViewAll.Click += new System.EventHandler(this.btnViewAll_Click);
             // 
             // Mainlayout
             // 
@@ -204,36 +206,21 @@
             this.Mainlayout.Controls.Add(this.dataGridView1, 0, 2);
             this.Mainlayout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Mainlayout.Location = new System.Drawing.Point(0, 0);
+            this.Mainlayout.Margin = new System.Windows.Forms.Padding(0);
             this.Mainlayout.Name = "Mainlayout";
             this.Mainlayout.RowCount = 4;
             this.Mainlayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
             this.Mainlayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.Mainlayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.Mainlayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.Mainlayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.Mainlayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.Mainlayout.Size = new System.Drawing.Size(969, 624);
+            this.Mainlayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.Mainlayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.Mainlayout.Size = new System.Drawing.Size(1071, 619);
             this.Mainlayout.TabIndex = 11;
-            // 
-            // BtnExit
-            // 
-            this.BtnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnExit.BackColor = System.Drawing.Color.LimeGreen;
-            this.BtnExit.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.BtnExit.FlatAppearance.BorderSize = 2;
-            this.BtnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
-            this.BtnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnExit.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnExit.Location = new System.Drawing.Point(823, 607);
-            this.BtnExit.Margin = new System.Windows.Forms.Padding(3, 3, 40, 3);
-            this.BtnExit.Name = "BtnExit";
-            this.BtnExit.Size = new System.Drawing.Size(106, 14);
-            this.BtnExit.TabIndex = 11;
-            this.BtnExit.Text = "EXIT";
-            this.BtnExit.UseVisualStyleBackColor = false;
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.ColumnHeadersVisible = false;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -248,7 +235,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 60;
             this.Mainlayout.SetRowSpan(this.dataGridView1, 2);
-            this.dataGridView1.Size = new System.Drawing.Size(969, 484);
+            this.dataGridView1.Size = new System.Drawing.Size(1071, 449);
             this.dataGridView1.TabIndex = 12;
             // 
             // VehicleID
@@ -277,19 +264,37 @@
             this.Year.HeaderText = "";
             this.Year.Name = "Year";
             // 
+            // BtnExit
+            // 
+            this.BtnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnExit.BackColor = System.Drawing.Color.LimeGreen;
+            this.BtnExit.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.BtnExit.FlatAppearance.BorderSize = 2;
+            this.BtnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
+            this.BtnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnExit.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnExit.Location = new System.Drawing.Point(925, 572);
+            this.BtnExit.Margin = new System.Windows.Forms.Padding(3, 3, 40, 3);
+            this.BtnExit.Name = "BtnExit";
+            this.BtnExit.Size = new System.Drawing.Size(106, 35);
+            this.BtnExit.TabIndex = 11;
+            this.BtnExit.Text = "EXIT";
+            this.BtnExit.UseVisualStyleBackColor = false;
+            this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
+            // 
             // ListingsMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(969, 624);
+            this.ClientSize = new System.Drawing.Size(1071, 619);
             this.Controls.Add(this.Mainlayout);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ListingsMain";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Recent Vehicles";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ListingsMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picBxListingMain)).EndInit();
             this.ListingHeader.ResumeLayout(false);
@@ -313,12 +318,12 @@
         private System.Windows.Forms.TableLayoutPanel Header;
         private System.Windows.Forms.TableLayoutPanel Mainlayout;
         private System.Windows.Forms.Button btnViewAll;
-        private System.Windows.Forms.Button BtnExit;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn VehicleID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Make;
         private System.Windows.Forms.DataGridViewTextBoxColumn Model;
         private System.Windows.Forms.DataGridViewTextBoxColumn VIN;
         private System.Windows.Forms.DataGridViewTextBoxColumn Year;
+        private System.Windows.Forms.Button BtnExit;
     }
 }

@@ -13,6 +13,7 @@ namespace Jamcheck
 {
     public partial class FrmAddVehicle : Form
     {
+        Parentform Parent;
         SqlConnection sql = new SqlConnection(@"data source=.\sqlexpress; initial catalog=JamCheckDB; integrated security = true");
         SqlCommand add;
         public FrmAddVehicle()
@@ -80,6 +81,11 @@ namespace Jamcheck
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();            
         }
     }
 }

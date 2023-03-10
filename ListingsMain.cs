@@ -26,5 +26,21 @@ namespace Jamcheck
         {
 
         }
+
+        private void BtnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnViewAll_Click(object sender, EventArgs e)
+        {
+            
+            ListingsMainAll listingsAll = new ListingsMainAll();
+            listingsAll.MdiParent = this.MdiParent;
+            listingsAll.Dock = DockStyle.Fill;
+            listingsAll.Show();
+            this.Close();
+        }
+
     }
 }
