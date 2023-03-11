@@ -61,17 +61,38 @@
     <Compile Include="AddVehicleForm.Designer.cs">
       <DependentUpon>AddVehicleForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="BodyType.cs">
-      <DependentUpon>JamCheckDB.tt</DependentUpon>
-    </Compile>
     <Compile Include="CarDealership.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CarDealership.Designer.cs">
       <DependentUpon>CarDealership.cs</DependentUpon>
     </Compile>
-    <Compile Include="CustomStaff.cs">
-      <DependentUpon>JamCheckDB.tt</DependentUpon>
+    <Compile Include="jamdatabase.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>jamdatabase.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="jamdatabase.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>jamdatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="jamdatabase.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>jamdatabase.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ManageUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageUsers.Designer.cs">
+      <DependentUpon>ManageUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Org.cs">
+      <DependentUpon>jamdatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Role.cs">
+      <DependentUpon>jamdatabase.tt</DependentUpon>
     </Compile>
     <Compile Include="test.cs">
       <SubType>Form</SubType>
@@ -85,21 +106,6 @@
     <Compile Include="JamCheck.Designer.cs">
       <DependentUpon>JamCheck.cs</DependentUpon>
     </Compile>
-    <Compile Include="JamCheckDB.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>JamCheckDB.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="JamCheckDB.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>JamCheckDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="JamCheckDB.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>JamCheckDB.edmx</DependentUpon>
-    </Compile>
     <Compile Include="CutsomLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,20 +118,11 @@
     <Compile Include="AllListing.Designer.cs">
       <DependentUpon>AllListing.cs</DependentUpon>
     </Compile>
-    <Compile Include="JamCheckStaff.cs">
-      <DependentUpon>JamCheckDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Make.cs">
-      <DependentUpon>JamCheckDB.tt</DependentUpon>
-    </Compile>
     <Compile Include="Parentform.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Parentform.Designer.cs">
       <DependentUpon>Parentform.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Parish.cs">
-      <DependentUpon>JamCheckDB.tt</DependentUpon>
     </Compile>
     <Compile Include="StaffLogin.cs">
       <SubType>Form</SubType>
@@ -147,14 +144,8 @@
     <Compile Include="testing.Designer.cs">
       <DependentUpon>testing.cs</DependentUpon>
     </Compile>
-    <Compile Include="Transtype.cs">
-      <DependentUpon>JamCheckDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="UsedCar.cs">
-      <DependentUpon>JamCheckDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="UsedCarDealer.cs">
-      <DependentUpon>JamCheckDB.tt</DependentUpon>
+    <Compile Include="user.cs">
+      <DependentUpon>jamdatabase.tt</DependentUpon>
     </Compile>
     <Compile Include="VehicleDetailsForm.cs">
       <SubType>Form</SubType>
@@ -176,6 +167,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AllListing.resx">
       <DependentUpon>AllListing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageUsers.resx">
+      <DependentUpon>ManageUsers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Parentform.resx">
       <DependentUpon>Parentform.cs</DependentUpon>
@@ -202,12 +196,12 @@
     <EmbeddedResource Include="VehicleDetailsForm.resx">
       <DependentUpon>VehicleDetailsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EntityDeploy Include="JamCheckDB.edmx">
+    <EntityDeploy Include="jamdatabase.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>JamCheckDB.Designer.cs</LastGenOutput>
+      <LastGenOutput>jamdatabase.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="JamCheckDB.edmx.diagram">
-      <DependentUpon>JamCheckDB.edmx</DependentUpon>
+    <None Include="jamdatabase.edmx.diagram">
+      <DependentUpon>jamdatabase.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -230,19 +224,19 @@
     <None Include="Resources\Jamcheck logo transparent1.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="JamCheckDB.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>JamCheckDB.Context.cs</LastGenOutput>
-      <DependentUpon>JamCheckDB.edmx</DependentUpon>
-    </Content>
-    <Content Include="JamCheckDB.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>JamCheckDB.edmx</DependentUpon>
-      <LastGenOutput>JamCheckDB.cs</LastGenOutput>
-    </Content>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Content Include="jamdatabase.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>jamdatabase.edmx</DependentUpon>
+      <LastGenOutput>jamdatabase.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="jamdatabase.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>jamdatabase.edmx</DependentUpon>
+      <LastGenOutput>jamdatabase.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

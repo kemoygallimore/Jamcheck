@@ -12,11 +12,18 @@ namespace Jamcheck
     using System;
     using System.Collections.Generic;
     
-    public partial class JamCheckStaff
+    public partial class Org
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Org()
+        {
+            this.users = new HashSet<user>();
+        }
+    
         public int id { get; set; }
-        public string name { get; set; }
-        public string email { get; set; }
-        public string password { get; set; }
+        public string company { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<user> users { get; set; }
     }
 }

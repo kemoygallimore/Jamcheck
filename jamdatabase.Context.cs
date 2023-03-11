@@ -13,10 +13,10 @@ namespace Jamcheck
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class JamCheckDB : DbContext
+    public partial class jampracticeEntities : DbContext
     {
-        public JamCheckDB()
-            : base("name=JamCheckDB")
+        public jampracticeEntities()
+            : base("name=jampracticeEntities")
         {
         }
     
@@ -25,13 +25,8 @@ namespace Jamcheck
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<CustomStaff> CustomStaffs { get; set; }
-        public virtual DbSet<JamCheckStaff> JamCheckStaffs { get; set; }
-        public virtual DbSet<BodyType> BodyTypes { get; set; }
-        public virtual DbSet<Make> Makes { get; set; }
-        public virtual DbSet<Parish> Parishes { get; set; }
-        public virtual DbSet<Transtype> Transtypes { get; set; }
-        public virtual DbSet<UsedCarDealer> UsedCarDealers { get; set; }
-        public virtual DbSet<UsedCar> UsedCars { get; set; }
+        public virtual DbSet<Org> Orgs { get; set; }
+        public virtual DbSet<Role> Roles { get; set; }
+        public virtual DbSet<user> users { get; set; }
     }
 }

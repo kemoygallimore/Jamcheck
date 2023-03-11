@@ -32,15 +32,15 @@ namespace Jamcheck
             this.MainMenu = new System.Windows.Forms.MenuStrip();
             this.addVehiclesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageVehiclesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.recentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.allVehiclesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dealerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manufacturerAndBodytypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manageUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.manageUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.manufacturerAndBodytypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.recentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.allVehiclesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,6 +76,20 @@ namespace Jamcheck
             this.manageVehiclesToolStripMenuItem.Size = new System.Drawing.Size(107, 20);
             this.manageVehiclesToolStripMenuItem.Text = "Manage Vehicles";
             // 
+            // recentToolStripMenuItem
+            // 
+            this.recentToolStripMenuItem.Name = "recentToolStripMenuItem";
+            this.recentToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.recentToolStripMenuItem.Text = " Recent Vehicles";
+            this.recentToolStripMenuItem.Click += new System.EventHandler(this.recentToolStripMenuItem_Click);
+            // 
+            // allVehiclesToolStripMenuItem
+            // 
+            this.allVehiclesToolStripMenuItem.Name = "allVehiclesToolStripMenuItem";
+            this.allVehiclesToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.allVehiclesToolStripMenuItem.Text = "All Vehicles";
+            this.allVehiclesToolStripMenuItem.Click += new System.EventHandler(this.allVehiclesToolStripMenuItem_Click);
+            // 
             // dealerToolStripMenuItem
             // 
             this.dealerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -88,15 +102,28 @@ namespace Jamcheck
             // addToolStripMenuItem
             // 
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.addToolStripMenuItem.Text = "Add";
             this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
             // 
             // manageToolStripMenuItem
             // 
             this.manageToolStripMenuItem.Name = "manageToolStripMenuItem";
-            this.manageToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.manageToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.manageToolStripMenuItem.Text = "Manage";
+            // 
+            // manufacturerAndBodytypeToolStripMenuItem
+            // 
+            this.manufacturerAndBodytypeToolStripMenuItem.Name = "manufacturerAndBodytypeToolStripMenuItem";
+            this.manufacturerAndBodytypeToolStripMenuItem.Size = new System.Drawing.Size(167, 20);
+            this.manufacturerAndBodytypeToolStripMenuItem.Text = "Manufacturer and Bodytype";
+            // 
+            // manageUsersToolStripMenuItem
+            // 
+            this.manageUsersToolStripMenuItem.Name = "manageUsersToolStripMenuItem";
+            this.manageUsersToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
+            this.manageUsersToolStripMenuItem.Text = "Manage Users";
+            this.manageUsersToolStripMenuItem.Click += new System.EventHandler(this.manageUsersToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -110,32 +137,6 @@ namespace Jamcheck
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
-            // 
-            // manageUsersToolStripMenuItem
-            // 
-            this.manageUsersToolStripMenuItem.Name = "manageUsersToolStripMenuItem";
-            this.manageUsersToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
-            this.manageUsersToolStripMenuItem.Text = "Manage Users";
-            // 
-            // manufacturerAndBodytypeToolStripMenuItem
-            // 
-            this.manufacturerAndBodytypeToolStripMenuItem.Name = "manufacturerAndBodytypeToolStripMenuItem";
-            this.manufacturerAndBodytypeToolStripMenuItem.Size = new System.Drawing.Size(167, 20);
-            this.manufacturerAndBodytypeToolStripMenuItem.Text = "Manufacturer and Bodytype";
-            // 
-            // recentToolStripMenuItem
-            // 
-            this.recentToolStripMenuItem.Name = "recentToolStripMenuItem";
-            this.recentToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.recentToolStripMenuItem.Text = " Recent Vehicles";
-            this.recentToolStripMenuItem.Click += new System.EventHandler(this.recentToolStripMenuItem_Click);
-            // 
-            // allVehiclesToolStripMenuItem
-            // 
-            this.allVehiclesToolStripMenuItem.Name = "allVehiclesToolStripMenuItem";
-            this.allVehiclesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.allVehiclesToolStripMenuItem.Text = "All Vehicles";
-            this.allVehiclesToolStripMenuItem.Click += new System.EventHandler(this.allVehiclesToolStripMenuItem_Click);
             // 
             // Parentform
             // 

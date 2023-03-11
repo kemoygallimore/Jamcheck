@@ -12,18 +12,18 @@ namespace Jamcheck
     using System;
     using System.Collections.Generic;
     
-    public partial class BodyType
+    public partial class Role
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public BodyType()
+        public Role()
         {
-            this.UsedCars = new HashSet<UsedCar>();
+            this.users = new HashSet<user>();
         }
     
         public int id { get; set; }
-        public string type { get; set; }
+        public string RoleType { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<UsedCar> UsedCars { get; set; }
+        public virtual ICollection<user> users { get; set; }
     }
 }

@@ -66,6 +66,14 @@ namespace Jamcheck
             carDealership.Show();
         }
 
+        private void manageUsersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ManageUsers manageUsers = new ManageUsers();
+            manageUsers.MdiParent = this;
+            manageUsers.Dock = DockStyle.Fill;
+            manageUsers.Show();
+        }
+
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();

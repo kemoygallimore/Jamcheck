@@ -12,11 +12,11 @@ namespace Jamcheck
 {
     public partial class CustomsLoginFrm : Form
     {
-        private readonly JamCheckDB jamCheckDB;
+        
         public CustomsLoginFrm()
         {
             InitializeComponent();
-            jamCheckDB = new JamCheckDB();
+           
         }
 
         private void FrmJamcheckLogin_FormClosed(object sender, FormClosedEventArgs e)
