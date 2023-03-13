@@ -128,9 +128,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Jamcheck.Properties.Resources.Jamcheck_logo_transparent;
-            this.pictureBox1.Location = new System.Drawing.Point(8, 84);
+            this.pictureBox1.Location = new System.Drawing.Point(8, 118);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(363, 199);
+            this.pictureBox1.Size = new System.Drawing.Size(363, 165);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -144,7 +145,7 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "VEHICLE ADD FORM";
             // 
-            // Form3
+            // CustomVehicleAddForm
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -152,7 +153,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "Form3";
+            this.Name = "CustomVehicleAddForm";
             this.Text = "VehicleAddForm";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
