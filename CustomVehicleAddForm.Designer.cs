@@ -1,6 +1,6 @@
 ﻿namespace Jamcheck
 {
-    partial class Form3
+    partial class CustomVehicleAddForm
     {
         /// <summary>
         /// Required designer variable.

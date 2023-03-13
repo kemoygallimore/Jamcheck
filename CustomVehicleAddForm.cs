@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Jamcheck
 {
-    public partial class Form3 : Form
+    public partial class CustomVehicleAddForm : Form
     {
-        public Form3()
+        public CustomVehicleAddForm()
         {
             InitializeComponent();
         }
