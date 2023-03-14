@@ -47,37 +47,78 @@ namespace Jamcheck
         {
             var fname = txtbxFname.Text;
             var lname = txtbxLname.Text;
-            var email = txtbxUsername.Text;
+            var email = txtbxEmail.Text;
             var username = txtbxUsername.Text;
+            var password = txtbxPassword.Text;
             var org = combxOrg.Text;
             var role = combxRole.Text;
+            var error = false;
+            var ErrorMessage = "Error: ";
 
-            if(Convert.ToString(role)=="Choose a role")
+            /*if(Convert.ToString(role)=="Choose a role")
             {
                 MessageBox.Show("Please choose a role");
-            }
-            else
+            }*/
+            /*if (!email.Contains('@'))
             {
-                MessageBox.Show($"Name: {fname} {lname}" +
-                $"\nEmail: {email}" +
-                $"\nUsername: {username}" +
-                $"\nCompany: {org} " +
-                $"\nRole: {role}\n");
+                MessageBox.Show("invalid email address");
+            }*/
+            for (int i = 0; i < password.Length; i++)
+            {
+                if (!char.IsLetterOrDigit(password[i]))
+                {
+                    MessageBox.Show("password should contain special characters");
+                }
+                else
+                {
+                    MessageBox.Show($"Name: {fname} {lname}" +
+                    $"\nEmail: {email}" +
+                    $"\nUsername: {username}" +
+                    $"\nCompany: {org} " +
+                    $"\nRole: {role}\n");
 
-                user users = new user();
-                users.fname = fname;
-                users.lname = lname;
-                users.email = email;
-                users.username = username;
-                users.companyid = Convert.ToInt32(combxOrg.SelectedValue);
-                users.roletypeid = Convert.ToInt32(combxRole.SelectedValue);
+                    /*user users = new user();
+                    users.fname = fname;
+                    users.lname = lname;
+                    users.email = email;
+                    users.username = username;
+                    users.companyid = Convert.ToInt32(combxOrg.SelectedValue);
+                    users.roletypeid = Convert.ToInt32(combxRole.SelectedValue);
 
-                jamdb.users.Add(users);
-                jamdb.SaveChanges();
+                    jamdb.users.Add(users);
+                    jamdb.SaveChanges();*/
+                }
             }
 
-            
+            try
+            {
+                if(Convert.ToString(role)=="Choose a role")
+                {
+                    error = true;
+                    ErrorMessage+="Please choose a role\n\r";
+                }
+                if (!email.Contains('@'))
+                {
+                    error = true;
+                    ErrorMessage += "invalid email address\n\r";
+                }
 
+                if (!error)
+                {
+                    MessageBox.Show($"Name: {fname} {lname}" +
+                    $"\nEmail: {email}" +
+                    $"\nUsername: {username}" +
+                    $"\nCompany: {org} " +
+                    $"\nRole: {role}\n");
+                }
+                else { MessageBox.Show(ErrorMessage); }
+            }
+            catch (Exception displayerror)
+            {
+                MessageBox.Show(displayerror.Message);
+               //throw;
+            }
+        
         }
 
         private void combxRole_SelectedIndexChanged(object sender, EventArgs e)
@@ -112,11 +153,31 @@ namespace Jamcheck
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+
+        private void txtbxPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void seepassword_Click(object sender, EventArgs e)
+        {
+            if(seepassword.BackColor==Color.LightGray)
+            {
+                seepassword.BackColor = Color.White;
+                txtbxPassword.PasswordChar = 'v';
+            }
+            else
+            {
+                seepassword.BackColor = Color.LightGray;
+                txtbxPassword.PasswordChar = '*';
+            }
 
         }
     }

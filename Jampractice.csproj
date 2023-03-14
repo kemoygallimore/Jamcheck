@@ -232,11 +232,13 @@
       <DependentUpon>jamdatabase.edmx</DependentUpon>
       <LastGenOutput>jamdatabase.Context.cs</LastGenOutput>
     </Content>
+    <Content Include="jamdatabase.edmx.sql" />
     <Content Include="jamdatabase.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>jamdatabase.edmx</DependentUpon>
       <LastGenOutput>jamdatabase.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\eye icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
