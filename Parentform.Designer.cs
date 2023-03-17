@@ -117,6 +117,7 @@ namespace Jamcheck
             this.manufacturerAndBodytypeToolStripMenuItem.Name = "manufacturerAndBodytypeToolStripMenuItem";
             this.manufacturerAndBodytypeToolStripMenuItem.Size = new System.Drawing.Size(167, 20);
             this.manufacturerAndBodytypeToolStripMenuItem.Text = "Manufacturer and Bodytype";
+            this.manufacturerAndBodytypeToolStripMenuItem.Click += new System.EventHandler(this.manufacturerAndBodytypeToolStripMenuItem_Click);
             // 
             // manageUsersToolStripMenuItem
             // 

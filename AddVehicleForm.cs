@@ -87,5 +87,30 @@ namespace Jamcheck
         {
             this.Close();            
         }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void rbtnAuto_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rbtnManual_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rbtnCVT_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

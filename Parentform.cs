@@ -78,5 +78,13 @@ namespace Jamcheck
         {
             this.Close();
         }
+
+        private void manufacturerAndBodytypeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BodyTypeAndMfr bodyTypeAndMfr = new BodyTypeAndMfr();
+            bodyTypeAndMfr.MdiParent = this;
+            bodyTypeAndMfr.Dock = DockStyle.Fill;
+            bodyTypeAndMfr.Show();
+        }
     }
 }

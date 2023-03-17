@@ -67,11 +67,11 @@
     <Compile Include="CarDealership.Designer.cs">
       <DependentUpon>CarDealership.cs</DependentUpon>
     </Compile>
-    <Compile Include="CustomVehicleAddForm.cs">
+    <Compile Include="BodyTypeAndMfr.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CustomVehicleAddForm.Designer.cs">
-      <DependentUpon>CustomVehicleAddForm.cs</DependentUpon>
+    <Compile Include="BodyTypeAndMfr.Designer.cs">
+      <DependentUpon>BodyTypeAndMfr.cs</DependentUpon>
     </Compile>
     <Compile Include="MenuStrip.cs">
       <SubType>Form</SubType>
@@ -171,8 +171,8 @@
     <EmbeddedResource Include="CarDealership.resx">
       <DependentUpon>CarDealership.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CustomVehicleAddForm.resx">
-      <DependentUpon>CustomVehicleAddForm.cs</DependentUpon>
+    <EmbeddedResource Include="BodyTypeAndMfr.resx">
+      <DependentUpon>BodyTypeAndMfr.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuStrip.resx">
       <DependentUpon>MenuStrip.cs</DependentUpon>
