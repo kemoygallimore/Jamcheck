@@ -22,22 +22,22 @@ namespace Jamcheck
         private void ManageUsers_Load(object sender, EventArgs e)
         {
             //call a list of items from the the Roles Table to a variable
-            var roles= jamdb.Roles.ToList();
+            //var roles= jamdb.Roles.ToList();
             //the column roletype will display the names
             combxRole.DisplayMember = "roletype";
             //this column is for the primary key
-            combxRole.ValueMember = "id";
+           // combxRole.ValueMember = "id";
             //This is the source that was queryed from above
-            combxRole.DataSource = roles;
+            //combxRole.DataSource = roles;
 
             //query the database for a list of items from the orgs table
-            var com = jamdb.Orgs.ToList();
+            //var com = jamdb.Orgs.ToList();
             //assign the items to the display of the combobox
-            combxOrg.DisplayMember = "company";
+            //combxOrg.DisplayMember = "company";
             //assign the items to the respeective id
-            combxOrg.ValueMember = "id";
+            //combxOrg.ValueMember = "id";
             //call the source of the list which was referenced above
-            combxOrg.DataSource = com;
+            //combxOrg.DataSource = com;
 
             //dataGridView1 = jamdb.
                        

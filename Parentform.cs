@@ -19,20 +19,7 @@ namespace Jamcheck
             this.BackgroundImage = Properties.Resources.Jamcheck_logo_transparent;
         }
 
-        private void JamcheckMenu_Click(object sender, EventArgs e)
-        {
-            CustomsLoginFrm customslogin = new CustomsLoginFrm();
-            customslogin.MdiParent = this;
-            customslogin.Dock = DockStyle.Fill;
-            customslogin.Show();                      
-        }
-
-        private void CustomsMenu_Click(object sender, EventArgs e)
-        {
-            FrmTest frmTest = new FrmTest();
-            frmTest.MdiParent = this;
-            frmTest.Show();
-        }
+      
 
         private void addVehiclesToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -58,13 +45,7 @@ namespace Jamcheck
             listingsAll.Show();
         }
 
-        private void addToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            CarDealership carDealership = new CarDealership();
-            carDealership.MdiParent = this;
-            carDealership.Dock = DockStyle.Fill;
-            carDealership.Show();
-        }
+        
 
         private void manageUsersToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -74,17 +55,25 @@ namespace Jamcheck
             manageUsers.Show();
         }
 
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void manufacturerAndBodytypeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             BodyTypeAndMfr bodyTypeAndMfr = new BodyTypeAndMfr();
             bodyTypeAndMfr.MdiParent = this;
             bodyTypeAndMfr.Dock = DockStyle.Fill;
             bodyTypeAndMfr.Show();
+        }
+
+        private void exitToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void dealerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CarDealership carDealership = new CarDealership();
+            carDealership.MdiParent = this;
+            carDealership.Dock = DockStyle.Fill;
+            carDealership.Show();
         }
     }
 }
