@@ -56,6 +56,9 @@ namespace Jamcheck
             this.combxRole = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.BtnAdd = new System.Windows.Forms.Button();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.txtbxPassword = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.windowTable.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.headertable.SuspendLayout();
@@ -67,6 +70,7 @@ namespace Jamcheck
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // windowTable
@@ -174,17 +178,18 @@ namespace Jamcheck
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 4;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.002F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33556F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.66245F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.12903F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.69355F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.85484F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.16129F));
             this.tableLayoutPanel1.Controls.Add(this.panel3, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel4, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.panel6, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.panel5, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.panel1, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.BtnAdd, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.panel1, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panel6, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.panel5, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panel7, 1, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 120);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
@@ -192,6 +197,7 @@ namespace Jamcheck
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 62F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 78F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1240, 120);
             this.tableLayoutPanel1.TabIndex = 16;
             // 
@@ -203,15 +209,15 @@ namespace Jamcheck
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(312, 62);
+            this.panel3.Size = new System.Drawing.Size(262, 62);
             this.panel3.TabIndex = 3;
             // 
             // txtbxFname
             // 
             this.txtbxFname.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxFname.Location = new System.Drawing.Point(40, 20);
+            this.txtbxFname.Location = new System.Drawing.Point(20, 20);
             this.txtbxFname.Name = "txtbxFname";
-            this.txtbxFname.Size = new System.Drawing.Size(240, 29);
+            this.txtbxFname.Size = new System.Drawing.Size(180, 29);
             this.txtbxFname.TabIndex = 1;
             this.txtbxFname.TextChanged += new System.EventHandler(this.txtbxFname_TextChanged);
             // 
@@ -230,18 +236,18 @@ namespace Jamcheck
             this.panel4.Controls.Add(this.txtbxUsername);
             this.panel4.Controls.Add(this.label29);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(312, 0);
+            this.panel4.Location = new System.Drawing.Point(262, 0);
             this.panel4.Margin = new System.Windows.Forms.Padding(0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(346, 62);
+            this.panel4.Size = new System.Drawing.Size(331, 62);
             this.panel4.TabIndex = 3;
             // 
             // txtbxUsername
             // 
             this.txtbxUsername.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxUsername.Location = new System.Drawing.Point(40, 20);
+            this.txtbxUsername.Location = new System.Drawing.Point(20, 20);
             this.txtbxUsername.Name = "txtbxUsername";
-            this.txtbxUsername.Size = new System.Drawing.Size(280, 29);
+            this.txtbxUsername.Size = new System.Drawing.Size(240, 29);
             this.txtbxUsername.TabIndex = 3;
             this.txtbxUsername.TextChanged += new System.EventHandler(this.txtbxUsername_TextChanged);
             // 
@@ -259,18 +265,17 @@ namespace Jamcheck
             // 
             this.panel6.Controls.Add(this.combxOrg);
             this.panel6.Controls.Add(this.label37);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(658, 0);
+            this.panel6.Location = new System.Drawing.Point(593, 62);
             this.panel6.Margin = new System.Windows.Forms.Padding(0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(381, 62);
+            this.panel6.Size = new System.Drawing.Size(333, 62);
             this.panel6.TabIndex = 3;
             // 
             // combxOrg
             // 
             this.combxOrg.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.combxOrg.FormattingEnabled = true;
-            this.combxOrg.Location = new System.Drawing.Point(40, 20);
+            this.combxOrg.Location = new System.Drawing.Point(20, 20);
             this.combxOrg.Name = "combxOrg";
             this.combxOrg.Size = new System.Drawing.Size(260, 29);
             this.combxOrg.TabIndex = 5;
@@ -294,15 +299,15 @@ namespace Jamcheck
             this.panel2.Location = new System.Drawing.Point(0, 62);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(312, 78);
+            this.panel2.Size = new System.Drawing.Size(262, 78);
             this.panel2.TabIndex = 2;
             // 
             // txtbxLname
             // 
             this.txtbxLname.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxLname.Location = new System.Drawing.Point(40, 20);
+            this.txtbxLname.Location = new System.Drawing.Point(20, 20);
             this.txtbxLname.Name = "txtbxLname";
-            this.txtbxLname.Size = new System.Drawing.Size(240, 29);
+            this.txtbxLname.Size = new System.Drawing.Size(180, 29);
             this.txtbxLname.TabIndex = 2;
             this.txtbxLname.TextChanged += new System.EventHandler(this.txtbxLname_TextChanged);
             // 
@@ -320,17 +325,16 @@ namespace Jamcheck
             // 
             this.panel5.Controls.Add(this.txtbxEmail);
             this.panel5.Controls.Add(this.label28);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(312, 62);
+            this.panel5.Location = new System.Drawing.Point(593, 0);
             this.panel5.Margin = new System.Windows.Forms.Padding(0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(346, 78);
+            this.panel5.Size = new System.Drawing.Size(333, 62);
             this.panel5.TabIndex = 3;
             // 
             // txtbxEmail
             // 
             this.txtbxEmail.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxEmail.Location = new System.Drawing.Point(40, 20);
+            this.txtbxEmail.Location = new System.Drawing.Point(20, 20);
             this.txtbxEmail.Name = "txtbxEmail";
             this.txtbxEmail.Size = new System.Drawing.Size(280, 29);
             this.txtbxEmail.TabIndex = 4;
@@ -350,18 +354,17 @@ namespace Jamcheck
             // 
             this.panel1.Controls.Add(this.combxRole);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(658, 62);
+            this.panel1.Location = new System.Drawing.Point(926, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(381, 78);
+            this.panel1.Size = new System.Drawing.Size(314, 62);
             this.panel1.TabIndex = 1;
             // 
             // combxRole
             // 
             this.combxRole.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.combxRole.FormattingEnabled = true;
-            this.combxRole.Location = new System.Drawing.Point(40, 20);
+            this.combxRole.Location = new System.Drawing.Point(20, 20);
             this.combxRole.Name = "combxRole";
             this.combxRole.Size = new System.Drawing.Size(260, 29);
             this.combxRole.TabIndex = 6;
@@ -386,7 +389,7 @@ namespace Jamcheck
             this.BtnAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
             this.BtnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnAdd.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAdd.Location = new System.Drawing.Point(1068, 65);
+            this.BtnAdd.Location = new System.Drawing.Point(1011, 65);
             this.BtnAdd.Margin = new System.Windows.Forms.Padding(3, 3, 40, 3);
             this.BtnAdd.Name = "BtnAdd";
             this.BtnAdd.Size = new System.Drawing.Size(106, 35);
@@ -395,10 +398,40 @@ namespace Jamcheck
             this.BtnAdd.UseVisualStyleBackColor = false;
             this.BtnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.txtbxPassword);
+            this.panel7.Controls.Add(this.label2);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel7.Location = new System.Drawing.Point(262, 62);
+            this.panel7.Margin = new System.Windows.Forms.Padding(0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(331, 78);
+            this.panel7.TabIndex = 3;
+            // 
+            // txtbxPassword
+            // 
+            this.txtbxPassword.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbxPassword.Location = new System.Drawing.Point(20, 20);
+            this.txtbxPassword.Name = "txtbxPassword";
+            this.txtbxPassword.Size = new System.Drawing.Size(240, 29);
+            this.txtbxPassword.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(20, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(84, 21);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Password";
+            // 
             // ManageUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1240, 590);
             this.Controls.Add(this.windowTable);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -423,6 +456,8 @@ namespace Jamcheck
             this.panel5.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -456,5 +491,8 @@ namespace Jamcheck
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.TextBox txtbxPassword;
+        private System.Windows.Forms.Label label2;
     }
 }

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tbxName = new System.Windows.Forms.TextBox();
             this.txbAddress = new System.Windows.Forms.TextBox();
             this.tbxTelephone = new System.Windows.Forms.TextBox();
@@ -38,32 +37,25 @@
             this.combxParish = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnClear = new System.Windows.Forms.Button();
-            this.btnEnter = new System.Windows.Forms.Button();
+            this.btnadd = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.BtnExit = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.bodytable = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.BtnExit = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.header = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
+            this.bodytable.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            this.bodytable.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.header.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Jamcheck.Properties.Resources.Jamcheck_logo_transparent;
-            this.pictureBox1.Location = new System.Drawing.Point(20, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(174, 70);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // tbxName
             // 
@@ -173,30 +165,30 @@
             this.btnClear.Text = "CLEAR";
             this.btnClear.UseVisualStyleBackColor = false;
             // 
-            // btnEnter
+            // btnadd
             // 
-            this.btnEnter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEnter.BackColor = System.Drawing.Color.LimeGreen;
-            this.btnEnter.FlatAppearance.BorderSize = 2;
-            this.btnEnter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
-            this.btnEnter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEnter.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnter.Location = new System.Drawing.Point(148, 0);
-            this.btnEnter.Margin = new System.Windows.Forms.Padding(0);
-            this.btnEnter.Name = "btnEnter";
-            this.btnEnter.Size = new System.Drawing.Size(95, 30);
-            this.btnEnter.TabIndex = 5;
-            this.btnEnter.Text = "ENTER";
-            this.btnEnter.UseVisualStyleBackColor = false;
+            this.btnadd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnadd.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnadd.FlatAppearance.BorderSize = 2;
+            this.btnadd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
+            this.btnadd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnadd.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnadd.Location = new System.Drawing.Point(148, 0);
+            this.btnadd.Margin = new System.Windows.Forms.Padding(0);
+            this.btnadd.Name = "btnadd";
+            this.btnadd.Size = new System.Drawing.Size(95, 30);
+            this.btnadd.TabIndex = 5;
+            this.btnadd.Text = "ADD";
+            this.btnadd.UseVisualStyleBackColor = false;
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.BtnExit, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.header, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.bodytable, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.BtnExit, 0, 3);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 5);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0, 20, 0, 0);
@@ -208,6 +200,50 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1256, 627);
             this.tableLayoutPanel1.TabIndex = 6;
+            // 
+            // BtnExit
+            // 
+            this.BtnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnExit.BackColor = System.Drawing.Color.LimeGreen;
+            this.BtnExit.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.BtnExit.FlatAppearance.BorderSize = 2;
+            this.BtnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
+            this.BtnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnExit.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnExit.Location = new System.Drawing.Point(1110, 580);
+            this.BtnExit.Margin = new System.Windows.Forms.Padding(3, 3, 40, 3);
+            this.BtnExit.Name = "BtnExit";
+            this.BtnExit.Size = new System.Drawing.Size(106, 35);
+            this.BtnExit.TabIndex = 13;
+            this.BtnExit.Text = "EXIT";
+            this.BtnExit.UseVisualStyleBackColor = false;
+            this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.LimeGreen;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 80);
+            this.panel1.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1256, 10);
+            this.panel1.TabIndex = 2;
+            // 
+            // bodytable
+            // 
+            this.bodytable.ColumnCount = 2;
+            this.bodytable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.59872F));
+            this.bodytable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.40128F));
+            this.bodytable.Controls.Add(this.tableLayoutPanel2, 0, 0);
+            this.bodytable.Controls.Add(this.dataGridView1, 1, 0);
+            this.bodytable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bodytable.Location = new System.Drawing.Point(0, 100);
+            this.bodytable.Margin = new System.Windows.Forms.Padding(0);
+            this.bodytable.Name = "bodytable";
+            this.bodytable.RowCount = 1;
+            this.bodytable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.bodytable.Size = new System.Drawing.Size(1256, 477);
+            this.bodytable.TabIndex = 3;
             // 
             // tableLayoutPanel2
             // 
@@ -244,39 +280,13 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.Controls.Add(this.btnClear, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.btnEnter, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.btnadd, 1, 0);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(153, 283);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(243, 48);
             this.tableLayoutPanel3.TabIndex = 6;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.LimeGreen;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 80);
-            this.panel1.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1256, 10);
-            this.panel1.TabIndex = 2;
-            // 
-            // bodytable
-            // 
-            this.bodytable.ColumnCount = 2;
-            this.bodytable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.59872F));
-            this.bodytable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.40128F));
-            this.bodytable.Controls.Add(this.tableLayoutPanel2, 0, 0);
-            this.bodytable.Controls.Add(this.dataGridView1, 1, 0);
-            this.bodytable.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bodytable.Location = new System.Drawing.Point(0, 100);
-            this.bodytable.Margin = new System.Windows.Forms.Padding(0);
-            this.bodytable.Name = "bodytable";
-            this.bodytable.RowCount = 1;
-            this.bodytable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.bodytable.Size = new System.Drawing.Size(1256, 477);
-            this.bodytable.TabIndex = 3;
             // 
             // dataGridView1
             // 
@@ -288,23 +298,43 @@
             this.dataGridView1.Size = new System.Drawing.Size(835, 477);
             this.dataGridView1.TabIndex = 2;
             // 
-            // BtnExit
+            // header
             // 
-            this.BtnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnExit.BackColor = System.Drawing.Color.LimeGreen;
-            this.BtnExit.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.BtnExit.FlatAppearance.BorderSize = 2;
-            this.BtnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
-            this.BtnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnExit.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnExit.Location = new System.Drawing.Point(1110, 580);
-            this.BtnExit.Margin = new System.Windows.Forms.Padding(3, 3, 40, 3);
-            this.BtnExit.Name = "BtnExit";
-            this.BtnExit.Size = new System.Drawing.Size(106, 35);
-            this.BtnExit.TabIndex = 13;
-            this.BtnExit.Text = "EXIT";
-            this.BtnExit.UseVisualStyleBackColor = false;
-            this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
+            this.header.ColumnCount = 2;
+            this.header.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.07325F));
+            this.header.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 81.92675F));
+            this.header.Controls.Add(this.pictureBox1, 0, 0);
+            this.header.Controls.Add(this.label5, 1, 0);
+            this.header.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.header.Location = new System.Drawing.Point(0, 0);
+            this.header.Margin = new System.Windows.Forms.Padding(0);
+            this.header.Name = "header";
+            this.header.RowCount = 1;
+            this.header.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.header.Size = new System.Drawing.Size(1256, 70);
+            this.header.TabIndex = 14;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Jamcheck.Properties.Resources.Jamcheck_logo_transparent;
+            this.pictureBox1.Location = new System.Drawing.Point(20, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(174, 70);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Corbel", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(628, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(225, 49);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Dealerships";
             // 
             // CarDealership
             // 
@@ -317,20 +347,20 @@
             this.Name = "CarDealership";
             this.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
             this.Text = "CarDealership";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.bodytable.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
-            this.bodytable.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.header.ResumeLayout(false);
+            this.header.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox tbxName;
         private System.Windows.Forms.TextBox txbAddress;
         private System.Windows.Forms.TextBox tbxTelephone;
@@ -340,7 +370,7 @@
         private System.Windows.Forms.ComboBox combxParish;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.Button btnEnter;
+        private System.Windows.Forms.Button btnadd;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
@@ -348,5 +378,8 @@
         private System.Windows.Forms.TableLayoutPanel bodytable;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button BtnExit;
+        private System.Windows.Forms.TableLayoutPanel header;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label5;
     }
 }
