@@ -30,78 +30,78 @@ namespace Jamcheck
         private void InitializeComponent()
         {
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
-            this.divider = new System.Windows.Forms.Panel();
             this.Header = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label15 = new System.Windows.Forms.Label();
+            this.divider = new System.Windows.Forms.Panel();
             this.content = new System.Windows.Forms.TableLayoutPanel();
             this.body = new System.Windows.Forms.TableLayoutPanel();
             this.FirstRow = new System.Windows.Forms.TableLayoutPanel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.cobxMake = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.radioButton10 = new System.Windows.Forms.RadioButton();
+            this.radioButton9 = new System.Windows.Forms.RadioButton();
+            this.numMileage = new System.Windows.Forms.NumericUpDown();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.txtbxModel = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.numSeating = new System.Windows.Forms.NumericUpDown();
-            this.label10 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.numYear = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
-            this.SecondRow = new System.Windows.Forms.TableLayoutPanel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.txtbxModelNo = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.txtbxChassisNo = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.importerPanel = new System.Windows.Forms.Panel();
-            this.cobxImporter = new System.Windows.Forms.ComboBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.ThirdRow = new System.Windows.Forms.TableLayoutPanel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.cobxVehicleType = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.txtbxImportFrom = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.rbtnCVT = new System.Windows.Forms.RadioButton();
             this.rbtnManual = new System.Windows.Forms.RadioButton();
             this.rbtnAuto = new System.Windows.Forms.RadioButton();
             this.label8 = new System.Windows.Forms.Label();
+            this.SecondLayer = new System.Windows.Forms.TableLayoutPanel();
+            this.RightPanel = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.LeftPanel = new System.Windows.Forms.Panel();
+            this.FifthRow = new System.Windows.Forms.TableLayoutPanel();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.ThirdRow = new System.Windows.Forms.TableLayoutPanel();
             this.datePickerPanel = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.DateImported = new System.Windows.Forms.DateTimePicker();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtbxImportFrom = new System.Windows.Forms.TextBox();
+            this.importerPanel = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.cobxImporter = new System.Windows.Forms.ComboBox();
+            this.SecondRow = new System.Windows.Forms.TableLayoutPanel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtbxModelNo = new System.Windows.Forms.TextBox();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.cobxVehicleType = new System.Windows.Forms.ComboBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtbxChassisNo = new System.Windows.Forms.TextBox();
             this.FourthRow = new System.Windows.Forms.TableLayoutPanel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.numSeating = new System.Windows.Forms.NumericUpDown();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.rbtnLHand = new System.Windows.Forms.RadioButton();
             this.rbtnRHand = new System.Windows.Forms.RadioButton();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.rbtnElectric = new System.Windows.Forms.RadioButton();
             this.rbtnDiesel = new System.Windows.Forms.RadioButton();
             this.rbtnPetrol = new System.Windows.Forms.RadioButton();
-            this.label11 = new System.Windows.Forms.Label();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.radioButton10 = new System.Windows.Forms.RadioButton();
-            this.radioButton9 = new System.Windows.Forms.RadioButton();
-            this.numMileage = new System.Windows.Forms.NumericUpDown();
-            this.label9 = new System.Windows.Forms.Label();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnExit = new System.Windows.Forms.Button();
             this.rbtnHybrid = new System.Windows.Forms.RadioButton();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.SecondLayer = new System.Windows.Forms.TableLayoutPanel();
-            this.RightPanel = new System.Windows.Forms.Panel();
-            this.LeftPanel = new System.Windows.Forms.Panel();
-            this.FifthRow = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel10.SuspendLayout();
             this.Header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -109,33 +109,33 @@ namespace Jamcheck
             this.body.SuspendLayout();
             this.FirstRow.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numMileage)).BeginInit();
             this.panel5.SuspendLayout();
-            this.panel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numSeating)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numYear)).BeginInit();
-            this.SecondRow.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.importerPanel.SuspendLayout();
-            this.ThirdRow.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panel13.SuspendLayout();
             this.panel8.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
+            this.SecondLayer.SuspendLayout();
+            this.RightPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.LeftPanel.SuspendLayout();
+            this.FifthRow.SuspendLayout();
+            this.ThirdRow.SuspendLayout();
             this.datePickerPanel.SuspendLayout();
+            this.panel13.SuspendLayout();
+            this.importerPanel.SuspendLayout();
+            this.SecondRow.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.FourthRow.SuspendLayout();
+            this.panel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numSeating)).BeginInit();
             this.panel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.panel11.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
-            this.panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numMileage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.SecondLayer.SuspendLayout();
-            this.RightPanel.SuspendLayout();
-            this.LeftPanel.SuspendLayout();
-            this.FifthRow.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel10
@@ -155,16 +155,6 @@ namespace Jamcheck
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel10.Size = new System.Drawing.Size(1328, 700);
             this.tableLayoutPanel10.TabIndex = 12;
-            // 
-            // divider
-            // 
-            this.divider.BackColor = System.Drawing.Color.LimeGreen;
-            this.divider.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.divider.Location = new System.Drawing.Point(0, 110);
-            this.divider.Margin = new System.Windows.Forms.Padding(0, 10, 0, 5);
-            this.divider.Name = "divider";
-            this.divider.Size = new System.Drawing.Size(1328, 5);
-            this.divider.TabIndex = 2;
             // 
             // Header
             // 
@@ -205,6 +195,16 @@ namespace Jamcheck
             this.label15.TabIndex = 2;
             this.label15.Text = "Add Vehicles";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // divider
+            // 
+            this.divider.BackColor = System.Drawing.Color.LimeGreen;
+            this.divider.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.divider.Location = new System.Drawing.Point(0, 110);
+            this.divider.Margin = new System.Windows.Forms.Padding(0, 10, 0, 5);
+            this.divider.Name = "divider";
+            this.divider.Size = new System.Drawing.Size(1328, 5);
+            this.divider.TabIndex = 2;
             // 
             // content
             // 
@@ -304,6 +304,82 @@ namespace Jamcheck
             this.label6.TabIndex = 0;
             this.label6.Text = "Make";
             // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.radioButton10);
+            this.panel9.Controls.Add(this.radioButton9);
+            this.panel9.Controls.Add(this.numMileage);
+            this.panel9.Controls.Add(this.label9);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel9.Location = new System.Drawing.Point(661, 0);
+            this.panel9.Margin = new System.Windows.Forms.Padding(0);
+            this.panel9.Name = "panel9";
+            this.panel9.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
+            this.panel9.Size = new System.Drawing.Size(182, 90);
+            this.panel9.TabIndex = 4;
+            // 
+            // radioButton10
+            // 
+            this.radioButton10.AutoSize = true;
+            this.radioButton10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton10.Location = new System.Drawing.Point(-220, 93);
+            this.radioButton10.Name = "radioButton10";
+            this.radioButton10.Size = new System.Drawing.Size(101, 24);
+            this.radioButton10.TabIndex = 3;
+            this.radioButton10.TabStop = true;
+            this.radioButton10.Text = "Left Hand";
+            this.radioButton10.UseVisualStyleBackColor = true;
+            // 
+            // radioButton9
+            // 
+            this.radioButton9.AutoSize = true;
+            this.radioButton9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton9.Location = new System.Drawing.Point(-114, 93);
+            this.radioButton9.Name = "radioButton9";
+            this.radioButton9.Size = new System.Drawing.Size(111, 24);
+            this.radioButton9.TabIndex = 2;
+            this.radioButton9.TabStop = true;
+            this.radioButton9.Text = "Right Hand";
+            this.radioButton9.UseVisualStyleBackColor = true;
+            // 
+            // numMileage
+            // 
+            this.numMileage.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.numMileage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numMileage.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.numMileage.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numMileage.Location = new System.Drawing.Point(20, 50);
+            this.numMileage.Margin = new System.Windows.Forms.Padding(0);
+            this.numMileage.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.numMileage.Minimum = new decimal(new int[] {
+            888888,
+            0,
+            0,
+            0});
+            this.numMileage.Name = "numMileage";
+            this.numMileage.Size = new System.Drawing.Size(142, 30);
+            this.numMileage.TabIndex = 2;
+            this.numMileage.Value = new decimal(new int[] {
+            888888,
+            0,
+            0,
+            0});
+            this.numMileage.ValueChanged += new System.EventHandler(this.numMileage_ValueChanged);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(20, 20);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(78, 23);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Mileage";
+            // 
             // panel5
             // 
             this.panel5.Controls.Add(this.txtbxModel);
@@ -339,42 +415,6 @@ namespace Jamcheck
             this.label5.Size = new System.Drawing.Size(63, 23);
             this.label5.TabIndex = 0;
             this.label5.Text = "Model";
-            // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.label10);
-            this.panel10.Controls.Add(this.numSeating);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(302, 0);
-            this.panel10.Margin = new System.Windows.Forms.Padding(0);
-            this.panel10.Name = "panel10";
-            this.panel10.Padding = new System.Windows.Forms.Padding(20, 20, 20, 0);
-            this.panel10.Size = new System.Drawing.Size(176, 100);
-            this.panel10.TabIndex = 4;
-            // 
-            // numSeating
-            // 
-            this.numSeating.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.numSeating.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.numSeating.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.numSeating.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numSeating.Location = new System.Drawing.Point(20, 70);
-            this.numSeating.Name = "numSeating";
-            this.numSeating.Size = new System.Drawing.Size(136, 30);
-            this.numSeating.TabIndex = 1;
-            this.numSeating.ValueChanged += new System.EventHandler(this.numSeating_ValueChanged);
-            // 
-            // label10
-            // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Times New Roman", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(20, 45);
-            this.label10.Margin = new System.Windows.Forms.Padding(0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(150, 23);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Seating Capacity";
             // 
             // panel4
             // 
@@ -425,229 +465,6 @@ namespace Jamcheck
             this.label4.Size = new System.Drawing.Size(48, 23);
             this.label4.TabIndex = 0;
             this.label4.Text = "Year";
-            // 
-            // SecondRow
-            // 
-            this.SecondRow.BackColor = System.Drawing.Color.Transparent;
-            this.SecondRow.ColumnCount = 3;
-            this.SecondRow.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.71154F));
-            this.SecondRow.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.28846F));
-            this.SecondRow.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 328F));
-            this.SecondRow.Controls.Add(this.panel2, 1, 0);
-            this.SecondRow.Controls.Add(this.panel7, 2, 0);
-            this.SecondRow.Controls.Add(this.panel1, 0, 0);
-            this.SecondRow.Dock = System.Windows.Forms.DockStyle.Top;
-            this.SecondRow.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SecondRow.Location = new System.Drawing.Point(0, 100);
-            this.SecondRow.Name = "SecondRow";
-            this.SecondRow.RowCount = 1;
-            this.SecondRow.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.SecondRow.Size = new System.Drawing.Size(882, 100);
-            this.SecondRow.TabIndex = 8;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.txtbxModelNo);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(247, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(0);
-            this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(20, 20, 20, 0);
-            this.panel2.Size = new System.Drawing.Size(306, 100);
-            this.panel2.TabIndex = 4;
-            // 
-            // txtbxModelNo
-            // 
-            this.txtbxModelNo.BackColor = System.Drawing.Color.White;
-            this.txtbxModelNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtbxModelNo.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.txtbxModelNo.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxModelNo.Location = new System.Drawing.Point(20, 70);
-            this.txtbxModelNo.Name = "txtbxModelNo";
-            this.txtbxModelNo.Size = new System.Drawing.Size(266, 30);
-            this.txtbxModelNo.TabIndex = 1;
-            this.txtbxModelNo.TextChanged += new System.EventHandler(this.txtbxModelNo_TextChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(20, 47);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(136, 23);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Model Number";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.txtbxChassisNo);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(0);
-            this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(20, 20, 20, 0);
-            this.panel1.Size = new System.Drawing.Size(247, 100);
-            this.panel1.TabIndex = 3;
-            // 
-            // txtbxChassisNo
-            // 
-            this.txtbxChassisNo.BackColor = System.Drawing.Color.White;
-            this.txtbxChassisNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtbxChassisNo.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.txtbxChassisNo.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxChassisNo.Location = new System.Drawing.Point(20, 70);
-            this.txtbxChassisNo.Name = "txtbxChassisNo";
-            this.txtbxChassisNo.Size = new System.Drawing.Size(207, 30);
-            this.txtbxChassisNo.TabIndex = 1;
-            this.txtbxChassisNo.TextChanged += new System.EventHandler(this.txtbxChassisNo_TextChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(20, 47);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(139, 23);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Chasis Number";
-            // 
-            // importerPanel
-            // 
-            this.importerPanel.BackColor = System.Drawing.Color.Transparent;
-            this.importerPanel.Controls.Add(this.label12);
-            this.importerPanel.Controls.Add(this.cobxImporter);
-            this.importerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.importerPanel.Location = new System.Drawing.Point(0, 0);
-            this.importerPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.importerPanel.Name = "importerPanel";
-            this.importerPanel.Padding = new System.Windows.Forms.Padding(20, 20, 20, 0);
-            this.importerPanel.Size = new System.Drawing.Size(287, 100);
-            this.importerPanel.TabIndex = 4;
-            // 
-            // cobxImporter
-            // 
-            this.cobxImporter.BackColor = System.Drawing.Color.White;
-            this.cobxImporter.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.cobxImporter.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cobxImporter.FormattingEnabled = true;
-            this.cobxImporter.Location = new System.Drawing.Point(20, 70);
-            this.cobxImporter.Name = "cobxImporter";
-            this.cobxImporter.Size = new System.Drawing.Size(247, 30);
-            this.cobxImporter.TabIndex = 1;
-            this.cobxImporter.SelectedIndexChanged += new System.EventHandler(this.cobxImporter_SelectedIndexChanged);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label12.Font = new System.Drawing.Font("Times New Roman", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(20, 47);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(85, 23);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "Importer";
-            // 
-            // ThirdRow
-            // 
-            this.ThirdRow.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ThirdRow.ColumnCount = 3;
-            this.ThirdRow.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.53968F));
-            this.ThirdRow.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 41.4966F));
-            this.ThirdRow.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.85034F));
-            this.ThirdRow.Controls.Add(this.datePickerPanel, 1, 0);
-            this.ThirdRow.Controls.Add(this.panel13, 2, 0);
-            this.ThirdRow.Controls.Add(this.importerPanel, 0, 0);
-            this.ThirdRow.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ThirdRow.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ThirdRow.Location = new System.Drawing.Point(0, 200);
-            this.ThirdRow.Name = "ThirdRow";
-            this.ThirdRow.RowCount = 1;
-            this.ThirdRow.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.ThirdRow.Size = new System.Drawing.Size(882, 100);
-            this.ThirdRow.TabIndex = 9;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.Transparent;
-            this.panel7.Controls.Add(this.label7);
-            this.panel7.Controls.Add(this.cobxVehicleType);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(553, 0);
-            this.panel7.Margin = new System.Windows.Forms.Padding(0);
-            this.panel7.Name = "panel7";
-            this.panel7.Padding = new System.Windows.Forms.Padding(20, 20, 20, 0);
-            this.panel7.Size = new System.Drawing.Size(329, 100);
-            this.panel7.TabIndex = 5;
-            // 
-            // cobxVehicleType
-            // 
-            this.cobxVehicleType.BackColor = System.Drawing.Color.White;
-            this.cobxVehicleType.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.cobxVehicleType.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cobxVehicleType.FormattingEnabled = true;
-            this.cobxVehicleType.Items.AddRange(new object[] {
-            "Truck",
-            "Sedan",
-            "Hatchback",
-            "Station Wagon"});
-            this.cobxVehicleType.Location = new System.Drawing.Point(20, 70);
-            this.cobxVehicleType.Name = "cobxVehicleType";
-            this.cobxVehicleType.Size = new System.Drawing.Size(289, 30);
-            this.cobxVehicleType.TabIndex = 1;
-            this.cobxVehicleType.SelectedIndexChanged += new System.EventHandler(this.cobxVehicleType_SelectedIndexChanged);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label7.Font = new System.Drawing.Font("Times New Roman", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(20, 47);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(114, 23);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Vehicle Type";
-            // 
-            // panel13
-            // 
-            this.panel13.BackColor = System.Drawing.Color.Transparent;
-            this.panel13.Controls.Add(this.label13);
-            this.panel13.Controls.Add(this.txtbxImportFrom);
-            this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel13.Location = new System.Drawing.Point(653, 0);
-            this.panel13.Margin = new System.Windows.Forms.Padding(0);
-            this.panel13.Name = "panel13";
-            this.panel13.Padding = new System.Windows.Forms.Padding(20, 20, 20, 0);
-            this.panel13.Size = new System.Drawing.Size(229, 100);
-            this.panel13.TabIndex = 5;
-            // 
-            // txtbxImportFrom
-            // 
-            this.txtbxImportFrom.BackColor = System.Drawing.Color.White;
-            this.txtbxImportFrom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtbxImportFrom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.txtbxImportFrom.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxImportFrom.Location = new System.Drawing.Point(20, 70);
-            this.txtbxImportFrom.Name = "txtbxImportFrom";
-            this.txtbxImportFrom.Size = new System.Drawing.Size(189, 30);
-            this.txtbxImportFrom.TabIndex = 1;
-            this.txtbxImportFrom.Text = "Signapore";
-            this.txtbxImportFrom.TextChanged += new System.EventHandler(this.txtbxImportFrom_TextChanged);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label13.Font = new System.Drawing.Font("Times New Roman", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(20, 47);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(139, 23);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "Imported From";
             // 
             // panel8
             // 
@@ -729,6 +546,149 @@ namespace Jamcheck
             this.label8.TabIndex = 0;
             this.label8.Text = "Transmission Type";
             // 
+            // SecondLayer
+            // 
+            this.SecondLayer.ColumnCount = 2;
+            this.SecondLayer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.70618F));
+            this.SecondLayer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.29382F));
+            this.SecondLayer.Controls.Add(this.RightPanel, 1, 0);
+            this.SecondLayer.Controls.Add(this.LeftPanel, 0, 0);
+            this.SecondLayer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SecondLayer.Location = new System.Drawing.Point(0, 90);
+            this.SecondLayer.Margin = new System.Windows.Forms.Padding(0);
+            this.SecondLayer.Name = "SecondLayer";
+            this.SecondLayer.RowCount = 1;
+            this.SecondLayer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.SecondLayer.Size = new System.Drawing.Size(1198, 400);
+            this.SecondLayer.TabIndex = 12;
+            // 
+            // RightPanel
+            // 
+            this.RightPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.RightPanel.Controls.Add(this.button1);
+            this.RightPanel.Controls.Add(this.pictureBox1);
+            this.RightPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.RightPanel.Location = new System.Drawing.Point(882, 0);
+            this.RightPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.RightPanel.Name = "RightPanel";
+            this.RightPanel.Padding = new System.Windows.Forms.Padding(20);
+            this.RightPanel.Size = new System.Drawing.Size(316, 400);
+            this.RightPanel.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.AutoSize = true;
+            this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button1.BackColor = System.Drawing.Color.LimeGreen;
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(60, 280);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.button1.Size = new System.Drawing.Size(206, 41);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "Upload Photo";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox1.Location = new System.Drawing.Point(20, 20);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(272, 240);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // LeftPanel
+            // 
+            this.LeftPanel.Controls.Add(this.FifthRow);
+            this.LeftPanel.Controls.Add(this.ThirdRow);
+            this.LeftPanel.Controls.Add(this.SecondRow);
+            this.LeftPanel.Controls.Add(this.FourthRow);
+            this.LeftPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LeftPanel.Location = new System.Drawing.Point(0, 0);
+            this.LeftPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.LeftPanel.Name = "LeftPanel";
+            this.LeftPanel.Size = new System.Drawing.Size(882, 400);
+            this.LeftPanel.TabIndex = 1;
+            // 
+            // FifthRow
+            // 
+            this.FifthRow.ColumnCount = 2;
+            this.FifthRow.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.FifthRow.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.FifthRow.Controls.Add(this.btnAdd, 0, 0);
+            this.FifthRow.Controls.Add(this.btnExit, 1, 0);
+            this.FifthRow.Dock = System.Windows.Forms.DockStyle.Top;
+            this.FifthRow.Location = new System.Drawing.Point(0, 300);
+            this.FifthRow.Margin = new System.Windows.Forms.Padding(0);
+            this.FifthRow.Name = "FifthRow";
+            this.FifthRow.RowCount = 1;
+            this.FifthRow.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.FifthRow.Size = new System.Drawing.Size(882, 100);
+            this.FifthRow.TabIndex = 11;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnAdd.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnAdd.FlatAppearance.BorderSize = 3;
+            this.btnAdd.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
+            this.btnAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Location = new System.Drawing.Point(160, 20);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 20, 3, 3);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(120, 45);
+            this.btnAdd.TabIndex = 12;
+            this.btnAdd.Text = "ADD";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnExit.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnExit.FlatAppearance.BorderSize = 3;
+            this.btnExit.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
+            this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Location = new System.Drawing.Point(601, 20);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 20, 3, 3);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(120, 45);
+            this.btnExit.TabIndex = 12;
+            this.btnExit.Text = "EXIT";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // ThirdRow
+            // 
+            this.ThirdRow.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ThirdRow.ColumnCount = 3;
+            this.ThirdRow.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.53968F));
+            this.ThirdRow.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 41.4966F));
+            this.ThirdRow.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.85034F));
+            this.ThirdRow.Controls.Add(this.datePickerPanel, 1, 0);
+            this.ThirdRow.Controls.Add(this.panel13, 2, 0);
+            this.ThirdRow.Controls.Add(this.importerPanel, 0, 0);
+            this.ThirdRow.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ThirdRow.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ThirdRow.Location = new System.Drawing.Point(0, 200);
+            this.ThirdRow.Name = "ThirdRow";
+            this.ThirdRow.RowCount = 1;
+            this.ThirdRow.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.ThirdRow.Size = new System.Drawing.Size(882, 100);
+            this.ThirdRow.TabIndex = 9;
+            // 
             // datePickerPanel
             // 
             this.datePickerPanel.Controls.Add(this.label14);
@@ -764,6 +724,210 @@ namespace Jamcheck
             this.DateImported.UseWaitCursor = true;
             this.DateImported.ValueChanged += new System.EventHandler(this.DateImported_ValueChanged);
             // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.Transparent;
+            this.panel13.Controls.Add(this.label13);
+            this.panel13.Controls.Add(this.txtbxImportFrom);
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel13.Location = new System.Drawing.Point(653, 0);
+            this.panel13.Margin = new System.Windows.Forms.Padding(0);
+            this.panel13.Name = "panel13";
+            this.panel13.Padding = new System.Windows.Forms.Padding(20, 20, 20, 0);
+            this.panel13.Size = new System.Drawing.Size(229, 100);
+            this.panel13.TabIndex = 5;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label13.Font = new System.Drawing.Font("Times New Roman", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Black;
+            this.label13.Location = new System.Drawing.Point(20, 47);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(139, 23);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "Imported From";
+            // 
+            // txtbxImportFrom
+            // 
+            this.txtbxImportFrom.BackColor = System.Drawing.Color.White;
+            this.txtbxImportFrom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtbxImportFrom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.txtbxImportFrom.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbxImportFrom.Location = new System.Drawing.Point(20, 70);
+            this.txtbxImportFrom.Name = "txtbxImportFrom";
+            this.txtbxImportFrom.Size = new System.Drawing.Size(189, 30);
+            this.txtbxImportFrom.TabIndex = 1;
+            this.txtbxImportFrom.Text = "Signapore";
+            this.txtbxImportFrom.TextChanged += new System.EventHandler(this.txtbxImportFrom_TextChanged);
+            // 
+            // importerPanel
+            // 
+            this.importerPanel.BackColor = System.Drawing.Color.Transparent;
+            this.importerPanel.Controls.Add(this.label12);
+            this.importerPanel.Controls.Add(this.cobxImporter);
+            this.importerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.importerPanel.Location = new System.Drawing.Point(0, 0);
+            this.importerPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.importerPanel.Name = "importerPanel";
+            this.importerPanel.Padding = new System.Windows.Forms.Padding(20, 20, 20, 0);
+            this.importerPanel.Size = new System.Drawing.Size(287, 100);
+            this.importerPanel.TabIndex = 4;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label12.Font = new System.Drawing.Font("Times New Roman", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(20, 47);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(85, 23);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Importer";
+            // 
+            // cobxImporter
+            // 
+            this.cobxImporter.BackColor = System.Drawing.Color.White;
+            this.cobxImporter.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.cobxImporter.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cobxImporter.FormattingEnabled = true;
+            this.cobxImporter.Location = new System.Drawing.Point(20, 70);
+            this.cobxImporter.Name = "cobxImporter";
+            this.cobxImporter.Size = new System.Drawing.Size(247, 30);
+            this.cobxImporter.TabIndex = 1;
+            this.cobxImporter.SelectedIndexChanged += new System.EventHandler(this.cobxImporter_SelectedIndexChanged);
+            // 
+            // SecondRow
+            // 
+            this.SecondRow.BackColor = System.Drawing.Color.Transparent;
+            this.SecondRow.ColumnCount = 3;
+            this.SecondRow.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.71154F));
+            this.SecondRow.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.28846F));
+            this.SecondRow.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 329F));
+            this.SecondRow.Controls.Add(this.panel2, 1, 0);
+            this.SecondRow.Controls.Add(this.panel7, 2, 0);
+            this.SecondRow.Controls.Add(this.panel1, 0, 0);
+            this.SecondRow.Dock = System.Windows.Forms.DockStyle.Top;
+            this.SecondRow.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SecondRow.Location = new System.Drawing.Point(0, 100);
+            this.SecondRow.Name = "SecondRow";
+            this.SecondRow.RowCount = 1;
+            this.SecondRow.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.SecondRow.Size = new System.Drawing.Size(882, 100);
+            this.SecondRow.TabIndex = 8;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.txtbxModelNo);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(247, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(0);
+            this.panel2.Name = "panel2";
+            this.panel2.Padding = new System.Windows.Forms.Padding(20, 20, 20, 0);
+            this.panel2.Size = new System.Drawing.Size(305, 100);
+            this.panel2.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(20, 47);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(136, 23);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Model Number";
+            // 
+            // txtbxModelNo
+            // 
+            this.txtbxModelNo.BackColor = System.Drawing.Color.White;
+            this.txtbxModelNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtbxModelNo.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.txtbxModelNo.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbxModelNo.Location = new System.Drawing.Point(20, 70);
+            this.txtbxModelNo.Name = "txtbxModelNo";
+            this.txtbxModelNo.Size = new System.Drawing.Size(265, 30);
+            this.txtbxModelNo.TabIndex = 1;
+            this.txtbxModelNo.TextChanged += new System.EventHandler(this.txtbxModelNo_TextChanged);
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.Transparent;
+            this.panel7.Controls.Add(this.label7);
+            this.panel7.Controls.Add(this.cobxVehicleType);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel7.Location = new System.Drawing.Point(552, 0);
+            this.panel7.Margin = new System.Windows.Forms.Padding(0);
+            this.panel7.Name = "panel7";
+            this.panel7.Padding = new System.Windows.Forms.Padding(20, 20, 20, 0);
+            this.panel7.Size = new System.Drawing.Size(330, 100);
+            this.panel7.TabIndex = 5;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(20, 47);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(114, 23);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Vehicle Type";
+            // 
+            // cobxVehicleType
+            // 
+            this.cobxVehicleType.BackColor = System.Drawing.Color.White;
+            this.cobxVehicleType.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.cobxVehicleType.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cobxVehicleType.FormattingEnabled = true;
+            this.cobxVehicleType.Items.AddRange(new object[] {
+            "Truck",
+            "Sedan",
+            "Hatchback",
+            "Station Wagon"});
+            this.cobxVehicleType.Location = new System.Drawing.Point(20, 70);
+            this.cobxVehicleType.Name = "cobxVehicleType";
+            this.cobxVehicleType.Size = new System.Drawing.Size(290, 30);
+            this.cobxVehicleType.TabIndex = 1;
+            this.cobxVehicleType.SelectedIndexChanged += new System.EventHandler(this.cobxVehicleType_SelectedIndexChanged);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.txtbxChassisNo);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(0);
+            this.panel1.Name = "panel1";
+            this.panel1.Padding = new System.Windows.Forms.Padding(20, 20, 20, 0);
+            this.panel1.Size = new System.Drawing.Size(247, 100);
+            this.panel1.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(20, 47);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(139, 23);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Chasis Number";
+            // 
+            // txtbxChassisNo
+            // 
+            this.txtbxChassisNo.BackColor = System.Drawing.Color.White;
+            this.txtbxChassisNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtbxChassisNo.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.txtbxChassisNo.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbxChassisNo.Location = new System.Drawing.Point(20, 70);
+            this.txtbxChassisNo.Name = "txtbxChassisNo";
+            this.txtbxChassisNo.Size = new System.Drawing.Size(207, 30);
+            this.txtbxChassisNo.TabIndex = 1;
+            this.txtbxChassisNo.TextChanged += new System.EventHandler(this.txtbxChassisNo_TextChanged);
+            // 
             // FourthRow
             // 
             this.FourthRow.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -783,6 +947,42 @@ namespace Jamcheck
             this.FourthRow.Size = new System.Drawing.Size(882, 100);
             this.FourthRow.TabIndex = 10;
             // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.label10);
+            this.panel10.Controls.Add(this.numSeating);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel10.Location = new System.Drawing.Point(302, 0);
+            this.panel10.Margin = new System.Windows.Forms.Padding(0);
+            this.panel10.Name = "panel10";
+            this.panel10.Padding = new System.Windows.Forms.Padding(20, 20, 20, 0);
+            this.panel10.Size = new System.Drawing.Size(176, 100);
+            this.panel10.TabIndex = 4;
+            // 
+            // label10
+            // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Times New Roman", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(20, 45);
+            this.label10.Margin = new System.Windows.Forms.Padding(0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(150, 23);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Seating Capacity";
+            // 
+            // numSeating
+            // 
+            this.numSeating.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.numSeating.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numSeating.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.numSeating.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numSeating.Location = new System.Drawing.Point(20, 70);
+            this.numSeating.Name = "numSeating";
+            this.numSeating.Size = new System.Drawing.Size(136, 30);
+            this.numSeating.TabIndex = 1;
+            this.numSeating.ValueChanged += new System.EventHandler(this.numSeating_ValueChanged);
+            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.label3);
@@ -794,6 +994,17 @@ namespace Jamcheck
             this.panel3.Padding = new System.Windows.Forms.Padding(20, 20, 20, 0);
             this.panel3.Size = new System.Drawing.Size(302, 100);
             this.panel3.TabIndex = 12;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(20, 47);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(154, 23);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Steering Position";
             // 
             // tableLayoutPanel4
             // 
@@ -837,17 +1048,6 @@ namespace Jamcheck
             this.rbtnRHand.UseVisualStyleBackColor = true;
             this.rbtnRHand.CheckedChanged += new System.EventHandler(this.rbtnRHand_CheckedChanged);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(20, 47);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(154, 23);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Steering Position";
-            // 
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.Transparent;
@@ -860,6 +1060,18 @@ namespace Jamcheck
             this.panel11.Padding = new System.Windows.Forms.Padding(20, 20, 20, 0);
             this.panel11.Size = new System.Drawing.Size(404, 100);
             this.panel11.TabIndex = 4;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label11.Font = new System.Drawing.Font("Times New Roman", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(20, 45);
+            this.label11.Margin = new System.Windows.Forms.Padding(0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(92, 23);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Fuel Type";
             // 
             // tableLayoutPanel7
             // 
@@ -925,132 +1137,6 @@ namespace Jamcheck
             this.rbtnPetrol.UseVisualStyleBackColor = true;
             this.rbtnPetrol.CheckedChanged += new System.EventHandler(this.rbtnPetrol_CheckedChanged);
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label11.Font = new System.Drawing.Font("Times New Roman", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(20, 45);
-            this.label11.Margin = new System.Windows.Forms.Padding(0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(92, 23);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Fuel Type";
-            // 
-            // panel9
-            // 
-            this.panel9.Controls.Add(this.radioButton10);
-            this.panel9.Controls.Add(this.radioButton9);
-            this.panel9.Controls.Add(this.numMileage);
-            this.panel9.Controls.Add(this.label9);
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel9.Location = new System.Drawing.Point(661, 0);
-            this.panel9.Margin = new System.Windows.Forms.Padding(0);
-            this.panel9.Name = "panel9";
-            this.panel9.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.panel9.Size = new System.Drawing.Size(182, 90);
-            this.panel9.TabIndex = 4;
-            // 
-            // radioButton10
-            // 
-            this.radioButton10.AutoSize = true;
-            this.radioButton10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton10.Location = new System.Drawing.Point(-220, 93);
-            this.radioButton10.Name = "radioButton10";
-            this.radioButton10.Size = new System.Drawing.Size(101, 24);
-            this.radioButton10.TabIndex = 3;
-            this.radioButton10.TabStop = true;
-            this.radioButton10.Text = "Left Hand";
-            this.radioButton10.UseVisualStyleBackColor = true;
-            // 
-            // radioButton9
-            // 
-            this.radioButton9.AutoSize = true;
-            this.radioButton9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton9.Location = new System.Drawing.Point(-114, 93);
-            this.radioButton9.Name = "radioButton9";
-            this.radioButton9.Size = new System.Drawing.Size(111, 24);
-            this.radioButton9.TabIndex = 2;
-            this.radioButton9.TabStop = true;
-            this.radioButton9.Text = "Right Hand";
-            this.radioButton9.UseVisualStyleBackColor = true;
-            // 
-            // numMileage
-            // 
-            this.numMileage.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.numMileage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.numMileage.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.numMileage.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numMileage.Location = new System.Drawing.Point(20, 50);
-            this.numMileage.Margin = new System.Windows.Forms.Padding(0);
-            this.numMileage.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            this.numMileage.Minimum = new decimal(new int[] {
-            888888,
-            0,
-            0,
-            0});
-            this.numMileage.Name = "numMileage";
-            this.numMileage.Size = new System.Drawing.Size(142, 30);
-            this.numMileage.TabIndex = 2;
-            this.numMileage.Value = new decimal(new int[] {
-            888888,
-            0,
-            0,
-            0});
-            this.numMileage.ValueChanged += new System.EventHandler(this.numMileage_ValueChanged);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Times New Roman", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(20, 20);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(78, 23);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Mileage";
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnAdd.BackColor = System.Drawing.Color.LimeGreen;
-            this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnAdd.FlatAppearance.BorderSize = 3;
-            this.btnAdd.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
-            this.btnAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(160, 20);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 20, 3, 3);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(120, 45);
-            this.btnAdd.TabIndex = 12;
-            this.btnAdd.Text = "ADD";
-            this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // btnExit
-            // 
-            this.btnExit.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnExit.BackColor = System.Drawing.Color.LimeGreen;
-            this.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnExit.FlatAppearance.BorderSize = 3;
-            this.btnExit.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
-            this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(601, 20);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 20, 3, 3);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(120, 45);
-            this.btnExit.TabIndex = 12;
-            this.btnExit.Text = "EXIT";
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
             // rbtnHybrid
             // 
             this.rbtnHybrid.AutoSize = true;
@@ -1070,92 +1156,6 @@ namespace Jamcheck
             this.openFileDialog1.FileName = "openFileDialog1";
             this.openFileDialog1.Title = "Upload";
             this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
-            // 
-            // button1
-            // 
-            this.button1.AutoSize = true;
-            this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button1.BackColor = System.Drawing.Color.LimeGreen;
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(60, 280);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.button1.Size = new System.Drawing.Size(206, 41);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Upload Photo";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox1.Location = new System.Drawing.Point(20, 20);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(272, 240);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // SecondLayer
-            // 
-            this.SecondLayer.ColumnCount = 2;
-            this.SecondLayer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.70618F));
-            this.SecondLayer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.29382F));
-            this.SecondLayer.Controls.Add(this.RightPanel, 1, 0);
-            this.SecondLayer.Controls.Add(this.LeftPanel, 0, 0);
-            this.SecondLayer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SecondLayer.Location = new System.Drawing.Point(0, 90);
-            this.SecondLayer.Margin = new System.Windows.Forms.Padding(0);
-            this.SecondLayer.Name = "SecondLayer";
-            this.SecondLayer.RowCount = 1;
-            this.SecondLayer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.SecondLayer.Size = new System.Drawing.Size(1198, 400);
-            this.SecondLayer.TabIndex = 12;
-            // 
-            // RightPanel
-            // 
-            this.RightPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.RightPanel.Controls.Add(this.button1);
-            this.RightPanel.Controls.Add(this.pictureBox1);
-            this.RightPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.RightPanel.Location = new System.Drawing.Point(882, 0);
-            this.RightPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.RightPanel.Name = "RightPanel";
-            this.RightPanel.Padding = new System.Windows.Forms.Padding(20);
-            this.RightPanel.Size = new System.Drawing.Size(316, 400);
-            this.RightPanel.TabIndex = 0;
-            // 
-            // LeftPanel
-            // 
-            this.LeftPanel.Controls.Add(this.FifthRow);
-            this.LeftPanel.Controls.Add(this.ThirdRow);
-            this.LeftPanel.Controls.Add(this.SecondRow);
-            this.LeftPanel.Controls.Add(this.FourthRow);
-            this.LeftPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LeftPanel.Location = new System.Drawing.Point(0, 0);
-            this.LeftPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.LeftPanel.Name = "LeftPanel";
-            this.LeftPanel.Size = new System.Drawing.Size(882, 400);
-            this.LeftPanel.TabIndex = 1;
-            // 
-            // FifthRow
-            // 
-            this.FifthRow.ColumnCount = 2;
-            this.FifthRow.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.FifthRow.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.FifthRow.Controls.Add(this.btnAdd, 0, 0);
-            this.FifthRow.Controls.Add(this.btnExit, 1, 0);
-            this.FifthRow.Dock = System.Windows.Forms.DockStyle.Top;
-            this.FifthRow.Location = new System.Drawing.Point(0, 300);
-            this.FifthRow.Margin = new System.Windows.Forms.Padding(0);
-            this.FifthRow.Name = "FifthRow";
-            this.FifthRow.RowCount = 1;
-            this.FifthRow.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.FifthRow.Size = new System.Drawing.Size(882, 100);
-            this.FifthRow.TabIndex = 11;
             // 
             // FrmAddVehicle
             // 
@@ -1182,33 +1182,42 @@ namespace Jamcheck
             this.FirstRow.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numMileage)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numSeating)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numYear)).EndInit();
-            this.SecondRow.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.importerPanel.ResumeLayout(false);
-            this.importerPanel.PerformLayout();
-            this.ThirdRow.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            this.panel13.ResumeLayout(false);
-            this.panel13.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
+            this.SecondLayer.ResumeLayout(false);
+            this.RightPanel.ResumeLayout(false);
+            this.RightPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.LeftPanel.ResumeLayout(false);
+            this.FifthRow.ResumeLayout(false);
+            this.ThirdRow.ResumeLayout(false);
             this.datePickerPanel.ResumeLayout(false);
             this.datePickerPanel.PerformLayout();
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
+            this.importerPanel.ResumeLayout(false);
+            this.importerPanel.PerformLayout();
+            this.SecondRow.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.FourthRow.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numSeating)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.tableLayoutPanel4.ResumeLayout(false);
@@ -1217,15 +1226,6 @@ namespace Jamcheck
             this.panel11.PerformLayout();
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numMileage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.SecondLayer.ResumeLayout(false);
-            this.RightPanel.ResumeLayout(false);
-            this.RightPanel.PerformLayout();
-            this.LeftPanel.ResumeLayout(false);
-            this.FifthRow.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
