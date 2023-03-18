@@ -112,5 +112,19 @@ namespace Jamcheck
         {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUpload_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFile = new OpenFileDialog();
+            if (openFile.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox1.ImageLocation = openFile.FileName.ToString();
+            }
+        }
     }
 }
