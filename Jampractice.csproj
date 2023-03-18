@@ -255,6 +255,7 @@
       <DependentUpon>jamdatabase.edmx</DependentUpon>
       <LastGenOutput>jamdatabase.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\eye-icon-1457.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

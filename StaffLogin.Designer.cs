@@ -36,7 +36,6 @@
             this.lblPassword = new System.Windows.Forms.Label();
             this.txtBxStfPassword = new System.Windows.Forms.TextBox();
             this.btnStfLogin = new System.Windows.Forms.Button();
-            this.picBxStfLoginPg = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -45,11 +44,14 @@
             this.LblDate = new System.Windows.Forms.Label();
             this.LblTime = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.picBxStfLoginPg)).BeginInit();
+            this.picBxStfLoginPg = new System.Windows.Forms.PictureBox();
+            this.seepassword = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBxStfLoginPg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seepassword)).BeginInit();
             this.SuspendLayout();
             // 
             // lblStaffLogin
@@ -69,11 +71,11 @@
             // 
             this.txtBxStfUserName.BackColor = System.Drawing.Color.White;
             this.txtBxStfUserName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtBxStfUserName.Font = new System.Drawing.Font("Corbel", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBxStfUserName.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBxStfUserName.Location = new System.Drawing.Point(160, 80);
             this.txtBxStfUserName.Margin = new System.Windows.Forms.Padding(2);
             this.txtBxStfUserName.Name = "txtBxStfUserName";
-            this.txtBxStfUserName.Size = new System.Drawing.Size(220, 28);
+            this.txtBxStfUserName.Size = new System.Drawing.Size(180, 27);
             this.txtBxStfUserName.TabIndex = 1;
             this.txtBxStfUserName.TextChanged += new System.EventHandler(this.txtBxStfUserName_TextChanged);
             // 
@@ -103,12 +105,11 @@
             // 
             this.txtBxStfPassword.BackColor = System.Drawing.Color.White;
             this.txtBxStfPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtBxStfPassword.Font = new System.Drawing.Font("Corbel", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBxStfPassword.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBxStfPassword.Location = new System.Drawing.Point(160, 140);
             this.txtBxStfPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtBxStfPassword.Name = "txtBxStfPassword";
-            this.txtBxStfPassword.PasswordChar = '*';
-            this.txtBxStfPassword.Size = new System.Drawing.Size(220, 28);
+            this.txtBxStfPassword.Size = new System.Drawing.Size(180, 27);
             this.txtBxStfPassword.TabIndex = 4;
             this.txtBxStfPassword.TextChanged += new System.EventHandler(this.txtBxStfPassword_TextChanged);
             // 
@@ -125,19 +126,6 @@
             this.btnStfLogin.Text = "LOGIN";
             this.btnStfLogin.UseVisualStyleBackColor = false;
             this.btnStfLogin.Click += new System.EventHandler(this.btnStfLogin_Click);
-            // 
-            // picBxStfLoginPg
-            // 
-            this.picBxStfLoginPg.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picBxStfLoginPg.Image = ((System.Drawing.Image)(resources.GetObject("picBxStfLoginPg.Image")));
-            this.picBxStfLoginPg.Location = new System.Drawing.Point(5, 5);
-            this.picBxStfLoginPg.Margin = new System.Windows.Forms.Padding(5);
-            this.picBxStfLoginPg.Name = "picBxStfLoginPg";
-            this.picBxStfLoginPg.Padding = new System.Windows.Forms.Padding(5);
-            this.picBxStfLoginPg.Size = new System.Drawing.Size(340, 312);
-            this.picBxStfLoginPg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picBxStfLoginPg.TabIndex = 7;
-            this.picBxStfLoginPg.TabStop = false;
             // 
             // tableLayoutPanel1
             // 
@@ -157,7 +145,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(784, 461);
             this.tableLayoutPanel1.TabIndex = 8;
-            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // tableLayoutPanel2
             // 
@@ -177,6 +164,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.seepassword);
             this.panel1.Controls.Add(this.lblPassword);
             this.panel1.Controls.Add(this.btnStaffExit);
             this.panel1.Controls.Add(this.btnStfLogin);
@@ -239,6 +227,31 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // picBxStfLoginPg
+            // 
+            this.picBxStfLoginPg.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picBxStfLoginPg.Image = ((System.Drawing.Image)(resources.GetObject("picBxStfLoginPg.Image")));
+            this.picBxStfLoginPg.Location = new System.Drawing.Point(5, 5);
+            this.picBxStfLoginPg.Margin = new System.Windows.Forms.Padding(5);
+            this.picBxStfLoginPg.Name = "picBxStfLoginPg";
+            this.picBxStfLoginPg.Padding = new System.Windows.Forms.Padding(5);
+            this.picBxStfLoginPg.Size = new System.Drawing.Size(340, 312);
+            this.picBxStfLoginPg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBxStfLoginPg.TabIndex = 7;
+            this.picBxStfLoginPg.TabStop = false;
+            // 
+            // seepassword
+            // 
+            this.seepassword.BackColor = System.Drawing.Color.DimGray;
+            this.seepassword.Image = global::Jamcheck.Properties.Resources.eye_icon_1457;
+            this.seepassword.Location = new System.Drawing.Point(340, 140);
+            this.seepassword.Name = "seepassword";
+            this.seepassword.Size = new System.Drawing.Size(40, 28);
+            this.seepassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.seepassword.TabIndex = 6;
+            this.seepassword.TabStop = false;
+            this.seepassword.Click += new System.EventHandler(this.seepassword_Click);
+            // 
             // StaffLoginFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -256,7 +269,6 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Staff Login";
-            ((System.ComponentModel.ISupportInitialize)(this.picBxStfLoginPg)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -264,6 +276,8 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBxStfLoginPg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seepassword)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -286,5 +300,6 @@
         private System.Windows.Forms.Timer timer1;
         private object btnStfExit;
         private System.Windows.Forms.Button btnStaffExit;
+        private System.Windows.Forms.PictureBox seepassword;
     }
 }

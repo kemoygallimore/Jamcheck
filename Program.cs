@@ -18,7 +18,7 @@ namespace Jamcheck
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Parentform());
+            Application.Run(new StaffLoginFrm());
 
 
         }
