@@ -67,28 +67,12 @@ namespace Jamcheck
             {
                 if (!char.IsLetterOrDigit(password[i]))
                 {
-                    MessageBox.Show("password should contain special characters");
+                    break; 
                 }
-                else
-                {
-                    MessageBox.Show($"Name: {fname} {lname}" +
-                    $"\nEmail: {email}" +
-                    $"\nUsername: {username}" +
-                    $"\nCompany: {org} " +
-                    $"\nRole: {role}\n");
-
-                    /*user users = new user();
-                    users.fname = fname;
-                    users.lname = lname;
-                    users.email = email;
-                    users.username = username;
-                    users.companyid = Convert.ToInt32(combxOrg.SelectedValue);
-                    users.roletypeid = Convert.ToInt32(combxRole.SelectedValue);
-
-                    jamdb.users.Add(users);
-                    jamdb.SaveChanges();*/
-                }
+                else { error = true; ErrorMessage = "password should contain special characters"; }
+                
             }
+
 
             try
             {
@@ -110,6 +94,17 @@ namespace Jamcheck
                     $"\nUsername: {username}" +
                     $"\nCompany: {org} " +
                     $"\nRole: {role}\n");
+
+                    /*user users = new user();
+                    users.fname = fname;
+                    users.lname = lname;
+                    users.email = email;
+                    users.username = username;
+                    users.companyid = Convert.ToInt32(combxOrg.SelectedValue);
+                    users.roletypeid = Convert.ToInt32(combxRole.SelectedValue);
+
+                    jamdb.users.Add(users);
+                    jamdb.SaveChanges();*/
                 }
                 else { MessageBox.Show(ErrorMessage); }
             }
