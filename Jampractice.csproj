@@ -112,12 +112,6 @@
     <Compile Include="test.Designer.cs">
       <DependentUpon>test.cs</DependentUpon>
     </Compile>
-    <Compile Include="JamCheck.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="JamCheck.Designer.cs">
-      <DependentUpon>JamCheck.cs</DependentUpon>
-    </Compile>
     <Compile Include="CutsomLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,9 +170,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MenuStrip.resx">
       <DependentUpon>MenuStrip.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="JamCheck.resx">
-      <DependentUpon>JamCheck.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CutsomLogin.resx">
       <DependentUpon>CutsomLogin.cs</DependentUpon>

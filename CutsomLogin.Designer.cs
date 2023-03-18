@@ -35,16 +35,18 @@ namespace Jamcheck
             this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.txtbxUsername = new System.Windows.Forms.TextBox();
             this.txtbxPassword = new System.Windows.Forms.TextBox();
+            this.txtbxUsername = new System.Windows.Forms.TextBox();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.seepassword = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.seepassword)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -75,6 +77,7 @@ namespace Jamcheck
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.seepassword);
             this.panel1.Controls.Add(this.txtbxPassword);
             this.panel1.Controls.Add(this.txtbxUsername);
             this.panel1.Controls.Add(this.btnLogin);
@@ -84,23 +87,20 @@ namespace Jamcheck
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
-            // label1
+            // txtbxPassword
             // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
+            this.txtbxPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.txtbxPassword, "txtbxPassword");
+            this.txtbxPassword.Name = "txtbxPassword";
+            this.txtbxPassword.UseSystemPasswordChar = true;
+            this.txtbxPassword.TextChanged += new System.EventHandler(this.txtbxPassword_TextChanged);
             // 
-            // label2
+            // txtbxUsername
             // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.Name = "label2";
-            // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.LimeGreen;
-            resources.ApplyResources(this.btnExit, "btnExit");
-            this.btnExit.Name = "btnExit";
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.txtbxUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.txtbxUsername, "txtbxUsername");
+            this.txtbxUsername.Name = "txtbxUsername";
+            this.txtbxUsername.TextChanged += new System.EventHandler(this.txtbxUsername_TextChanged);
             // 
             // btnLogin
             // 
@@ -110,37 +110,53 @@ namespace Jamcheck
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // txtbxUsername
+            // btnExit
             // 
-            this.txtbxUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.txtbxUsername, "txtbxUsername");
-            this.txtbxUsername.Name = "txtbxUsername";
-            this.txtbxUsername.TextChanged += new System.EventHandler(this.txtbxUsername_TextChanged);
+            this.btnExit.BackColor = System.Drawing.Color.LimeGreen;
+            resources.ApplyResources(this.btnExit, "btnExit");
+            this.btnExit.Name = "btnExit";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // txtbxPassword
+            // label2
             // 
-            this.txtbxPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.txtbxPassword, "txtbxPassword");
-            this.txtbxPassword.Name = "txtbxPassword";
-            this.txtbxPassword.TextChanged += new System.EventHandler(this.txtbxPassword_TextChanged);
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.Name = "label2";
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
+            // 
+            // seepassword
+            // 
+            this.seepassword.BackColor = System.Drawing.Color.DimGray;
+            this.seepassword.Image = global::Jamcheck.Properties.Resources.eye_icon_1457;
+            resources.ApplyResources(this.seepassword, "seepassword");
+            this.seepassword.Name = "seepassword";
+            this.seepassword.TabStop = false;
+            this.seepassword.Click += new System.EventHandler(this.seepassword_Click);
             // 
             // CustomsLoginFrm
             // 
+            this.AcceptButton = this.btnLogin;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.ControlBox = false;
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MinimizeBox = false;
             this.Name = "CustomsLoginFrm";
             this.ShowIcon = false;
-            this.ShowInTaskbar = false;
+            this.Load += new System.EventHandler(this.CustomsLoginFrm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.seepassword)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -157,5 +173,6 @@ namespace Jamcheck
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox seepassword;
     }
 }

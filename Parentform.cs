@@ -12,6 +12,12 @@ namespace Jamcheck
 {
     public partial class Parentform : Form
     {
+        private void CheckMDIChild()
+        {
+            if (ActiveMdiChild != null)
+                ActiveMdiChild.Close();
+        }
+
         public Parentform()
         {
             InitializeComponent();
@@ -23,6 +29,7 @@ namespace Jamcheck
 
         private void addVehiclesToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            CheckMDIChild();
             FrmAddVehicle addVehicle = new FrmAddVehicle();
             addVehicle.MdiParent = this;            
             addVehicle.Dock = DockStyle.Fill;
@@ -31,6 +38,7 @@ namespace Jamcheck
 
         private void recentToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            CheckMDIChild();
             ListingsMain recentlistings = new ListingsMain();
             recentlistings.MdiParent = this;
             recentlistings.Dock = DockStyle.Fill;
@@ -39,6 +47,7 @@ namespace Jamcheck
 
         private void allVehiclesToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            CheckMDIChild();
             ListingsMainAll listingsAll = new ListingsMainAll();
             listingsAll.MdiParent = this;
             listingsAll.Dock = DockStyle.Fill;
@@ -49,6 +58,7 @@ namespace Jamcheck
 
         private void manageUsersToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            CheckMDIChild();
             ManageUsers manageUsers = new ManageUsers();
             manageUsers.MdiParent = this;
             manageUsers.Dock = DockStyle.Fill;
@@ -57,6 +67,7 @@ namespace Jamcheck
 
         private void manufacturerAndBodytypeToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            CheckMDIChild();
             BodyTypeAndMfr bodyTypeAndMfr = new BodyTypeAndMfr();
             bodyTypeAndMfr.MdiParent = this;
             bodyTypeAndMfr.Dock = DockStyle.Fill;
@@ -70,6 +81,7 @@ namespace Jamcheck
 
         private void dealerToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            CheckMDIChild();
             CarDealership carDealership = new CarDealership();
             carDealership.MdiParent = this;
             carDealership.Dock = DockStyle.Fill;

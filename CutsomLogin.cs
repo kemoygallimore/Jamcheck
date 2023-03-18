@@ -43,9 +43,13 @@ namespace Jamcheck
 
             try
             {
-                if (username == "customs" && password == "Password1")
+                if (username == "Admin" && password == "Password1")
                 {
                     MessageBox.Show("You have been logged in successfully");
+                    Parentform parentform = new Parentform();
+                    this.Hide();
+                    parentform.ShowDialog();
+                    this.Close();
                 }
                 else
                 {
@@ -86,6 +90,26 @@ namespace Jamcheck
         }
 
         private void btnExit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void seepassword_Click(object sender, EventArgs e)
+        {
+            if (seepassword.BackColor == Color.DimGray)
+            {
+                txtbxPassword.UseSystemPasswordChar = false;
+                seepassword.BackColor = Color.AliceBlue;
+            }
+            else
+            {
+                txtbxPassword.UseSystemPasswordChar = true;
+                seepassword.BackColor = Color.DimGray;
+
+            }
+        }
+
+        private void CustomsLoginFrm_Load(object sender, EventArgs e)
         {
 
         }
