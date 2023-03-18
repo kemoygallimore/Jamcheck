@@ -76,7 +76,7 @@ namespace Jamcheck
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
+            
         }
 
         private void manufacturerAndBodytypeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -85,6 +85,21 @@ namespace Jamcheck
             bodyTypeAndMfr.MdiParent = this;
             bodyTypeAndMfr.Dock = DockStyle.Fill;
             bodyTypeAndMfr.Show();
+        }
+
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void exitToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void exitToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
