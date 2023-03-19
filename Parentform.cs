@@ -23,9 +23,7 @@ namespace Jamcheck
             InitializeComponent();
             this.BackgroundImageLayout = ImageLayout.Zoom;
             this.BackgroundImage = Properties.Resources.Jamcheck_logo_transparent;
-        }
-
-      
+        }      
 
         private void addVehiclesToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -54,8 +52,6 @@ namespace Jamcheck
             listingsAll.Show();
         }
 
-        
-
         private void manageUsersToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CheckMDIChild();
@@ -74,11 +70,6 @@ namespace Jamcheck
             bodyTypeAndMfr.Show();
         }
 
-        private void exitToolStripMenuItem2_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void dealerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CheckMDIChild();
@@ -86,6 +77,11 @@ namespace Jamcheck
             carDealership.MdiParent = this;
             carDealership.Dock = DockStyle.Fill;
             carDealership.Show();
+        }
+
+        private void exitToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

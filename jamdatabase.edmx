@@ -5,6 +5,30 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="jampracticeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Dealerships">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="tel" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="address" Type="nvarchar" MaxLength="100" />
+          <Property Name="parishid" Type="int" />
+        </EntityType>
+        <EntityType Name="Fuel">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Make">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="30" Nullable="false" />
+        </EntityType>
         <EntityType Name="Org">
           <Key>
             <PropertyRef Name="id" />
@@ -12,12 +36,33 @@
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="company" Type="nvarchar" MaxLength="20" Nullable="false" />
         </EntityType>
+        <EntityType Name="parishes">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="20" />
+        </EntityType>
         <EntityType Name="Roles">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="RoleType" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SteeringPosition">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TransmissionType">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="10" Nullable="false" />
         </EntityType>
         <EntityType Name="users">
           <Key>
@@ -28,10 +73,60 @@
           <Property Name="lname" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="username" Type="nvarchar" MaxLength="40" Nullable="false" />
           <Property Name="email" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="password" Type="nvarchar" MaxLength="12" Nullable="false" />
           <Property Name="companyid" Type="int" Nullable="false" />
           <Property Name="roletypeid" Type="int" Nullable="false" />
         </EntityType>
-        <Association Name="FK__users__companyid__286302EC">
+        <EntityType Name="VehicleType">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'jampractice.dbo.UserInfoes' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="UserInfoes">
+          <Key>
+            <PropertyRef Name="First Name" />
+            <PropertyRef Name="Last Name" />
+            <PropertyRef Name="Username" />
+            <PropertyRef Name="Email" />
+            <PropertyRef Name="Password" />
+          </Key>
+          <Property Name="First Name" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Last Name" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Username" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="12" Nullable="false" />
+          <Property Name="Role" Type="nvarchar" MaxLength="20" />
+          <Property Name="Company" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'jampractice.dbo.ViewDealerships' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="ViewDealerships">
+          <Key>
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Telephone" />
+          </Key>
+          <Property Name="Name" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="Telephone" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Address" Type="nvarchar" MaxLength="100" />
+          <Property Name="Parish" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <Association Name="FK__Dealershi__paris__4F7CD00D">
+          <End Role="parishes" Type="Self.parishes" Multiplicity="0..1" />
+          <End Role="Dealerships" Type="Self.Dealerships" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="parishes">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Dealerships">
+              <PropertyRef Name="parishid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__users__companyid__2C3393D0">
           <End Role="Org" Type="Self.Org" Multiplicity="1" />
           <End Role="users" Type="Self.users" Multiplicity="*" />
           <ReferentialConstraint>
@@ -43,7 +138,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__users__roletype__29572725">
+        <Association Name="FK__users__roletypei__2D27B809">
           <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
           <End Role="users" Type="Self.users" Multiplicity="*" />
           <ReferentialConstraint>
@@ -56,14 +151,44 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="jampracticeModelStoreContainer">
+          <EntitySet Name="Dealerships" EntityType="Self.Dealerships" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Fuel" EntityType="Self.Fuel" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Make" EntityType="Self.Make" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Org" EntityType="Self.Org" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="parishes" EntityType="Self.parishes" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SteeringPosition" EntityType="Self.SteeringPosition" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TransmissionType" EntityType="Self.TransmissionType" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="users" EntityType="Self.users" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__users__companyid__286302EC" Association="Self.FK__users__companyid__286302EC">
+          <EntitySet Name="VehicleType" EntityType="Self.VehicleType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserInfoes" EntityType="Self.UserInfoes" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [UserInfoes].[First Name] AS [First Name], 
+    [UserInfoes].[Last Name] AS [Last Name], 
+    [UserInfoes].[Username] AS [Username], 
+    [UserInfoes].[Email] AS [Email], 
+    [UserInfoes].[Password] AS [Password], 
+    [UserInfoes].[Role] AS [Role], 
+    [UserInfoes].[Company] AS [Company]
+    FROM [dbo].[UserInfoes] AS [UserInfoes]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="ViewDealerships" EntityType="Self.ViewDealerships" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [ViewDealerships].[Name] AS [Name], 
+    [ViewDealerships].[Telephone] AS [Telephone], 
+    [ViewDealerships].[Address] AS [Address], 
+    [ViewDealerships].[Parish] AS [Parish]
+    FROM [dbo].[ViewDealerships] AS [ViewDealerships]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK__Dealershi__paris__4F7CD00D" Association="Self.FK__Dealershi__paris__4F7CD00D">
+            <End Role="parishes" EntitySet="parishes" />
+            <End Role="Dealerships" EntitySet="Dealerships" />
+          </AssociationSet>
+          <AssociationSet Name="FK__users__companyid__2C3393D0" Association="Self.FK__users__companyid__2C3393D0">
             <End Role="Org" EntitySet="Org" />
             <End Role="users" EntitySet="users" />
           </AssociationSet>
-          <AssociationSet Name="FK__users__roletype__29572725" Association="Self.FK__users__roletype__29572725">
+          <AssociationSet Name="FK__users__roletypei__2D27B809" Association="Self.FK__users__roletypei__2D27B809">
             <End Role="Roles" EntitySet="Roles" />
             <End Role="users" EntitySet="users" />
           </AssociationSet>
@@ -73,25 +198,71 @@
     <edmx:ConceptualModels>
       <Schema Namespace="jampracticeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="jampracticeEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Dealerships" EntityType="jampracticeModel.Dealership" />
+          <EntitySet Name="Fuels" EntityType="jampracticeModel.Fuel" />
+          <EntitySet Name="Makes" EntityType="jampracticeModel.Make" />
           <EntitySet Name="Orgs" EntityType="jampracticeModel.Org" />
+          <EntitySet Name="parishes" EntityType="jampracticeModel.parish" />
           <EntitySet Name="Roles" EntityType="jampracticeModel.Role" />
+          <EntitySet Name="SteeringPositions" EntityType="jampracticeModel.SteeringPosition" />
+          <EntitySet Name="TransmissionTypes" EntityType="jampracticeModel.TransmissionType" />
           <EntitySet Name="users" EntityType="jampracticeModel.user" />
-          <AssociationSet Name="FK__users__companyid__286302EC" Association="jampracticeModel.FK__users__companyid__286302EC">
+          <EntitySet Name="VehicleTypes" EntityType="jampracticeModel.VehicleType" />
+          <EntitySet Name="UserInfoes" EntityType="jampracticeModel.UserInfo" />
+          <EntitySet Name="ViewDealerships" EntityType="jampracticeModel.ViewDealership" />
+          <AssociationSet Name="FK__Dealershi__paris__4F7CD00D" Association="jampracticeModel.FK__Dealershi__paris__4F7CD00D">
+            <End Role="parish" EntitySet="parishes" />
+            <End Role="Dealership" EntitySet="Dealerships" />
+          </AssociationSet>
+          <AssociationSet Name="FK__users__companyid__2C3393D0" Association="jampracticeModel.FK__users__companyid__2C3393D0">
             <End Role="Org" EntitySet="Orgs" />
             <End Role="user" EntitySet="users" />
           </AssociationSet>
-          <AssociationSet Name="FK__users__roletype__29572725" Association="jampracticeModel.FK__users__roletype__29572725">
+          <AssociationSet Name="FK__users__roletypei__2D27B809" Association="jampracticeModel.FK__users__roletypei__2D27B809">
             <End Role="Role" EntitySet="Roles" />
             <End Role="user" EntitySet="users" />
           </AssociationSet>
         </EntityContainer>
+        <EntityType Name="Dealership">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="tel" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="parishid" Type="Int32" />
+          <NavigationProperty Name="parish" Relationship="jampracticeModel.FK__Dealershi__paris__4F7CD00D" FromRole="Dealership" ToRole="parish" />
+        </EntityType>
+        <EntityType Name="Fuel">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Make">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+        </EntityType>
         <EntityType Name="Org">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="company" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="users" Relationship="jampracticeModel.FK__users__companyid__286302EC" FromRole="Org" ToRole="user" />
+          <NavigationProperty Name="users" Relationship="jampracticeModel.FK__users__companyid__2C3393D0" FromRole="Org" ToRole="user" />
+        </EntityType>
+        <EntityType Name="parish">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Dealerships" Relationship="jampracticeModel.FK__Dealershi__paris__4F7CD00D" FromRole="parish" ToRole="Dealership" />
         </EntityType>
         <EntityType Name="Role">
           <Key>
@@ -99,7 +270,21 @@
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="RoleType" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="users" Relationship="jampracticeModel.FK__users__roletype__29572725" FromRole="Role" ToRole="user" />
+          <NavigationProperty Name="users" Relationship="jampracticeModel.FK__users__roletypei__2D27B809" FromRole="Role" ToRole="user" />
+        </EntityType>
+        <EntityType Name="SteeringPosition">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TransmissionType">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="user">
           <Key>
@@ -110,12 +295,58 @@
           <Property Name="lname" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="username" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
           <Property Name="email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="password" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="true" />
           <Property Name="companyid" Type="Int32" Nullable="false" />
           <Property Name="roletypeid" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Org" Relationship="jampracticeModel.FK__users__companyid__286302EC" FromRole="user" ToRole="Org" />
-          <NavigationProperty Name="Role" Relationship="jampracticeModel.FK__users__roletype__29572725" FromRole="user" ToRole="Role" />
+          <NavigationProperty Name="Org" Relationship="jampracticeModel.FK__users__companyid__2C3393D0" FromRole="user" ToRole="Org" />
+          <NavigationProperty Name="Role" Relationship="jampracticeModel.FK__users__roletypei__2D27B809" FromRole="user" ToRole="Role" />
         </EntityType>
-        <Association Name="FK__users__companyid__286302EC">
+        <EntityType Name="VehicleType">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="UserInfo">
+          <Key>
+            <PropertyRef Name="First_Name" />
+            <PropertyRef Name="Last_Name" />
+            <PropertyRef Name="Username" />
+            <PropertyRef Name="Email" />
+            <PropertyRef Name="Password" />
+          </Key>
+          <Property Name="First_Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Last_Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Username" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="Role" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Company" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ViewDealership">
+          <Key>
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Telephone" />
+          </Key>
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="Telephone" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Parish" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <Association Name="FK__Dealershi__paris__4F7CD00D">
+          <End Type="jampracticeModel.parish" Role="parish" Multiplicity="0..1" />
+          <End Type="jampracticeModel.Dealership" Role="Dealership" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="parish">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Dealership">
+              <PropertyRef Name="parishid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__users__companyid__2C3393D0">
           <End Type="jampracticeModel.Org" Role="Org" Multiplicity="1" />
           <End Type="jampracticeModel.user" Role="user" Multiplicity="*" />
           <ReferentialConstraint>
@@ -127,7 +358,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__users__roletype__29572725">
+        <Association Name="FK__users__roletypei__2D27B809">
           <End Type="jampracticeModel.Role" Role="Role" Multiplicity="1" />
           <End Type="jampracticeModel.user" Role="user" Multiplicity="*" />
           <ReferentialConstraint>
@@ -145,10 +376,45 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="jampracticeModelStoreContainer" CdmEntityContainer="jampracticeEntities">
+          <EntitySetMapping Name="Dealerships">
+            <EntityTypeMapping TypeName="jampracticeModel.Dealership">
+              <MappingFragment StoreEntitySet="Dealerships">
+                <ScalarProperty Name="parishid" ColumnName="parishid" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="tel" ColumnName="tel" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Fuels">
+            <EntityTypeMapping TypeName="jampracticeModel.Fuel">
+              <MappingFragment StoreEntitySet="Fuel">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Makes">
+            <EntityTypeMapping TypeName="jampracticeModel.Make">
+              <MappingFragment StoreEntitySet="Make">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Orgs">
             <EntityTypeMapping TypeName="jampracticeModel.Org">
               <MappingFragment StoreEntitySet="Org">
                 <ScalarProperty Name="company" ColumnName="company" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="parishes">
+            <EntityTypeMapping TypeName="jampracticeModel.parish">
+              <MappingFragment StoreEntitySet="parishes">
+                <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -161,16 +427,64 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="SteeringPositions">
+            <EntityTypeMapping TypeName="jampracticeModel.SteeringPosition">
+              <MappingFragment StoreEntitySet="SteeringPosition">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TransmissionTypes">
+            <EntityTypeMapping TypeName="jampracticeModel.TransmissionType">
+              <MappingFragment StoreEntitySet="TransmissionType">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="users">
             <EntityTypeMapping TypeName="jampracticeModel.user">
               <MappingFragment StoreEntitySet="users">
                 <ScalarProperty Name="roletypeid" ColumnName="roletypeid" />
                 <ScalarProperty Name="companyid" ColumnName="companyid" />
+                <ScalarProperty Name="password" ColumnName="password" />
                 <ScalarProperty Name="email" ColumnName="email" />
                 <ScalarProperty Name="username" ColumnName="username" />
                 <ScalarProperty Name="lname" ColumnName="lname" />
                 <ScalarProperty Name="fname" ColumnName="fname" />
                 <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VehicleTypes">
+            <EntityTypeMapping TypeName="jampracticeModel.VehicleType">
+              <MappingFragment StoreEntitySet="VehicleType">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserInfoes">
+            <EntityTypeMapping TypeName="jampracticeModel.UserInfo">
+              <MappingFragment StoreEntitySet="UserInfoes">
+                <ScalarProperty Name="Company" ColumnName="Company" />
+                <ScalarProperty Name="Role" ColumnName="Role" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Last_Name" ColumnName="Last Name" />
+                <ScalarProperty Name="First_Name" ColumnName="First Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ViewDealerships">
+            <EntityTypeMapping TypeName="jampracticeModel.ViewDealership">
+              <MappingFragment StoreEntitySet="ViewDealerships">
+                <ScalarProperty Name="Parish" ColumnName="Parish" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

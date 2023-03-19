@@ -13,12 +13,11 @@ namespace Jamcheck
 {
     public partial class FrmAddVehicle : Form
     {
-        Parentform Parent;
-        SqlConnection sql = new SqlConnection(@"data source=.\sqlexpress; initial catalog=JamCheckDB; integrated security = true");
-        SqlCommand add;
+        jampracticeEntities jamdb;
         public FrmAddVehicle()
         {
             InitializeComponent();
+            jamdb = new jampracticeEntities();
         }
 
         private void txtbxChassisNo_TextChanged(object sender, EventArgs e)

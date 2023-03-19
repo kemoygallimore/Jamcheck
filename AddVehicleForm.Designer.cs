@@ -282,9 +282,9 @@ namespace Jamcheck
             // 
             this.FourthRow.BackColor = System.Drawing.Color.White;
             this.FourthRow.ColumnCount = 3;
-            this.FourthRow.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.FourthRow.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.FourthRow.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.FourthRow.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.13553F));
+            this.FourthRow.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.84493F));
+            this.FourthRow.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.14164F));
             this.FourthRow.Controls.Add(this.datePickerPanel, 2, 0);
             this.FourthRow.Controls.Add(this.panel13, 0, 0);
             this.FourthRow.Controls.Add(this.importerPanel, 1, 0);
@@ -303,11 +303,11 @@ namespace Jamcheck
             this.datePickerPanel.Controls.Add(this.label14);
             this.datePickerPanel.Controls.Add(this.dateTimePicker1);
             this.datePickerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.datePickerPanel.Location = new System.Drawing.Point(546, 0);
+            this.datePickerPanel.Location = new System.Drawing.Point(522, 0);
             this.datePickerPanel.Margin = new System.Windows.Forms.Padding(0);
             this.datePickerPanel.Name = "datePickerPanel";
             this.datePickerPanel.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.datePickerPanel.Size = new System.Drawing.Size(273, 100);
+            this.datePickerPanel.Size = new System.Drawing.Size(297, 100);
             this.datePickerPanel.TabIndex = 5;
             // 
             // label14
@@ -329,7 +329,7 @@ namespace Jamcheck
             this.dateTimePicker1.Location = new System.Drawing.Point(10, 71);
             this.dateTimePicker1.MinDate = new System.DateTime(2023, 1, 1, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(253, 29);
+            this.dateTimePicker1.Size = new System.Drawing.Size(277, 29);
             this.dateTimePicker1.TabIndex = 0;
             this.dateTimePicker1.UseWaitCursor = true;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
@@ -344,7 +344,7 @@ namespace Jamcheck
             this.panel13.Margin = new System.Windows.Forms.Padding(0);
             this.panel13.Name = "panel13";
             this.panel13.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.panel13.Size = new System.Drawing.Size(273, 100);
+            this.panel13.Size = new System.Drawing.Size(254, 100);
             this.panel13.TabIndex = 5;
             // 
             // txtbxImportFrom
@@ -355,7 +355,7 @@ namespace Jamcheck
             this.txtbxImportFrom.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbxImportFrom.Location = new System.Drawing.Point(10, 71);
             this.txtbxImportFrom.Name = "txtbxImportFrom";
-            this.txtbxImportFrom.Size = new System.Drawing.Size(253, 29);
+            this.txtbxImportFrom.Size = new System.Drawing.Size(234, 29);
             this.txtbxImportFrom.TabIndex = 1;
             this.txtbxImportFrom.TextChanged += new System.EventHandler(this.txtbxImportFrom_TextChanged);
             // 
@@ -378,11 +378,11 @@ namespace Jamcheck
             this.importerPanel.Controls.Add(this.cobxImporter);
             this.importerPanel.Controls.Add(this.label12);
             this.importerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.importerPanel.Location = new System.Drawing.Point(273, 0);
+            this.importerPanel.Location = new System.Drawing.Point(254, 0);
             this.importerPanel.Margin = new System.Windows.Forms.Padding(0);
             this.importerPanel.Name = "importerPanel";
             this.importerPanel.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.importerPanel.Size = new System.Drawing.Size(273, 100);
+            this.importerPanel.Size = new System.Drawing.Size(268, 100);
             this.importerPanel.TabIndex = 4;
             // 
             // cobxImporter
@@ -393,7 +393,7 @@ namespace Jamcheck
             this.cobxImporter.FormattingEnabled = true;
             this.cobxImporter.Location = new System.Drawing.Point(10, 71);
             this.cobxImporter.Name = "cobxImporter";
-            this.cobxImporter.Size = new System.Drawing.Size(253, 29);
+            this.cobxImporter.Size = new System.Drawing.Size(248, 29);
             this.cobxImporter.TabIndex = 1;
             this.cobxImporter.SelectedIndexChanged += new System.EventHandler(this.cobxImporter_SelectedIndexChanged);
             // 

@@ -43,19 +43,19 @@ namespace Jamcheck
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtbxUsername = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.combxOrg = new System.Windows.Forms.ComboBox();
-            this.label37 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtbxLname = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.txtbxEmail = new System.Windows.Forms.TextBox();
-            this.label28 = new System.Windows.Forms.Label();
+            this.BtnAdd = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.combxRole = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.BtnAdd = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.combxOrg = new System.Windows.Forms.ComboBox();
+            this.label37 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.txtbxEmail = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.txtbxPassword = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -66,10 +66,10 @@ namespace Jamcheck
             this.tableLayoutPanel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel6.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -114,6 +114,7 @@ namespace Jamcheck
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -261,36 +262,6 @@ namespace Jamcheck
             this.label29.TabIndex = 0;
             this.label29.Text = "Username";
             // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.combxOrg);
-            this.panel6.Controls.Add(this.label37);
-            this.panel6.Location = new System.Drawing.Point(593, 62);
-            this.panel6.Margin = new System.Windows.Forms.Padding(0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(333, 62);
-            this.panel6.TabIndex = 3;
-            // 
-            // combxOrg
-            // 
-            this.combxOrg.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.combxOrg.FormattingEnabled = true;
-            this.combxOrg.Location = new System.Drawing.Point(20, 20);
-            this.combxOrg.Name = "combxOrg";
-            this.combxOrg.Size = new System.Drawing.Size(260, 29);
-            this.combxOrg.TabIndex = 5;
-            this.combxOrg.SelectedIndexChanged += new System.EventHandler(this.combxOrg_SelectedIndexChanged);
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(20, 0);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(104, 21);
-            this.label37.TabIndex = 0;
-            this.label37.Text = "Organization";
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.txtbxLname);
@@ -321,34 +292,23 @@ namespace Jamcheck
             this.label12.TabIndex = 0;
             this.label12.Text = "Last Name";
             // 
-            // panel5
+            // BtnAdd
             // 
-            this.panel5.Controls.Add(this.txtbxEmail);
-            this.panel5.Controls.Add(this.label28);
-            this.panel5.Location = new System.Drawing.Point(593, 0);
-            this.panel5.Margin = new System.Windows.Forms.Padding(0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(333, 62);
-            this.panel5.TabIndex = 3;
-            // 
-            // txtbxEmail
-            // 
-            this.txtbxEmail.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxEmail.Location = new System.Drawing.Point(20, 20);
-            this.txtbxEmail.Name = "txtbxEmail";
-            this.txtbxEmail.Size = new System.Drawing.Size(280, 29);
-            this.txtbxEmail.TabIndex = 4;
-            this.txtbxEmail.TextChanged += new System.EventHandler(this.txtbxEmail_TextChanged);
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(20, 0);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(118, 21);
-            this.label28.TabIndex = 0;
-            this.label28.Text = "Email Address";
+            this.BtnAdd.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.BtnAdd.BackColor = System.Drawing.Color.LimeGreen;
+            this.BtnAdd.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.BtnAdd.FlatAppearance.BorderSize = 2;
+            this.BtnAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
+            this.BtnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAdd.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAdd.Location = new System.Drawing.Point(1011, 65);
+            this.BtnAdd.Margin = new System.Windows.Forms.Padding(3, 3, 40, 3);
+            this.BtnAdd.Name = "BtnAdd";
+            this.BtnAdd.Size = new System.Drawing.Size(106, 35);
+            this.BtnAdd.TabIndex = 7;
+            this.BtnAdd.Text = "Add User";
+            this.BtnAdd.UseVisualStyleBackColor = false;
+            this.BtnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // panel1
             // 
@@ -380,23 +340,64 @@ namespace Jamcheck
             this.label1.TabIndex = 0;
             this.label1.Text = "Role";
             // 
-            // BtnAdd
+            // panel6
             // 
-            this.BtnAdd.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.BtnAdd.BackColor = System.Drawing.Color.LimeGreen;
-            this.BtnAdd.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.BtnAdd.FlatAppearance.BorderSize = 2;
-            this.BtnAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
-            this.BtnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAdd.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAdd.Location = new System.Drawing.Point(1011, 65);
-            this.BtnAdd.Margin = new System.Windows.Forms.Padding(3, 3, 40, 3);
-            this.BtnAdd.Name = "BtnAdd";
-            this.BtnAdd.Size = new System.Drawing.Size(106, 35);
-            this.BtnAdd.TabIndex = 7;
-            this.BtnAdd.Text = "Add User";
-            this.BtnAdd.UseVisualStyleBackColor = false;
-            this.BtnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
+            this.panel6.Controls.Add(this.combxOrg);
+            this.panel6.Controls.Add(this.label37);
+            this.panel6.Location = new System.Drawing.Point(593, 62);
+            this.panel6.Margin = new System.Windows.Forms.Padding(0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(333, 62);
+            this.panel6.TabIndex = 3;
+            // 
+            // combxOrg
+            // 
+            this.combxOrg.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.combxOrg.FormattingEnabled = true;
+            this.combxOrg.Location = new System.Drawing.Point(20, 20);
+            this.combxOrg.Name = "combxOrg";
+            this.combxOrg.Size = new System.Drawing.Size(260, 29);
+            this.combxOrg.TabIndex = 5;
+            this.combxOrg.SelectedIndexChanged += new System.EventHandler(this.combxOrg_SelectedIndexChanged);
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.Location = new System.Drawing.Point(20, 0);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(104, 21);
+            this.label37.TabIndex = 0;
+            this.label37.Text = "Organization";
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.txtbxEmail);
+            this.panel5.Controls.Add(this.label28);
+            this.panel5.Location = new System.Drawing.Point(593, 0);
+            this.panel5.Margin = new System.Windows.Forms.Padding(0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(333, 62);
+            this.panel5.TabIndex = 3;
+            // 
+            // txtbxEmail
+            // 
+            this.txtbxEmail.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbxEmail.Location = new System.Drawing.Point(20, 20);
+            this.txtbxEmail.Name = "txtbxEmail";
+            this.txtbxEmail.Size = new System.Drawing.Size(280, 29);
+            this.txtbxEmail.TabIndex = 4;
+            this.txtbxEmail.TextChanged += new System.EventHandler(this.txtbxEmail_TextChanged);
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(20, 0);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(118, 21);
+            this.label28.TabIndex = 0;
+            this.label28.Text = "Email Address";
             // 
             // panel7
             // 
@@ -448,14 +449,14 @@ namespace Jamcheck
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.ResumeLayout(false);

@@ -25,8 +25,17 @@ namespace Jamcheck
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Dealership> Dealerships { get; set; }
+        public virtual DbSet<Fuel> Fuels { get; set; }
+        public virtual DbSet<Make> Makes { get; set; }
         public virtual DbSet<Org> Orgs { get; set; }
+        public virtual DbSet<parish> parishes { get; set; }
         public virtual DbSet<Role> Roles { get; set; }
+        public virtual DbSet<SteeringPosition> SteeringPositions { get; set; }
+        public virtual DbSet<TransmissionType> TransmissionTypes { get; set; }
         public virtual DbSet<user> users { get; set; }
+        public virtual DbSet<VehicleType> VehicleTypes { get; set; }
+        public virtual DbSet<UserInfo> UserInfoes { get; set; }
+        public virtual DbSet<ViewDealership> ViewDealerships { get; set; }
     }
 }

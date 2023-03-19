@@ -62,7 +62,7 @@ namespace Jamcheck
             catch (Exception login)
             {
 
-                 MessageBox.Show("Access denied");
+                 MessageBox.Show(login.Message + login.Source);
             }
 
 

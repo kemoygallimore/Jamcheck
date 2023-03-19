@@ -12,18 +12,18 @@ namespace Jamcheck
     using System;
     using System.Collections.Generic;
     
-    public partial class user
+    public partial class parish
     {
-        public int id { get; set; }
-        public string fname { get; set; }
-        public string lname { get; set; }
-        public string username { get; set; }
-        public string email { get; set; }
-        public string password { get; set; }
-        public int companyid { get; set; }
-        public int roletypeid { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public parish()
+        {
+            this.Dealerships = new HashSet<Dealership>();
+        }
     
-        public virtual Org Org { get; set; }
-        public virtual Role Role { get; set; }
+        public int id { get; set; }
+        public string name { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Dealership> Dealerships { get; set; }
     }
 }

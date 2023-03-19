@@ -35,13 +35,13 @@ namespace Jamcheck
             this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.seepassword = new System.Windows.Forms.PictureBox();
             this.txtbxPassword = new System.Windows.Forms.TextBox();
             this.txtbxUsername = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.seepassword = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -87,6 +87,15 @@ namespace Jamcheck
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
+            // seepassword
+            // 
+            this.seepassword.BackColor = System.Drawing.Color.DimGray;
+            this.seepassword.Image = global::Jamcheck.Properties.Resources.eye_icon_1457;
+            resources.ApplyResources(this.seepassword, "seepassword");
+            this.seepassword.Name = "seepassword";
+            this.seepassword.TabStop = false;
+            this.seepassword.Click += new System.EventHandler(this.seepassword_Click);
+            // 
             // txtbxPassword
             // 
             this.txtbxPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -127,15 +136,6 @@ namespace Jamcheck
             // 
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            // 
-            // seepassword
-            // 
-            this.seepassword.BackColor = System.Drawing.Color.DimGray;
-            this.seepassword.Image = global::Jamcheck.Properties.Resources.eye_icon_1457;
-            resources.ApplyResources(this.seepassword, "seepassword");
-            this.seepassword.Name = "seepassword";
-            this.seepassword.TabStop = false;
-            this.seepassword.Click += new System.EventHandler(this.seepassword_Click);
             // 
             // CustomsLoginFrm
             // 

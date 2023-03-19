@@ -12,18 +12,14 @@ namespace Jamcheck
     using System;
     using System.Collections.Generic;
     
-    public partial class user
+    public partial class Dealership
     {
         public int id { get; set; }
-        public string fname { get; set; }
-        public string lname { get; set; }
-        public string username { get; set; }
-        public string email { get; set; }
-        public string password { get; set; }
-        public int companyid { get; set; }
-        public int roletypeid { get; set; }
+        public string name { get; set; }
+        public string tel { get; set; }
+        public string address { get; set; }
+        public Nullable<int> parishid { get; set; }
     
-        public virtual Org Org { get; set; }
-        public virtual Role Role { get; set; }
+        public virtual parish parish { get; set; }
     }
 }

@@ -231,6 +231,9 @@
   <data name="txtbxPassword.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
+  <data name="txtbxPassword.Text" xml:space="preserve">
+    <value>Password1</value>
+  </data>
   <data name="&gt;&gt;txtbxPassword.Name" xml:space="preserve">
     <value>txtbxPassword</value>
   </data>
@@ -254,6 +257,9 @@
   </data>
   <data name="txtbxUsername.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
+  </data>
+  <data name="txtbxUsername.Text" xml:space="preserve">
+    <value>Admin</value>
   </data>
   <data name="&gt;&gt;txtbxUsername.Name" xml:space="preserve">
     <value>txtbxUsername</value>
