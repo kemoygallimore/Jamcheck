@@ -27,6 +27,7 @@ namespace Jamcheck
     
         public virtual DbSet<Dealership> Dealerships { get; set; }
         public virtual DbSet<Fuel> Fuels { get; set; }
+        public virtual DbSet<ImportFrom> ImportFroms { get; set; }
         public virtual DbSet<Make> Makes { get; set; }
         public virtual DbSet<Org> Orgs { get; set; }
         public virtual DbSet<parish> parishes { get; set; }

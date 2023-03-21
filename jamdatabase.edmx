@@ -22,6 +22,13 @@
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="name" Type="nvarchar" MaxLength="10" Nullable="false" />
         </EntityType>
+        <EntityType Name="ImportFrom">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
         <EntityType Name="Make">
           <Key>
             <PropertyRef Name="id" />
@@ -153,6 +160,7 @@ warning 6002: The table/view 'jampractice.dbo.ViewDealerships' does not have a p
         <EntityContainer Name="jampracticeModelStoreContainer">
           <EntitySet Name="Dealerships" EntityType="Self.Dealerships" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Fuel" EntityType="Self.Fuel" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ImportFrom" EntityType="Self.ImportFrom" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Make" EntityType="Self.Make" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Org" EntityType="Self.Org" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="parishes" EntityType="Self.parishes" Schema="dbo" store:Type="Tables" />
@@ -200,6 +208,7 @@ warning 6002: The table/view 'jampractice.dbo.ViewDealerships' does not have a p
         <EntityContainer Name="jampracticeEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Dealerships" EntityType="jampracticeModel.Dealership" />
           <EntitySet Name="Fuels" EntityType="jampracticeModel.Fuel" />
+          <EntitySet Name="ImportFroms" EntityType="jampracticeModel.ImportFrom" />
           <EntitySet Name="Makes" EntityType="jampracticeModel.Make" />
           <EntitySet Name="Orgs" EntityType="jampracticeModel.Org" />
           <EntitySet Name="parishes" EntityType="jampracticeModel.parish" />
@@ -240,6 +249,13 @@ warning 6002: The table/view 'jampractice.dbo.ViewDealerships' does not have a p
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="name" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ImportFrom">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Make">
           <Key>
@@ -391,6 +407,14 @@ warning 6002: The table/view 'jampractice.dbo.ViewDealerships' does not have a p
             <EntityTypeMapping TypeName="jampracticeModel.Fuel">
               <MappingFragment StoreEntitySet="Fuel">
                 <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ImportFroms">
+            <EntityTypeMapping TypeName="jampracticeModel.ImportFrom">
+              <MappingFragment StoreEntitySet="ImportFrom">
+                <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>

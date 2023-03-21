@@ -19,6 +19,24 @@ namespace Jamcheck
             InitializeComponent();
             jamdb = new jampracticeEntities();
         }
+        private void FrmAddVehicle_Load(object sender, EventArgs e)
+        {
+
+            var make = jamdb.Makes.ToList();
+            cobxMake.DisplayMember = "Name";
+            cobxMake.ValueMember = "id";
+            cobxMake.DataSource = make;
+
+            var type = jamdb.VehicleTypes.ToList();
+            cobxVehicleType.DisplayMember = "name";
+            cobxVehicleType.ValueMember = "id";
+            cobxVehicleType.DataSource = type;
+
+            var import = jamdb.ImportFroms.ToList();
+            cobxImporter.DisplayMember = "name";
+            cobxImporter.ValueMember = "id";
+            cobxImporter.DataSource = import;
+        }
 
         private void txtbxChassisNo_TextChanged(object sender, EventArgs e)
         {
@@ -72,9 +90,7 @@ namespace Jamcheck
 
         private void btnAddVehicle_Click(object sender, EventArgs e)
         {
-            /*sql.Open();
-            add = new SqlCommand($"insert into UsedCars(year, Makeid, model, bodytypeid, chassisnum, transnum, transtypeid, mileage, dealerid)" +
-                $"values({numYear.Value}, {cobxMake.SelectedIndex),");*/
+           
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -125,5 +141,7 @@ namespace Jamcheck
                 pictureBox1.ImageLocation = openFile.FileName.ToString();
             }
         }
+
+        
     }
 }

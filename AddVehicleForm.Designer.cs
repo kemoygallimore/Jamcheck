@@ -29,6 +29,7 @@ namespace Jamcheck
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAddVehicle));
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -846,13 +847,10 @@ namespace Jamcheck
             this.cobxMake.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.cobxMake.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cobxMake.FormattingEnabled = true;
-            this.cobxMake.Items.AddRange(new object[] {
-            "Mercedez-Benz"});
             this.cobxMake.Location = new System.Drawing.Point(10, 71);
             this.cobxMake.Name = "cobxMake";
             this.cobxMake.Size = new System.Drawing.Size(149, 29);
             this.cobxMake.TabIndex = 1;
-            this.cobxMake.Text = "Mercedez-Benz";
             this.cobxMake.SelectedIndexChanged += new System.EventHandler(this.cobxMake_SelectedIndexChanged);
             // 
             // label6
@@ -1102,11 +1100,13 @@ namespace Jamcheck
             this.Controls.Add(this.tableLayoutPanel10);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(1130, 700);
             this.Name = "FrmAddVehicle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FrmAddVehicle_Load);
             this.tableLayoutPanel10.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
             this.Header.ResumeLayout(false);
