@@ -153,6 +153,9 @@
     <Compile Include="UserInfo.cs">
       <DependentUpon>jamdatabase.tt</DependentUpon>
     </Compile>
+    <Compile Include="Vehicle.cs">
+      <DependentUpon>jamdatabase.tt</DependentUpon>
+    </Compile>
     <Compile Include="VehicleDetailsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,6 +166,9 @@
       <DependentUpon>jamdatabase.tt</DependentUpon>
     </Compile>
     <Compile Include="ViewDealership.cs">
+      <DependentUpon>jamdatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ViewVehicle.cs">
       <DependentUpon>jamdatabase.tt</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AddVehicleForm.resx">

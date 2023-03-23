@@ -43,11 +43,6 @@ namespace Jamcheck
 
         }
 
-        private void txtbxModelNo_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void cobxImporter_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -86,11 +81,6 @@ namespace Jamcheck
         private void numSeating_ValueChanged(object sender, EventArgs e)
         {
 
-        }
-
-        private void btnAddVehicle_Click(object sender, EventArgs e)
-        {
-           
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -133,6 +123,11 @@ namespace Jamcheck
 
         }
 
+        private void txtbxVIN_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnUpload_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFile = new OpenFileDialog();
@@ -142,6 +137,28 @@ namespace Jamcheck
             }
         }
 
-        
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            Vehicle vehicle = new Vehicle();
+
+            var make = cobxMake.SelectedValue;
+            var model = txtbxModel.Text;
+            var year = numYear.Value;
+            var Fuel = (rtbnPetrol.Checked) ? "Petrol" : (rbtnDiesel.Checked) ? "Diesel" : (rbtnElectric.Checked) ? "Electric" : "Hybrid";
+            var Chassis = txtbxChassisNo.Text;
+            var VIN = txtbxVIN.Text;
+            var mileage = numMileage;
+            var Seating = numSeating;
+            var Steering = (rbtnLHand.Checked) ? "Left Hand" : "Right Hand";
+            var bodytype = cobxVehicleType.SelectedValue;
+            var trans = (rbtnAuto.Checked) ? 1 : (rbtnManual.Checked) ? 2 : 3;
+            var Source = cobxImporter.SelectedValue;
+            var importer = txtbxImportFrom.Text;
+            var pic = pictureBox1.ImageLocation;
+
+
+
+
+        }
     }
 }

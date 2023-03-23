@@ -41,13 +41,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.cobxmake = new System.Windows.Forms.ComboBox();
+            this.cobxModel = new System.Windows.Forms.ComboBox();
+            this.cobxYear = new System.Windows.Forms.ComboBox();
+            this.cobxBodyType = new System.Windows.Forms.ComboBox();
+            this.cobxFuelType = new System.Windows.Forms.ComboBox();
             this.comboBox6 = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.BtnExit = new System.Windows.Forms.Button();
             this.RightColumn = new System.Windows.Forms.TableLayoutPanel();
             this.lblVehicleIDAll = new System.Windows.Forms.Label();
             this.lblYearAll = new System.Windows.Forms.Label();
@@ -58,7 +59,6 @@
             this.tableLayoutPanel2All = new System.Windows.Forms.TableLayoutPanel();
             this.label8 = new System.Windows.Forms.Label();
             this.Body = new System.Windows.Forms.TableLayoutPanel();
-            this.BtnExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picBxListingMainAll)).BeginInit();
             this.Content.SuspendLayout();
             this.ContenTable.SuspendLayout();
@@ -133,11 +133,11 @@
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.comboBox1, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.comboBox2, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.comboBox3, 0, 7);
-            this.tableLayoutPanel1.Controls.Add(this.comboBox4, 0, 9);
-            this.tableLayoutPanel1.Controls.Add(this.comboBox5, 0, 11);
+            this.tableLayoutPanel1.Controls.Add(this.cobxmake, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.cobxModel, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.cobxYear, 0, 7);
+            this.tableLayoutPanel1.Controls.Add(this.cobxBodyType, 0, 9);
+            this.tableLayoutPanel1.Controls.Add(this.cobxFuelType, 0, 11);
             this.tableLayoutPanel1.Controls.Add(this.comboBox6, 0, 13);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
@@ -238,50 +238,55 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Filters";
             // 
-            // comboBox1
+            // cobxmake
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(43, 110);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(137, 26);
-            this.comboBox1.TabIndex = 1;
+            this.cobxmake.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cobxmake.FormattingEnabled = true;
+            this.cobxmake.Location = new System.Drawing.Point(43, 110);
+            this.cobxmake.Name = "cobxmake";
+            this.cobxmake.Size = new System.Drawing.Size(137, 26);
+            this.cobxmake.TabIndex = 1;
+            this.cobxmake.SelectedIndexChanged += new System.EventHandler(this.cobxmake_SelectedIndexChanged);
             // 
-            // comboBox2
+            // cobxModel
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(43, 180);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(137, 26);
-            this.comboBox2.TabIndex = 1;
+            this.cobxModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cobxModel.FormattingEnabled = true;
+            this.cobxModel.Location = new System.Drawing.Point(43, 180);
+            this.cobxModel.Name = "cobxModel";
+            this.cobxModel.Size = new System.Drawing.Size(137, 26);
+            this.cobxModel.TabIndex = 1;
+            this.cobxModel.SelectedIndexChanged += new System.EventHandler(this.cobxModel_SelectedIndexChanged);
             // 
-            // comboBox3
+            // cobxYear
             // 
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(43, 250);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(137, 26);
-            this.comboBox3.TabIndex = 1;
+            this.cobxYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cobxYear.FormattingEnabled = true;
+            this.cobxYear.Location = new System.Drawing.Point(43, 250);
+            this.cobxYear.Name = "cobxYear";
+            this.cobxYear.Size = new System.Drawing.Size(137, 26);
+            this.cobxYear.TabIndex = 1;
+            this.cobxYear.SelectedIndexChanged += new System.EventHandler(this.cobxYear_SelectedIndexChanged);
             // 
-            // comboBox4
+            // cobxBodyType
             // 
-            this.comboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(43, 320);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(137, 26);
-            this.comboBox4.TabIndex = 1;
+            this.cobxBodyType.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cobxBodyType.FormattingEnabled = true;
+            this.cobxBodyType.Location = new System.Drawing.Point(43, 320);
+            this.cobxBodyType.Name = "cobxBodyType";
+            this.cobxBodyType.Size = new System.Drawing.Size(137, 26);
+            this.cobxBodyType.TabIndex = 1;
+            this.cobxBodyType.SelectedIndexChanged += new System.EventHandler(this.cobxBodyType_SelectedIndexChanged);
             // 
-            // comboBox5
+            // cobxFuelType
             // 
-            this.comboBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(43, 390);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(137, 26);
-            this.comboBox5.TabIndex = 1;
+            this.cobxFuelType.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cobxFuelType.FormattingEnabled = true;
+            this.cobxFuelType.Location = new System.Drawing.Point(43, 390);
+            this.cobxFuelType.Name = "cobxFuelType";
+            this.cobxFuelType.Size = new System.Drawing.Size(137, 26);
+            this.cobxFuelType.TabIndex = 1;
+            this.cobxFuelType.SelectedIndexChanged += new System.EventHandler(this.cobxFuelType_SelectedIndexChanged);
             // 
             // comboBox6
             // 
@@ -309,6 +314,24 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(958, 544);
             this.tableLayoutPanel2.TabIndex = 10;
+            // 
+            // BtnExit
+            // 
+            this.BtnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnExit.BackColor = System.Drawing.Color.LimeGreen;
+            this.BtnExit.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.BtnExit.FlatAppearance.BorderSize = 2;
+            this.BtnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
+            this.BtnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnExit.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnExit.Location = new System.Drawing.Point(812, 497);
+            this.BtnExit.Margin = new System.Windows.Forms.Padding(3, 3, 40, 3);
+            this.BtnExit.Name = "BtnExit";
+            this.BtnExit.Size = new System.Drawing.Size(106, 35);
+            this.BtnExit.TabIndex = 12;
+            this.BtnExit.Text = "EXIT";
+            this.BtnExit.UseVisualStyleBackColor = false;
+            this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
             // RightColumn
             // 
@@ -410,14 +433,17 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.ColumnHeadersVisible = false;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 35);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(958, 459);
             this.dataGridView1.TabIndex = 10;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // tableLayoutPanel2All
             // 
@@ -463,31 +489,12 @@
             this.Body.Size = new System.Drawing.Size(1158, 624);
             this.Body.TabIndex = 11;
             // 
-            // BtnExit
-            // 
-            this.BtnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnExit.BackColor = System.Drawing.Color.LimeGreen;
-            this.BtnExit.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.BtnExit.FlatAppearance.BorderSize = 2;
-            this.BtnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
-            this.BtnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnExit.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnExit.Location = new System.Drawing.Point(812, 497);
-            this.BtnExit.Margin = new System.Windows.Forms.Padding(3, 3, 40, 3);
-            this.BtnExit.Name = "BtnExit";
-            this.BtnExit.Size = new System.Drawing.Size(106, 35);
-            this.BtnExit.TabIndex = 12;
-            this.BtnExit.Text = "EXIT";
-            this.BtnExit.UseVisualStyleBackColor = false;
-            this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
-            // 
             // ListingsMainAll
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1158, 624);
-            this.ControlBox = false;
             this.Controls.Add(this.Body);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -530,11 +537,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox cobxmake;
+        private System.Windows.Forms.ComboBox cobxModel;
+        private System.Windows.Forms.ComboBox cobxYear;
+        private System.Windows.Forms.ComboBox cobxBodyType;
+        private System.Windows.Forms.ComboBox cobxFuelType;
         private System.Windows.Forms.ComboBox comboBox6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;

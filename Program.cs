@@ -18,7 +18,7 @@ namespace Jamcheck
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CustomsLoginFrm());
+            Application.Run(new ListingsMainAll());
 
 
         }

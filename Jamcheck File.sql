@@ -1,6 +1,6 @@
 USE [master]
 GO
-/****** Object:  Database [jampractice]    Script Date: 20/3/2023 11:02:30 pm ******/
+/****** Object:  Database [jampractice]    Script Date: 23/3/2023 8:40:25 am ******/
 CREATE DATABASE [jampractice]
  CONTAINMENT = NONE
  ON  PRIMARY 
@@ -80,7 +80,7 @@ ALTER DATABASE [jampractice] SET QUERY_STORE = OFF
 GO
 USE [jampractice]
 GO
-/****** Object:  Table [dbo].[Roles]    Script Date: 20/3/2023 11:02:31 pm ******/
+/****** Object:  Table [dbo].[Roles]    Script Date: 23/3/2023 8:40:25 am ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -94,7 +94,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Org]    Script Date: 20/3/2023 11:02:31 pm ******/
+/****** Object:  Table [dbo].[Org]    Script Date: 23/3/2023 8:40:25 am ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -108,7 +108,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[users]    Script Date: 20/3/2023 11:02:31 pm ******/
+/****** Object:  Table [dbo].[users]    Script Date: 23/3/2023 8:40:25 am ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -128,7 +128,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  View [dbo].[UserInfoes]    Script Date: 20/3/2023 11:02:31 pm ******/
+/****** Object:  View [dbo].[UserInfoes]    Script Date: 23/3/2023 8:40:25 am ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -146,7 +146,7 @@ from users u
 left join Roles r on u.roletypeid = r.id
 left join Org o on u.companyid = o.id
 GO
-/****** Object:  Table [dbo].[parishes]    Script Date: 20/3/2023 11:02:31 pm ******/
+/****** Object:  Table [dbo].[parishes]    Script Date: 23/3/2023 8:40:25 am ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -160,7 +160,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Dealerships]    Script Date: 20/3/2023 11:02:31 pm ******/
+/****** Object:  Table [dbo].[Dealerships]    Script Date: 23/3/2023 8:40:25 am ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -177,7 +177,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  View [dbo].[ViewDealerships]    Script Date: 20/3/2023 11:02:31 pm ******/
+/****** Object:  View [dbo].[ViewDealerships]    Script Date: 23/3/2023 8:40:25 am ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -192,35 +192,7 @@ SELECT
   FROM Dealerships d
   left join parishes p on p.id = d.parishid
 GO
-/****** Object:  Table [dbo].[Fuel]    Script Date: 20/3/2023 11:02:31 pm ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE TABLE [dbo].[Fuel](
-	[id] [int] IDENTITY(1,1) NOT NULL,
-	[name] [nvarchar](10) NOT NULL,
-PRIMARY KEY CLUSTERED 
-(
-	[id] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
-) ON [PRIMARY]
-GO
-/****** Object:  Table [dbo].[ImportFrom]    Script Date: 20/3/2023 11:02:31 pm ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE TABLE [dbo].[ImportFrom](
-	[id] [int] IDENTITY(1,1) NOT NULL,
-	[Name] [nvarchar](50) NOT NULL,
- CONSTRAINT [PK_ImportFrom] PRIMARY KEY CLUSTERED 
-(
-	[id] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
-) ON [PRIMARY]
-GO
-/****** Object:  Table [dbo].[Make]    Script Date: 20/3/2023 11:02:31 pm ******/
+/****** Object:  Table [dbo].[Make]    Script Date: 23/3/2023 8:40:25 am ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -234,7 +206,35 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[SteeringPosition]    Script Date: 20/3/2023 11:02:31 pm ******/
+/****** Object:  Table [dbo].[VehicleType]    Script Date: 23/3/2023 8:40:25 am ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[VehicleType](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](30) NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Fuel]    Script Date: 23/3/2023 8:40:25 am ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Fuel](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[name] [nvarchar](10) NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[SteeringPosition]    Script Date: 23/3/2023 8:40:25 am ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -248,7 +248,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[TransmissionType]    Script Date: 20/3/2023 11:02:31 pm ******/
+/****** Object:  Table [dbo].[TransmissionType]    Script Date: 23/3/2023 8:40:25 am ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -262,19 +262,81 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[VehicleType]    Script Date: 20/3/2023 11:02:31 pm ******/
+/****** Object:  Table [dbo].[ImportFrom]    Script Date: 23/3/2023 8:40:25 am ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-CREATE TABLE [dbo].[VehicleType](
+CREATE TABLE [dbo].[ImportFrom](
 	[id] [int] IDENTITY(1,1) NOT NULL,
-	[Name] [nvarchar](30) NOT NULL,
-PRIMARY KEY CLUSTERED 
+	[Name] [nvarchar](50) NOT NULL,
+ CONSTRAINT [PK_ImportFrom] PRIMARY KEY CLUSTERED 
 (
 	[id] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Vehicles]    Script Date: 23/3/2023 8:40:25 am ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Vehicles](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[year] [int] NOT NULL,
+	[makeid] [int] NOT NULL,
+	[Model] [nvarchar](30) NOT NULL,
+	[fuelid] [int] NOT NULL,
+	[ChassisNo] [nvarchar](20) NOT NULL,
+	[VinNum] [nvarchar](20) NOT NULL,
+	[Mileage] [int] NOT NULL,
+	[Seating] [int] NOT NULL,
+	[steeringid] [int] NOT NULL,
+	[bodytypeid] [int] NOT NULL,
+	[transmissionid] [int] NOT NULL,
+	[ImportfromID] [int] NOT NULL,
+	[Importer] [nvarchar](50) NOT NULL,
+	[ImportDate] [date] NOT NULL,
+	[Picture] [image] NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  View [dbo].[ViewVehicles]    Script Date: 23/3/2023 8:40:25 am ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+/****** Script for SelectTopNRows command from SSMS  ******/
+CREATE   view [dbo].[ViewVehicles] as 
+SELECT TOP (1000)
+	  v.id,
+	  Picture,
+      m.name[Make],
+	  model,
+      fuelid,
+      ChassisNo,
+      Vinnum [VIN],
+	  year,
+      Mileage,
+      Seating,
+      s.name[Steering],
+      body.Name [BodyType],
+      t.name[Transmission],
+      imp.Name[ImportFrom],
+      Importer,
+      ImportDate
+  FROM Vehicles v
+  join make m on m.id = v.makeid
+  join fuel f on f.id = v.fuelid
+  join SteeringPosition s on s.id = v.steeringid
+  join VehicleType body on body.id = v.bodytypeid
+  join transmissiontype t on t.id = v.transmissionid
+  join ImportFrom imp on imp.id = v.ImportFromID
+  
 GO
 SET IDENTITY_INSERT [dbo].[Fuel] ON 
 GO
@@ -430,6 +492,24 @@ REFERENCES [dbo].[Org] ([id])
 GO
 ALTER TABLE [dbo].[users]  WITH CHECK ADD FOREIGN KEY([roletypeid])
 REFERENCES [dbo].[Roles] ([id])
+GO
+ALTER TABLE [dbo].[Vehicles]  WITH CHECK ADD FOREIGN KEY([bodytypeid])
+REFERENCES [dbo].[VehicleType] ([id])
+GO
+ALTER TABLE [dbo].[Vehicles]  WITH CHECK ADD FOREIGN KEY([fuelid])
+REFERENCES [dbo].[Fuel] ([id])
+GO
+ALTER TABLE [dbo].[Vehicles]  WITH CHECK ADD FOREIGN KEY([ImportfromID])
+REFERENCES [dbo].[ImportFrom] ([id])
+GO
+ALTER TABLE [dbo].[Vehicles]  WITH CHECK ADD FOREIGN KEY([makeid])
+REFERENCES [dbo].[Make] ([id])
+GO
+ALTER TABLE [dbo].[Vehicles]  WITH CHECK ADD FOREIGN KEY([steeringid])
+REFERENCES [dbo].[SteeringPosition] ([id])
+GO
+ALTER TABLE [dbo].[Vehicles]  WITH CHECK ADD FOREIGN KEY([transmissionid])
+REFERENCES [dbo].[TransmissionType] ([id])
 GO
 USE [master]
 GO

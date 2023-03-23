@@ -32,7 +32,7 @@ namespace Jamcheck
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAddVehicle));
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.Header = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -68,7 +68,7 @@ namespace Jamcheck
             this.SecondRow = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtbxModelNo = new System.Windows.Forms.TextBox();
+            this.txtbxVIN = new System.Windows.Forms.TextBox();
             this.panel10 = new System.Windows.Forms.Panel();
             this.numSeating = new System.Windows.Forms.NumericUpDown();
             this.label10 = new System.Windows.Forms.Label();
@@ -156,7 +156,7 @@ namespace Jamcheck
             // 
             // panel12
             // 
-            this.panel12.Controls.Add(this.button1);
+            this.panel12.Controls.Add(this.btnAdd);
             this.panel12.Controls.Add(this.btnExit);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel12.Location = new System.Drawing.Point(0, 520);
@@ -165,22 +165,23 @@ namespace Jamcheck
             this.panel12.Size = new System.Drawing.Size(1130, 180);
             this.panel12.TabIndex = 11;
             // 
-            // button1
+            // btnAdd
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button1.BackColor = System.Drawing.Color.LimeGreen;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button1.FlatAppearance.BorderSize = 3;
-            this.button1.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(320, 20);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 45);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "ADD";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnAdd.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnAdd.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnAdd.FlatAppearance.BorderSize = 3;
+            this.btnAdd.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
+            this.btnAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Location = new System.Drawing.Point(320, 20);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(120, 45);
+            this.btnAdd.TabIndex = 12;
+            this.btnAdd.Text = "ADD";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnExit
             // 
@@ -641,7 +642,7 @@ namespace Jamcheck
             // panel2
             // 
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.txtbxModelNo);
+            this.panel2.Controls.Add(this.txtbxVIN);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(204, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
@@ -658,21 +659,21 @@ namespace Jamcheck
             this.label2.Location = new System.Drawing.Point(10, 40);
             this.label2.Margin = new System.Windows.Forms.Padding(0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(136, 23);
+            this.label2.Size = new System.Drawing.Size(45, 23);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Model Number";
+            this.label2.Text = "VIN";
             // 
-            // txtbxModelNo
+            // txtbxVIN
             // 
-            this.txtbxModelNo.BackColor = System.Drawing.Color.White;
-            this.txtbxModelNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtbxModelNo.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.txtbxModelNo.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxModelNo.Location = new System.Drawing.Point(10, 71);
-            this.txtbxModelNo.Name = "txtbxModelNo";
-            this.txtbxModelNo.Size = new System.Drawing.Size(274, 29);
-            this.txtbxModelNo.TabIndex = 1;
-            this.txtbxModelNo.TextChanged += new System.EventHandler(this.txtbxModelNo_TextChanged);
+            this.txtbxVIN.BackColor = System.Drawing.Color.White;
+            this.txtbxVIN.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtbxVIN.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.txtbxVIN.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbxVIN.Location = new System.Drawing.Point(10, 71);
+            this.txtbxVIN.Name = "txtbxVIN";
+            this.txtbxVIN.Size = new System.Drawing.Size(274, 29);
+            this.txtbxVIN.TabIndex = 1;
+            this.txtbxVIN.TextChanged += new System.EventHandler(this.txtbxVIN_TextChanged);
             // 
             // panel10
             // 
@@ -1183,7 +1184,7 @@ namespace Jamcheck
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TableLayoutPanel SecondRow;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox txtbxModelNo;
+        private System.Windows.Forms.TextBox txtbxVIN;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtbxChassisNo;
@@ -1225,7 +1226,7 @@ namespace Jamcheck
         private System.Windows.Forms.NumericUpDown numMileage;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel leftpanel;
