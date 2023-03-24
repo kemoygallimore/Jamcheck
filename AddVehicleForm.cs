@@ -169,7 +169,8 @@ namespace Jamcheck
             OpenFileDialog openFile = new OpenFileDialog();
             if(openFile.ShowDialog()==DialogResult.OK)
             {
-              pictureBox1.ImageLocation = openFile.FileName.ToString();
+                pictureBox1.Image = new Bitmap(openFile.FileName);
+              //pictureBox1.ImageLocation = openFile.FileName.ToString();
             }
 
         }

@@ -804,7 +804,7 @@ namespace Jamcheck
             this.SecondRow.ColumnCount = 3;
             this.SecondRow.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.71154F));
             this.SecondRow.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.28846F));
-            this.SecondRow.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 329F));
+            this.SecondRow.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 330F));
             this.SecondRow.Controls.Add(this.panel2, 1, 0);
             this.SecondRow.Controls.Add(this.panel7, 2, 0);
             this.SecondRow.Controls.Add(this.panel1, 0, 0);
@@ -822,7 +822,7 @@ namespace Jamcheck
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.txtbxModelNo);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(247, 0);
+            this.panel2.Location = new System.Drawing.Point(246, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(20, 20, 20, 0);
@@ -858,11 +858,11 @@ namespace Jamcheck
             this.panel7.Controls.Add(this.label7);
             this.panel7.Controls.Add(this.cobxVehicleType);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(552, 0);
+            this.panel7.Location = new System.Drawing.Point(551, 0);
             this.panel7.Margin = new System.Windows.Forms.Padding(0);
             this.panel7.Name = "panel7";
             this.panel7.Padding = new System.Windows.Forms.Padding(20, 20, 20, 0);
-            this.panel7.Size = new System.Drawing.Size(330, 100);
+            this.panel7.Size = new System.Drawing.Size(331, 100);
             this.panel7.TabIndex = 5;
             // 
             // label7
@@ -889,7 +889,7 @@ namespace Jamcheck
             "Station Wagon"});
             this.cobxVehicleType.Location = new System.Drawing.Point(20, 70);
             this.cobxVehicleType.Name = "cobxVehicleType";
-            this.cobxVehicleType.Size = new System.Drawing.Size(290, 30);
+            this.cobxVehicleType.Size = new System.Drawing.Size(291, 30);
             this.cobxVehicleType.TabIndex = 1;
             this.cobxVehicleType.SelectedIndexChanged += new System.EventHandler(this.cobxVehicleType_SelectedIndexChanged);
             // 
@@ -902,7 +902,7 @@ namespace Jamcheck
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(20, 20, 20, 0);
-            this.panel1.Size = new System.Drawing.Size(247, 100);
+            this.panel1.Size = new System.Drawing.Size(246, 100);
             this.panel1.TabIndex = 3;
             // 
             // label1
@@ -924,7 +924,7 @@ namespace Jamcheck
             this.txtbxChassisNo.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbxChassisNo.Location = new System.Drawing.Point(20, 70);
             this.txtbxChassisNo.Name = "txtbxChassisNo";
-            this.txtbxChassisNo.Size = new System.Drawing.Size(207, 30);
+            this.txtbxChassisNo.Size = new System.Drawing.Size(206, 30);
             this.txtbxChassisNo.TabIndex = 1;
             this.txtbxChassisNo.TextChanged += new System.EventHandler(this.txtbxChassisNo_TextChanged);
             // 
