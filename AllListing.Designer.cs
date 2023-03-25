@@ -28,7 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListingsMainAll));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.picBxListingMainAll = new System.Windows.Forms.PictureBox();
             this.Content = new System.Windows.Forms.Panel();
             this.ContenTable = new System.Windows.Forms.TableLayoutPanel();
@@ -49,26 +54,23 @@
             this.comboBox6 = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.BtnExit = new System.Windows.Forms.Button();
-            this.RightColumn = new System.Windows.Forms.TableLayoutPanel();
-            this.lblVehicleIDAll = new System.Windows.Forms.Label();
-            this.lblYearAll = new System.Windows.Forms.Label();
-            this.lblMakeAll = new System.Windows.Forms.Label();
-            this.lblVINAll = new System.Windows.Forms.Label();
-            this.lblModelAll = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel2All = new System.Windows.Forms.TableLayoutPanel();
             this.label8 = new System.Windows.Forms.Label();
             this.Body = new System.Windows.Forms.TableLayoutPanel();
+            this.viewVehicleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.viewVehicleBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.picBxListingMainAll)).BeginInit();
             this.Content.SuspendLayout();
             this.ContenTable.SuspendLayout();
             this.LeftPanel.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            this.RightColumn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel2All.SuspendLayout();
             this.Body.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.viewVehicleBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewVehicleBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // picBxListingMainAll
@@ -78,7 +80,7 @@
             this.picBxListingMainAll.Location = new System.Drawing.Point(12, 10);
             this.picBxListingMainAll.Margin = new System.Windows.Forms.Padding(2, 10, 2, 2);
             this.picBxListingMainAll.Name = "picBxListingMainAll";
-            this.picBxListingMainAll.Size = new System.Drawing.Size(186, 68);
+            this.picBxListingMainAll.Size = new System.Drawing.Size(186, 104);
             this.picBxListingMainAll.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBxListingMainAll.TabIndex = 1;
             this.picBxListingMainAll.TabStop = false;
@@ -87,10 +89,10 @@
             // 
             this.Content.Controls.Add(this.ContenTable);
             this.Content.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Content.Location = new System.Drawing.Point(0, 80);
+            this.Content.Location = new System.Drawing.Point(0, 116);
             this.Content.Margin = new System.Windows.Forms.Padding(0);
             this.Content.Name = "Content";
-            this.Content.Size = new System.Drawing.Size(1158, 544);
+            this.Content.Size = new System.Drawing.Size(1338, 646);
             this.Content.TabIndex = 9;
             this.Content.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1All_Paint);
             // 
@@ -107,7 +109,7 @@
             this.ContenTable.Name = "ContenTable";
             this.ContenTable.RowCount = 1;
             this.ContenTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.ContenTable.Size = new System.Drawing.Size(1158, 544);
+            this.ContenTable.Size = new System.Drawing.Size(1338, 646);
             this.ContenTable.TabIndex = 9;
             // 
             // LeftPanel
@@ -118,7 +120,7 @@
             this.LeftPanel.Location = new System.Drawing.Point(0, 0);
             this.LeftPanel.Margin = new System.Windows.Forms.Padding(0);
             this.LeftPanel.Name = "LeftPanel";
-            this.LeftPanel.Size = new System.Drawing.Size(200, 544);
+            this.LeftPanel.Size = new System.Drawing.Size(200, 646);
             this.LeftPanel.TabIndex = 9;
             // 
             // tableLayoutPanel1
@@ -159,7 +161,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(200, 544);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(200, 646);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // label7
@@ -167,7 +169,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(43, 437);
+            this.label7.Location = new System.Drawing.Point(43, 488);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(60, 20);
             this.label7.TabIndex = 0;
@@ -178,7 +180,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(43, 367);
+            this.label6.Location = new System.Drawing.Point(43, 418);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(46, 20);
             this.label6.TabIndex = 0;
@@ -189,7 +191,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(43, 297);
+            this.label5.Location = new System.Drawing.Point(43, 348);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(100, 20);
             this.label5.TabIndex = 0;
@@ -200,7 +202,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(43, 227);
+            this.label4.Location = new System.Drawing.Point(43, 278);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 20);
             this.label4.TabIndex = 0;
@@ -211,7 +213,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(43, 157);
+            this.label3.Location = new System.Drawing.Point(43, 208);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 20);
             this.label3.TabIndex = 0;
@@ -222,7 +224,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(43, 87);
+            this.label2.Location = new System.Drawing.Point(43, 138);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 20);
             this.label2.TabIndex = 0;
@@ -232,7 +234,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(43, 37);
+            this.label1.Location = new System.Drawing.Point(43, 88);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(80, 26);
             this.label1.TabIndex = 0;
@@ -242,7 +244,7 @@
             // 
             this.cobxmake.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cobxmake.FormattingEnabled = true;
-            this.cobxmake.Location = new System.Drawing.Point(43, 110);
+            this.cobxmake.Location = new System.Drawing.Point(43, 161);
             this.cobxmake.Name = "cobxmake";
             this.cobxmake.Size = new System.Drawing.Size(137, 26);
             this.cobxmake.TabIndex = 1;
@@ -252,7 +254,7 @@
             // 
             this.cobxModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cobxModel.FormattingEnabled = true;
-            this.cobxModel.Location = new System.Drawing.Point(43, 180);
+            this.cobxModel.Location = new System.Drawing.Point(43, 231);
             this.cobxModel.Name = "cobxModel";
             this.cobxModel.Size = new System.Drawing.Size(137, 26);
             this.cobxModel.TabIndex = 1;
@@ -262,7 +264,7 @@
             // 
             this.cobxYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cobxYear.FormattingEnabled = true;
-            this.cobxYear.Location = new System.Drawing.Point(43, 250);
+            this.cobxYear.Location = new System.Drawing.Point(43, 301);
             this.cobxYear.Name = "cobxYear";
             this.cobxYear.Size = new System.Drawing.Size(137, 26);
             this.cobxYear.TabIndex = 1;
@@ -272,7 +274,7 @@
             // 
             this.cobxBodyType.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cobxBodyType.FormattingEnabled = true;
-            this.cobxBodyType.Location = new System.Drawing.Point(43, 320);
+            this.cobxBodyType.Location = new System.Drawing.Point(43, 371);
             this.cobxBodyType.Name = "cobxBodyType";
             this.cobxBodyType.Size = new System.Drawing.Size(137, 26);
             this.cobxBodyType.TabIndex = 1;
@@ -282,7 +284,7 @@
             // 
             this.cobxFuelType.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cobxFuelType.FormattingEnabled = true;
-            this.cobxFuelType.Location = new System.Drawing.Point(43, 390);
+            this.cobxFuelType.Location = new System.Drawing.Point(43, 441);
             this.cobxFuelType.Name = "cobxFuelType";
             this.cobxFuelType.Size = new System.Drawing.Size(137, 26);
             this.cobxFuelType.TabIndex = 1;
@@ -292,7 +294,7 @@
             // 
             this.comboBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(43, 460);
+            this.comboBox6.Location = new System.Drawing.Point(43, 511);
             this.comboBox6.Name = "comboBox6";
             this.comboBox6.Size = new System.Drawing.Size(137, 26);
             this.comboBox6.TabIndex = 1;
@@ -302,17 +304,16 @@
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Controls.Add(this.BtnExit, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.RightColumn, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.dataGridView1, 0, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(200, 0);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 3;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 0F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(958, 544);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1138, 646);
             this.tableLayoutPanel2.TabIndex = 10;
             // 
             // BtnExit
@@ -324,7 +325,7 @@
             this.BtnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
             this.BtnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnExit.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnExit.Location = new System.Drawing.Point(812, 497);
+            this.BtnExit.Location = new System.Drawing.Point(992, 599);
             this.BtnExit.Margin = new System.Windows.Forms.Padding(3, 3, 40, 3);
             this.BtnExit.Name = "BtnExit";
             this.BtnExit.Size = new System.Drawing.Size(106, 35);
@@ -333,115 +334,49 @@
             this.BtnExit.UseVisualStyleBackColor = false;
             this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
-            // RightColumn
-            // 
-            this.RightColumn.BackColor = System.Drawing.Color.White;
-            this.RightColumn.ColumnCount = 5;
-            this.RightColumn.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.RightColumn.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.RightColumn.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.RightColumn.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.RightColumn.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.RightColumn.Controls.Add(this.lblVehicleIDAll, 0, 0);
-            this.RightColumn.Controls.Add(this.lblYearAll, 4, 0);
-            this.RightColumn.Controls.Add(this.lblMakeAll, 1, 0);
-            this.RightColumn.Controls.Add(this.lblVINAll, 3, 0);
-            this.RightColumn.Controls.Add(this.lblModelAll, 2, 0);
-            this.RightColumn.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.RightColumn.Location = new System.Drawing.Point(0, 0);
-            this.RightColumn.Margin = new System.Windows.Forms.Padding(0);
-            this.RightColumn.Name = "RightColumn";
-            this.RightColumn.RowCount = 1;
-            this.RightColumn.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.83871F));
-            this.RightColumn.Size = new System.Drawing.Size(958, 35);
-            this.RightColumn.TabIndex = 9;
-            // 
-            // lblVehicleIDAll
-            // 
-            this.lblVehicleIDAll.AutoSize = true;
-            this.lblVehicleIDAll.BackColor = System.Drawing.Color.LimeGreen;
-            this.lblVehicleIDAll.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblVehicleIDAll.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVehicleIDAll.ForeColor = System.Drawing.Color.Black;
-            this.lblVehicleIDAll.Location = new System.Drawing.Point(0, 0);
-            this.lblVehicleIDAll.Margin = new System.Windows.Forms.Padding(0);
-            this.lblVehicleIDAll.Name = "lblVehicleIDAll";
-            this.lblVehicleIDAll.Size = new System.Drawing.Size(191, 35);
-            this.lblVehicleIDAll.TabIndex = 2;
-            this.lblVehicleIDAll.Text = "Vehicle ID";
-            this.lblVehicleIDAll.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblYearAll
-            // 
-            this.lblYearAll.AutoSize = true;
-            this.lblYearAll.BackColor = System.Drawing.Color.LimeGreen;
-            this.lblYearAll.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblYearAll.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblYearAll.ForeColor = System.Drawing.Color.Black;
-            this.lblYearAll.Location = new System.Drawing.Point(764, 0);
-            this.lblYearAll.Margin = new System.Windows.Forms.Padding(0);
-            this.lblYearAll.Name = "lblYearAll";
-            this.lblYearAll.Size = new System.Drawing.Size(194, 35);
-            this.lblYearAll.TabIndex = 7;
-            this.lblYearAll.Text = "Year";
-            this.lblYearAll.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblMakeAll
-            // 
-            this.lblMakeAll.AutoSize = true;
-            this.lblMakeAll.BackColor = System.Drawing.Color.LimeGreen;
-            this.lblMakeAll.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblMakeAll.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMakeAll.ForeColor = System.Drawing.Color.Black;
-            this.lblMakeAll.Location = new System.Drawing.Point(191, 0);
-            this.lblMakeAll.Margin = new System.Windows.Forms.Padding(0);
-            this.lblMakeAll.Name = "lblMakeAll";
-            this.lblMakeAll.Size = new System.Drawing.Size(191, 35);
-            this.lblMakeAll.TabIndex = 4;
-            this.lblMakeAll.Text = "Make";
-            this.lblMakeAll.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblVINAll
-            // 
-            this.lblVINAll.AutoSize = true;
-            this.lblVINAll.BackColor = System.Drawing.Color.LimeGreen;
-            this.lblVINAll.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblVINAll.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVINAll.ForeColor = System.Drawing.Color.Black;
-            this.lblVINAll.Location = new System.Drawing.Point(573, 0);
-            this.lblVINAll.Margin = new System.Windows.Forms.Padding(0);
-            this.lblVINAll.Name = "lblVINAll";
-            this.lblVINAll.Size = new System.Drawing.Size(191, 35);
-            this.lblVINAll.TabIndex = 6;
-            this.lblVINAll.Text = "VIN";
-            this.lblVINAll.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblModelAll
-            // 
-            this.lblModelAll.AutoSize = true;
-            this.lblModelAll.BackColor = System.Drawing.Color.LimeGreen;
-            this.lblModelAll.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblModelAll.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblModelAll.ForeColor = System.Drawing.Color.Black;
-            this.lblModelAll.Location = new System.Drawing.Point(382, 0);
-            this.lblModelAll.Margin = new System.Windows.Forms.Padding(0);
-            this.lblModelAll.Name = "lblModelAll";
-            this.lblModelAll.Size = new System.Drawing.Size(191, 35);
-            this.lblModelAll.TabIndex = 5;
-            this.lblModelAll.Text = "Model";
-            this.lblModelAll.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.ColumnHeadersVisible = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LimeGreen;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.Format = "D";
+            dataGridViewCellStyle1.NullValue = null;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.ColumnHeadersHeight = 38;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 35);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(0);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(958, 459);
+            this.dataGridView1.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridView1.RowTemplate.Height = 100;
+            this.dataGridView1.RowTemplate.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(1138, 596);
             this.dataGridView1.TabIndex = 10;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -459,7 +394,7 @@
             this.tableLayoutPanel2All.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.tableLayoutPanel2All.RowCount = 1;
             this.tableLayoutPanel2All.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2All.Size = new System.Drawing.Size(1158, 80);
+            this.tableLayoutPanel2All.Size = new System.Drawing.Size(1338, 116);
             this.tableLayoutPanel2All.TabIndex = 0;
             // 
             // label8
@@ -469,7 +404,7 @@
             this.label8.Font = new System.Drawing.Font("Corbel", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(203, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(942, 80);
+            this.label8.Size = new System.Drawing.Size(1122, 116);
             this.label8.TabIndex = 2;
             this.label8.Text = "ALL VEHICLES";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -484,17 +419,25 @@
             this.Body.Location = new System.Drawing.Point(0, 0);
             this.Body.Name = "Body";
             this.Body.RowCount = 2;
-            this.Body.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.Body.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 116F));
             this.Body.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.Body.Size = new System.Drawing.Size(1158, 624);
+            this.Body.Size = new System.Drawing.Size(1338, 762);
             this.Body.TabIndex = 11;
+            // 
+            // viewVehicleBindingSource
+            // 
+            this.viewVehicleBindingSource.DataSource = typeof(Jamcheck.ViewVehicle);
+            // 
+            // viewVehicleBindingSource1
+            // 
+            this.viewVehicleBindingSource1.DataSource = typeof(Jamcheck.ViewVehicle);
             // 
             // ListingsMainAll
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1158, 624);
+            this.ClientSize = new System.Drawing.Size(1338, 762);
             this.Controls.Add(this.Body);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -511,12 +454,12 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
-            this.RightColumn.ResumeLayout(false);
-            this.RightColumn.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tableLayoutPanel2All.ResumeLayout(false);
             this.tableLayoutPanel2All.PerformLayout();
             this.Body.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.viewVehicleBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewVehicleBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -545,13 +488,9 @@
         private System.Windows.Forms.ComboBox comboBox6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.TableLayoutPanel RightColumn;
-        private System.Windows.Forms.Label lblVehicleIDAll;
-        private System.Windows.Forms.Label lblYearAll;
-        private System.Windows.Forms.Label lblMakeAll;
-        private System.Windows.Forms.Label lblVINAll;
-        private System.Windows.Forms.Label lblModelAll;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button BtnExit;
+        private System.Windows.Forms.BindingSource viewVehicleBindingSource;
+        private System.Windows.Forms.BindingSource viewVehicleBindingSource1;
     }
 }

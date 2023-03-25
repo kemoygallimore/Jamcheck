@@ -15,11 +15,12 @@ namespace Jamcheck
     public partial class ViewVehicle
     {
         public int id { get; set; }
+        public byte[] Picture { get; set; }
         public string Make { get; set; }
-        public string model { get; set; }
-        public int fuelid { get; set; }
+        public string Model { get; set; }
+        public string Fuel { get; set; }
         public string ChassisNo { get; set; }
-        public string ModelNo { get; set; }
+        public string VIN { get; set; }
         public int year { get; set; }
         public int Mileage { get; set; }
         public int Seating { get; set; }

@@ -20,7 +20,7 @@ namespace Jamcheck
         public string Model { get; set; }
         public int fuelid { get; set; }
         public string ChassisNo { get; set; }
-        public string ModelNo { get; set; }
+        public string VinNum { get; set; }
         public int Mileage { get; set; }
         public int Seating { get; set; }
         public int steeringid { get; set; }
@@ -29,6 +29,7 @@ namespace Jamcheck
         public int ImportfromID { get; set; }
         public string Importer { get; set; }
         public System.DateTime ImportDate { get; set; }
+        public byte[] Picture { get; set; }
     
         public virtual Fuel Fuel { get; set; }
         public virtual ImportFrom ImportFrom { get; set; }

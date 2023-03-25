@@ -233,7 +233,7 @@ namespace Jamcheck
             // 
             this.label15.AutoSize = true;
             this.label15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label15.Font = new System.Drawing.Font("Source Sans Pro", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(212, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(905, 100);
@@ -755,6 +755,11 @@ namespace Jamcheck
             this.numMileage.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.numMileage.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numMileage.Location = new System.Drawing.Point(10, 71);
+            this.numMileage.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
             this.numMileage.Name = "numMileage";
             this.numMileage.Size = new System.Drawing.Size(119, 29);
             this.numMileage.TabIndex = 2;

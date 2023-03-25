@@ -21,13 +21,27 @@ namespace Jamcheck
 
         private void ListingsMainAll_Load(object sender, EventArgs e)
         {
+
+
+            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.LimeGreen;
+
             var vehicles = jamdb.ViewVehicles.ToList();
             dataGridView1.DataSource = vehicles;
 
-
-            dataGridView1.Columns[3].Visible = false;
+            dataGridView1.Columns[0].HeaderCell.Style.ForeColor = Color.LimeGreen;
+            dataGridView1.Columns[0].Width = 10;
+            dataGridView1.Columns[1].Width = 50;
+            DataGridViewImageColumn imageColumn = new DataGridViewImageColumn();
+            imageColumn = (DataGridViewImageColumn)dataGridView1.Columns[1];
+            imageColumn.ImageLayout = DataGridViewImageCellLayout.Zoom;
+            
+            //dataGridView1.Columns[1].CellTemplate.im
+/*            dataGridView1.Columns[2].Width = 250;
+            dataGridView1.Columns[2].Width = 250;
+            dataGridView1.Columns[6].Width = 250;
+            dataGridView1.Columns[7].Width = 250;*/
+            dataGridView1.Columns[5].Visible = false;
             dataGridView1.Columns[4].Visible = false;
-            dataGridView1.Columns[7].Visible = false;
             dataGridView1.Columns[8].Visible = false;
             dataGridView1.Columns[9].Visible = false;
             dataGridView1.Columns[10].Visible = false;
@@ -35,6 +49,8 @@ namespace Jamcheck
             dataGridView1.Columns[12].Visible = false;
             dataGridView1.Columns[13].Visible = false;
             dataGridView1.Columns[14].Visible = false;
+            dataGridView1.Columns[15].Visible = false;
+
         }
 
         private void panel1All_Paint(object sender, PaintEventArgs e)

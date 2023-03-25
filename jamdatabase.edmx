@@ -94,7 +94,7 @@
           <Property Name="Model" Type="nvarchar" MaxLength="30" Nullable="false" />
           <Property Name="fuelid" Type="int" Nullable="false" />
           <Property Name="ChassisNo" Type="nvarchar" MaxLength="20" Nullable="false" />
-          <Property Name="ModelNo" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="VinNum" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="Mileage" Type="int" Nullable="false" />
           <Property Name="Seating" Type="int" Nullable="false" />
           <Property Name="steeringid" Type="int" Nullable="false" />
@@ -103,6 +103,7 @@
           <Property Name="ImportfromID" Type="int" Nullable="false" />
           <Property Name="Importer" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="ImportDate" Type="date" Nullable="false" />
+          <Property Name="Picture" Type="varbinary(max)" Nullable="false" />
         </EntityType>
         <EntityType Name="VehicleType">
           <Key>
@@ -146,11 +147,12 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
         <EntityType Name="ViewVehicles">
           <Key>
             <PropertyRef Name="id" />
+            <PropertyRef Name="Picture" />
             <PropertyRef Name="Make" />
-            <PropertyRef Name="model" />
-            <PropertyRef Name="fuelid" />
+            <PropertyRef Name="Model" />
+            <PropertyRef Name="Fuel" />
             <PropertyRef Name="ChassisNo" />
-            <PropertyRef Name="ModelNo" />
+            <PropertyRef Name="VIN" />
             <PropertyRef Name="year" />
             <PropertyRef Name="Mileage" />
             <PropertyRef Name="Seating" />
@@ -162,11 +164,12 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
             <PropertyRef Name="ImportDate" />
           </Key>
           <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="Picture" Type="varbinary(max)" Nullable="false" />
           <Property Name="Make" Type="nvarchar" MaxLength="30" Nullable="false" />
-          <Property Name="model" Type="nvarchar" MaxLength="30" Nullable="false" />
-          <Property Name="fuelid" Type="int" Nullable="false" />
+          <Property Name="Model" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Fuel" Type="nvarchar" MaxLength="10" Nullable="false" />
           <Property Name="ChassisNo" Type="nvarchar" MaxLength="20" Nullable="false" />
-          <Property Name="ModelNo" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="VIN" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="year" Type="int" Nullable="false" />
           <Property Name="Mileage" Type="int" Nullable="false" />
           <Property Name="Seating" Type="int" Nullable="false" />
@@ -177,7 +180,7 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
           <Property Name="Importer" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="ImportDate" Type="date" Nullable="false" />
         </EntityType>
-        <Association Name="FK__Dealershi__paris__4F7CD00D">
+        <Association Name="FK__Dealershi__paris__4E88ABD4">
           <End Role="parishes" Type="Self.parishes" Multiplicity="0..1" />
           <End Role="Dealerships" Type="Self.Dealerships" Multiplicity="*" />
           <ReferentialConstraint>
@@ -189,7 +192,7 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__users__companyid__2C3393D0">
+        <Association Name="FK__users__companyid__4F7CD00D">
           <End Role="Org" Type="Self.Org" Multiplicity="1" />
           <End Role="users" Type="Self.users" Multiplicity="*" />
           <ReferentialConstraint>
@@ -201,7 +204,7 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__users__roletypei__2D27B809">
+        <Association Name="FK__users__roletypei__5070F446">
           <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
           <End Role="users" Type="Self.users" Multiplicity="*" />
           <ReferentialConstraint>
@@ -213,7 +216,7 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Vehicles__bodyty__60A75C0F">
+        <Association Name="FK__Vehicles__bodyty__5165187F">
           <End Role="VehicleType" Type="Self.VehicleType" Multiplicity="1" />
           <End Role="Vehicles" Type="Self.Vehicles" Multiplicity="*" />
           <ReferentialConstraint>
@@ -225,7 +228,7 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Vehicles__fuelid__5EBF139D">
+        <Association Name="FK__Vehicles__fuelid__52593CB8">
           <End Role="Fuel" Type="Self.Fuel" Multiplicity="1" />
           <End Role="Vehicles" Type="Self.Vehicles" Multiplicity="*" />
           <ReferentialConstraint>
@@ -237,7 +240,7 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Vehicles__Import__628FA481">
+        <Association Name="FK__Vehicles__Import__534D60F1">
           <End Role="ImportFrom" Type="Self.ImportFrom" Multiplicity="1" />
           <End Role="Vehicles" Type="Self.Vehicles" Multiplicity="*" />
           <ReferentialConstraint>
@@ -249,7 +252,7 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Vehicles__makeid__5DCAEF64">
+        <Association Name="FK__Vehicles__makeid__5441852A">
           <End Role="Make" Type="Self.Make" Multiplicity="1" />
           <End Role="Vehicles" Type="Self.Vehicles" Multiplicity="*" />
           <ReferentialConstraint>
@@ -261,7 +264,7 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Vehicles__steeri__5FB337D6">
+        <Association Name="FK__Vehicles__steeri__5535A963">
           <End Role="SteeringPosition" Type="Self.SteeringPosition" Multiplicity="1" />
           <End Role="Vehicles" Type="Self.Vehicles" Multiplicity="*" />
           <ReferentialConstraint>
@@ -273,7 +276,7 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Vehicles__transm__619B8048">
+        <Association Name="FK__Vehicles__transm__5629CD9C">
           <End Role="TransmissionType" Type="Self.TransmissionType" Multiplicity="1" />
           <End Role="Vehicles" Type="Self.Vehicles" Multiplicity="*" />
           <ReferentialConstraint>
@@ -320,11 +323,12 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
           <EntitySet Name="ViewVehicles" EntityType="Self.ViewVehicles" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [ViewVehicles].[id] AS [id], 
+    [ViewVehicles].[Picture] AS [Picture], 
     [ViewVehicles].[Make] AS [Make], 
-    [ViewVehicles].[model] AS [model], 
-    [ViewVehicles].[fuelid] AS [fuelid], 
+    [ViewVehicles].[Model] AS [Model], 
+    [ViewVehicles].[Fuel] AS [Fuel], 
     [ViewVehicles].[ChassisNo] AS [ChassisNo], 
-    [ViewVehicles].[ModelNo] AS [ModelNo], 
+    [ViewVehicles].[VIN] AS [VIN], 
     [ViewVehicles].[year] AS [year], 
     [ViewVehicles].[Mileage] AS [Mileage], 
     [ViewVehicles].[Seating] AS [Seating], 
@@ -336,39 +340,39 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
     [ViewVehicles].[ImportDate] AS [ImportDate]
     FROM [dbo].[ViewVehicles] AS [ViewVehicles]</DefiningQuery>
           </EntitySet>
-          <AssociationSet Name="FK__Dealershi__paris__4F7CD00D" Association="Self.FK__Dealershi__paris__4F7CD00D">
+          <AssociationSet Name="FK__Dealershi__paris__4E88ABD4" Association="Self.FK__Dealershi__paris__4E88ABD4">
             <End Role="parishes" EntitySet="parishes" />
             <End Role="Dealerships" EntitySet="Dealerships" />
           </AssociationSet>
-          <AssociationSet Name="FK__users__companyid__2C3393D0" Association="Self.FK__users__companyid__2C3393D0">
+          <AssociationSet Name="FK__users__companyid__4F7CD00D" Association="Self.FK__users__companyid__4F7CD00D">
             <End Role="Org" EntitySet="Org" />
             <End Role="users" EntitySet="users" />
           </AssociationSet>
-          <AssociationSet Name="FK__users__roletypei__2D27B809" Association="Self.FK__users__roletypei__2D27B809">
+          <AssociationSet Name="FK__users__roletypei__5070F446" Association="Self.FK__users__roletypei__5070F446">
             <End Role="Roles" EntitySet="Roles" />
             <End Role="users" EntitySet="users" />
           </AssociationSet>
-          <AssociationSet Name="FK__Vehicles__bodyty__60A75C0F" Association="Self.FK__Vehicles__bodyty__60A75C0F">
+          <AssociationSet Name="FK__Vehicles__bodyty__5165187F" Association="Self.FK__Vehicles__bodyty__5165187F">
             <End Role="VehicleType" EntitySet="VehicleType" />
             <End Role="Vehicles" EntitySet="Vehicles" />
           </AssociationSet>
-          <AssociationSet Name="FK__Vehicles__fuelid__5EBF139D" Association="Self.FK__Vehicles__fuelid__5EBF139D">
+          <AssociationSet Name="FK__Vehicles__fuelid__52593CB8" Association="Self.FK__Vehicles__fuelid__52593CB8">
             <End Role="Fuel" EntitySet="Fuel" />
             <End Role="Vehicles" EntitySet="Vehicles" />
           </AssociationSet>
-          <AssociationSet Name="FK__Vehicles__Import__628FA481" Association="Self.FK__Vehicles__Import__628FA481">
+          <AssociationSet Name="FK__Vehicles__Import__534D60F1" Association="Self.FK__Vehicles__Import__534D60F1">
             <End Role="ImportFrom" EntitySet="ImportFrom" />
             <End Role="Vehicles" EntitySet="Vehicles" />
           </AssociationSet>
-          <AssociationSet Name="FK__Vehicles__makeid__5DCAEF64" Association="Self.FK__Vehicles__makeid__5DCAEF64">
+          <AssociationSet Name="FK__Vehicles__makeid__5441852A" Association="Self.FK__Vehicles__makeid__5441852A">
             <End Role="Make" EntitySet="Make" />
             <End Role="Vehicles" EntitySet="Vehicles" />
           </AssociationSet>
-          <AssociationSet Name="FK__Vehicles__steeri__5FB337D6" Association="Self.FK__Vehicles__steeri__5FB337D6">
+          <AssociationSet Name="FK__Vehicles__steeri__5535A963" Association="Self.FK__Vehicles__steeri__5535A963">
             <End Role="SteeringPosition" EntitySet="SteeringPosition" />
             <End Role="Vehicles" EntitySet="Vehicles" />
           </AssociationSet>
-          <AssociationSet Name="FK__Vehicles__transm__619B8048" Association="Self.FK__Vehicles__transm__619B8048">
+          <AssociationSet Name="FK__Vehicles__transm__5629CD9C" Association="Self.FK__Vehicles__transm__5629CD9C">
             <End Role="TransmissionType" EntitySet="TransmissionType" />
             <End Role="Vehicles" EntitySet="Vehicles" />
           </AssociationSet>
@@ -393,39 +397,39 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
           <EntitySet Name="UserInfoes" EntityType="jampracticeModel.UserInfo" />
           <EntitySet Name="ViewDealerships" EntityType="jampracticeModel.ViewDealership" />
           <EntitySet Name="ViewVehicles" EntityType="jampracticeModel.ViewVehicle" />
-          <AssociationSet Name="FK__Dealershi__paris__4F7CD00D" Association="jampracticeModel.FK__Dealershi__paris__4F7CD00D">
+          <AssociationSet Name="FK__Dealershi__paris__4E88ABD4" Association="jampracticeModel.FK__Dealershi__paris__4E88ABD4">
             <End Role="parish" EntitySet="parishes" />
             <End Role="Dealership" EntitySet="Dealerships" />
           </AssociationSet>
-          <AssociationSet Name="FK__Vehicles__fuelid__5EBF139D" Association="jampracticeModel.FK__Vehicles__fuelid__5EBF139D">
+          <AssociationSet Name="FK__Vehicles__fuelid__52593CB8" Association="jampracticeModel.FK__Vehicles__fuelid__52593CB8">
             <End Role="Fuel" EntitySet="Fuels" />
             <End Role="Vehicle" EntitySet="Vehicles" />
           </AssociationSet>
-          <AssociationSet Name="FK__Vehicles__Import__628FA481" Association="jampracticeModel.FK__Vehicles__Import__628FA481">
+          <AssociationSet Name="FK__Vehicles__Import__534D60F1" Association="jampracticeModel.FK__Vehicles__Import__534D60F1">
             <End Role="ImportFrom" EntitySet="ImportFroms" />
             <End Role="Vehicle" EntitySet="Vehicles" />
           </AssociationSet>
-          <AssociationSet Name="FK__Vehicles__makeid__5DCAEF64" Association="jampracticeModel.FK__Vehicles__makeid__5DCAEF64">
+          <AssociationSet Name="FK__Vehicles__makeid__5441852A" Association="jampracticeModel.FK__Vehicles__makeid__5441852A">
             <End Role="Make" EntitySet="Makes" />
             <End Role="Vehicle" EntitySet="Vehicles" />
           </AssociationSet>
-          <AssociationSet Name="FK__users__companyid__2C3393D0" Association="jampracticeModel.FK__users__companyid__2C3393D0">
+          <AssociationSet Name="FK__users__companyid__4F7CD00D" Association="jampracticeModel.FK__users__companyid__4F7CD00D">
             <End Role="Org" EntitySet="Orgs" />
             <End Role="user" EntitySet="users" />
           </AssociationSet>
-          <AssociationSet Name="FK__users__roletypei__2D27B809" Association="jampracticeModel.FK__users__roletypei__2D27B809">
+          <AssociationSet Name="FK__users__roletypei__5070F446" Association="jampracticeModel.FK__users__roletypei__5070F446">
             <End Role="Role" EntitySet="Roles" />
             <End Role="user" EntitySet="users" />
           </AssociationSet>
-          <AssociationSet Name="FK__Vehicles__steeri__5FB337D6" Association="jampracticeModel.FK__Vehicles__steeri__5FB337D6">
+          <AssociationSet Name="FK__Vehicles__steeri__5535A963" Association="jampracticeModel.FK__Vehicles__steeri__5535A963">
             <End Role="SteeringPosition" EntitySet="SteeringPositions" />
             <End Role="Vehicle" EntitySet="Vehicles" />
           </AssociationSet>
-          <AssociationSet Name="FK__Vehicles__transm__619B8048" Association="jampracticeModel.FK__Vehicles__transm__619B8048">
+          <AssociationSet Name="FK__Vehicles__transm__5629CD9C" Association="jampracticeModel.FK__Vehicles__transm__5629CD9C">
             <End Role="TransmissionType" EntitySet="TransmissionTypes" />
             <End Role="Vehicle" EntitySet="Vehicles" />
           </AssociationSet>
-          <AssociationSet Name="FK__Vehicles__bodyty__60A75C0F" Association="jampracticeModel.FK__Vehicles__bodyty__60A75C0F">
+          <AssociationSet Name="FK__Vehicles__bodyty__5165187F" Association="jampracticeModel.FK__Vehicles__bodyty__5165187F">
             <End Role="VehicleType" EntitySet="VehicleTypes" />
             <End Role="Vehicle" EntitySet="Vehicles" />
           </AssociationSet>
@@ -439,7 +443,7 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
           <Property Name="tel" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Name="address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="parishid" Type="Int32" />
-          <NavigationProperty Name="parish" Relationship="jampracticeModel.FK__Dealershi__paris__4F7CD00D" FromRole="Dealership" ToRole="parish" />
+          <NavigationProperty Name="parish" Relationship="jampracticeModel.FK__Dealershi__paris__4E88ABD4" FromRole="Dealership" ToRole="parish" />
         </EntityType>
         <EntityType Name="Fuel">
           <Key>
@@ -447,7 +451,7 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="name" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Vehicles" Relationship="jampracticeModel.FK__Vehicles__fuelid__5EBF139D" FromRole="Fuel" ToRole="Vehicle" />
+          <NavigationProperty Name="Vehicles" Relationship="jampracticeModel.FK__Vehicles__fuelid__52593CB8" FromRole="Fuel" ToRole="Vehicle" />
         </EntityType>
         <EntityType Name="ImportFrom">
           <Key>
@@ -455,7 +459,7 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Vehicles" Relationship="jampracticeModel.FK__Vehicles__Import__628FA481" FromRole="ImportFrom" ToRole="Vehicle" />
+          <NavigationProperty Name="Vehicles" Relationship="jampracticeModel.FK__Vehicles__Import__534D60F1" FromRole="ImportFrom" ToRole="Vehicle" />
         </EntityType>
         <EntityType Name="Make">
           <Key>
@@ -463,7 +467,7 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Vehicles" Relationship="jampracticeModel.FK__Vehicles__makeid__5DCAEF64" FromRole="Make" ToRole="Vehicle" />
+          <NavigationProperty Name="Vehicles" Relationship="jampracticeModel.FK__Vehicles__makeid__5441852A" FromRole="Make" ToRole="Vehicle" />
         </EntityType>
         <EntityType Name="Org">
           <Key>
@@ -471,7 +475,7 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="company" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="users" Relationship="jampracticeModel.FK__users__companyid__2C3393D0" FromRole="Org" ToRole="user" />
+          <NavigationProperty Name="users" Relationship="jampracticeModel.FK__users__companyid__4F7CD00D" FromRole="Org" ToRole="user" />
         </EntityType>
         <EntityType Name="parish">
           <Key>
@@ -479,7 +483,7 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Dealerships" Relationship="jampracticeModel.FK__Dealershi__paris__4F7CD00D" FromRole="parish" ToRole="Dealership" />
+          <NavigationProperty Name="Dealerships" Relationship="jampracticeModel.FK__Dealershi__paris__4E88ABD4" FromRole="parish" ToRole="Dealership" />
         </EntityType>
         <EntityType Name="Role">
           <Key>
@@ -487,7 +491,7 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="RoleType" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="users" Relationship="jampracticeModel.FK__users__roletypei__2D27B809" FromRole="Role" ToRole="user" />
+          <NavigationProperty Name="users" Relationship="jampracticeModel.FK__users__roletypei__5070F446" FromRole="Role" ToRole="user" />
         </EntityType>
         <EntityType Name="SteeringPosition">
           <Key>
@@ -495,7 +499,7 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="name" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Vehicles" Relationship="jampracticeModel.FK__Vehicles__steeri__5FB337D6" FromRole="SteeringPosition" ToRole="Vehicle" />
+          <NavigationProperty Name="Vehicles" Relationship="jampracticeModel.FK__Vehicles__steeri__5535A963" FromRole="SteeringPosition" ToRole="Vehicle" />
         </EntityType>
         <EntityType Name="TransmissionType">
           <Key>
@@ -503,7 +507,7 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="name" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Vehicles" Relationship="jampracticeModel.FK__Vehicles__transm__619B8048" FromRole="TransmissionType" ToRole="Vehicle" />
+          <NavigationProperty Name="Vehicles" Relationship="jampracticeModel.FK__Vehicles__transm__5629CD9C" FromRole="TransmissionType" ToRole="Vehicle" />
         </EntityType>
         <EntityType Name="user">
           <Key>
@@ -517,8 +521,8 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
           <Property Name="password" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="true" />
           <Property Name="companyid" Type="Int32" Nullable="false" />
           <Property Name="roletypeid" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Org" Relationship="jampracticeModel.FK__users__companyid__2C3393D0" FromRole="user" ToRole="Org" />
-          <NavigationProperty Name="Role" Relationship="jampracticeModel.FK__users__roletypei__2D27B809" FromRole="user" ToRole="Role" />
+          <NavigationProperty Name="Org" Relationship="jampracticeModel.FK__users__companyid__4F7CD00D" FromRole="user" ToRole="Org" />
+          <NavigationProperty Name="Role" Relationship="jampracticeModel.FK__users__roletypei__5070F446" FromRole="user" ToRole="Role" />
         </EntityType>
         <EntityType Name="Vehicle">
           <Key>
@@ -530,7 +534,7 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
           <Property Name="Model" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
           <Property Name="fuelid" Type="Int32" Nullable="false" />
           <Property Name="ChassisNo" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="ModelNo" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="VinNum" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="Mileage" Type="Int32" Nullable="false" />
           <Property Name="Seating" Type="Int32" Nullable="false" />
           <Property Name="steeringid" Type="Int32" Nullable="false" />
@@ -539,12 +543,13 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
           <Property Name="ImportfromID" Type="Int32" Nullable="false" />
           <Property Name="Importer" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="ImportDate" Type="DateTime" Nullable="false" Precision="0" />
-          <NavigationProperty Name="Fuel" Relationship="jampracticeModel.FK__Vehicles__fuelid__5EBF139D" FromRole="Vehicle" ToRole="Fuel" />
-          <NavigationProperty Name="ImportFrom" Relationship="jampracticeModel.FK__Vehicles__Import__628FA481" FromRole="Vehicle" ToRole="ImportFrom" />
-          <NavigationProperty Name="Make" Relationship="jampracticeModel.FK__Vehicles__makeid__5DCAEF64" FromRole="Vehicle" ToRole="Make" />
-          <NavigationProperty Name="SteeringPosition" Relationship="jampracticeModel.FK__Vehicles__steeri__5FB337D6" FromRole="Vehicle" ToRole="SteeringPosition" />
-          <NavigationProperty Name="TransmissionType" Relationship="jampracticeModel.FK__Vehicles__transm__619B8048" FromRole="Vehicle" ToRole="TransmissionType" />
-          <NavigationProperty Name="VehicleType" Relationship="jampracticeModel.FK__Vehicles__bodyty__60A75C0F" FromRole="Vehicle" ToRole="VehicleType" />
+          <Property Name="Picture" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="Fuel" Relationship="jampracticeModel.FK__Vehicles__fuelid__52593CB8" FromRole="Vehicle" ToRole="Fuel" />
+          <NavigationProperty Name="ImportFrom" Relationship="jampracticeModel.FK__Vehicles__Import__534D60F1" FromRole="Vehicle" ToRole="ImportFrom" />
+          <NavigationProperty Name="Make" Relationship="jampracticeModel.FK__Vehicles__makeid__5441852A" FromRole="Vehicle" ToRole="Make" />
+          <NavigationProperty Name="SteeringPosition" Relationship="jampracticeModel.FK__Vehicles__steeri__5535A963" FromRole="Vehicle" ToRole="SteeringPosition" />
+          <NavigationProperty Name="TransmissionType" Relationship="jampracticeModel.FK__Vehicles__transm__5629CD9C" FromRole="Vehicle" ToRole="TransmissionType" />
+          <NavigationProperty Name="VehicleType" Relationship="jampracticeModel.FK__Vehicles__bodyty__5165187F" FromRole="Vehicle" ToRole="VehicleType" />
         </EntityType>
         <EntityType Name="VehicleType">
           <Key>
@@ -552,7 +557,7 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Vehicles" Relationship="jampracticeModel.FK__Vehicles__bodyty__60A75C0F" FromRole="VehicleType" ToRole="Vehicle" />
+          <NavigationProperty Name="Vehicles" Relationship="jampracticeModel.FK__Vehicles__bodyty__5165187F" FromRole="VehicleType" ToRole="Vehicle" />
         </EntityType>
         <EntityType Name="UserInfo">
           <Key>
@@ -583,11 +588,12 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
         <EntityType Name="ViewVehicle">
           <Key>
             <PropertyRef Name="id" />
+            <PropertyRef Name="Picture" />
             <PropertyRef Name="Make" />
-            <PropertyRef Name="model" />
-            <PropertyRef Name="fuelid" />
+            <PropertyRef Name="Model" />
+            <PropertyRef Name="Fuel" />
             <PropertyRef Name="ChassisNo" />
-            <PropertyRef Name="ModelNo" />
+            <PropertyRef Name="VIN" />
             <PropertyRef Name="year" />
             <PropertyRef Name="Mileage" />
             <PropertyRef Name="Seating" />
@@ -599,11 +605,12 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
             <PropertyRef Name="ImportDate" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="Picture" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
           <Property Name="Make" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
-          <Property Name="model" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
-          <Property Name="fuelid" Type="Int32" Nullable="false" />
+          <Property Name="Model" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Fuel" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Name="ChassisNo" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="ModelNo" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="VIN" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="year" Type="Int32" Nullable="false" />
           <Property Name="Mileage" Type="Int32" Nullable="false" />
           <Property Name="Seating" Type="Int32" Nullable="false" />
@@ -614,7 +621,7 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
           <Property Name="Importer" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="ImportDate" Type="DateTime" Nullable="false" Precision="0" />
         </EntityType>
-        <Association Name="FK__Dealershi__paris__4F7CD00D">
+        <Association Name="FK__Dealershi__paris__4E88ABD4">
           <End Type="jampracticeModel.parish" Role="parish" Multiplicity="0..1" />
           <End Type="jampracticeModel.Dealership" Role="Dealership" Multiplicity="*" />
           <ReferentialConstraint>
@@ -626,7 +633,7 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Vehicles__fuelid__5EBF139D">
+        <Association Name="FK__Vehicles__fuelid__52593CB8">
           <End Type="jampracticeModel.Fuel" Role="Fuel" Multiplicity="1" />
           <End Type="jampracticeModel.Vehicle" Role="Vehicle" Multiplicity="*" />
           <ReferentialConstraint>
@@ -638,7 +645,7 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Vehicles__Import__628FA481">
+        <Association Name="FK__Vehicles__Import__534D60F1">
           <End Type="jampracticeModel.ImportFrom" Role="ImportFrom" Multiplicity="1" />
           <End Type="jampracticeModel.Vehicle" Role="Vehicle" Multiplicity="*" />
           <ReferentialConstraint>
@@ -650,7 +657,7 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Vehicles__makeid__5DCAEF64">
+        <Association Name="FK__Vehicles__makeid__5441852A">
           <End Type="jampracticeModel.Make" Role="Make" Multiplicity="1" />
           <End Type="jampracticeModel.Vehicle" Role="Vehicle" Multiplicity="*" />
           <ReferentialConstraint>
@@ -662,7 +669,7 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__users__companyid__2C3393D0">
+        <Association Name="FK__users__companyid__4F7CD00D">
           <End Type="jampracticeModel.Org" Role="Org" Multiplicity="1" />
           <End Type="jampracticeModel.user" Role="user" Multiplicity="*" />
           <ReferentialConstraint>
@@ -674,7 +681,7 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__users__roletypei__2D27B809">
+        <Association Name="FK__users__roletypei__5070F446">
           <End Type="jampracticeModel.Role" Role="Role" Multiplicity="1" />
           <End Type="jampracticeModel.user" Role="user" Multiplicity="*" />
           <ReferentialConstraint>
@@ -686,7 +693,7 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Vehicles__steeri__5FB337D6">
+        <Association Name="FK__Vehicles__steeri__5535A963">
           <End Type="jampracticeModel.SteeringPosition" Role="SteeringPosition" Multiplicity="1" />
           <End Type="jampracticeModel.Vehicle" Role="Vehicle" Multiplicity="*" />
           <ReferentialConstraint>
@@ -698,7 +705,7 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Vehicles__transm__619B8048">
+        <Association Name="FK__Vehicles__transm__5629CD9C">
           <End Type="jampracticeModel.TransmissionType" Role="TransmissionType" Multiplicity="1" />
           <End Type="jampracticeModel.Vehicle" Role="Vehicle" Multiplicity="*" />
           <ReferentialConstraint>
@@ -710,7 +717,7 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Vehicles__bodyty__60A75C0F">
+        <Association Name="FK__Vehicles__bodyty__5165187F">
           <End Type="jampracticeModel.VehicleType" Role="VehicleType" Multiplicity="1" />
           <End Type="jampracticeModel.Vehicle" Role="Vehicle" Multiplicity="*" />
           <ReferentialConstraint>
@@ -820,6 +827,7 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
           <EntitySetMapping Name="Vehicles">
             <EntityTypeMapping TypeName="jampracticeModel.Vehicle">
               <MappingFragment StoreEntitySet="Vehicles">
+                <ScalarProperty Name="Picture" ColumnName="Picture" />
                 <ScalarProperty Name="ImportDate" ColumnName="ImportDate" />
                 <ScalarProperty Name="Importer" ColumnName="Importer" />
                 <ScalarProperty Name="ImportfromID" ColumnName="ImportfromID" />
@@ -828,7 +836,7 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
                 <ScalarProperty Name="steeringid" ColumnName="steeringid" />
                 <ScalarProperty Name="Seating" ColumnName="Seating" />
                 <ScalarProperty Name="Mileage" ColumnName="Mileage" />
-                <ScalarProperty Name="ModelNo" ColumnName="ModelNo" />
+                <ScalarProperty Name="VinNum" ColumnName="VinNum" />
                 <ScalarProperty Name="ChassisNo" ColumnName="ChassisNo" />
                 <ScalarProperty Name="fuelid" ColumnName="fuelid" />
                 <ScalarProperty Name="Model" ColumnName="Model" />
@@ -881,11 +889,12 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
                 <ScalarProperty Name="Seating" ColumnName="Seating" />
                 <ScalarProperty Name="Mileage" ColumnName="Mileage" />
                 <ScalarProperty Name="year" ColumnName="year" />
-                <ScalarProperty Name="ModelNo" ColumnName="ModelNo" />
+                <ScalarProperty Name="VIN" ColumnName="VIN" />
                 <ScalarProperty Name="ChassisNo" ColumnName="ChassisNo" />
-                <ScalarProperty Name="fuelid" ColumnName="fuelid" />
-                <ScalarProperty Name="model" ColumnName="model" />
+                <ScalarProperty Name="Fuel" ColumnName="Fuel" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
                 <ScalarProperty Name="Make" ColumnName="Make" />
+                <ScalarProperty Name="Picture" ColumnName="Picture" />
                 <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
