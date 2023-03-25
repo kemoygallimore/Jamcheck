@@ -51,6 +51,17 @@ namespace Jamcheck
             dataGridView1.Columns[14].Visible = false;
             dataGridView1.Columns[15].Visible = false;
 
+            var make = jamdb.Makes.ToList();
+
+            cobxmake.DisplayMember = "name";
+            cobxmake.ValueMember = "id";
+            cobxmake.DataSource = make;
+
+            var fuel = jamdb.Fuels.ToList();
+            cobxFuelType.DisplayMember = "name";
+            cobxFuelType.ValueMember = "id";
+            cobxFuelType.DataSource = fuel;
+
         }
 
         private void panel1All_Paint(object sender, PaintEventArgs e)
