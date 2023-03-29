@@ -103,5 +103,13 @@ namespace Jamcheck
         {
 
         }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            VehicleDetailsForm detailsForm = new VehicleDetailsForm();
+
+            detailsForm.ShowDialog();
+            detailsForm.
+        }
     }
 }

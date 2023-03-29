@@ -8,10 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+
 namespace Jamcheck
 {
     public partial class ManageUsers : Form
     {
+        
         private readonly jampracticeEntities jamdb;
         public ManageUsers()
         {
@@ -45,6 +48,8 @@ namespace Jamcheck
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
+            
+
             var fname = txtbxFname.Text;
             var lname = txtbxLname.Text;
             var email = txtbxEmail.Text;

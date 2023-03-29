@@ -118,11 +118,11 @@
     <Compile Include="SteeringPosition.cs">
       <DependentUpon>jamdatabase.tt</DependentUpon>
     </Compile>
-    <Compile Include="CutsomLogin.cs">
+    <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CutsomLogin.Designer.cs">
-      <DependentUpon>CutsomLogin.cs</DependentUpon>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="AllListing.cs">
       <SubType>Form</SubType>
@@ -180,8 +180,8 @@
     <EmbeddedResource Include="BodyTypeAndMfr.resx">
       <DependentUpon>BodyTypeAndMfr.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CutsomLogin.resx">
-      <DependentUpon>CutsomLogin.cs</DependentUpon>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AllListing.resx">
       <DependentUpon>AllListing.cs</DependentUpon>
