@@ -893,7 +893,6 @@ namespace Jamcheck
             this.txtbxModel.Name = "txtbxModel";
             this.txtbxModel.Size = new System.Drawing.Size(151, 29);
             this.txtbxModel.TabIndex = 1;
-            this.txtbxModel.Text = "S-Class";
             this.txtbxModel.TextChanged += new System.EventHandler(this.txtbxModel_TextChanged);
             // 
             // label5
@@ -1091,6 +1090,7 @@ namespace Jamcheck
             this.pictureBox1.Location = new System.Drawing.Point(20, 40);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(271, 260);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);

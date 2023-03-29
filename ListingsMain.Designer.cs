@@ -39,13 +39,8 @@
             this.Header = new System.Windows.Forms.TableLayoutPanel();
             this.btnViewAll = new System.Windows.Forms.Button();
             this.Mainlayout = new System.Windows.Forms.TableLayoutPanel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.VehicleID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Make = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Model = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.VIN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Year = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BtnExit = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.picBxListingMain)).BeginInit();
             this.ListingHeader.SuspendLayout();
             this.Header.SuspendLayout();
@@ -217,53 +212,6 @@
             this.Mainlayout.Size = new System.Drawing.Size(1071, 619);
             this.Mainlayout.TabIndex = 11;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.ColumnHeadersVisible = false;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.VehicleID,
-            this.Make,
-            this.Model,
-            this.VIN,
-            this.Year});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 120);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 60;
-            this.Mainlayout.SetRowSpan(this.dataGridView1, 2);
-            this.dataGridView1.Size = new System.Drawing.Size(1071, 449);
-            this.dataGridView1.TabIndex = 12;
-            // 
-            // VehicleID
-            // 
-            this.VehicleID.FillWeight = 150F;
-            this.VehicleID.HeaderText = "";
-            this.VehicleID.Name = "VehicleID";
-            // 
-            // Make
-            // 
-            this.Make.HeaderText = "";
-            this.Make.Name = "Make";
-            // 
-            // Model
-            // 
-            this.Model.HeaderText = "";
-            this.Model.Name = "Model";
-            // 
-            // VIN
-            // 
-            this.VIN.HeaderText = "";
-            this.VIN.Name = "VIN";
-            // 
-            // Year
-            // 
-            this.Year.HeaderText = "";
-            this.Year.Name = "Year";
-            // 
             // BtnExit
             // 
             this.BtnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -281,6 +229,24 @@
             this.BtnExit.Text = "EXIT";
             this.BtnExit.UseVisualStyleBackColor = false;
             this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.ColumnHeadersVisible = false;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 120);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 60;
+            this.Mainlayout.SetRowSpan(this.dataGridView1, 2);
+            this.dataGridView1.RowTemplate.Height = 100;
+            this.dataGridView1.Size = new System.Drawing.Size(1071, 449);
+            this.dataGridView1.TabIndex = 12;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // ListingsMain
             // 
@@ -319,11 +285,6 @@
         private System.Windows.Forms.TableLayoutPanel Mainlayout;
         private System.Windows.Forms.Button btnViewAll;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn VehicleID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Make;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Model;
-        private System.Windows.Forms.DataGridViewTextBoxColumn VIN;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Year;
         private System.Windows.Forms.Button BtnExit;
     }
 }

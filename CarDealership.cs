@@ -66,6 +66,11 @@ namespace Jamcheck
 
             jamdb.Dealerships.Add(dealer);
             jamdb.SaveChanges();
+            tbxName.Clear();
+            tbxTelephone.Clear();
+            txbAddress.Clear();
+
+            MessageBox.Show(name + " has been added");
 
             dataGridView1.DataSource = jamdb.ViewDealerships.ToList();
 
@@ -78,6 +83,8 @@ namespace Jamcheck
 
         private void CarDealership_Load(object sender, EventArgs e)
         {
+            CarDealership carDealership = new CarDealership();
+            dataGridView1.DataSource = carDealership;
 
             combxParish.DataSource = jamdb.parishes.ToList();
 

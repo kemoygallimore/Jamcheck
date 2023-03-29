@@ -109,7 +109,7 @@ namespace Jamcheck
             VehicleDetailsForm detailsForm = new VehicleDetailsForm();
 
             detailsForm.ShowDialog();
-            detailsForm.
+            //detailsForm.
         }
     }
 }

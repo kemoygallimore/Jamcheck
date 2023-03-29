@@ -12,8 +12,22 @@ using System.IO;
 
 namespace Jamcheck
 {
+    
     public partial class FrmAddVehicle : Form
     {
+        private void cleartextboxes()
+        {
+            txtbxChassisNo.Clear();
+            txtbxImportFrom.Clear();
+            txtbxModel.Clear();
+            txtbxVIN.Clear();
+            numMileage.Value = 0;
+            numSeating.Value = 0;
+            numYear.Value = 0;
+            pictureBox1.Image = null;
+            RadioButton radioButton = new RadioButton();
+            radioButton.Checked = false;
+        }
         jampracticeEntities jamdb;
         public FrmAddVehicle()
         {
@@ -187,8 +201,9 @@ namespace Jamcheck
 
             jamdb.Vehicles.Add(vehicle);
             jamdb.SaveChanges();
-
-
+            MessageBox.Show("Entry has been added");
+            cleartextboxes();
+            txtbxModel.Focus();
 
 
         }
