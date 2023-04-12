@@ -31,6 +31,7 @@ namespace Jamcheck
         public virtual DbSet<Make> Makes { get; set; }
         public virtual DbSet<Org> Orgs { get; set; }
         public virtual DbSet<parish> parishes { get; set; }
+        public virtual DbSet<request> requests { get; set; }
         public virtual DbSet<Role> Roles { get; set; }
         public virtual DbSet<SteeringPosition> SteeringPositions { get; set; }
         public virtual DbSet<TransmissionType> TransmissionTypes { get; set; }

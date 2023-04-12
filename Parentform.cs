@@ -83,5 +83,14 @@ namespace Jamcheck
         {
             this.Close();
         }
+
+        private void CustomerProfileStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CheckMDIChild();
+            requestsubmissions submissions = new requestsubmissions();
+            submissions.MdiParent = this;
+            submissions.Dock = DockStyle.Fill;
+            submissions.Show();
+        }
     }
 }

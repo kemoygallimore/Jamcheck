@@ -112,6 +112,9 @@
     <Compile Include="parish.cs">
       <DependentUpon>jamdatabase.tt</DependentUpon>
     </Compile>
+    <Compile Include="request.cs">
+      <DependentUpon>jamdatabase.tt</DependentUpon>
+    </Compile>
     <Compile Include="Role.cs">
       <DependentUpon>jamdatabase.tt</DependentUpon>
     </Compile>

@@ -121,6 +121,7 @@ namespace Jamcheck
             this.CustomerProfileStripMenuItem.Name = "CustomerProfileStripMenuItem";
             this.CustomerProfileStripMenuItem.Size = new System.Drawing.Size(108, 22);
             this.CustomerProfileStripMenuItem.Text = "Customer Profile";
+            this.CustomerProfileStripMenuItem.Click += new System.EventHandler(this.CustomerProfileStripMenuItem_Click);
             // 
             // TransactionsToolStripMenuItem
             // 
