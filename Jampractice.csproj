@@ -61,6 +61,9 @@
     <Compile Include="AddVehicleForm.Designer.cs">
       <DependentUpon>AddVehicleForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AllVehicles_pr_Result.cs">
+      <DependentUpon>jamdatabase.tt</DependentUpon>
+    </Compile>
     <Compile Include="CarDealership.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +118,12 @@
     <Compile Include="request.cs">
       <DependentUpon>jamdatabase.tt</DependentUpon>
     </Compile>
+    <Compile Include="requestsubmissions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="requestsubmissions.Designer.cs">
+      <DependentUpon>requestsubmissions.cs</DependentUpon>
+    </Compile>
     <Compile Include="Role.cs">
       <DependentUpon>jamdatabase.tt</DependentUpon>
     </Compile>
@@ -165,6 +174,9 @@
     <Compile Include="VehicleDetailsForm.Designer.cs">
       <DependentUpon>VehicleDetailsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="VehiclesDetails_Result.cs">
+      <DependentUpon>jamdatabase.tt</DependentUpon>
+    </Compile>
     <Compile Include="VehicleType.cs">
       <DependentUpon>jamdatabase.tt</DependentUpon>
     </Compile>
@@ -208,6 +220,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="requestsubmissions.resx">
+      <DependentUpon>requestsubmissions.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VehicleDetailsForm.resx">
       <DependentUpon>VehicleDetailsForm.cs</DependentUpon>
     </EmbeddedResource>

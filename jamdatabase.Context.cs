@@ -12,6 +12,8 @@ namespace Jamcheck
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class jampracticeEntities : DbContext
     {
@@ -41,5 +43,19 @@ namespace Jamcheck
         public virtual DbSet<UserInfo> UserInfoes { get; set; }
         public virtual DbSet<ViewDealership> ViewDealerships { get; set; }
         public virtual DbSet<ViewVehicle> ViewVehicles { get; set; }
+    
+        public virtual ObjectResult<AllVehicles_pr_Result> AllVehicles_pr()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<AllVehicles_pr_Result>("AllVehicles_pr");
+        }
+    
+        public virtual ObjectResult<VehiclesDetails_Result> VehiclesDetails(Nullable<int> index)
+        {
+            var indexParameter = index.HasValue ?
+                new ObjectParameter("index", index) :
+                new ObjectParameter("index", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<VehiclesDetails_Result>("VehiclesDetails", indexParameter);
+        }
     }
 }

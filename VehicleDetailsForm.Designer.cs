@@ -31,9 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VehicleDetailsForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.DisplayPicture = new System.Windows.Forms.PictureBox();
             this.btnAddReport = new System.Windows.Forms.Button();
             this.tblLayPanCarDetails = new System.Windows.Forms.TableLayoutPanel();
+            this.Mileagetxtbx = new System.Windows.Forms.TextBox();
+            this.transtxtbx = new System.Windows.Forms.TextBox();
+            this.steeringtxtbx = new System.Windows.Forms.TextBox();
+            this.fueltypetxtbx = new System.Windows.Forms.TextBox();
+            this.Bodytypetxtbx = new System.Windows.Forms.TextBox();
             this.lblMake = new System.Windows.Forms.Label();
             this.lblModel = new System.Windows.Forms.Label();
             this.lblYear = new System.Windows.Forms.Label();
@@ -42,23 +47,18 @@
             this.lblFuelType = new System.Windows.Forms.Label();
             this.lblColour = new System.Windows.Forms.Label();
             this.lblEngine = new System.Windows.Forms.Label();
+            this.maketxtbx = new System.Windows.Forms.TextBox();
+            this.modeltxtbx = new System.Windows.Forms.TextBox();
+            this.yeartxtbx = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DisplayPicture)).BeginInit();
             this.tblLayPanCarDetails.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -83,7 +83,7 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.pictureBox2);
+            this.splitContainer1.Panel1.Controls.Add(this.DisplayPicture);
             // 
             // splitContainer1.Panel2
             // 
@@ -94,21 +94,21 @@
             this.splitContainer1.SplitterWidth = 3;
             this.splitContainer1.TabIndex = 0;
             // 
-            // pictureBox2
+            // DisplayPicture
             // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(445, 493);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click_1);
+            this.DisplayPicture.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DisplayPicture.Location = new System.Drawing.Point(0, 0);
+            this.DisplayPicture.Margin = new System.Windows.Forms.Padding(2);
+            this.DisplayPicture.Name = "DisplayPicture";
+            this.DisplayPicture.Size = new System.Drawing.Size(445, 493);
+            this.DisplayPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.DisplayPicture.TabIndex = 0;
+            this.DisplayPicture.TabStop = false;
+            this.DisplayPicture.Click += new System.EventHandler(this.pictureBox2_Click_1);
             // 
             // btnAddReport
             // 
-            this.btnAddReport.Font = new System.Drawing.Font("Bernard MT Condensed", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddReport.Location = new System.Drawing.Point(503, 439);
             this.btnAddReport.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddReport.Name = "btnAddReport";
@@ -124,11 +124,11 @@
             this.tblLayPanCarDetails.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tblLayPanCarDetails.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tblLayPanCarDetails.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tblLayPanCarDetails.Controls.Add(this.textBox8, 3, 3);
-            this.tblLayPanCarDetails.Controls.Add(this.textBox7, 1, 3);
-            this.tblLayPanCarDetails.Controls.Add(this.textBox6, 3, 2);
-            this.tblLayPanCarDetails.Controls.Add(this.textBox5, 3, 1);
-            this.tblLayPanCarDetails.Controls.Add(this.textBox4, 3, 0);
+            this.tblLayPanCarDetails.Controls.Add(this.Mileagetxtbx, 3, 3);
+            this.tblLayPanCarDetails.Controls.Add(this.transtxtbx, 1, 3);
+            this.tblLayPanCarDetails.Controls.Add(this.steeringtxtbx, 3, 2);
+            this.tblLayPanCarDetails.Controls.Add(this.fueltypetxtbx, 3, 1);
+            this.tblLayPanCarDetails.Controls.Add(this.Bodytypetxtbx, 3, 0);
             this.tblLayPanCarDetails.Controls.Add(this.lblMake, 0, 0);
             this.tblLayPanCarDetails.Controls.Add(this.lblModel, 0, 1);
             this.tblLayPanCarDetails.Controls.Add(this.lblYear, 0, 2);
@@ -137,9 +137,9 @@
             this.tblLayPanCarDetails.Controls.Add(this.lblFuelType, 2, 1);
             this.tblLayPanCarDetails.Controls.Add(this.lblColour, 2, 2);
             this.tblLayPanCarDetails.Controls.Add(this.lblEngine, 2, 3);
-            this.tblLayPanCarDetails.Controls.Add(this.textBox1, 1, 0);
-            this.tblLayPanCarDetails.Controls.Add(this.textBox2, 1, 1);
-            this.tblLayPanCarDetails.Controls.Add(this.textBox3, 1, 2);
+            this.tblLayPanCarDetails.Controls.Add(this.maketxtbx, 1, 0);
+            this.tblLayPanCarDetails.Controls.Add(this.modeltxtbx, 1, 1);
+            this.tblLayPanCarDetails.Controls.Add(this.yeartxtbx, 1, 2);
             this.tblLayPanCarDetails.Dock = System.Windows.Forms.DockStyle.Top;
             this.tblLayPanCarDetails.Location = new System.Drawing.Point(0, 0);
             this.tblLayPanCarDetails.Margin = new System.Windows.Forms.Padding(2);
@@ -147,16 +147,66 @@
             this.tblLayPanCarDetails.RowCount = 4;
             this.tblLayPanCarDetails.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tblLayPanCarDetails.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tblLayPanCarDetails.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tblLayPanCarDetails.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tblLayPanCarDetails.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.87685F));
+            this.tblLayPanCarDetails.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.36946F));
             this.tblLayPanCarDetails.Size = new System.Drawing.Size(622, 406);
             this.tblLayPanCarDetails.TabIndex = 0;
+            // 
+            // Mileagetxtbx
+            // 
+            this.Mileagetxtbx.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Mileagetxtbx.Location = new System.Drawing.Point(468, 305);
+            this.Mileagetxtbx.Multiline = true;
+            this.Mileagetxtbx.Name = "Mileagetxtbx";
+            this.Mileagetxtbx.Size = new System.Drawing.Size(151, 98);
+            this.Mileagetxtbx.TabIndex = 13;
+            this.Mileagetxtbx.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // transtxtbx
+            // 
+            this.transtxtbx.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.transtxtbx.Location = new System.Drawing.Point(158, 305);
+            this.transtxtbx.Multiline = true;
+            this.transtxtbx.Name = "transtxtbx";
+            this.transtxtbx.Size = new System.Drawing.Size(149, 98);
+            this.transtxtbx.TabIndex = 12;
+            this.transtxtbx.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // steeringtxtbx
+            // 
+            this.steeringtxtbx.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.steeringtxtbx.Location = new System.Drawing.Point(468, 205);
+            this.steeringtxtbx.Multiline = true;
+            this.steeringtxtbx.Name = "steeringtxtbx";
+            this.steeringtxtbx.Size = new System.Drawing.Size(151, 94);
+            this.steeringtxtbx.TabIndex = 11;
+            this.steeringtxtbx.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // fueltypetxtbx
+            // 
+            this.fueltypetxtbx.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.fueltypetxtbx.Location = new System.Drawing.Point(468, 104);
+            this.fueltypetxtbx.Multiline = true;
+            this.fueltypetxtbx.Name = "fueltypetxtbx";
+            this.fueltypetxtbx.Size = new System.Drawing.Size(151, 95);
+            this.fueltypetxtbx.TabIndex = 10;
+            this.fueltypetxtbx.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // Bodytypetxtbx
+            // 
+            this.Bodytypetxtbx.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Bodytypetxtbx.Location = new System.Drawing.Point(468, 3);
+            this.Bodytypetxtbx.Multiline = true;
+            this.Bodytypetxtbx.Name = "Bodytypetxtbx";
+            this.Bodytypetxtbx.Size = new System.Drawing.Size(151, 95);
+            this.Bodytypetxtbx.TabIndex = 9;
+            this.Bodytypetxtbx.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblMake
             // 
             this.lblMake.AutoSize = true;
             this.lblMake.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblMake.Font = new System.Drawing.Font("Bernard MT Condensed", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMake.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMake.Location = new System.Drawing.Point(2, 0);
             this.lblMake.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMake.Name = "lblMake";
@@ -169,7 +219,7 @@
             // 
             this.lblModel.AutoSize = true;
             this.lblModel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblModel.Font = new System.Drawing.Font("Bernard MT Condensed", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblModel.Location = new System.Drawing.Point(2, 101);
             this.lblModel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblModel.Name = "lblModel";
@@ -182,11 +232,11 @@
             // 
             this.lblYear.AutoSize = true;
             this.lblYear.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblYear.Font = new System.Drawing.Font("Bernard MT Condensed", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblYear.Location = new System.Drawing.Point(2, 202);
             this.lblYear.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblYear.Name = "lblYear";
-            this.lblYear.Size = new System.Drawing.Size(151, 101);
+            this.lblYear.Size = new System.Drawing.Size(151, 100);
             this.lblYear.TabIndex = 2;
             this.lblYear.Text = "Year";
             this.lblYear.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -195,11 +245,11 @@
             // 
             this.lblTransmission.AutoSize = true;
             this.lblTransmission.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblTransmission.Font = new System.Drawing.Font("Bernard MT Condensed", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTransmission.Location = new System.Drawing.Point(2, 303);
+            this.lblTransmission.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTransmission.Location = new System.Drawing.Point(2, 302);
             this.lblTransmission.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTransmission.Name = "lblTransmission";
-            this.lblTransmission.Size = new System.Drawing.Size(151, 103);
+            this.lblTransmission.Size = new System.Drawing.Size(151, 104);
             this.lblTransmission.TabIndex = 3;
             this.lblTransmission.Text = "Transmission";
             this.lblTransmission.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -208,7 +258,7 @@
             // 
             this.lblBodyType.AutoSize = true;
             this.lblBodyType.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblBodyType.Font = new System.Drawing.Font("Bernard MT Condensed", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBodyType.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodyType.Location = new System.Drawing.Point(312, 0);
             this.lblBodyType.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBodyType.Name = "lblBodyType";
@@ -221,7 +271,7 @@
             // 
             this.lblFuelType.AutoSize = true;
             this.lblFuelType.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblFuelType.Font = new System.Drawing.Font("Bernard MT Condensed", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFuelType.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFuelType.Location = new System.Drawing.Point(312, 101);
             this.lblFuelType.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFuelType.Name = "lblFuelType";
@@ -234,27 +284,58 @@
             // 
             this.lblColour.AutoSize = true;
             this.lblColour.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblColour.Font = new System.Drawing.Font("Bernard MT Condensed", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblColour.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblColour.Location = new System.Drawing.Point(312, 202);
             this.lblColour.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblColour.Name = "lblColour";
-            this.lblColour.Size = new System.Drawing.Size(151, 101);
+            this.lblColour.Size = new System.Drawing.Size(151, 100);
             this.lblColour.TabIndex = 6;
-            this.lblColour.Text = "Colour";
+            this.lblColour.Text = "Steering";
             this.lblColour.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblEngine
             // 
             this.lblEngine.AutoSize = true;
             this.lblEngine.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblEngine.Font = new System.Drawing.Font("Bernard MT Condensed", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEngine.Location = new System.Drawing.Point(312, 303);
+            this.lblEngine.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEngine.Location = new System.Drawing.Point(312, 302);
             this.lblEngine.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEngine.Name = "lblEngine";
-            this.lblEngine.Size = new System.Drawing.Size(151, 103);
+            this.lblEngine.Size = new System.Drawing.Size(151, 104);
             this.lblEngine.TabIndex = 7;
-            this.lblEngine.Text = "Engine";
+            this.lblEngine.Text = "Mileage";
             this.lblEngine.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // maketxtbx
+            // 
+            this.maketxtbx.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.maketxtbx.Location = new System.Drawing.Point(158, 3);
+            this.maketxtbx.Multiline = true;
+            this.maketxtbx.Name = "maketxtbx";
+            this.maketxtbx.Size = new System.Drawing.Size(149, 95);
+            this.maketxtbx.TabIndex = 8;
+            this.maketxtbx.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.maketxtbx.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // modeltxtbx
+            // 
+            this.modeltxtbx.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.modeltxtbx.Location = new System.Drawing.Point(158, 104);
+            this.modeltxtbx.Multiline = true;
+            this.modeltxtbx.Name = "modeltxtbx";
+            this.modeltxtbx.Size = new System.Drawing.Size(149, 95);
+            this.modeltxtbx.TabIndex = 8;
+            this.modeltxtbx.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // yeartxtbx
+            // 
+            this.yeartxtbx.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.yeartxtbx.Location = new System.Drawing.Point(158, 205);
+            this.yeartxtbx.Multiline = true;
+            this.yeartxtbx.Name = "yeartxtbx";
+            this.yeartxtbx.Size = new System.Drawing.Size(149, 94);
+            this.yeartxtbx.TabIndex = 8;
+            this.yeartxtbx.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel2
             // 
@@ -294,87 +375,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // textBox1
-            // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Location = new System.Drawing.Point(158, 3);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(149, 95);
-            this.textBox1.TabIndex = 8;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // textBox2
-            // 
-            this.textBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox2.Location = new System.Drawing.Point(158, 104);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(149, 95);
-            this.textBox2.TabIndex = 8;
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox3.Location = new System.Drawing.Point(158, 205);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(149, 95);
-            this.textBox3.TabIndex = 8;
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox4.Location = new System.Drawing.Point(468, 3);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(151, 95);
-            this.textBox4.TabIndex = 9;
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox5.Location = new System.Drawing.Point(468, 104);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(151, 95);
-            this.textBox5.TabIndex = 10;
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox6.Location = new System.Drawing.Point(468, 205);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(151, 95);
-            this.textBox6.TabIndex = 11;
-            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox7.Location = new System.Drawing.Point(158, 306);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(149, 97);
-            this.textBox7.TabIndex = 12;
-            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox8.Location = new System.Drawing.Point(468, 306);
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(151, 97);
-            this.textBox8.TabIndex = 13;
-            this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // VehicleDetailsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -391,7 +391,7 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DisplayPicture)).EndInit();
             this.tblLayPanCarDetails.ResumeLayout(false);
             this.tblLayPanCarDetails.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -409,7 +409,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.TableLayoutPanel tblLayPanCarDetails;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox DisplayPicture;
         private System.Windows.Forms.Button btnAddReport;
         private System.Windows.Forms.Label lblMake;
         private System.Windows.Forms.Label lblModel;
@@ -419,13 +419,13 @@
         private System.Windows.Forms.Label lblFuelType;
         private System.Windows.Forms.Label lblColour;
         private System.Windows.Forms.Label lblEngine;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox Mileagetxtbx;
+        private System.Windows.Forms.TextBox transtxtbx;
+        private System.Windows.Forms.TextBox steeringtxtbx;
+        private System.Windows.Forms.TextBox fueltypetxtbx;
+        private System.Windows.Forms.TextBox Bodytypetxtbx;
+        private System.Windows.Forms.TextBox maketxtbx;
+        private System.Windows.Forms.TextBox modeltxtbx;
+        private System.Windows.Forms.TextBox yeartxtbx;
     }
 }

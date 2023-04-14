@@ -300,6 +300,10 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="AllVehicles_pr" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="VehiclesDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="index" Type="int" Mode="In" />
+        </Function>
         <EntityContainer Name="jampracticeModelStoreContainer">
           <EntitySet Name="Dealerships" EntityType="Self.Dealerships" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Fuel" EntityType="Self.Fuel" Schema="dbo" store:Type="Tables" />
@@ -447,6 +451,10 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
             <End Role="VehicleType" EntitySet="VehicleTypes" />
             <End Role="Vehicle" EntitySet="Vehicles" />
           </AssociationSet>
+          <FunctionImport Name="AllVehicles_pr" ReturnType="Collection(jampracticeModel.AllVehicles_pr_Result)" />
+          <FunctionImport Name="VehiclesDetails" ReturnType="Collection(jampracticeModel.VehiclesDetails_Result)">
+            <Parameter Name="index" Mode="In" Type="Int32" />
+          </FunctionImport>
         </EntityContainer>
         <EntityType Name="Dealership">
           <Key>
@@ -755,6 +763,42 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <ComplexType Name="AllVehicles_pr_Result">
+          <Property Type="Int32" Name="id" Nullable="false" />
+          <Property Type="Binary" Name="Picture" Nullable="false" />
+          <Property Type="String" Name="Make" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="Model" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="Fuel" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="ChassisNo" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="VIN" Nullable="false" MaxLength="20" />
+          <Property Type="Int32" Name="year" Nullable="false" />
+          <Property Type="Int32" Name="Mileage" Nullable="false" />
+          <Property Type="Int32" Name="Seating" Nullable="false" />
+          <Property Type="String" Name="Steering" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="BodyType" Nullable="false" MaxLength="30" />
+          <Property Type="String" Name="Transmission" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="ImportFrom" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Importer" Nullable="false" MaxLength="50" />
+          <Property Type="DateTime" Name="ImportDate" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="VehiclesDetails_Result">
+          <Property Type="Int32" Name="id" Nullable="false" />
+          <Property Type="Int32" Name="year" Nullable="false" />
+          <Property Type="Int32" Name="makeid" Nullable="false" />
+          <Property Type="String" Name="Model" Nullable="false" MaxLength="30" />
+          <Property Type="Int32" Name="fuelid" Nullable="false" />
+          <Property Type="String" Name="ChassisNo" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="VinNum" Nullable="false" MaxLength="20" />
+          <Property Type="Int32" Name="Mileage" Nullable="false" />
+          <Property Type="Int32" Name="Seating" Nullable="false" />
+          <Property Type="Int32" Name="steeringid" Nullable="false" />
+          <Property Type="Int32" Name="bodytypeid" Nullable="false" />
+          <Property Type="Int32" Name="transmissionid" Nullable="false" />
+          <Property Type="Int32" Name="ImportfromID" Nullable="false" />
+          <Property Type="String" Name="Importer" Nullable="false" MaxLength="50" />
+          <Property Type="DateTime" Name="ImportDate" Nullable="false" />
+          <Property Type="Binary" Name="Picture" Nullable="false" />
+        </ComplexType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -938,6 +982,50 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="AllVehicles_pr" FunctionName="jampracticeModel.Store.AllVehicles_pr">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="jampracticeModel.AllVehicles_pr_Result">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Picture" ColumnName="Picture" />
+                <ScalarProperty Name="Make" ColumnName="Make" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="Fuel" ColumnName="Fuel" />
+                <ScalarProperty Name="ChassisNo" ColumnName="ChassisNo" />
+                <ScalarProperty Name="VIN" ColumnName="VIN" />
+                <ScalarProperty Name="year" ColumnName="year" />
+                <ScalarProperty Name="Mileage" ColumnName="Mileage" />
+                <ScalarProperty Name="Seating" ColumnName="Seating" />
+                <ScalarProperty Name="Steering" ColumnName="Steering" />
+                <ScalarProperty Name="BodyType" ColumnName="BodyType" />
+                <ScalarProperty Name="Transmission" ColumnName="Transmission" />
+                <ScalarProperty Name="ImportFrom" ColumnName="ImportFrom" />
+                <ScalarProperty Name="Importer" ColumnName="Importer" />
+                <ScalarProperty Name="ImportDate" ColumnName="ImportDate" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="VehiclesDetails" FunctionName="jampracticeModel.Store.VehiclesDetails">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="jampracticeModel.VehiclesDetails_Result">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="year" ColumnName="year" />
+                <ScalarProperty Name="makeid" ColumnName="makeid" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="fuelid" ColumnName="fuelid" />
+                <ScalarProperty Name="ChassisNo" ColumnName="ChassisNo" />
+                <ScalarProperty Name="VinNum" ColumnName="VinNum" />
+                <ScalarProperty Name="Mileage" ColumnName="Mileage" />
+                <ScalarProperty Name="Seating" ColumnName="Seating" />
+                <ScalarProperty Name="steeringid" ColumnName="steeringid" />
+                <ScalarProperty Name="bodytypeid" ColumnName="bodytypeid" />
+                <ScalarProperty Name="transmissionid" ColumnName="transmissionid" />
+                <ScalarProperty Name="ImportfromID" ColumnName="ImportfromID" />
+                <ScalarProperty Name="Importer" ColumnName="Importer" />
+                <ScalarProperty Name="ImportDate" ColumnName="ImportDate" />
+                <ScalarProperty Name="Picture" ColumnName="Picture" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
@@ -952,7 +1040,7 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
