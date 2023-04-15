@@ -56,7 +56,7 @@ namespace Jamcheck
                     MessageBox.Show("Your email address or password is incorrect");
                     txtbxPassword.Clear();
                     txtbxUsername.Clear();
-                    txtbxUsername.Focus();
+                    //txtbxUsername.Focus();
                 }
             }
             catch (Exception login)
@@ -99,7 +99,7 @@ namespace Jamcheck
             if (seepassword.BackColor == Color.DimGray)
             {
                 txtbxPassword.UseSystemPasswordChar = false;
-                seepassword.BackColor = Color.AliceBlue;
+                seepassword.BackColor = Color.Green;
             }
             else
             {

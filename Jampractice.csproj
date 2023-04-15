@@ -76,7 +76,7 @@
     <Compile Include="BodyTypeAndMfr.Designer.cs">
       <DependentUpon>BodyTypeAndMfr.cs</DependentUpon>
     </Compile>
-    <Compile Include="Dealership.cs">
+    <Compile Include="Dealerships.cs">
       <DependentUpon>jamdatabase.tt</DependentUpon>
     </Compile>
     <Compile Include="Fuel.cs">
@@ -112,10 +112,7 @@
     <Compile Include="Org.cs">
       <DependentUpon>jamdatabase.tt</DependentUpon>
     </Compile>
-    <Compile Include="parish.cs">
-      <DependentUpon>jamdatabase.tt</DependentUpon>
-    </Compile>
-    <Compile Include="request.cs">
+    <Compile Include="parishes.cs">
       <DependentUpon>jamdatabase.tt</DependentUpon>
     </Compile>
     <Compile Include="requestsubmissions.cs">
@@ -124,7 +121,7 @@
     <Compile Include="requestsubmissions.Designer.cs">
       <DependentUpon>requestsubmissions.cs</DependentUpon>
     </Compile>
-    <Compile Include="Role.cs">
+    <Compile Include="Roles.cs">
       <DependentUpon>jamdatabase.tt</DependentUpon>
     </Compile>
     <Compile Include="SteeringPosition.cs">
@@ -159,13 +156,10 @@
     <Compile Include="TransmissionType.cs">
       <DependentUpon>jamdatabase.tt</DependentUpon>
     </Compile>
-    <Compile Include="user.cs">
+    <Compile Include="UserInfoes.cs">
       <DependentUpon>jamdatabase.tt</DependentUpon>
     </Compile>
-    <Compile Include="UserInfo.cs">
-      <DependentUpon>jamdatabase.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Vehicle.cs">
+    <Compile Include="users.cs">
       <DependentUpon>jamdatabase.tt</DependentUpon>
     </Compile>
     <Compile Include="VehicleDetailsForm.cs">
@@ -174,16 +168,19 @@
     <Compile Include="VehicleDetailsForm.Designer.cs">
       <DependentUpon>VehicleDetailsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vehicles.cs">
+      <DependentUpon>jamdatabase.tt</DependentUpon>
+    </Compile>
     <Compile Include="VehiclesDetails_Result.cs">
       <DependentUpon>jamdatabase.tt</DependentUpon>
     </Compile>
     <Compile Include="VehicleType.cs">
       <DependentUpon>jamdatabase.tt</DependentUpon>
     </Compile>
-    <Compile Include="ViewDealership.cs">
+    <Compile Include="ViewDealerships.cs">
       <DependentUpon>jamdatabase.tt</DependentUpon>
     </Compile>
-    <Compile Include="ViewVehicle.cs">
+    <Compile Include="ViewVehicles.cs">
       <DependentUpon>jamdatabase.tt</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AddVehicleForm.resx">

@@ -12,7 +12,7 @@ namespace Jamcheck
     using System;
     using System.Collections.Generic;
     
-    public partial class ViewVehicle
+    public partial class ViewVehicles
     {
         public int id { get; set; }
         public byte[] Picture { get; set; }
@@ -30,5 +30,6 @@ namespace Jamcheck
         public string ImportFrom { get; set; }
         public string Importer { get; set; }
         public System.DateTime ImportDate { get; set; }
+        public byte[] Report { get; set; }
     }
 }

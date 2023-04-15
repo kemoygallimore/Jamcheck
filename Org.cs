@@ -17,13 +17,13 @@ namespace Jamcheck
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Org()
         {
-            this.users = new HashSet<user>();
+            this.users = new HashSet<users>();
         }
     
         public int id { get; set; }
         public string company { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<user> users { get; set; }
+        public virtual ICollection<users> users { get; set; }
     }
 }

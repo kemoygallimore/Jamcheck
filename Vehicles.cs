@@ -12,7 +12,7 @@ namespace Jamcheck
     using System;
     using System.Collections.Generic;
     
-    public partial class Vehicle
+    public partial class Vehicles
     {
         public int id { get; set; }
         public int year { get; set; }
@@ -30,6 +30,9 @@ namespace Jamcheck
         public string Importer { get; set; }
         public System.DateTime ImportDate { get; set; }
         public byte[] Picture { get; set; }
+        public byte[] Report { get; set; }
+        public string Report_Name { get; set; }
+        public string Report_Ext { get; set; }
     
         public virtual Fuel Fuel { get; set; }
         public virtual ImportFrom ImportFrom { get; set; }

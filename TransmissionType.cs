@@ -17,13 +17,13 @@ namespace Jamcheck
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public TransmissionType()
         {
-            this.Vehicles = new HashSet<Vehicle>();
+            this.Vehicles = new HashSet<Vehicles>();
         }
     
         public int id { get; set; }
         public string name { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Vehicle> Vehicles { get; set; }
+        public virtual ICollection<Vehicles> Vehicles { get; set; }
     }
 }

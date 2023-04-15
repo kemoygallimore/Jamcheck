@@ -432,11 +432,11 @@
             // 
             // viewVehicleBindingSource
             // 
-            this.viewVehicleBindingSource.DataSource = typeof(Jamcheck.ViewVehicle);
+            this.viewVehicleBindingSource.DataSource = typeof(Jamcheck.ViewVehicles);
             // 
             // viewVehicleBindingSource1
             // 
-            this.viewVehicleBindingSource1.DataSource = typeof(Jamcheck.ViewVehicle);
+            this.viewVehicleBindingSource1.DataSource = typeof(Jamcheck.ViewVehicles);
             // 
             // ListingsMainAll
             // 

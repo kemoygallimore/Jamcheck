@@ -90,14 +90,14 @@ namespace Jamcheck
                 {
                     VehicleType vehicleType = new VehicleType();
                     vehicleType.Name = Details();
-                    jamdb.VehicleTypes.Add(vehicleType);
+                    jamdb.VehicleType.Add(vehicleType);
                     jamdb.SaveChanges();
                 }
                 else
                 {
                     Make make = new Make();
                     make.Name = Details();
-                    jamdb.Makes.Add(make);
+                    jamdb.Make.Add(make);
                     jamdb.SaveChanges();
                 }
                 MessageBox.Show($"{Details()} was added successfully");

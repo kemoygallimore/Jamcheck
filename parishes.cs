@@ -12,14 +12,18 @@ namespace Jamcheck
     using System;
     using System.Collections.Generic;
     
-    public partial class Dealership
+    public partial class parishes
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public parishes()
+        {
+            this.Dealerships = new HashSet<Dealerships>();
+        }
+    
         public int id { get; set; }
         public string name { get; set; }
-        public string tel { get; set; }
-        public string address { get; set; }
-        public Nullable<int> parishid { get; set; }
     
-        public virtual parish parish { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Dealerships> Dealerships { get; set; }
     }
 }

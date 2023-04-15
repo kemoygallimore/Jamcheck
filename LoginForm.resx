@@ -163,7 +163,7 @@
     <value>Fill</value>
   </data>
   <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Source Sans Pro, 29.9999981pt, style=Bold</value>
+    <value>Microsoft Sans Serif, 29.9999981pt, style=Bold</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 0</value>

@@ -47,13 +47,13 @@ namespace Jamcheck
             imageColumn = (DataGridViewImageColumn)dataGridView1.Columns[0];
             imageColumn.ImageLayout = DataGridViewImageCellLayout.Zoom;
 
-            var make = jamdb.Makes.ToList();
+            var make = jamdb.Make.ToList();
 
             cobxmake.DisplayMember = "name";
             cobxmake.ValueMember = "id";
             cobxmake.DataSource = make;
 
-            var fuel = jamdb.Fuels.ToList();
+            var fuel = jamdb.Fuel.ToList();
             cobxFuelType.DisplayMember = "name";
             cobxFuelType.ValueMember = "id";
             cobxFuelType.DataSource = fuel;

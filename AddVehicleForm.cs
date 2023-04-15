@@ -37,17 +37,17 @@ namespace Jamcheck
         private void FrmAddVehicle_Load(object sender, EventArgs e)
         {
 
-            var make = jamdb.Makes.ToList();
+            var make = jamdb.Make.ToList();
             cobxMake.DisplayMember = "Name";
             cobxMake.ValueMember = "id";
             cobxMake.DataSource = make;
 
-            var type = jamdb.VehicleTypes.ToList();
+            var type = jamdb.VehicleType.ToList();
             cobxVehicleType.DisplayMember = "name";
             cobxVehicleType.ValueMember = "id";
             cobxVehicleType.DataSource = type;
 
-            var import = jamdb.ImportFroms.ToList();
+            var import = jamdb.ImportFrom.ToList();
             cobxImporter.DisplayMember = "name";
             cobxImporter.ValueMember = "id";
             cobxImporter.DataSource = import;
@@ -156,7 +156,7 @@ namespace Jamcheck
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            Vehicle vehicle = new Vehicle();
+            Vehicles vehicle = new Vehicles();
 
             var make = Convert.ToInt32( cobxMake.SelectedValue);
             var model = txtbxModel.Text;

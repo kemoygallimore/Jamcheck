@@ -29,23 +29,19 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListingsMain));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.picBxListingMain = new System.Windows.Forms.PictureBox();
-            this.lblVehicleID = new System.Windows.Forms.Label();
-            this.lblMake = new System.Windows.Forms.Label();
-            this.lblModel = new System.Windows.Forms.Label();
-            this.lblVIN = new System.Windows.Forms.Label();
-            this.lblYear = new System.Windows.Forms.Label();
-            this.ListingHeader = new System.Windows.Forms.TableLayoutPanel();
             this.Header = new System.Windows.Forms.TableLayoutPanel();
             this.btnViewAll = new System.Windows.Forms.Button();
             this.Mainlayout = new System.Windows.Forms.TableLayoutPanel();
             this.BtnExit = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.CatalogueGridView = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.picBxListingMain)).BeginInit();
-            this.ListingHeader.SuspendLayout();
             this.Header.SuspendLayout();
             this.Mainlayout.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CatalogueGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // picBxListingMain
@@ -55,108 +51,10 @@
             this.picBxListingMain.Location = new System.Drawing.Point(20, 0);
             this.picBxListingMain.Margin = new System.Windows.Forms.Padding(0);
             this.picBxListingMain.Name = "picBxListingMain";
-            this.picBxListingMain.Size = new System.Drawing.Size(160, 80);
+            this.picBxListingMain.Size = new System.Drawing.Size(160, 92);
             this.picBxListingMain.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBxListingMain.TabIndex = 1;
             this.picBxListingMain.TabStop = false;
-            // 
-            // lblVehicleID
-            // 
-            this.lblVehicleID.AutoSize = true;
-            this.lblVehicleID.BackColor = System.Drawing.Color.LimeGreen;
-            this.lblVehicleID.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblVehicleID.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVehicleID.ForeColor = System.Drawing.Color.Black;
-            this.lblVehicleID.Location = new System.Drawing.Point(2, 0);
-            this.lblVehicleID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblVehicleID.Name = "lblVehicleID";
-            this.lblVehicleID.Size = new System.Drawing.Size(210, 40);
-            this.lblVehicleID.TabIndex = 2;
-            this.lblVehicleID.Text = "Vehicle ID";
-            this.lblVehicleID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblMake
-            // 
-            this.lblMake.AutoSize = true;
-            this.lblMake.BackColor = System.Drawing.Color.LimeGreen;
-            this.lblMake.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblMake.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMake.ForeColor = System.Drawing.Color.Black;
-            this.lblMake.Location = new System.Drawing.Point(216, 0);
-            this.lblMake.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblMake.Name = "lblMake";
-            this.lblMake.Size = new System.Drawing.Size(210, 40);
-            this.lblMake.TabIndex = 4;
-            this.lblMake.Text = "Make";
-            this.lblMake.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblModel
-            // 
-            this.lblModel.AutoSize = true;
-            this.lblModel.BackColor = System.Drawing.Color.LimeGreen;
-            this.lblModel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblModel.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblModel.ForeColor = System.Drawing.Color.Black;
-            this.lblModel.Location = new System.Drawing.Point(430, 0);
-            this.lblModel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblModel.Name = "lblModel";
-            this.lblModel.Size = new System.Drawing.Size(210, 40);
-            this.lblModel.TabIndex = 5;
-            this.lblModel.Text = "Model";
-            this.lblModel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblVIN
-            // 
-            this.lblVIN.AutoSize = true;
-            this.lblVIN.BackColor = System.Drawing.Color.LimeGreen;
-            this.lblVIN.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblVIN.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVIN.ForeColor = System.Drawing.Color.Black;
-            this.lblVIN.Location = new System.Drawing.Point(644, 0);
-            this.lblVIN.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblVIN.Name = "lblVIN";
-            this.lblVIN.Size = new System.Drawing.Size(210, 40);
-            this.lblVIN.TabIndex = 6;
-            this.lblVIN.Text = "VIN";
-            this.lblVIN.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblYear
-            // 
-            this.lblYear.AutoSize = true;
-            this.lblYear.BackColor = System.Drawing.Color.LimeGreen;
-            this.lblYear.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblYear.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblYear.ForeColor = System.Drawing.Color.Black;
-            this.lblYear.Location = new System.Drawing.Point(858, 0);
-            this.lblYear.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblYear.Name = "lblYear";
-            this.lblYear.Size = new System.Drawing.Size(211, 40);
-            this.lblYear.TabIndex = 7;
-            this.lblYear.Text = "Year";
-            this.lblYear.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // ListingHeader
-            // 
-            this.ListingHeader.ColumnCount = 5;
-            this.ListingHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.ListingHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.ListingHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.ListingHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.ListingHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.ListingHeader.Controls.Add(this.lblVehicleID, 0, 0);
-            this.ListingHeader.Controls.Add(this.lblYear, 4, 0);
-            this.ListingHeader.Controls.Add(this.lblMake, 1, 0);
-            this.ListingHeader.Controls.Add(this.lblVIN, 3, 0);
-            this.ListingHeader.Controls.Add(this.lblModel, 2, 0);
-            this.ListingHeader.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ListingHeader.Location = new System.Drawing.Point(0, 80);
-            this.ListingHeader.Margin = new System.Windows.Forms.Padding(0);
-            this.ListingHeader.Name = "ListingHeader";
-            this.ListingHeader.RowCount = 1;
-            this.ListingHeader.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.83871F));
-            this.ListingHeader.Size = new System.Drawing.Size(1071, 40);
-            this.ListingHeader.TabIndex = 8;
-            this.ListingHeader.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // Header
             // 
@@ -173,7 +71,7 @@
             this.Header.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
             this.Header.RowCount = 1;
             this.Header.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.Header.Size = new System.Drawing.Size(1071, 80);
+            this.Header.Size = new System.Drawing.Size(1071, 92);
             this.Header.TabIndex = 0;
             // 
             // btnViewAll
@@ -182,32 +80,30 @@
             this.btnViewAll.BackColor = System.Drawing.Color.Chartreuse;
             this.btnViewAll.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnViewAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewAll.Location = new System.Drawing.Point(894, 23);
+            this.btnViewAll.Location = new System.Drawing.Point(894, 29);
             this.btnViewAll.Name = "btnViewAll";
             this.btnViewAll.Padding = new System.Windows.Forms.Padding(5);
             this.btnViewAll.Size = new System.Drawing.Size(147, 33);
             this.btnViewAll.TabIndex = 2;
             this.btnViewAll.Text = "View All Vehicles";
             this.btnViewAll.UseVisualStyleBackColor = false;
+            this.btnViewAll.Visible = false;
             this.btnViewAll.Click += new System.EventHandler(this.btnViewAll_Click);
             // 
             // Mainlayout
             // 
             this.Mainlayout.ColumnCount = 1;
             this.Mainlayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.Mainlayout.Controls.Add(this.BtnExit, 0, 3);
-            this.Mainlayout.Controls.Add(this.ListingHeader, 0, 1);
             this.Mainlayout.Controls.Add(this.Header, 0, 0);
-            this.Mainlayout.Controls.Add(this.dataGridView1, 0, 2);
+            this.Mainlayout.Controls.Add(this.CatalogueGridView, 0, 1);
+            this.Mainlayout.Controls.Add(this.BtnExit, 0, 2);
             this.Mainlayout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Mainlayout.Location = new System.Drawing.Point(0, 0);
             this.Mainlayout.Margin = new System.Windows.Forms.Padding(0);
             this.Mainlayout.Name = "Mainlayout";
-            this.Mainlayout.RowCount = 4;
-            this.Mainlayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.Mainlayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.Mainlayout.RowCount = 3;
+            this.Mainlayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 92F));
             this.Mainlayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.Mainlayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.Mainlayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.Mainlayout.Size = new System.Drawing.Size(1071, 619);
             this.Mainlayout.TabIndex = 11;
@@ -230,23 +126,50 @@
             this.BtnExit.UseVisualStyleBackColor = false;
             this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
-            // dataGridView1
+            // CatalogueGridView
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.ColumnHeadersVisible = false;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 120);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 60;
-            this.Mainlayout.SetRowSpan(this.dataGridView1, 2);
-            this.dataGridView1.RowTemplate.Height = 100;
-            this.dataGridView1.Size = new System.Drawing.Size(1071, 449);
-            this.dataGridView1.TabIndex = 12;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.CatalogueGridView.AllowUserToAddRows = false;
+            this.CatalogueGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.CatalogueGridView.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.CatalogueGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Corbel", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.CatalogueGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.CatalogueGridView.ColumnHeadersHeight = 40;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.CatalogueGridView.DefaultCellStyle = dataGridViewCellStyle2;
+            this.CatalogueGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CatalogueGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
+            this.CatalogueGridView.Location = new System.Drawing.Point(0, 92);
+            this.CatalogueGridView.Margin = new System.Windows.Forms.Padding(0);
+            this.CatalogueGridView.MultiSelect = false;
+            this.CatalogueGridView.Name = "CatalogueGridView";
+            this.CatalogueGridView.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.ForestGreen;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Corbel", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.CatalogueGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.CatalogueGridView.RowHeadersWidth = 60;
+            this.CatalogueGridView.RowTemplate.Height = 100;
+            this.CatalogueGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.CatalogueGridView.Size = new System.Drawing.Size(1071, 477);
+            this.CatalogueGridView.TabIndex = 12;
+            this.CatalogueGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CatalogueGridView_CellDoubleClick);
             // 
             // ListingsMain
             // 
@@ -263,11 +186,9 @@
             this.Text = "Recent Vehicles";
             this.Load += new System.EventHandler(this.ListingsMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picBxListingMain)).EndInit();
-            this.ListingHeader.ResumeLayout(false);
-            this.ListingHeader.PerformLayout();
             this.Header.ResumeLayout(false);
             this.Mainlayout.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CatalogueGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -275,16 +196,10 @@
         #endregion
 
         private System.Windows.Forms.PictureBox picBxListingMain;
-        private System.Windows.Forms.Label lblVehicleID;
-        private System.Windows.Forms.Label lblMake;
-        private System.Windows.Forms.Label lblModel;
-        private System.Windows.Forms.Label lblVIN;
-        private System.Windows.Forms.Label lblYear;
-        private System.Windows.Forms.TableLayoutPanel ListingHeader;
         private System.Windows.Forms.TableLayoutPanel Header;
         private System.Windows.Forms.TableLayoutPanel Mainlayout;
         private System.Windows.Forms.Button btnViewAll;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView CatalogueGridView;
         private System.Windows.Forms.Button BtnExit;
     }
 }

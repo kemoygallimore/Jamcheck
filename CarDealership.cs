@@ -56,7 +56,7 @@ namespace Jamcheck
             var address = txbAddress.Text;
             var parish = combxParish.SelectedItem;
 
-            Dealership dealer = new Dealership();
+            Dealerships dealer = new Dealerships();
 
             dealer.name = name;
             dealer.tel = tel;

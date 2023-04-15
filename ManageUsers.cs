@@ -34,7 +34,7 @@ namespace Jamcheck
             combxRole.DataSource = roles;
 
             //query the database for a list of items from the orgs table
-            var com = jamdb.Orgs.ToList();
+            var com = jamdb.Org.ToList();
             //assign the items to the display of the combobox
             combxOrg.DisplayMember = "company";
             //assign the items to the respeective id
@@ -71,16 +71,16 @@ namespace Jamcheck
                 $"\nRole: {role}\n");*/
                 MessageBox.Show("Records have been added");
 
-                user users = new user();
-                users.fname = fname;
-                users.lname = lname;
-                users.email = email;
-                users.username = username;
-                users.password = password;
-                users.companyid = Convert.ToInt32(combxOrg.SelectedValue);
-                users.roletypeid = Convert.ToInt32(combxRole.SelectedValue);
+                users user = new users();
+                user.fname = fname;
+                user.lname = lname;
+                user.email = email;
+                user.username = username;
+                user.password = password;
+                user.companyid = Convert.ToInt32(combxOrg.SelectedValue);
+                user.roletypeid = Convert.ToInt32(combxRole.SelectedValue);
 
-                jamdb.users.Add(users);
+                jamdb.users.Add(user);
                 jamdb.SaveChanges();
                 dataGridView1.DataSource = jamdb.UserInfoes.ToList();
 

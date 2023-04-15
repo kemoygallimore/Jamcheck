@@ -5,28 +5,27 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="468cb2cb9c934a19b3c2fd2b8d59e1a9" Name="Diagram1">
-        <EntityTypeShape EntityType="jampracticeModel.Dealership" Width="1.5" PointX="10" PointY="4.875" />
-        <EntityTypeShape EntityType="jampracticeModel.Fuel" Width="1.5" PointX="0.75" PointY="8.375" />
-        <EntityTypeShape EntityType="jampracticeModel.ImportFrom" Width="1.5" PointX="0.75" PointY="6" />
-        <EntityTypeShape EntityType="jampracticeModel.Make" Width="1.5" PointX="0.75" PointY="13.125" />
+        <EntityTypeShape EntityType="jampracticeModel.Dealerships" Width="1.5" PointX="10" PointY="4.875" />
+        <EntityTypeShape EntityType="jampracticeModel.Fuel" Width="1.5" PointX="0.75" PointY="3" />
+        <EntityTypeShape EntityType="jampracticeModel.ImportFrom" Width="1.5" PointX="0.75" PointY="10.875" />
+        <EntityTypeShape EntityType="jampracticeModel.Make" Width="1.5" PointX="0.75" PointY="15.5" />
         <EntityTypeShape EntityType="jampracticeModel.Org" Width="1.5" PointX="5.75" PointY="5.625" />
-        <EntityTypeShape EntityType="jampracticeModel.parish" Width="1.5" PointX="7.75" PointY="5.25" />
-        <EntityTypeShape EntityType="jampracticeModel.request" Width="1.5" PointX="2.75" PointY="7.75" />
-        <EntityTypeShape EntityType="jampracticeModel.Role" Width="1.5" PointX="5.75" PointY="1.625" />
-        <EntityTypeShape EntityType="jampracticeModel.SteeringPosition" Width="1.5" PointX="0.75" PointY="2.875" />
-        <EntityTypeShape EntityType="jampracticeModel.TransmissionType" Width="1.5" PointX="0.75" PointY="10.75" />
-        <EntityTypeShape EntityType="jampracticeModel.user" Width="1.5" PointX="8" PointY="1" />
-        <EntityTypeShape EntityType="jampracticeModel.Vehicle" Width="1.5" PointX="3" PointY="1.125" />
-        <EntityTypeShape EntityType="jampracticeModel.VehicleType" Width="1.5" PointX="0.75" PointY="15.5" />
-        <EntityTypeShape EntityType="jampracticeModel.UserInfo" Width="1.5" PointX="4.75" PointY="8.75" />
-        <EntityTypeShape EntityType="jampracticeModel.ViewDealership" Width="1.5" PointX="6.75" PointY="8.75" />
-        <EntityTypeShape EntityType="jampracticeModel.ViewVehicle" Width="1.5" PointX="8.75" PointY="8.75" />
-        <AssociationConnector Association="jampracticeModel.FK__Dealershi__paris__6383C8BA" />
+        <EntityTypeShape EntityType="jampracticeModel.parishes" Width="1.5" PointX="7.75" PointY="5.25" />
+        <EntityTypeShape EntityType="jampracticeModel.Roles" Width="1.5" PointX="5.75" PointY="1.625" />
+        <EntityTypeShape EntityType="jampracticeModel.SteeringPosition" Width="1.5" PointX="0.75" PointY="13.25" />
+        <EntityTypeShape EntityType="jampracticeModel.TransmissionType" Width="1.5" PointX="0.75" PointY="8.5" />
+        <EntityTypeShape EntityType="jampracticeModel.users" Width="1.5" PointX="8" PointY="1" />
+        <EntityTypeShape EntityType="jampracticeModel.VehicleType" Width="1.5" PointX="0.75" PointY="6.125" />
+        <EntityTypeShape EntityType="jampracticeModel.UserInfoes" Width="1.5" PointX="2.75" PointY="7.75" />
+        <EntityTypeShape EntityType="jampracticeModel.ViewDealerships" Width="1.5" PointX="4.75" PointY="8.75" />
+        <AssociationConnector Association="jampracticeModel.FK__Dealershi__paris__3C69FB99" />
+        <AssociationConnector Association="jampracticeModel.FK__users__companyid__3D5E1FD2" />
+        <AssociationConnector Association="jampracticeModel.FK__users__roletypei__3E52440B" />
+        <EntityTypeShape EntityType="jampracticeModel.ViewVehicles" Width="1.5" PointX="7.375" PointY="8.75" />
+        <EntityTypeShape EntityType="jampracticeModel.Vehicles" Width="1.5" PointX="3" PointY="12.125" />
         <AssociationConnector Association="jampracticeModel.FK__Vehicles__fuelid__52593CB8" />
         <AssociationConnector Association="jampracticeModel.FK__Vehicles__Import__534D60F1" />
         <AssociationConnector Association="jampracticeModel.FK__Vehicles__makeid__5441852A" />
-        <AssociationConnector Association="jampracticeModel.FK__users__companyid__6477ECF3" />
-        <AssociationConnector Association="jampracticeModel.FK__users__roletypei__656C112C" />
         <AssociationConnector Association="jampracticeModel.FK__Vehicles__steeri__5535A963" />
         <AssociationConnector Association="jampracticeModel.FK__Vehicles__transm__5629CD9C" />
         <AssociationConnector Association="jampracticeModel.FK__Vehicles__bodyty__5165187F" />

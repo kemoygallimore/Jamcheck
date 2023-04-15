@@ -27,22 +27,21 @@ namespace Jamcheck
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Dealership> Dealerships { get; set; }
-        public virtual DbSet<Fuel> Fuels { get; set; }
-        public virtual DbSet<ImportFrom> ImportFroms { get; set; }
-        public virtual DbSet<Make> Makes { get; set; }
-        public virtual DbSet<Org> Orgs { get; set; }
-        public virtual DbSet<parish> parishes { get; set; }
-        public virtual DbSet<request> requests { get; set; }
-        public virtual DbSet<Role> Roles { get; set; }
-        public virtual DbSet<SteeringPosition> SteeringPositions { get; set; }
-        public virtual DbSet<TransmissionType> TransmissionTypes { get; set; }
-        public virtual DbSet<user> users { get; set; }
-        public virtual DbSet<Vehicle> Vehicles { get; set; }
-        public virtual DbSet<VehicleType> VehicleTypes { get; set; }
-        public virtual DbSet<UserInfo> UserInfoes { get; set; }
-        public virtual DbSet<ViewDealership> ViewDealerships { get; set; }
-        public virtual DbSet<ViewVehicle> ViewVehicles { get; set; }
+        public virtual DbSet<Dealerships> Dealerships { get; set; }
+        public virtual DbSet<Fuel> Fuel { get; set; }
+        public virtual DbSet<ImportFrom> ImportFrom { get; set; }
+        public virtual DbSet<Make> Make { get; set; }
+        public virtual DbSet<Org> Org { get; set; }
+        public virtual DbSet<parishes> parishes { get; set; }
+        public virtual DbSet<Roles> Roles { get; set; }
+        public virtual DbSet<SteeringPosition> SteeringPosition { get; set; }
+        public virtual DbSet<TransmissionType> TransmissionType { get; set; }
+        public virtual DbSet<users> users { get; set; }
+        public virtual DbSet<VehicleType> VehicleType { get; set; }
+        public virtual DbSet<UserInfoes> UserInfoes { get; set; }
+        public virtual DbSet<ViewDealerships> ViewDealerships { get; set; }
+        public virtual DbSet<ViewVehicles> ViewVehicles { get; set; }
+        public virtual DbSet<Vehicles> Vehicles { get; set; }
     
         public virtual ObjectResult<AllVehicles_pr_Result> AllVehicles_pr()
         {
