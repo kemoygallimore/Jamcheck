@@ -21,10 +21,13 @@ namespace Jamcheck
         {
             InitializeComponent();
         }
-        public VehicleDetailsForm(ViewVehicles vehicle)
+        public VehicleDetailsForm( UserInfoes useraccess)
         {
-            // maketxtbx.Text = listings.
-
+            InitializeComponent();
+            
+        }
+        public VehicleDetailsForm(ViewVehicles vehicle, LoginUserRole userRole)
+        {
             InitializeComponent();
             maketxtbx.Text = vehicle.Make;
             modeltxtbx.Text = vehicle.Model;
@@ -37,47 +40,48 @@ namespace Jamcheck
             VINtxtbx.Text = vehicle.VIN;
             IDlbl.Text = vehicle.id.ToString();
 
-            
-
             var pic = vehicle.Picture;
             MemoryStream ms = new MemoryStream(pic);
             DisplayPicture.Image = Image.FromStream(ms);
-        }
 
-        private void pictureBox2_Click_1(object sender, EventArgs e)
-        {
+            if (userRole.roletype != "Admin")
+            {
+                filenametxtbx.Visible = false;
+                Downloadbtn.Visible = false;
+                Uploadbtn.Visible = false;
+            }
+            if (vehicle.Report == null)
+                Downloadbtn.Visible = false;
 
         }
 
         private void btnAddReport_Click(object sender, EventArgs e)
         {
+            //Converts the id value to an int and store into a variable
             var id = int.Parse(IDlbl.Text);
-            
+            //query the database for the first id that matches the id variable declared above
             var editcar = jamdb.Vehicles.FirstOrDefault(a=>a.id == id);
 
+            //accepts the new details into the database cells that matches the query above
             editcar.Model= modeltxtbx.Text;
-            using(Stream files = File.OpenRead(filenametxtbx.Text))
-            {
-                byte[] data = new byte[files.Length];
-                files.Read(data,0, data.Length);
-                string extn = Path.GetExtension(filenametxtbx.Text).ToLower();
-                string filename = Path.GetFileName(filenametxtbx.Text);
-                editcar.Report = data;
-                editcar.Report_Name = filename;
-                editcar.Report_Ext = extn;
-            }
 
+            //This checks if the admin had uploaded a report file and the name is in the textbox control
+            if(filenametxtbx.Text.Trim()!="")
+            {
+                //converts the file into a byte array
+                using (Stream files = File.OpenRead(filenametxtbx.Text))
+                {
+                    byte[] data = new byte[files.Length];
+                    files.Read(data, 0, data.Length);
+                    string extn = Path.GetExtension(filenametxtbx.Text).ToLower();
+                    string filename = Path.GetFileName(filenametxtbx.Text);
+                    editcar.Report = data;
+                    editcar.Report_Name = filename;
+                    editcar.Report_Ext = extn;
+                }
+            }
             jamdb.SaveChanges();
             MessageBox.Show("Records have been updated");
-
-            //Reopens the listing module
-            ListingsMain main = new ListingsMain();
-            main.MdiParent = this.MdiParent;
-            main.Dock = DockStyle.Fill;
-            this.Hide();
-            main.ShowDialog();
-            this.Close();
-
         }
         //this methods will upload the document from the computer
         private void Uploadbtn_Click(object sender, EventArgs e)
@@ -109,11 +113,17 @@ namespace Jamcheck
                     // Open the file using the default program associated with its file type
                     System.Diagnostics.Process.Start(saveFileDialog1.FileName);
                 }
-                
             }
             else
                 MessageBox.Show("There is no file linked to this vehicle.\nClose this popup and click the upload button to add a car report");
+        }
 
+        private void VehicleDetailsForm_Load(object sender, EventArgs e)
+        {
+            var id = Convert.ToInt32(IDlbl.Text);
+            var v = jamdb.Vehicles.FirstOrDefault(a => a.id == id);
+            if (v.Report != null)
+                Downloadbtn.Visible = false;
         }
     }
 }

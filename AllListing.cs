@@ -105,8 +105,10 @@ namespace Jamcheck
             var num = (int)dataGridView1.SelectedRows[0].Cells["id"].Value;
             
             var car = jamdb.ViewVehicles.FirstOrDefault(a => a.id == num);
+            var UserRole = new LoginUserRole();
 
-            VehicleDetailsForm detailsForm = new VehicleDetailsForm(car);
+
+            VehicleDetailsForm detailsForm = new VehicleDetailsForm(car, UserRole);
 
             detailsForm.ShowDialog();
             

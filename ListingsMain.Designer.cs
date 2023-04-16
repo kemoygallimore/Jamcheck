@@ -29,15 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListingsMain));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.picBxListingMain = new System.Windows.Forms.PictureBox();
             this.Header = new System.Windows.Forms.TableLayoutPanel();
             this.btnViewAll = new System.Windows.Forms.Button();
             this.Mainlayout = new System.Windows.Forms.TableLayoutPanel();
-            this.BtnExit = new System.Windows.Forms.Button();
             this.CatalogueGridView = new System.Windows.Forms.DataGridView();
+            this.BtnExit = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picBxListingMain)).BeginInit();
             this.Header.SuspendLayout();
             this.Mainlayout.SuspendLayout();
@@ -64,6 +65,7 @@
             this.Header.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 160F));
             this.Header.Controls.Add(this.picBxListingMain, 0, 0);
             this.Header.Controls.Add(this.btnViewAll, 2, 0);
+            this.Header.Controls.Add(this.label1, 1, 0);
             this.Header.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Header.Location = new System.Drawing.Point(0, 0);
             this.Header.Margin = new System.Windows.Forms.Padding(0);
@@ -85,9 +87,8 @@
             this.btnViewAll.Padding = new System.Windows.Forms.Padding(5);
             this.btnViewAll.Size = new System.Drawing.Size(147, 33);
             this.btnViewAll.TabIndex = 2;
-            this.btnViewAll.Text = "View All Vehicles";
+            this.btnViewAll.Text = "Refresh";
             this.btnViewAll.UseVisualStyleBackColor = false;
-            this.btnViewAll.Visible = false;
             this.btnViewAll.Click += new System.EventHandler(this.btnViewAll_Click);
             // 
             // Mainlayout
@@ -108,6 +109,51 @@
             this.Mainlayout.Size = new System.Drawing.Size(1071, 619);
             this.Mainlayout.TabIndex = 11;
             // 
+            // CatalogueGridView
+            // 
+            this.CatalogueGridView.AllowUserToAddRows = false;
+            this.CatalogueGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.CatalogueGridView.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.CatalogueGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Corbel", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.CatalogueGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.CatalogueGridView.ColumnHeadersHeight = 40;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.CatalogueGridView.DefaultCellStyle = dataGridViewCellStyle8;
+            this.CatalogueGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CatalogueGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
+            this.CatalogueGridView.Location = new System.Drawing.Point(0, 92);
+            this.CatalogueGridView.Margin = new System.Windows.Forms.Padding(0);
+            this.CatalogueGridView.MultiSelect = false;
+            this.CatalogueGridView.Name = "CatalogueGridView";
+            this.CatalogueGridView.ReadOnly = true;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.ForestGreen;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Corbel", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.CatalogueGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.CatalogueGridView.RowHeadersWidth = 60;
+            this.CatalogueGridView.RowTemplate.Height = 100;
+            this.CatalogueGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.CatalogueGridView.Size = new System.Drawing.Size(1071, 477);
+            this.CatalogueGridView.TabIndex = 12;
+            this.CatalogueGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CatalogueGridView_CellDoubleClick);
+            // 
             // BtnExit
             // 
             this.BtnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -126,50 +172,14 @@
             this.BtnExit.UseVisualStyleBackColor = false;
             this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
-            // CatalogueGridView
+            // label1
             // 
-            this.CatalogueGridView.AllowUserToAddRows = false;
-            this.CatalogueGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.CatalogueGridView.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.CatalogueGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Corbel", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.CatalogueGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.CatalogueGridView.ColumnHeadersHeight = 40;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.CatalogueGridView.DefaultCellStyle = dataGridViewCellStyle2;
-            this.CatalogueGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CatalogueGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
-            this.CatalogueGridView.Location = new System.Drawing.Point(0, 92);
-            this.CatalogueGridView.Margin = new System.Windows.Forms.Padding(0);
-            this.CatalogueGridView.MultiSelect = false;
-            this.CatalogueGridView.Name = "CatalogueGridView";
-            this.CatalogueGridView.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.ForestGreen;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Corbel", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.CatalogueGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.CatalogueGridView.RowHeadersWidth = 60;
-            this.CatalogueGridView.RowTemplate.Height = 100;
-            this.CatalogueGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.CatalogueGridView.Size = new System.Drawing.Size(1071, 477);
-            this.CatalogueGridView.TabIndex = 12;
-            this.CatalogueGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CatalogueGridView_CellDoubleClick);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(183, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "label1";
             // 
             // ListingsMain
             // 
@@ -187,6 +197,7 @@
             this.Load += new System.EventHandler(this.ListingsMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picBxListingMain)).EndInit();
             this.Header.ResumeLayout(false);
+            this.Header.PerformLayout();
             this.Mainlayout.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.CatalogueGridView)).EndInit();
             this.ResumeLayout(false);
@@ -201,5 +212,6 @@
         private System.Windows.Forms.Button btnViewAll;
         private System.Windows.Forms.DataGridView CatalogueGridView;
         private System.Windows.Forms.Button BtnExit;
+        private System.Windows.Forms.Label label1;
     }
 }

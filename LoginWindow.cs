@@ -10,19 +10,13 @@ using System.Windows.Forms;
 
 namespace Jamcheck
 {
-    public partial class CustomsLoginFrm : Form
+    public partial class LoginForm : Form
     {
+        private readonly jampracticeEntities jamCheckDB = new jampracticeEntities();
         
-        public CustomsLoginFrm()
+        public LoginForm()
         {
-            InitializeComponent();
-           
-        }
-
-        private void FrmJamcheckLogin_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Parentform parentform = new Parentform();
-            parentform.Show();
+            InitializeComponent();           
         }
 
         private void txtbxUsername_TextChanged(object sender, EventArgs e)
@@ -41,7 +35,7 @@ namespace Jamcheck
             var username = txtbxUsername.Text;
             var password = txtbxPassword.Text;
 
-            try
+            /*try
             {
                 if (username == "Admin" && password == "Password1")
                 {
@@ -63,30 +57,36 @@ namespace Jamcheck
             {
 
                  MessageBox.Show(login.Message + login.Source);
-            }
+            }*/
 
 
-            /*var user = jamCheckDB.CustomStaffs.FirstOrDefault(a => a.name == username && a.password == password);
-            FrmAddVehicle addVehicle = new FrmAddVehicle();
+            var user = jamCheckDB.UserInfoes.FirstOrDefault(a => a.Username == username && a.Password == password);
+            /*FrmAddVehicle addVehicle = new FrmAddVehicle();
             addVehicle.MdiParent = this.MdiParent;
             addVehicle.Dock = DockStyle.Fill;
             addVehicle.Show();
             this.Hide();*/
 
-            /*if(user!=null)
+            if (user != null)
             {
-                FrmAddVehicle addVehicle = new FrmAddVehicle();
-                addVehicle.MdiParent = this.MdiParent;
-                addVehicle.Dock = DockStyle.Fill;
-                addVehicle.Show();
+                MessageBox.Show("You have been logged in successfully");
+                LoginUserRole userRole = new LoginUserRole();
+                userRole.roletype = user.Role;
+                Parentform parentform = new Parentform(userRole);
+                //VehicleDetailsForm vehicleDetails = new VehicleDetailsForm(LoginUserRole);
                 this.Hide();
+                parentform.ShowDialog();
+                this.Close();
+                
+
+                //var id = jamCheckDB.users.FirstOrDefault(a=>a.id)
             }
             else
             {
                 MessageBox.Show("You have entered an incorrect username/password");
                 txtbxUsername.Clear();
                 txtbxPassword.Clear();
-            }*/
+            }
         }
 
         private void btnExit_Click(object sender, EventArgs e)

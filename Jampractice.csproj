@@ -85,6 +85,7 @@
     <Compile Include="ImportFrom.cs">
       <DependentUpon>jamdatabase.tt</DependentUpon>
     </Compile>
+    <Compile Include="LoginUserRole.cs" />
     <Compile Include="Make.cs">
       <DependentUpon>jamdatabase.tt</DependentUpon>
     </Compile>
@@ -127,11 +128,11 @@
     <Compile Include="SteeringPosition.cs">
       <DependentUpon>jamdatabase.tt</DependentUpon>
     </Compile>
-    <Compile Include="LoginForm.cs">
+    <Compile Include="LoginWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginForm.Designer.cs">
-      <DependentUpon>LoginForm.cs</DependentUpon>
+    <Compile Include="LoginWindow.Designer.cs">
+      <DependentUpon>LoginWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="AllListing.cs">
       <SubType>Form</SubType>
@@ -192,8 +193,8 @@
     <EmbeddedResource Include="BodyTypeAndMfr.resx">
       <DependentUpon>BodyTypeAndMfr.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
-      <DependentUpon>LoginForm.cs</DependentUpon>
+    <EmbeddedResource Include="LoginWindow.resx">
+      <DependentUpon>LoginWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AllListing.resx">
       <DependentUpon>AllListing.cs</DependentUpon>

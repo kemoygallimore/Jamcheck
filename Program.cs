@@ -22,7 +22,7 @@ namespace Jamcheck
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ListingsMain());
+            Application.Run(new LoginForm());
 
 
         }

@@ -17,11 +17,15 @@ namespace Jamcheck
         public ListingsMain()
         {
             InitializeComponent();
-            jamdb = new jampracticeEntities();
-
         }
-
-        private void ListingsMain_Load(object sender, EventArgs e)
+        public ListingsMain(LoginUserRole userRole)
+        {
+            InitializeComponent();
+            jamdb = new jampracticeEntities();
+            label1.Text = userRole.roletype;
+            label1.Visible = false;
+        }
+        private void UpdateView()
         {
             CatalogueGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.LimeGreen;
             var testing = jamdb.ViewVehicles.Select(v => new
@@ -33,8 +37,6 @@ namespace Jamcheck
                 VIN = v.VIN,
                 BodyType = v.BodyType,
                 v.id
-
-
             }).ToList();
             CatalogueGridView.DataSource = testing;
 
@@ -42,10 +44,16 @@ namespace Jamcheck
             CatalogueGridView.Columns[6].Visible = false;
 
             CatalogueGridView.Columns[0].HeaderCell.Style.ForeColor = Color.LimeGreen;
-            
+
             DataGridViewImageColumn imageColumn = new DataGridViewImageColumn();
             imageColumn = (DataGridViewImageColumn)CatalogueGridView.Columns[0];
             imageColumn.ImageLayout = DataGridViewImageCellLayout.Zoom;
+        }
+
+        private void ListingsMain_Load(object sender, EventArgs e)
+        {
+            UpdateView();
+            
         }
 
         private void BtnExit_Click(object sender, EventArgs e)
@@ -55,12 +63,7 @@ namespace Jamcheck
 
         private void btnViewAll_Click(object sender, EventArgs e)
         {
-            
-            ListingsMainAll listingsAll = new ListingsMainAll();
-            listingsAll.MdiParent = this.MdiParent;
-            listingsAll.Dock = DockStyle.Fill;
-            listingsAll.Show();
-            this.Close();
+            UpdateView();
         }
         private void CatalogueGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -68,12 +71,15 @@ namespace Jamcheck
 
             var car = jamdb.ViewVehicles.FirstOrDefault(a => a.id == num);
 
-            VehicleDetailsForm detailsForm = new VehicleDetailsForm(car);
-            detailsForm.MdiParent = this.MdiParent;
+            var UserRole = new LoginUserRole();
+            
+            UserRole.roletype = label1.Text;
+            VehicleDetailsForm detailsForm = new VehicleDetailsForm(car, UserRole);
+            /*detailsForm.MdiParent = this.MdiParent;
             detailsForm.Dock = DockStyle.Fill;
-            this.Hide();
+            this.Hide();*/
             detailsForm.ShowDialog();
-            this.Close();
+            //this.Close();
 
 
         }

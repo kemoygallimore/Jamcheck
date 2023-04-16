@@ -42,6 +42,7 @@ namespace Jamcheck
             this.TransactionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.useridlbl = new System.Windows.Forms.Label();
             this.MainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -84,14 +85,14 @@ namespace Jamcheck
             // recentToolStripMenuItem
             // 
             this.recentToolStripMenuItem.Name = "recentToolStripMenuItem";
-            this.recentToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.recentToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.recentToolStripMenuItem.Text = " Recent Vehicles";
             this.recentToolStripMenuItem.Click += new System.EventHandler(this.recentToolStripMenuItem_Click);
             // 
             // allVehiclesToolStripMenuItem
             // 
             this.allVehiclesToolStripMenuItem.Name = "allVehiclesToolStripMenuItem";
-            this.allVehiclesToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.allVehiclesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.allVehiclesToolStripMenuItem.Text = "All Vehicles";
             this.allVehiclesToolStripMenuItem.Click += new System.EventHandler(this.allVehiclesToolStripMenuItem_Click);
             // 
@@ -142,11 +143,21 @@ namespace Jamcheck
             this.exitToolStripMenuItem2.Text = "Exit";
             this.exitToolStripMenuItem2.Click += new System.EventHandler(this.exitToolStripMenuItem2_Click);
             // 
+            // useridlbl
+            // 
+            this.useridlbl.AutoSize = true;
+            this.useridlbl.Location = new System.Drawing.Point(705, 173);
+            this.useridlbl.Name = "useridlbl";
+            this.useridlbl.Size = new System.Drawing.Size(35, 13);
+            this.useridlbl.TabIndex = 3;
+            this.useridlbl.Text = "label1";
+            // 
             // Parentform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(913, 487);
+            this.Controls.Add(this.useridlbl);
             this.Controls.Add(this.MainMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
@@ -177,5 +188,6 @@ namespace Jamcheck
         private System.Windows.Forms.ToolStripMenuItem allVehiclesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem2;
+        private System.Windows.Forms.Label useridlbl;
     }
 }

@@ -12,18 +12,47 @@ namespace Jamcheck
 {
     public partial class Parentform : Form
     {
+
         private void CheckMDIChild()
         {
             if (ActiveMdiChild != null)
                 ActiveMdiChild.Close();
         }
 
+
+
         public Parentform()
         {
             InitializeComponent();
             this.BackgroundImageLayout = ImageLayout.Zoom;
             this.BackgroundImage = Properties.Resources.Jamcheck_logo_transparent;
-        }      
+        }
+        public Parentform(LoginUserRole useraccess)
+        {
+            jampracticeEntities jamdb = new jampracticeEntities();
+            InitializeComponent();
+            this.BackgroundImageLayout = ImageLayout.Zoom;
+            this.BackgroundImage = Properties.Resources.Jamcheck_logo_transparent;
+            useridlbl.Visible = false;
+
+            useridlbl.Text = useraccess.roletype;
+            var role = useridlbl.Text;
+            var userauth = jamdb.UserInfoes.FirstOrDefault(a=>a.Role == role);
+
+            if (role == "Admin")
+            {
+                addVehiclesToolStripMenuItem.Visible = false;                
+            }
+            else
+            {
+                recentToolStripMenuItem.Visible = false;
+                dealerToolStripMenuItem.Visible = false;
+                manufacturerAndBodytypeToolStripMenuItem.Visible = false;
+                CustomerProfileStripMenuItem.Visible = false;
+                manageUsersToolStripMenuItem.Visible = false;
+            }
+
+        }
 
         private void addVehiclesToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -37,7 +66,9 @@ namespace Jamcheck
         private void recentToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CheckMDIChild();
-            ListingsMain recentlistings = new ListingsMain();
+            LoginUserRole userRole = new LoginUserRole();
+            userRole.roletype=useridlbl.Text;
+            ListingsMain recentlistings = new ListingsMain(userRole);
             recentlistings.MdiParent = this;
             recentlistings.Dock = DockStyle.Fill;
             recentlistings.Show();

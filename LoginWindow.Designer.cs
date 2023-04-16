@@ -1,7 +1,7 @@
 ﻿
 namespace Jamcheck
 {
-    partial class CustomsLoginFrm
+    partial class LoginForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace Jamcheck
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomsLoginFrm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
@@ -137,7 +137,7 @@ namespace Jamcheck
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
             // 
-            // CustomsLoginFrm
+            // LoginForm
             // 
             this.AcceptButton = this.btnLogin;
             resources.ApplyResources(this, "$this");
@@ -147,7 +147,7 @@ namespace Jamcheck
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MinimizeBox = false;
-            this.Name = "CustomsLoginFrm";
+            this.Name = "LoginForm";
             this.ShowIcon = false;
             this.Load += new System.EventHandler(this.CustomsLoginFrm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
