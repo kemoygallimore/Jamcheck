@@ -119,12 +119,14 @@
 warning 6002: The table/view 'jampractice.dbo.UserInfoes' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="UserInfoes">
           <Key>
+            <PropertyRef Name="id" />
             <PropertyRef Name="First Name" />
             <PropertyRef Name="Last Name" />
             <PropertyRef Name="Username" />
             <PropertyRef Name="Email" />
             <PropertyRef Name="Password" />
           </Key>
+          <Property Name="id" Type="int" Nullable="false" />
           <Property Name="First Name" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="Last Name" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="Username" Type="nvarchar" MaxLength="40" Nullable="false" />
@@ -307,6 +309,7 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
           <EntitySet Name="VehicleType" EntityType="Self.VehicleType" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UserInfoes" EntityType="Self.UserInfoes" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
+    [UserInfoes].[id] AS [id], 
     [UserInfoes].[First Name] AS [First Name], 
     [UserInfoes].[Last Name] AS [Last Name], 
     [UserInfoes].[Username] AS [Username], 
@@ -402,7 +405,6 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
           <EntitySet Name="TransmissionType" EntityType="jampracticeModel.TransmissionType" />
           <EntitySet Name="users" EntityType="jampracticeModel.users" />
           <EntitySet Name="VehicleType" EntityType="jampracticeModel.VehicleType" />
-          <EntitySet Name="UserInfoes" EntityType="jampracticeModel.UserInfoes" />
           <EntitySet Name="ViewDealerships" EntityType="jampracticeModel.ViewDealerships" />
           <AssociationSet Name="FK__Dealershi__paris__3C69FB99" Association="jampracticeModel.FK__Dealershi__paris__3C69FB99">
             <End Role="parishes" EntitySet="parishes" />
@@ -442,6 +444,7 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
             <End Role="VehicleType" EntitySet="VehicleType" />
             <End Role="Vehicles" EntitySet="Vehicles" />
           </AssociationSet>
+          <EntitySet Name="UserInfoes" EntityType="jampracticeModel.UserInfoes" />
         </EntityContainer>
         <ComplexType Name="AllVehicles_pr_Result">
           <Property Type="Int32" Name="id" Nullable="false" />
@@ -576,22 +579,6 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Vehicles" Relationship="jampracticeModel.FK__Vehicles__bodyty__5165187F" FromRole="VehicleType" ToRole="Vehicles" />
-        </EntityType>
-        <EntityType Name="UserInfoes">
-          <Key>
-            <PropertyRef Name="First_Name" />
-            <PropertyRef Name="Last_Name" />
-            <PropertyRef Name="Username" />
-            <PropertyRef Name="Email" />
-            <PropertyRef Name="Password" />
-          </Key>
-          <Property Name="First_Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="Last_Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="Username" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
-          <Property Name="Email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Password" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="true" />
-          <Property Name="Role" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="Company" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="ViewDealerships">
           <Key>
@@ -778,6 +765,24 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="UserInfoes">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="First_Name" />
+            <PropertyRef Name="Last_Name" />
+            <PropertyRef Name="Username" />
+            <PropertyRef Name="Email" />
+            <PropertyRef Name="Password" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="First_Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Last_Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Username" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="Role" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Company" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -881,19 +886,6 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="UserInfoes">
-            <EntityTypeMapping TypeName="jampracticeModel.UserInfoes">
-              <MappingFragment StoreEntitySet="UserInfoes">
-                <ScalarProperty Name="Company" ColumnName="Company" />
-                <ScalarProperty Name="Role" ColumnName="Role" />
-                <ScalarProperty Name="Password" ColumnName="Password" />
-                <ScalarProperty Name="Email" ColumnName="Email" />
-                <ScalarProperty Name="Username" ColumnName="Username" />
-                <ScalarProperty Name="Last_Name" ColumnName="Last Name" />
-                <ScalarProperty Name="First_Name" ColumnName="First Name" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="ViewDealerships">
             <EntityTypeMapping TypeName="jampracticeModel.ViewDealerships">
               <MappingFragment StoreEntitySet="ViewDealerships">
@@ -948,6 +940,20 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
                 <ScalarProperty Name="Model" ColumnName="Model" />
                 <ScalarProperty Name="makeid" ColumnName="makeid" />
                 <ScalarProperty Name="year" ColumnName="year" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserInfoes">
+            <EntityTypeMapping TypeName="jampracticeModel.UserInfoes">
+              <MappingFragment StoreEntitySet="UserInfoes">
+                <ScalarProperty Name="Company" ColumnName="Company" />
+                <ScalarProperty Name="Role" ColumnName="Role" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Last_Name" ColumnName="Last Name" />
+                <ScalarProperty Name="First_Name" ColumnName="First Name" />
                 <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>

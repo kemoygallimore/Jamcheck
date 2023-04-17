@@ -16,7 +16,6 @@
         <EntityTypeShape EntityType="jampracticeModel.TransmissionType" Width="1.5" PointX="0.75" PointY="8.5" />
         <EntityTypeShape EntityType="jampracticeModel.users" Width="1.5" PointX="8" PointY="1" />
         <EntityTypeShape EntityType="jampracticeModel.VehicleType" Width="1.5" PointX="0.75" PointY="6.125" />
-        <EntityTypeShape EntityType="jampracticeModel.UserInfoes" Width="1.5" PointX="2.75" PointY="7.75" />
         <EntityTypeShape EntityType="jampracticeModel.ViewDealerships" Width="1.5" PointX="4.75" PointY="8.75" />
         <AssociationConnector Association="jampracticeModel.FK__Dealershi__paris__3C69FB99" />
         <AssociationConnector Association="jampracticeModel.FK__users__companyid__3D5E1FD2" />
@@ -29,6 +28,7 @@
         <AssociationConnector Association="jampracticeModel.FK__Vehicles__steeri__5535A963" />
         <AssociationConnector Association="jampracticeModel.FK__Vehicles__transm__5629CD9C" />
         <AssociationConnector Association="jampracticeModel.FK__Vehicles__bodyty__5165187F" />
+        <EntityTypeShape EntityType="jampracticeModel.UserInfoes" Width="1.5" PointX="9.375" PointY="8.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

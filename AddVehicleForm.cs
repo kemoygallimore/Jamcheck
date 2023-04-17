@@ -23,7 +23,7 @@ namespace Jamcheck
             txtbxVIN.Clear();
             numMileage.Value = 0;
             numSeating.Value = 0;
-            numYear.Value = 0;
+            numYear.Value = 1;
             pictureBox1.Image = null;
             RadioButton radioButton = new RadioButton();
             radioButton.Checked = false;

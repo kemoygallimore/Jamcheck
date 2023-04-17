@@ -38,10 +38,10 @@ namespace Jamcheck
         public virtual DbSet<TransmissionType> TransmissionType { get; set; }
         public virtual DbSet<users> users { get; set; }
         public virtual DbSet<VehicleType> VehicleType { get; set; }
-        public virtual DbSet<UserInfoes> UserInfoes { get; set; }
         public virtual DbSet<ViewDealerships> ViewDealerships { get; set; }
         public virtual DbSet<ViewVehicles> ViewVehicles { get; set; }
         public virtual DbSet<Vehicles> Vehicles { get; set; }
+        public virtual DbSet<UserInfoes> UserInfoes { get; set; }
     
         public virtual ObjectResult<AllVehicles_pr_Result> AllVehicles_pr()
         {

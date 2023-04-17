@@ -14,12 +14,30 @@ namespace Jamcheck
 {
     public partial class ManageUsers : Form
     {
-        
+
         private readonly jampracticeEntities jamdb;
         public ManageUsers()
         {
             InitializeComponent();
             jamdb = new jampracticeEntities();
+        }
+        private void Recallroles(int id)
+        {
+            switch(id)
+            {
+                case 1:
+
+                    break; 
+                case 2:
+                    combxRole.Text = "Manage";
+                    break;
+                case 3:
+                    combxRole.Text = "Staff";
+                    break;
+                case 4:
+                    combxRole.Text = "Admin";
+                    break;
+            }
         }
 
         private void ManageUsers_Load(object sender, EventArgs e)
@@ -43,6 +61,7 @@ namespace Jamcheck
             combxOrg.DataSource = com;
 
             dataGridView1.DataSource = jamdb.UserInfoes.ToList();
+            dataGridView1.Columns[0].Visible= false;
                        
         }
 
@@ -82,7 +101,7 @@ namespace Jamcheck
 
                 jamdb.users.Add(user);
                 jamdb.SaveChanges();
-                dataGridView1.DataSource = jamdb.UserInfoes.ToList();
+                
 
                 txtbxEmail.Clear();
                 txtbxFname.Clear();
@@ -92,9 +111,27 @@ namespace Jamcheck
                 combxRole = null;
                 combxOrg = null;
 
+
+
             }
         }
+        private void dataGridView1_CellDoubleClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            var id = dataGridView1.SelectedRows[0].Index;
+            //var user = new users();
 
+           /* var user = jamdb.UserInfoes.FirstOrDefault(a => a.id == id);
+            txtbxEmail.Text = user.email;
+            txtbxFname.Text = user.fname;
+            txtbxLname.Text = user.lname;
+            txtbxUsername.Text = user.username;
+            Recallroles(user.);
+            //combxRole.*/
+
+
+            //txtbxFname.Text = "fire";
+        }
+       
         private void combxRole_SelectedIndexChanged(object sender, EventArgs e)
         {
             
@@ -127,12 +164,9 @@ namespace Jamcheck
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
+ 
     }
 }
