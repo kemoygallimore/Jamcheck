@@ -9,12 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.IO;
+using System.Net.WebSockets;
 
 namespace Jamcheck
 {
     
     public partial class FrmAddVehicle : Form
     {
+        //Create a function that will clear all the fields when it has been called
         private void cleartextboxes()
         {
             txtbxChassisNo.Clear();
@@ -28,6 +30,7 @@ namespace Jamcheck
             RadioButton radioButton = new RadioButton();
             radioButton.Checked = false;
         }
+        
         jampracticeEntities jamdb;
         public FrmAddVehicle()
         {
@@ -37,10 +40,13 @@ namespace Jamcheck
 
         private void FrmAddVehicle_Load(object sender, EventArgs e)
         {
-
+            //It checks the database for the Make table and store the values in a list
             var make = jamdb.Make.ToList();
+            //it looks in the Name column and displays the names
             cobxMake.DisplayMember = "Name";
+            //Assigns each o the display name to an ID
             cobxMake.ValueMember = "id";
+            //This calls the SQL command as the datasource for the dropdown
             cobxMake.DataSource = make;
 
             var type = jamdb.VehicleType.ToList();
@@ -103,12 +109,7 @@ namespace Jamcheck
         {
 
         }
-
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            this.Close();            
-        }
-
+        
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
 
@@ -154,71 +155,55 @@ namespace Jamcheck
                 //pictureBox1.ImageLocation = openFile.FileName.ToString();
             }
         }
-        private string fueltype()
+        private int fueltype()
         {
-            string result = (rtbnPetrol.Checked) ? "Petrol" : (rbtnDiesel.Checked) ? "Diesel" : (rbtnElectric.Checked) ? "Electric" : "Hybrid";
-
+            int result = (rtbnPetrol.Checked) ? 2 : (rbtnDiesel.Checked) ? 3 : (rbtnElectric.Checked) ? 4 : 5;
             return result;
         }
-
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
             try
             {
-                Vehicles vehicle = new Vehicles();
-
-                var make = Convert.ToInt32(cobxMake.SelectedValue);
-                var model = txtbxModel.Text;
-                var year = Convert.ToInt32(numYear.Value);
-                var Fuel = fueltype();
-                var FuelID = (rtbnPetrol.Checked) ? 2 : (rbtnDiesel.Checked) ? 3 : (rbtnElectric.Checked) ? 4 : 5;
-                var Chassis = txtbxChassisNo.Text.ToUpper();
-                var VIN = txtbxVIN.Text.ToUpper();
-                var mileage = Convert.ToInt32(numMileage.Value);
-                var Seating = Convert.ToInt32(numSeating.Value);
-                var Steering = (rbtnLHand.Checked) ? "Left Hand" : "Right Hand";
-                var Steeringid = (rbtnLHand.Checked) ? 1 : 2;
-                var bodytype = Convert.ToInt32(cobxVehicleType.SelectedValue);
-                var trans = (rbtnAuto.Checked) ? 2 : (rbtnManual.Checked) ? 3 : 4;
-                var Source = Convert.ToInt32(cobxImporter.SelectedValue);
-                var importer = txtbxImportFrom.Text;
-                var importdate = dateTimePicker1.Value;
-                //var pic = Convert.ToByte( pictureBox1.Image);
-
+                // creates an object for the vehicle table
+                Vehicles vehicle = new Vehicles();                
                 using (MemoryStream ms = new MemoryStream())
                 {
+                    //save the image from the picture box to a bmp format through the memory stream object ms
                     pictureBox1.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Bmp);
                     vehicle.Picture = ms.ToArray();
                 }
+                //store the values of the textboxes to columns in the created object
+                vehicle.makeid = Convert.ToInt32(cobxMake.SelectedValue); 
+                vehicle.Model = txtbxModel.Text;
+                vehicle.year = Convert.ToInt32(numYear.Value);
+                vehicle.fuelid = fueltype();
+                vehicle.ChassisNo = txtbxChassisNo.Text.ToUpper();
+                vehicle.VinNum = txtbxVIN.Text.ToUpper();
+                vehicle.Mileage = Convert.ToInt32(numMileage.Value);
+                vehicle.Seating = Convert.ToInt32(numSeating.Value); ;
+                vehicle.steeringid = (rbtnLHand.Checked) ? 1 : 2;
+                vehicle.bodytypeid = Convert.ToInt32(cobxVehicleType.SelectedValue); ;
+                vehicle.transmissionid = (rbtnAuto.Checked) ? 2 : (rbtnManual.Checked) ? 3 : 4; ;
+                vehicle.ImportfromID = Convert.ToInt32(cobxImporter.SelectedValue);
+                vehicle.Importer = txtbxImportFrom.Text;
+                vehicle.ImportDate = dateTimePicker1.Value;
 
-                //var imageData = ImageToByteArray(pictureBox1.Image);
-                vehicle.makeid = make;
-                vehicle.Model = model;
-                vehicle.year = year;
-                vehicle.fuelid = FuelID;
-                vehicle.ChassisNo = Chassis;
-                vehicle.VinNum = VIN;
-                vehicle.Mileage = mileage;
-                vehicle.Seating = Seating;
-                vehicle.steeringid = Steeringid;
-                vehicle.bodytypeid = bodytype;
-                vehicle.transmissionid = trans;
-                vehicle.ImportfromID = Source;
-                vehicle.Importer = importer;
-                vehicle.ImportDate = importdate;
-
-
+                //Add the properties of the objects to the Vehicles table of the database
                 jamdb.Vehicles.Add(vehicle);
+                //save the changes that were made
                 jamdb.SaveChanges();
                 MessageBox.Show("Entry has been added");
+                //calls the fuction that clear all the textboxes
                 cleartextboxes();
                 txtbxModel.Focus();
             }
-            catch (Exception errors)
-            {
-                MessageBox.Show(errors.Message);
-            }
+            catch (Exception errors){MessageBox.Show(errors.Message+ "/n/n"+ errors.Source);}
+        }
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            //closes the form
+            this.Close();
         }
     }
 }

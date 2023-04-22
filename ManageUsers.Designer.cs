@@ -102,7 +102,7 @@ namespace Jamcheck
             this.btnExit.FlatAppearance.BorderSize = 2;
             this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.Location = new System.Drawing.Point(1094, 543);
             this.btnExit.Margin = new System.Windows.Forms.Padding(3, 3, 40, 3);
             this.btnExit.Name = "btnExit";
@@ -133,7 +133,7 @@ namespace Jamcheck
             // 
             this.label8.AutoSize = true;
             this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label8.Font = new System.Drawing.Font("Corbel", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Helvetica", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(203, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(1034, 100);
@@ -202,7 +202,7 @@ namespace Jamcheck
             // 
             // txtbxFname
             // 
-            this.txtbxFname.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbxFname.Font = new System.Drawing.Font("Garamond", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbxFname.Location = new System.Drawing.Point(20, 20);
             this.txtbxFname.Name = "txtbxFname";
             this.txtbxFname.Size = new System.Drawing.Size(180, 29);
@@ -212,10 +212,10 @@ namespace Jamcheck
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.Location = new System.Drawing.Point(20, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(92, 21);
+            this.label19.Size = new System.Drawing.Size(114, 22);
             this.label19.TabIndex = 0;
             this.label19.Text = "First Name";
             // 
@@ -232,7 +232,7 @@ namespace Jamcheck
             // 
             // txtbxUsername
             // 
-            this.txtbxUsername.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbxUsername.Font = new System.Drawing.Font("Garamond", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbxUsername.Location = new System.Drawing.Point(20, 20);
             this.txtbxUsername.Name = "txtbxUsername";
             this.txtbxUsername.Size = new System.Drawing.Size(240, 29);
@@ -242,10 +242,10 @@ namespace Jamcheck
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label29.Location = new System.Drawing.Point(20, 0);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(84, 21);
+            this.label29.Size = new System.Drawing.Size(106, 22);
             this.label29.TabIndex = 0;
             this.label29.Text = "Username";
             // 
@@ -262,7 +262,7 @@ namespace Jamcheck
             // 
             // txtbxLname
             // 
-            this.txtbxLname.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbxLname.Font = new System.Drawing.Font("Garamond", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbxLname.Location = new System.Drawing.Point(20, 20);
             this.txtbxLname.Name = "txtbxLname";
             this.txtbxLname.Size = new System.Drawing.Size(180, 29);
@@ -272,28 +272,29 @@ namespace Jamcheck
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(20, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(90, 21);
+            this.label12.Size = new System.Drawing.Size(113, 22);
             this.label12.TabIndex = 0;
             this.label12.Text = "Last Name";
             // 
             // BtnAdd
             // 
             this.BtnAdd.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.BtnAdd.AutoSize = true;
             this.BtnAdd.BackColor = System.Drawing.Color.LimeGreen;
             this.BtnAdd.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.BtnAdd.FlatAppearance.BorderSize = 2;
             this.BtnAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
             this.BtnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAdd.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAdd.Location = new System.Drawing.Point(1011, 65);
+            this.BtnAdd.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAdd.Location = new System.Drawing.Point(1001, 65);
             this.BtnAdd.Margin = new System.Windows.Forms.Padding(3, 3, 40, 3);
             this.BtnAdd.Name = "BtnAdd";
-            this.BtnAdd.Size = new System.Drawing.Size(106, 35);
+            this.BtnAdd.Size = new System.Drawing.Size(127, 36);
             this.BtnAdd.TabIndex = 7;
-            this.BtnAdd.Text = "Add User";
+            this.BtnAdd.Text = "ADD USER";
             this.BtnAdd.UseVisualStyleBackColor = false;
             this.BtnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
@@ -309,7 +310,7 @@ namespace Jamcheck
             // 
             // combxRole
             // 
-            this.combxRole.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.combxRole.Font = new System.Drawing.Font("Garamond", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.combxRole.FormattingEnabled = true;
             this.combxRole.Location = new System.Drawing.Point(20, 20);
             this.combxRole.Name = "combxRole";
@@ -320,10 +321,10 @@ namespace Jamcheck
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(20, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 21);
+            this.label1.Size = new System.Drawing.Size(53, 22);
             this.label1.TabIndex = 0;
             this.label1.Text = "Role";
             // 
@@ -339,7 +340,7 @@ namespace Jamcheck
             // 
             // combxOrg
             // 
-            this.combxOrg.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.combxOrg.Font = new System.Drawing.Font("Garamond", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.combxOrg.FormattingEnabled = true;
             this.combxOrg.Location = new System.Drawing.Point(20, 20);
             this.combxOrg.Name = "combxOrg";
@@ -350,10 +351,10 @@ namespace Jamcheck
             // label37
             // 
             this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label37.Location = new System.Drawing.Point(20, 0);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(104, 21);
+            this.label37.Size = new System.Drawing.Size(128, 22);
             this.label37.TabIndex = 0;
             this.label37.Text = "Organization";
             // 
@@ -369,7 +370,7 @@ namespace Jamcheck
             // 
             // txtbxEmail
             // 
-            this.txtbxEmail.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbxEmail.Font = new System.Drawing.Font("Garamond", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbxEmail.Location = new System.Drawing.Point(20, 20);
             this.txtbxEmail.Name = "txtbxEmail";
             this.txtbxEmail.Size = new System.Drawing.Size(280, 29);
@@ -379,10 +380,10 @@ namespace Jamcheck
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.Location = new System.Drawing.Point(20, 0);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(118, 21);
+            this.label28.Size = new System.Drawing.Size(143, 22);
             this.label28.TabIndex = 0;
             this.label28.Text = "Email Address";
             // 
@@ -399,7 +400,7 @@ namespace Jamcheck
             // 
             // txtbxPassword
             // 
-            this.txtbxPassword.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbxPassword.Font = new System.Drawing.Font("Garamond", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbxPassword.Location = new System.Drawing.Point(20, 20);
             this.txtbxPassword.Name = "txtbxPassword";
             this.txtbxPassword.Size = new System.Drawing.Size(240, 29);
@@ -408,10 +409,10 @@ namespace Jamcheck
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(20, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 21);
+            this.label2.Size = new System.Drawing.Size(102, 22);
             this.label2.TabIndex = 0;
             this.label2.Text = "Password";
             // 
@@ -445,6 +446,7 @@ namespace Jamcheck
             this.headertable.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);

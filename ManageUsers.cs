@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using System.Runtime.CompilerServices;
 
 namespace Jamcheck
 {
@@ -22,14 +23,8 @@ namespace Jamcheck
             InitializeComponent();
             jamdb = new jampracticeEntities();
         }
-        private void PopulateFields(int id)
-        {
-            txtbxFname.Text = dataGridView1.Rows[id].Cells[0].Value.ToString();
-            txtbxLname.Text = dataGridView1.Rows[id].Cells[1].Value.ToString();
-            txtbxUsername.Text = dataGridView1.Rows[id].Cells[2].Value.ToString();
-            txtbxEmail.Text = dataGridView1.Rows[id].Cells[3].Value.ToString();
-            combxRole.Text = dataGridView1.Rows[id].Cells[5].Value.ToString();
-        }
+        
+        //this function is used to check if a particular users exists based on the email or username that is being entered
         private bool CheckIfUserExists()
         {
             var checkuser = jamdb.users.FirstOrDefault(a => a.username == txtbxUsername.Text);
@@ -37,14 +32,22 @@ namespace Jamcheck
             return checkuser != null || checkemail != null;
         }
 
-        private void AddEdit()
-        {
-            
-        }
+        //this functions populates/refreshes the grid view table with a select statement 
         private void Showusers()
         {
             conn.Open();
-            SqlCommand display = new SqlCommand("select fname [First Name], lname [Last Name],Username,Email,Password,R.roletype [Role],o.company [Company]from users u left join Roles r on u.roletypeid = r.id left join Org o on u.companyid = o.id",conn);
+            SqlCommand display = new SqlCommand("select " +
+                "fname [First Name], " +
+                "lname [Last Name]," +
+                "Username," +
+                "Email," +
+                "Password," +
+                "R.roletype [Role]," +
+                "o.company [Company]" +
+                "from users u " +
+                "left join Roles r on u.roletypeid = r.id " +
+                "left join Org o on u.companyid = o.id",conn);
+
             SqlDataAdapter da = new SqlDataAdapter(display);
             DataTable ds = new DataTable();
             da.Fill(ds);
@@ -52,6 +55,7 @@ namespace Jamcheck
             conn.Close();
         }
 
+        //this method clears all the fields after being called
         private void ClearFields()
         {
             txtbxEmail.Clear();
@@ -59,8 +63,8 @@ namespace Jamcheck
             txtbxLname.Clear();
             txtbxPassword.Clear();
             txtbxUsername.Clear();
-            combxRole = null;
-            combxOrg = null;
+            combxRole.Text = "Choose a role";
+            combxOrg.Text = "Select Organization";
         }
 
         private void ManageUsers_Load(object sender, EventArgs e)
@@ -82,6 +86,8 @@ namespace Jamcheck
             combxOrg.ValueMember = "id";
             //call the source of the list which was referenced above
             combxOrg.DataSource = com;
+            
+            //populate the table with this method
             Showusers();
         }
 
@@ -97,7 +103,6 @@ namespace Jamcheck
 
             if(BtnAdd.Text=="Add User")
             {
-
                 if (CheckIfUserExists())
                 {
                     MessageBox.Show("Username or Email already exists");
@@ -141,13 +146,24 @@ namespace Jamcheck
                 LocateUsername.roletypeid = Convert.ToInt32(combxRole.SelectedValue);
                 jamdb.SaveChanges();
                 BtnAdd.Text = "Add User";
+                ClearFields();
                 Showusers();
             }
+        }
+
+        //this method populate the textboxes with the entry that was selected
+        private void PopulateFields(int id)
+        {
+            txtbxFname.Text = dataGridView1.Rows[id].Cells[0].Value.ToString();
+            txtbxLname.Text = dataGridView1.Rows[id].Cells[1].Value.ToString();
+            txtbxUsername.Text = dataGridView1.Rows[id].Cells[2].Value.ToString();
+            txtbxEmail.Text = dataGridView1.Rows[id].Cells[3].Value.ToString();
+            combxRole.Text = dataGridView1.Rows[id].Cells[5].Value.ToString();
         }
         private void dataGridView1_CellDoubleClick_1(object sender, DataGridViewCellEventArgs e)
         {            
             var id = dataGridView1.SelectedRows[0].Index;
-            var user = jamdb.users.FirstOrDefault(a => a.id == id);
+
             PopulateFields(id);
             BtnAdd.Text = "Update User";
         }

@@ -12,7 +12,7 @@ namespace Jamcheck
 {
     public partial class Parentform : Form
     {
-
+        //this methods check if there is any other instance of a MDI child and close it
         private void CheckMDIChild()
         {
             if (ActiveMdiChild != null)
@@ -31,19 +31,19 @@ namespace Jamcheck
             InitializeComponent();
             this.BackgroundImageLayout = ImageLayout.Zoom;
             this.BackgroundImage = Properties.Resources.Jamcheck_logo_transparent;
-            useridlbl.Visible = false;
-
+            
             useridlbl.Text = useraccess.roletype;
+            
             var role = useridlbl.Text;
-            var userauth = jamdb.UserInfoes.FirstOrDefault(a=>a.Role == role);
-
+            useridlbl.Visible = false;
+            
+            //check if the logged in user is a Admin to decide what items they or cannot access
             if (role == "Admin")
             {
                 addVehiclesToolStripMenuItem.Visible = false;                
             }
             else
             {
-                recentToolStripMenuItem.Visible = false;
                 dealerToolStripMenuItem.Visible = false;
                 manufacturerAndBodytypeToolStripMenuItem.Visible = false;
                 CustomerProfileStripMenuItem.Visible = false;

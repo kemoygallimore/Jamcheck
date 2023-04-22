@@ -40,6 +40,8 @@ namespace Jamcheck
         //
         public string Details()
         {
+            TextInfo upper = new CultureInfo("en-US", false).TextInfo;
+
             //BMW and SUV are names that should be All Caps as they are acronyms but if the vehicle type of manufactured eneter is neither then 
             //then each word in the name will be capitalized
             var details = (txtbxEntry.Text.Trim().ToLower() == "bmw") ? "BMW" : (txtbxEntry.Text.Trim().ToLower() == "suv") ? "SUV" : upper.ToTitleCase(txtbxEntry.Text);
@@ -51,8 +53,11 @@ namespace Jamcheck
         {
             
             //declaring and initializing boolean variables that will be used later on
+            //checks if the entry contains all letters
             bool allletters = Details().All(char.IsLetter);
+            //Checks if the entry contains any letter at all
             bool anyletters = Details().Any(char.IsLetter);
+            //checks if the entry has any dashes
             bool dashincluded = Details().Contains('-');
             bool valid = false;
             string Error = "Please remove any numbers or special characters used except a dash(-)";
@@ -85,7 +90,7 @@ namespace Jamcheck
         private void add(bool valid)
         {
             if (valid)
-            {
+            {   //Checks if the label says Add Body Type to add the value to the body type property of the table
                 if (lblTitle.Text == "Add Body Type")
                 {
                     VehicleType vehicleType = new VehicleType();
@@ -94,7 +99,8 @@ namespace Jamcheck
                     jamdb.SaveChanges();
                 }
                 else
-                {
+                {   
+                    //Checks if the label says Add Manufacturer to add the value to the make property of the table
                     Make make = new Make();
                     make.Name = Details();
                     jamdb.Make.Add(make);
@@ -106,7 +112,6 @@ namespace Jamcheck
             }
         }
        
-        TextInfo upper = new CultureInfo("en-US", false).TextInfo;
 
         private void btnSwitch_Click(object sender, EventArgs e)
         {
@@ -116,8 +121,9 @@ namespace Jamcheck
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
+            //calls the valid entry function to check if the user had enter a valid item
             validentry();
-
+            //if the item is valid then it satifies the add method
             add(validentry());
         }
 
@@ -138,7 +144,7 @@ namespace Jamcheck
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
     }
 }

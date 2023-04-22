@@ -149,9 +149,9 @@ namespace Jamcheck
             this.tableLayoutPanel10.RowCount = 4;
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 400F));
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 360F));
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(1130, 700);
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(1130, 596);
             this.tableLayoutPanel10.TabIndex = 12;
             // 
             // panel12
@@ -159,10 +159,10 @@ namespace Jamcheck
             this.panel12.Controls.Add(this.btnAdd);
             this.panel12.Controls.Add(this.btnExit);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel12.Location = new System.Drawing.Point(0, 520);
+            this.panel12.Location = new System.Drawing.Point(0, 480);
             this.panel12.Margin = new System.Windows.Forms.Padding(0);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(1130, 180);
+            this.panel12.Size = new System.Drawing.Size(1130, 116);
             this.panel12.TabIndex = 11;
             // 
             // btnAdd
@@ -174,10 +174,10 @@ namespace Jamcheck
             this.btnAdd.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
             this.btnAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.Location = new System.Drawing.Point(320, 20);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(120, 45);
+            this.btnAdd.Size = new System.Drawing.Size(120, 40);
             this.btnAdd.TabIndex = 12;
             this.btnAdd.Text = "ADD";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -192,10 +192,10 @@ namespace Jamcheck
             this.btnExit.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
             this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.Location = new System.Drawing.Point(640, 20);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(120, 45);
+            this.btnExit.Size = new System.Drawing.Size(120, 40);
             this.btnExit.TabIndex = 12;
             this.btnExit.Text = "EXIT";
             this.btnExit.UseVisualStyleBackColor = false;
@@ -233,12 +233,12 @@ namespace Jamcheck
             // 
             this.label15.AutoSize = true;
             this.label15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Helvetica", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(212, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(905, 100);
             this.label15.TabIndex = 2;
-            this.label15.Text = "Add Vehicles";
+            this.label15.Text = "ADD VEHICLES";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel14
@@ -264,7 +264,7 @@ namespace Jamcheck
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1130, 400);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1130, 360);
             this.tableLayoutPanel1.TabIndex = 6;
             // 
             // leftpanel
@@ -277,7 +277,7 @@ namespace Jamcheck
             this.leftpanel.Location = new System.Drawing.Point(0, 0);
             this.leftpanel.Margin = new System.Windows.Forms.Padding(0);
             this.leftpanel.Name = "leftpanel";
-            this.leftpanel.Size = new System.Drawing.Size(819, 400);
+            this.leftpanel.Size = new System.Drawing.Size(819, 360);
             this.leftpanel.TabIndex = 0;
             // 
             // FourthRow
@@ -292,12 +292,12 @@ namespace Jamcheck
             this.FourthRow.Controls.Add(this.importerPanel, 1, 0);
             this.FourthRow.Dock = System.Windows.Forms.DockStyle.Top;
             this.FourthRow.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FourthRow.Location = new System.Drawing.Point(0, 300);
+            this.FourthRow.Location = new System.Drawing.Point(0, 240);
             this.FourthRow.Name = "FourthRow";
             this.FourthRow.RowCount = 1;
             this.FourthRow.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.FourthRow.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.FourthRow.Size = new System.Drawing.Size(819, 100);
+            this.FourthRow.Size = new System.Drawing.Size(819, 80);
             this.FourthRow.TabIndex = 10;
             // 
             // datePickerPanel
@@ -309,29 +309,29 @@ namespace Jamcheck
             this.datePickerPanel.Margin = new System.Windows.Forms.Padding(0);
             this.datePickerPanel.Name = "datePickerPanel";
             this.datePickerPanel.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.datePickerPanel.Size = new System.Drawing.Size(297, 100);
+            this.datePickerPanel.Size = new System.Drawing.Size(297, 80);
             this.datePickerPanel.TabIndex = 5;
             // 
             // label14
             // 
-            this.label14.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label14.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Times New Roman", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(10, 40);
+            this.label14.Font = new System.Drawing.Font("Helvetica", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(10, 30);
             this.label14.Margin = new System.Windows.Forms.Padding(0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(131, 23);
+            this.label14.Size = new System.Drawing.Size(116, 19);
             this.label14.TabIndex = 1;
             this.label14.Text = "Date Imported";
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(10, 71);
+            this.dateTimePicker1.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(10, 55);
             this.dateTimePicker1.MinDate = new System.DateTime(2023, 1, 1, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(277, 29);
+            this.dateTimePicker1.Size = new System.Drawing.Size(277, 25);
             this.dateTimePicker1.TabIndex = 0;
             this.dateTimePicker1.UseWaitCursor = true;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
@@ -346,7 +346,7 @@ namespace Jamcheck
             this.panel13.Margin = new System.Windows.Forms.Padding(0);
             this.panel13.Name = "panel13";
             this.panel13.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.panel13.Size = new System.Drawing.Size(254, 100);
+            this.panel13.Size = new System.Drawing.Size(254, 80);
             this.panel13.TabIndex = 5;
             // 
             // txtbxImportFrom
@@ -354,23 +354,23 @@ namespace Jamcheck
             this.txtbxImportFrom.BackColor = System.Drawing.Color.White;
             this.txtbxImportFrom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtbxImportFrom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.txtbxImportFrom.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxImportFrom.Location = new System.Drawing.Point(10, 71);
+            this.txtbxImportFrom.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbxImportFrom.Location = new System.Drawing.Point(10, 55);
             this.txtbxImportFrom.Name = "txtbxImportFrom";
-            this.txtbxImportFrom.Size = new System.Drawing.Size(234, 29);
+            this.txtbxImportFrom.Size = new System.Drawing.Size(234, 25);
             this.txtbxImportFrom.TabIndex = 1;
             this.txtbxImportFrom.TextChanged += new System.EventHandler(this.txtbxImportFrom_TextChanged);
             // 
             // label13
             // 
-            this.label13.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Times New Roman", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Helvetica", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(10, 40);
+            this.label13.Location = new System.Drawing.Point(10, 30);
             this.label13.Margin = new System.Windows.Forms.Padding(0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(139, 23);
+            this.label13.Size = new System.Drawing.Size(121, 19);
             this.label13.TabIndex = 0;
             this.label13.Text = "Imported From";
             // 
@@ -384,30 +384,30 @@ namespace Jamcheck
             this.importerPanel.Margin = new System.Windows.Forms.Padding(0);
             this.importerPanel.Name = "importerPanel";
             this.importerPanel.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.importerPanel.Size = new System.Drawing.Size(268, 100);
+            this.importerPanel.Size = new System.Drawing.Size(268, 80);
             this.importerPanel.TabIndex = 4;
             // 
             // cobxImporter
             // 
             this.cobxImporter.BackColor = System.Drawing.Color.WhiteSmoke;
             this.cobxImporter.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.cobxImporter.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cobxImporter.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cobxImporter.FormattingEnabled = true;
-            this.cobxImporter.Location = new System.Drawing.Point(10, 71);
+            this.cobxImporter.Location = new System.Drawing.Point(10, 54);
             this.cobxImporter.Name = "cobxImporter";
-            this.cobxImporter.Size = new System.Drawing.Size(248, 29);
+            this.cobxImporter.Size = new System.Drawing.Size(248, 26);
             this.cobxImporter.TabIndex = 1;
             this.cobxImporter.SelectedIndexChanged += new System.EventHandler(this.cobxImporter_SelectedIndexChanged);
             // 
             // label12
             // 
-            this.label12.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Times New Roman", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(10, 40);
+            this.label12.Font = new System.Drawing.Font("Helvetica", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(10, 30);
             this.label12.Margin = new System.Windows.Forms.Padding(0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(85, 23);
+            this.label12.Size = new System.Drawing.Size(73, 19);
             this.label12.TabIndex = 0;
             this.label12.Text = "Importer";
             // 
@@ -423,11 +423,11 @@ namespace Jamcheck
             this.ThirdRow.Controls.Add(this.panel7, 1, 0);
             this.ThirdRow.Dock = System.Windows.Forms.DockStyle.Top;
             this.ThirdRow.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ThirdRow.Location = new System.Drawing.Point(0, 200);
+            this.ThirdRow.Location = new System.Drawing.Point(0, 160);
             this.ThirdRow.Name = "ThirdRow";
             this.ThirdRow.RowCount = 1;
             this.ThirdRow.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.ThirdRow.Size = new System.Drawing.Size(819, 100);
+            this.ThirdRow.Size = new System.Drawing.Size(819, 80);
             this.ThirdRow.TabIndex = 9;
             // 
             // panel8
@@ -439,7 +439,7 @@ namespace Jamcheck
             this.panel8.Margin = new System.Windows.Forms.Padding(0);
             this.panel8.Name = "panel8";
             this.panel8.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.panel8.Size = new System.Drawing.Size(330, 100);
+            this.panel8.Size = new System.Drawing.Size(330, 80);
             this.panel8.TabIndex = 4;
             // 
             // tableLayoutPanel5
@@ -453,21 +453,21 @@ namespace Jamcheck
             this.tableLayoutPanel5.Controls.Add(this.rbtnAuto, 0, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tableLayoutPanel5.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(10, 67);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(10, 53);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(310, 33);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(310, 27);
             this.tableLayoutPanel5.TabIndex = 1;
             this.tableLayoutPanel5.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel5_Paint);
             // 
             // rbtnCVT
             // 
             this.rbtnCVT.AutoSize = true;
-            this.rbtnCVT.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnCVT.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnCVT.Location = new System.Drawing.Point(228, 3);
             this.rbtnCVT.Name = "rbtnCVT";
-            this.rbtnCVT.Size = new System.Drawing.Size(66, 25);
+            this.rbtnCVT.Size = new System.Drawing.Size(59, 21);
             this.rbtnCVT.TabIndex = 3;
             this.rbtnCVT.TabStop = true;
             this.rbtnCVT.Text = "CVT";
@@ -477,10 +477,10 @@ namespace Jamcheck
             // rbtnManual
             // 
             this.rbtnManual.AutoSize = true;
-            this.rbtnManual.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnManual.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnManual.Location = new System.Drawing.Point(127, 3);
             this.rbtnManual.Name = "rbtnManual";
-            this.rbtnManual.Size = new System.Drawing.Size(82, 25);
+            this.rbtnManual.Size = new System.Drawing.Size(79, 21);
             this.rbtnManual.TabIndex = 2;
             this.rbtnManual.TabStop = true;
             this.rbtnManual.Text = "Manual";
@@ -490,10 +490,10 @@ namespace Jamcheck
             // rbtnAuto
             // 
             this.rbtnAuto.AutoSize = true;
-            this.rbtnAuto.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnAuto.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnAuto.Location = new System.Drawing.Point(3, 3);
             this.rbtnAuto.Name = "rbtnAuto";
-            this.rbtnAuto.Size = new System.Drawing.Size(105, 25);
+            this.rbtnAuto.Size = new System.Drawing.Size(98, 21);
             this.rbtnAuto.TabIndex = 1;
             this.rbtnAuto.TabStop = true;
             this.rbtnAuto.Text = "Automatic";
@@ -502,13 +502,13 @@ namespace Jamcheck
             // 
             // label8
             // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Times New Roman", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(10, 40);
+            this.label8.Font = new System.Drawing.Font("Helvetica", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(10, 30);
             this.label8.Margin = new System.Windows.Forms.Padding(0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(166, 23);
+            this.label8.Size = new System.Drawing.Size(153, 19);
             this.label8.TabIndex = 0;
             this.label8.Text = "Transmission Type";
             // 
@@ -521,7 +521,7 @@ namespace Jamcheck
             this.panel3.Margin = new System.Windows.Forms.Padding(0);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.panel3.Size = new System.Drawing.Size(287, 100);
+            this.panel3.Size = new System.Drawing.Size(287, 80);
             this.panel3.TabIndex = 12;
             // 
             // tableLayoutPanel4
@@ -532,20 +532,20 @@ namespace Jamcheck
             this.tableLayoutPanel4.Controls.Add(this.rbtnLHand, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.rbtnRHand, 1, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(10, 70);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(10, 53);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(267, 30);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(267, 27);
             this.tableLayoutPanel4.TabIndex = 4;
             // 
             // rbtnLHand
             // 
             this.rbtnLHand.AutoSize = true;
-            this.rbtnLHand.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnLHand.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnLHand.Location = new System.Drawing.Point(3, 3);
             this.rbtnLHand.Name = "rbtnLHand";
-            this.rbtnLHand.Size = new System.Drawing.Size(103, 24);
+            this.rbtnLHand.Size = new System.Drawing.Size(97, 21);
             this.rbtnLHand.TabIndex = 3;
             this.rbtnLHand.TabStop = true;
             this.rbtnLHand.Text = "Left Hand";
@@ -554,10 +554,10 @@ namespace Jamcheck
             // rbtnRHand
             // 
             this.rbtnRHand.AutoSize = true;
-            this.rbtnRHand.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnRHand.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnRHand.Location = new System.Drawing.Point(136, 3);
             this.rbtnRHand.Name = "rbtnRHand";
-            this.rbtnRHand.Size = new System.Drawing.Size(113, 24);
+            this.rbtnRHand.Size = new System.Drawing.Size(108, 21);
             this.rbtnRHand.TabIndex = 2;
             this.rbtnRHand.TabStop = true;
             this.rbtnRHand.Text = "Right Hand";
@@ -565,13 +565,13 @@ namespace Jamcheck
             // 
             // label3
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(10, 40);
+            this.label3.Font = new System.Drawing.Font("Helvetica", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(10, 30);
             this.label3.Margin = new System.Windows.Forms.Padding(0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(154, 23);
+            this.label3.Size = new System.Drawing.Size(140, 19);
             this.label3.TabIndex = 0;
             this.label3.Text = "Steering Position";
             // 
@@ -585,35 +585,35 @@ namespace Jamcheck
             this.panel7.Margin = new System.Windows.Forms.Padding(0);
             this.panel7.Name = "panel7";
             this.panel7.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.panel7.Size = new System.Drawing.Size(202, 100);
+            this.panel7.Size = new System.Drawing.Size(202, 80);
             this.panel7.TabIndex = 5;
             // 
             // cobxVehicleType
             // 
             this.cobxVehicleType.BackColor = System.Drawing.Color.WhiteSmoke;
             this.cobxVehicleType.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.cobxVehicleType.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cobxVehicleType.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cobxVehicleType.FormattingEnabled = true;
             this.cobxVehicleType.Items.AddRange(new object[] {
             "Truck",
             "Sedan",
             "Hatchback",
             "Station Wagon"});
-            this.cobxVehicleType.Location = new System.Drawing.Point(10, 71);
+            this.cobxVehicleType.Location = new System.Drawing.Point(10, 54);
             this.cobxVehicleType.Name = "cobxVehicleType";
-            this.cobxVehicleType.Size = new System.Drawing.Size(182, 29);
+            this.cobxVehicleType.Size = new System.Drawing.Size(182, 26);
             this.cobxVehicleType.TabIndex = 1;
             this.cobxVehicleType.SelectedIndexChanged += new System.EventHandler(this.cobxVehicleType_SelectedIndexChanged);
             // 
             // label7
             // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Times New Roman", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(10, 40);
+            this.label7.Font = new System.Drawing.Font("Helvetica", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(10, 30);
             this.label7.Margin = new System.Windows.Forms.Padding(0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(114, 23);
+            this.label7.Size = new System.Drawing.Size(105, 19);
             this.label7.TabIndex = 0;
             this.label7.Text = "Vehicle Type";
             // 
@@ -631,11 +631,11 @@ namespace Jamcheck
             this.SecondRow.Controls.Add(this.panel1, 0, 0);
             this.SecondRow.Dock = System.Windows.Forms.DockStyle.Top;
             this.SecondRow.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SecondRow.Location = new System.Drawing.Point(0, 100);
+            this.SecondRow.Location = new System.Drawing.Point(0, 80);
             this.SecondRow.Name = "SecondRow";
             this.SecondRow.RowCount = 1;
             this.SecondRow.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.SecondRow.Size = new System.Drawing.Size(819, 100);
+            this.SecondRow.Size = new System.Drawing.Size(819, 80);
             this.SecondRow.TabIndex = 8;
             this.SecondRow.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
@@ -648,18 +648,18 @@ namespace Jamcheck
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.panel2.Size = new System.Drawing.Size(294, 100);
+            this.panel2.Size = new System.Drawing.Size(294, 80);
             this.panel2.TabIndex = 4;
             // 
             // label2
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(10, 40);
+            this.label2.Font = new System.Drawing.Font("Helvetica", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(10, 30);
             this.label2.Margin = new System.Windows.Forms.Padding(0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 23);
+            this.label2.Size = new System.Drawing.Size(36, 19);
             this.label2.TabIndex = 0;
             this.label2.Text = "VIN";
             // 
@@ -668,10 +668,10 @@ namespace Jamcheck
             this.txtbxVIN.BackColor = System.Drawing.Color.White;
             this.txtbxVIN.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtbxVIN.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.txtbxVIN.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxVIN.Location = new System.Drawing.Point(10, 71);
+            this.txtbxVIN.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbxVIN.Location = new System.Drawing.Point(10, 55);
             this.txtbxVIN.Name = "txtbxVIN";
-            this.txtbxVIN.Size = new System.Drawing.Size(274, 29);
+            this.txtbxVIN.Size = new System.Drawing.Size(274, 25);
             this.txtbxVIN.TabIndex = 1;
             this.txtbxVIN.TextChanged += new System.EventHandler(this.txtbxVIN_TextChanged);
             // 
@@ -684,7 +684,7 @@ namespace Jamcheck
             this.panel10.Margin = new System.Windows.Forms.Padding(0);
             this.panel10.Name = "panel10";
             this.panel10.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.panel10.Size = new System.Drawing.Size(182, 100);
+            this.panel10.Size = new System.Drawing.Size(182, 80);
             this.panel10.TabIndex = 4;
             // 
             // numSeating
@@ -692,22 +692,22 @@ namespace Jamcheck
             this.numSeating.BackColor = System.Drawing.Color.WhiteSmoke;
             this.numSeating.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.numSeating.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.numSeating.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numSeating.Location = new System.Drawing.Point(10, 71);
+            this.numSeating.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numSeating.Location = new System.Drawing.Point(10, 55);
             this.numSeating.Name = "numSeating";
-            this.numSeating.Size = new System.Drawing.Size(162, 29);
+            this.numSeating.Size = new System.Drawing.Size(162, 25);
             this.numSeating.TabIndex = 1;
             this.numSeating.ValueChanged += new System.EventHandler(this.numSeating_ValueChanged);
             // 
             // label10
             // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Times New Roman", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(10, 40);
+            this.label10.Font = new System.Drawing.Font("Helvetica", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(10, 30);
             this.label10.Margin = new System.Windows.Forms.Padding(0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(150, 23);
+            this.label10.Size = new System.Drawing.Size(138, 19);
             this.label10.TabIndex = 0;
             this.label10.Text = "Seating Capacity";
             // 
@@ -721,7 +721,7 @@ namespace Jamcheck
             this.panel9.Margin = new System.Windows.Forms.Padding(0);
             this.panel9.Name = "panel9";
             this.panel9.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.panel9.Size = new System.Drawing.Size(139, 100);
+            this.panel9.Size = new System.Drawing.Size(139, 80);
             this.panel9.TabIndex = 4;
             // 
             // radioButton10
@@ -753,27 +753,27 @@ namespace Jamcheck
             this.numMileage.BackColor = System.Drawing.Color.WhiteSmoke;
             this.numMileage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.numMileage.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.numMileage.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numMileage.Location = new System.Drawing.Point(10, 71);
+            this.numMileage.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numMileage.Location = new System.Drawing.Point(10, 55);
             this.numMileage.Maximum = new decimal(new int[] {
             1000000,
             0,
             0,
             0});
             this.numMileage.Name = "numMileage";
-            this.numMileage.Size = new System.Drawing.Size(119, 29);
+            this.numMileage.Size = new System.Drawing.Size(119, 25);
             this.numMileage.TabIndex = 2;
             this.numMileage.ValueChanged += new System.EventHandler(this.numMileage_ValueChanged);
             // 
             // label9
             // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Times New Roman", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(10, 40);
+            this.label9.Font = new System.Drawing.Font("Helvetica", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(10, 30);
             this.label9.Margin = new System.Windows.Forms.Padding(0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(78, 23);
+            this.label9.Size = new System.Drawing.Size(67, 19);
             this.label9.TabIndex = 0;
             this.label9.Text = "Mileage";
             // 
@@ -786,18 +786,18 @@ namespace Jamcheck
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.panel1.Size = new System.Drawing.Size(204, 100);
+            this.panel1.Size = new System.Drawing.Size(204, 80);
             this.panel1.TabIndex = 3;
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(10, 40);
+            this.label1.Font = new System.Drawing.Font("Helvetica", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(10, 30);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(139, 23);
+            this.label1.Size = new System.Drawing.Size(127, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "Chasis Number";
             // 
@@ -806,10 +806,10 @@ namespace Jamcheck
             this.txtbxChassisNo.BackColor = System.Drawing.Color.White;
             this.txtbxChassisNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtbxChassisNo.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.txtbxChassisNo.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxChassisNo.Location = new System.Drawing.Point(10, 71);
+            this.txtbxChassisNo.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbxChassisNo.Location = new System.Drawing.Point(10, 55);
             this.txtbxChassisNo.Name = "txtbxChassisNo";
-            this.txtbxChassisNo.Size = new System.Drawing.Size(184, 29);
+            this.txtbxChassisNo.Size = new System.Drawing.Size(184, 25);
             this.txtbxChassisNo.TabIndex = 1;
             this.txtbxChassisNo.TextChanged += new System.EventHandler(this.txtbxChassisNo_TextChanged);
             // 
@@ -832,7 +832,7 @@ namespace Jamcheck
             this.FirstRow.Name = "FirstRow";
             this.FirstRow.RowCount = 1;
             this.FirstRow.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.FirstRow.Size = new System.Drawing.Size(819, 100);
+            this.FirstRow.Size = new System.Drawing.Size(819, 80);
             this.FirstRow.TabIndex = 7;
             // 
             // panel6
@@ -844,30 +844,30 @@ namespace Jamcheck
             this.panel6.Margin = new System.Windows.Forms.Padding(0);
             this.panel6.Name = "panel6";
             this.panel6.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.panel6.Size = new System.Drawing.Size(169, 100);
+            this.panel6.Size = new System.Drawing.Size(169, 80);
             this.panel6.TabIndex = 0;
             // 
             // cobxMake
             // 
             this.cobxMake.BackColor = System.Drawing.Color.WhiteSmoke;
             this.cobxMake.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.cobxMake.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cobxMake.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cobxMake.FormattingEnabled = true;
-            this.cobxMake.Location = new System.Drawing.Point(10, 71);
+            this.cobxMake.Location = new System.Drawing.Point(10, 54);
             this.cobxMake.Name = "cobxMake";
-            this.cobxMake.Size = new System.Drawing.Size(149, 29);
+            this.cobxMake.Size = new System.Drawing.Size(149, 26);
             this.cobxMake.TabIndex = 1;
             this.cobxMake.SelectedIndexChanged += new System.EventHandler(this.cobxMake_SelectedIndexChanged);
             // 
             // label6
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(10, 40);
+            this.label6.Font = new System.Drawing.Font("Helvetica", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(10, 30);
             this.label6.Margin = new System.Windows.Forms.Padding(0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(57, 23);
+            this.label6.Size = new System.Drawing.Size(49, 19);
             this.label6.TabIndex = 0;
             this.label6.Text = "Make";
             // 
@@ -880,7 +880,7 @@ namespace Jamcheck
             this.panel5.Margin = new System.Windows.Forms.Padding(0);
             this.panel5.Name = "panel5";
             this.panel5.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.panel5.Size = new System.Drawing.Size(171, 100);
+            this.panel5.Size = new System.Drawing.Size(171, 80);
             this.panel5.TabIndex = 2;
             // 
             // txtbxModel
@@ -888,22 +888,22 @@ namespace Jamcheck
             this.txtbxModel.BackColor = System.Drawing.Color.White;
             this.txtbxModel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtbxModel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.txtbxModel.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxModel.Location = new System.Drawing.Point(10, 71);
+            this.txtbxModel.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbxModel.Location = new System.Drawing.Point(10, 55);
             this.txtbxModel.Name = "txtbxModel";
-            this.txtbxModel.Size = new System.Drawing.Size(151, 29);
+            this.txtbxModel.Size = new System.Drawing.Size(151, 25);
             this.txtbxModel.TabIndex = 1;
             this.txtbxModel.TextChanged += new System.EventHandler(this.txtbxModel_TextChanged);
             // 
             // label5
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(10, 40);
+            this.label5.Font = new System.Drawing.Font("Helvetica", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(10, 30);
             this.label5.Margin = new System.Windows.Forms.Padding(0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 23);
+            this.label5.Size = new System.Drawing.Size(55, 19);
             this.label5.TabIndex = 0;
             this.label5.Text = "Model";
             // 
@@ -917,7 +917,7 @@ namespace Jamcheck
             this.panel11.Margin = new System.Windows.Forms.Padding(0);
             this.panel11.Name = "panel11";
             this.panel11.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.panel11.Size = new System.Drawing.Size(381, 100);
+            this.panel11.Size = new System.Drawing.Size(381, 80);
             this.panel11.TabIndex = 4;
             // 
             // tableLayoutPanel7
@@ -932,20 +932,21 @@ namespace Jamcheck
             this.tableLayoutPanel7.Controls.Add(this.rbtnHybrid, 3, 0);
             this.tableLayoutPanel7.Controls.Add(this.rbtnElectric, 2, 0);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(10, 67);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(10, 53);
+            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 1;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(361, 33);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(361, 27);
             this.tableLayoutPanel7.TabIndex = 4;
             // 
             // rbtnDiesel
             // 
             this.rbtnDiesel.AutoSize = true;
-            this.rbtnDiesel.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnDiesel.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnDiesel.Location = new System.Drawing.Point(88, 3);
             this.rbtnDiesel.Name = "rbtnDiesel";
-            this.rbtnDiesel.Size = new System.Drawing.Size(73, 25);
+            this.rbtnDiesel.Size = new System.Drawing.Size(70, 21);
             this.rbtnDiesel.TabIndex = 2;
             this.rbtnDiesel.TabStop = true;
             this.rbtnDiesel.Text = "Diesel";
@@ -954,10 +955,10 @@ namespace Jamcheck
             // rtbnPetrol
             // 
             this.rtbnPetrol.AutoSize = true;
-            this.rtbnPetrol.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rtbnPetrol.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtbnPetrol.Location = new System.Drawing.Point(3, 3);
             this.rtbnPetrol.Name = "rtbnPetrol";
-            this.rtbnPetrol.Size = new System.Drawing.Size(72, 25);
+            this.rtbnPetrol.Size = new System.Drawing.Size(67, 21);
             this.rtbnPetrol.TabIndex = 1;
             this.rtbnPetrol.TabStop = true;
             this.rtbnPetrol.Text = "Petrol";
@@ -966,10 +967,10 @@ namespace Jamcheck
             // rbtnHybrid
             // 
             this.rbtnHybrid.AutoSize = true;
-            this.rbtnHybrid.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnHybrid.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnHybrid.Location = new System.Drawing.Point(269, 3);
             this.rbtnHybrid.Name = "rbtnHybrid";
-            this.rbtnHybrid.Size = new System.Drawing.Size(80, 25);
+            this.rbtnHybrid.Size = new System.Drawing.Size(76, 21);
             this.rbtnHybrid.TabIndex = 3;
             this.rbtnHybrid.TabStop = true;
             this.rbtnHybrid.Text = "Hybrid";
@@ -978,10 +979,10 @@ namespace Jamcheck
             // rbtnElectric
             // 
             this.rbtnElectric.AutoSize = true;
-            this.rbtnElectric.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnElectric.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnElectric.Location = new System.Drawing.Point(173, 3);
             this.rbtnElectric.Name = "rbtnElectric";
-            this.rbtnElectric.Size = new System.Drawing.Size(84, 25);
+            this.rbtnElectric.Size = new System.Drawing.Size(80, 21);
             this.rbtnElectric.TabIndex = 3;
             this.rbtnElectric.TabStop = true;
             this.rbtnElectric.Text = "Electric";
@@ -989,13 +990,13 @@ namespace Jamcheck
             // 
             // label11
             // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Times New Roman", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(10, 40);
+            this.label11.Font = new System.Drawing.Font("Helvetica", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(10, 30);
             this.label11.Margin = new System.Windows.Forms.Padding(0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(92, 23);
+            this.label11.Size = new System.Drawing.Size(83, 19);
             this.label11.TabIndex = 0;
             this.label11.Text = "Fuel Type";
             // 
@@ -1008,7 +1009,7 @@ namespace Jamcheck
             this.panel4.Margin = new System.Windows.Forms.Padding(0);
             this.panel4.Name = "panel4";
             this.panel4.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.panel4.Size = new System.Drawing.Size(98, 100);
+            this.panel4.Size = new System.Drawing.Size(98, 80);
             this.panel4.TabIndex = 3;
             // 
             // numYear
@@ -1016,8 +1017,8 @@ namespace Jamcheck
             this.numYear.BackColor = System.Drawing.Color.WhiteSmoke;
             this.numYear.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.numYear.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.numYear.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numYear.Location = new System.Drawing.Point(10, 71);
+            this.numYear.Font = new System.Drawing.Font("Garamond", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numYear.Location = new System.Drawing.Point(10, 55);
             this.numYear.Maximum = new decimal(new int[] {
             3000,
             0,
@@ -1029,7 +1030,7 @@ namespace Jamcheck
             0,
             0});
             this.numYear.Name = "numYear";
-            this.numYear.Size = new System.Drawing.Size(78, 29);
+            this.numYear.Size = new System.Drawing.Size(78, 25);
             this.numYear.TabIndex = 1;
             this.numYear.Value = new decimal(new int[] {
             2020,
@@ -1040,13 +1041,13 @@ namespace Jamcheck
             // 
             // label4
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(10, 40);
+            this.label4.Font = new System.Drawing.Font("Helvetica", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(10, 30);
             this.label4.Margin = new System.Windows.Forms.Padding(0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(48, 23);
+            this.label4.Size = new System.Drawing.Size(43, 19);
             this.label4.TabIndex = 0;
             this.label4.Text = "Year";
             // 
@@ -1059,7 +1060,7 @@ namespace Jamcheck
             this.panel15.Margin = new System.Windows.Forms.Padding(0);
             this.panel15.Name = "panel15";
             this.panel15.Padding = new System.Windows.Forms.Padding(20, 40, 20, 0);
-            this.panel15.Size = new System.Drawing.Size(311, 400);
+            this.panel15.Size = new System.Drawing.Size(311, 360);
             this.panel15.TabIndex = 1;
             // 
             // btnUpload
@@ -1074,10 +1075,10 @@ namespace Jamcheck
             this.btnUpload.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
             this.btnUpload.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
             this.btnUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpload.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpload.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpload.Location = new System.Drawing.Point(80, 320);
             this.btnUpload.Name = "btnUpload";
-            this.btnUpload.Size = new System.Drawing.Size(139, 39);
+            this.btnUpload.Size = new System.Drawing.Size(154, 38);
             this.btnUpload.TabIndex = 12;
             this.btnUpload.Text = "Upload Photo";
             this.btnUpload.UseVisualStyleBackColor = true;
@@ -1101,13 +1102,13 @@ namespace Jamcheck
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1130, 700);
+            this.ClientSize = new System.Drawing.Size(1130, 596);
             this.ControlBox = false;
             this.Controls.Add(this.tableLayoutPanel10);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(1130, 700);
+            this.MinimumSize = new System.Drawing.Size(1130, 0);
             this.Name = "FrmAddVehicle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.TopMost = true;

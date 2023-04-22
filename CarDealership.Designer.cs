@@ -60,17 +60,17 @@
             // tbxName
             // 
             this.tbxName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbxName.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxName.Font = new System.Drawing.Font("Garamond", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxName.Location = new System.Drawing.Point(153, 43);
             this.tbxName.Name = "tbxName";
-            this.tbxName.Size = new System.Drawing.Size(243, 30);
+            this.tbxName.Size = new System.Drawing.Size(243, 29);
             this.tbxName.TabIndex = 1;
             this.tbxName.TextChanged += new System.EventHandler(this.tbxName_TextChanged);
             // 
             // txbAddress
             // 
             this.txbAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbAddress.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbAddress.Font = new System.Drawing.Font("Garamond", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbAddress.Location = new System.Drawing.Point(153, 143);
             this.txbAddress.Multiline = true;
             this.txbAddress.Name = "txbAddress";
@@ -81,47 +81,47 @@
             // tbxTelephone
             // 
             this.tbxTelephone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbxTelephone.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxTelephone.Font = new System.Drawing.Font("Garamond", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxTelephone.Location = new System.Drawing.Point(153, 93);
             this.tbxTelephone.Name = "tbxTelephone";
-            this.tbxTelephone.Size = new System.Drawing.Size(243, 30);
+            this.tbxTelephone.Size = new System.Drawing.Size(243, 29);
             this.tbxTelephone.TabIndex = 2;
             this.tbxTelephone.TextChanged += new System.EventHandler(this.tbxTelephone_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(33, 140);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 23);
+            this.label1.Size = new System.Drawing.Size(88, 22);
             this.label1.TabIndex = 2;
             this.label1.Text = "Address";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(33, 40);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 23);
+            this.label2.Size = new System.Drawing.Size(65, 22);
             this.label2.TabIndex = 2;
             this.label2.Text = "Name";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(33, 230);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 23);
+            this.label3.Size = new System.Drawing.Size(68, 22);
             this.label3.TabIndex = 3;
             this.label3.Text = "Parish";
             // 
             // combxParish
             // 
             this.combxParish.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.combxParish.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.combxParish.Font = new System.Drawing.Font("Garamond", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.combxParish.FormattingEnabled = true;
             this.combxParish.Items.AddRange(new object[] {
             "Kingston",
@@ -140,17 +140,17 @@
             "St. Elizabeth"});
             this.combxParish.Location = new System.Drawing.Point(153, 233);
             this.combxParish.Name = "combxParish";
-            this.combxParish.Size = new System.Drawing.Size(243, 30);
+            this.combxParish.Size = new System.Drawing.Size(243, 29);
             this.combxParish.TabIndex = 4;
             this.combxParish.SelectedIndexChanged += new System.EventHandler(this.combxParish_SelectedIndexChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(33, 90);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(95, 23);
+            this.label4.Size = new System.Drawing.Size(108, 22);
             this.label4.TabIndex = 2;
             this.label4.Text = "Telephone";
             // 
@@ -160,11 +160,11 @@
             this.btnClear.FlatAppearance.BorderSize = 2;
             this.btnClear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClear.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.Location = new System.Drawing.Point(0, 0);
             this.btnClear.Margin = new System.Windows.Forms.Padding(0);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(95, 30);
+            this.btnClear.Size = new System.Drawing.Size(95, 35);
             this.btnClear.TabIndex = 5;
             this.btnClear.Text = "CLEAR";
             this.btnClear.UseVisualStyleBackColor = false;
@@ -177,11 +177,11 @@
             this.btnadd.FlatAppearance.BorderSize = 2;
             this.btnadd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
             this.btnadd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnadd.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnadd.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnadd.Location = new System.Drawing.Point(148, 0);
             this.btnadd.Margin = new System.Windows.Forms.Padding(0);
             this.btnadd.Name = "btnadd";
-            this.btnadd.Size = new System.Drawing.Size(95, 30);
+            this.btnadd.Size = new System.Drawing.Size(95, 35);
             this.btnadd.TabIndex = 5;
             this.btnadd.Text = "ADD";
             this.btnadd.UseVisualStyleBackColor = false;
@@ -238,10 +238,10 @@
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Corbel", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(602, 0);
+            this.label5.Font = new System.Drawing.Font("Helvetica", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(589, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(278, 49);
+            this.label5.Size = new System.Drawing.Size(305, 47);
             this.label5.TabIndex = 2;
             this.label5.Text = "DEALERSHIPS";
             // 
@@ -324,6 +324,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(835, 392);
             this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // BtnExit
@@ -334,7 +335,7 @@
             this.BtnExit.FlatAppearance.BorderSize = 2;
             this.BtnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
             this.BtnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnExit.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnExit.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnExit.Location = new System.Drawing.Point(1110, 495);
             this.BtnExit.Margin = new System.Windows.Forms.Padding(3, 3, 40, 3);
             this.BtnExit.Name = "BtnExit";

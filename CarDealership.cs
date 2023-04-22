@@ -43,10 +43,16 @@ namespace Jamcheck
         {
 
         }
-
+        private void ClearFields()
+        {
+            tbxName.Clear();
+            tbxTelephone.Clear();
+            txbAddress.Clear();
+            combxParish.Text = "Select Parish";
+        }
         private void btnClear_Click(object sender, EventArgs e)
         {
-
+            ClearFields();
         }
 
         private void btnadd_Click(object sender, EventArgs e)
@@ -66,9 +72,7 @@ namespace Jamcheck
 
             jamdb.Dealerships.Add(dealer);
             jamdb.SaveChanges();
-            tbxName.Clear();
-            tbxTelephone.Clear();
-            txbAddress.Clear();
+            ClearFields();
 
             MessageBox.Show(name + " has been added");
 
@@ -78,11 +82,11 @@ namespace Jamcheck
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            dataGridView1.DataSource = jamdb.ViewDealerships.ToList();
+           /* dataGridView1.DataSource = jamdb.ViewDealerships.ToList();
             dataGridView1.Columns[0].HeaderText = "Name";
             dataGridView1.Columns[1].HeaderText = "Telephone";
             dataGridView1.Columns[2].HeaderText = "Address";
-            dataGridView1.Columns[3].HeaderText = "Parish";
+            dataGridView1.Columns[3].HeaderText = "Parish";*/
         }
 
         private void CarDealership_Load(object sender, EventArgs e)
@@ -96,6 +100,15 @@ namespace Jamcheck
             combxParish.ValueMember = "id";
 
             dataGridView1.DataSource = jamdb.ViewDealerships.ToList();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            tbxName.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+            txbAddress.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+            tbxTelephone.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+            combxParish.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
+            btnadd.Text = "Update";
         }
     }
 }

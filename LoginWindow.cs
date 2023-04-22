@@ -13,25 +13,19 @@ namespace Jamcheck
     public partial class LoginForm : Form
     {
         private readonly jampracticeEntities jamCheckDB = new jampracticeEntities();
-
         
         public LoginForm()
         {
             InitializeComponent();           
         }
-        private void ClearStatus()
-        {
-
-            LoginSSlbl.Text = "";
-            LoginSSlbl.BackColor = Color.White;
-            LoginStatusStrip.BackColor = Color.White;
-        }
-
+        
         private void txtbxUsername_TextChanged(object sender, EventArgs e)
         {
             bool containsIntegers = false;
+            //This will loop through the textbox to check each character
             foreach (char c in txtbxUsername.Text)
             {
+                //checks if the char value stored in 'c' is a digit
                 if (Char.IsDigit(c))
                 {
                     containsIntegers = true;
@@ -55,31 +49,37 @@ namespace Jamcheck
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            
-            var username = txtbxUsername.Text;
-            var password = txtbxPassword.Text;
-
-            var user = jamCheckDB.UserInfoes.FirstOrDefault(a => a.Username == username && a.Password == password);
-            
-            if (user != null)
+            try
             {
-                MessageBox.Show("You have been logged in successfully");
-                LoginUserRole userRole = new LoginUserRole();
-                userRole.roletype = user.Role;
-                Parentform parentform = new Parentform(userRole);
-                
-                this.Hide();
-                parentform.ShowDialog();
-                this.Close();
-                
+                var username = txtbxUsername.Text;
+                var password = txtbxPassword.Text;
+                //Checks userinfoes table for the username and password and check if it is equal to the variables above and store that entry into a variable
+                var user = jamCheckDB.UserInfoes.FirstOrDefault(a => a.Username == username && a.Password == password);
 
-                //var id = jamCheckDB.users.FirstOrDefault(a=>a.id)
+                //checks the condition on if there any value that was store in the variable declared above
+                if (user != null)
+                {
+                    MessageBox.Show("You have been logged in successfully");
+                    LoginUserRole userRole = new LoginUserRole();
+                    //stores the role(admin, manager, staff) of the logged in user to a property from the LoginUserClass
+                    userRole.roletype = user.Role;
+                    //passes the role information as a parameter that will be referenced in the new form
+                    Parentform parentform = new Parentform(userRole);
+                    //
+                    this.Hide();
+                    parentform.ShowDialog();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("You have entered an incorrect username/password");
+                    txtbxUsername.Clear();
+                    txtbxPassword.Clear();
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("You have entered an incorrect username/password");
-                txtbxUsername.Clear();
-                txtbxPassword.Clear();
+                MessageBox.Show(ex.Message + "\n\n" + ex.Source);   
             }
         }
 
@@ -88,6 +88,7 @@ namespace Jamcheck
             this.Close();
         }
 
+        //this method allows the user to see or hide their password entry in the textbox
         private void seepassword_Click(object sender, EventArgs e)
         {
             if (seepassword.BackColor == Color.DimGray)
@@ -99,7 +100,6 @@ namespace Jamcheck
             {
                 txtbxPassword.UseSystemPasswordChar = true;
                 seepassword.BackColor = Color.DimGray;
-
             }
         }
 
@@ -108,12 +108,19 @@ namespace Jamcheck
 
         }
 
+        //this method manipulates the statusstrip component
+        private void ClearStatus()
+        {
+            LoginSSlbl.Text = "";
+            LoginSSlbl.BackColor = Color.White;
+            LoginStatusStrip.BackColor = Color.White;
+        }
+
         private void txtbxUsername_MouseHover(object sender, EventArgs e)
         {
             LoginSSlbl.Text = "ENTER YOUR USERNAME GIVEN BY ADMIN";
             LoginSSlbl.BackColor = Color.LimeGreen;
             LoginStatusStrip.BackColor = Color.LimeGreen;
-
         }
 
         private void txtbxUsername_MouseLeave(object sender, EventArgs e)
@@ -126,7 +133,6 @@ namespace Jamcheck
             LoginSSlbl.Text = "ENTER YOUR PASSWORD!!";
             LoginSSlbl.BackColor = Color.LimeGreen;
             LoginStatusStrip.BackColor = Color.LimeGreen;
-
         }
 
         private void txtbxPassword_MouseLeave(object sender, EventArgs e)

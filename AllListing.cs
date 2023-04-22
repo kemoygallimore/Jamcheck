@@ -19,7 +19,6 @@ namespace Jamcheck
             jamdb = new jampracticeEntities();
         }
 
-
         private void ListingsMainAll_Load(object sender, EventArgs e)
         {
             dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.LimeGreen;
@@ -31,24 +30,19 @@ namespace Jamcheck
                 year = v.year,
                 VIN = v.VIN,
                 BodyType = v.BodyType,
-                v.id
-
-
             }).ToList();
+
             dataGridView1.DataSource = testing;
 
             dataGridView1.Columns[5].HeaderText = "Body Type";
             dataGridView1.Columns[6].Visible = false;
 
             dataGridView1.Columns[0].HeaderCell.Style.ForeColor = Color.LimeGreen;
-           /* dataGridView1.Columns[0].Width = 10;
-            dataGridView1.Columns[1].Width = 50;*/
             DataGridViewImageColumn imageColumn = new DataGridViewImageColumn();
             imageColumn = (DataGridViewImageColumn)dataGridView1.Columns[0];
             imageColumn.ImageLayout = DataGridViewImageCellLayout.Zoom;
 
             var make = jamdb.Make.ToList();
-
             cobxmake.DisplayMember = "name";
             cobxmake.ValueMember = "id";
             cobxmake.DataSource = make;
@@ -102,7 +96,7 @@ namespace Jamcheck
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            var num = (int)dataGridView1.SelectedRows[0].Cells["id"].Value;
+            /*var num = (int)dataGridView1.SelectedRows[0].Cells["id"].Value;
             
             var car = jamdb.ViewVehicles.FirstOrDefault(a => a.id == num);
             var UserRole = new LoginUserRole();
@@ -110,7 +104,7 @@ namespace Jamcheck
 
             VehicleDetailsForm detailsForm = new VehicleDetailsForm(car, UserRole);
 
-            detailsForm.ShowDialog();
+            detailsForm.ShowDialog();*/
             
         }
     }

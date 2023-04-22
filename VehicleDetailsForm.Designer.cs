@@ -57,13 +57,13 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.IDlbl = new System.Windows.Forms.Label();
             this.Downloadnotifyicon = new System.Windows.Forms.NotifyIcon(this.components);
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DisplayPicture)).BeginInit();
             this.tblLayPanCarDetails.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -90,10 +90,10 @@
             // 
             this.Downloadbtn.AutoSize = true;
             this.Downloadbtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.Downloadbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Downloadbtn.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Downloadbtn.Location = new System.Drawing.Point(468, 1);
             this.Downloadbtn.Name = "Downloadbtn";
-            this.Downloadbtn.Size = new System.Drawing.Size(159, 32);
+            this.Downloadbtn.Size = new System.Drawing.Size(183, 32);
             this.Downloadbtn.TabIndex = 4;
             this.Downloadbtn.Text = "Download Report";
             this.Downloadbtn.UseVisualStyleBackColor = true;
@@ -101,20 +101,20 @@
             // 
             // filenametxtbx
             // 
-            this.filenametxtbx.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.filenametxtbx.Font = new System.Drawing.Font("Garamond", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.filenametxtbx.Location = new System.Drawing.Point(23, 10);
             this.filenametxtbx.Name = "filenametxtbx";
-            this.filenametxtbx.Size = new System.Drawing.Size(280, 23);
+            this.filenametxtbx.Size = new System.Drawing.Size(280, 29);
             this.filenametxtbx.TabIndex = 3;
             // 
             // Uploadbtn
             // 
             this.Uploadbtn.AutoSize = true;
             this.Uploadbtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.Uploadbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Uploadbtn.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Uploadbtn.Location = new System.Drawing.Point(23, 48);
             this.Uploadbtn.Name = "Uploadbtn";
-            this.Uploadbtn.Size = new System.Drawing.Size(77, 32);
+            this.Uploadbtn.Size = new System.Drawing.Size(87, 32);
             this.Uploadbtn.TabIndex = 2;
             this.Uploadbtn.Text = "Upload";
             this.Uploadbtn.UseVisualStyleBackColor = true;
@@ -124,11 +124,11 @@
             // 
             this.btnAddReport.AutoSize = true;
             this.btnAddReport.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnAddReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddReport.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddReport.Location = new System.Drawing.Point(468, 48);
             this.btnAddReport.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddReport.Name = "btnAddReport";
-            this.btnAddReport.Size = new System.Drawing.Size(140, 34);
+            this.btnAddReport.Size = new System.Drawing.Size(162, 32);
             this.btnAddReport.TabIndex = 1;
             this.btnAddReport.Text = "Update Details";
             this.btnAddReport.UseVisualStyleBackColor = true;
@@ -175,7 +175,7 @@
             // 
             this.Mileagetxtbx.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Mileagetxtbx.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Mileagetxtbx.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Mileagetxtbx.Font = new System.Drawing.Font("Garamond", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Mileagetxtbx.Location = new System.Drawing.Point(514, 200);
             this.Mileagetxtbx.Multiline = true;
             this.Mileagetxtbx.Name = "Mileagetxtbx";
@@ -187,7 +187,7 @@
             // 
             this.transtxtbx.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.transtxtbx.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.transtxtbx.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.transtxtbx.Font = new System.Drawing.Font("Garamond", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.transtxtbx.Location = new System.Drawing.Point(157, 200);
             this.transtxtbx.Margin = new System.Windows.Forms.Padding(7, 3, 3, 3);
             this.transtxtbx.Multiline = true;
@@ -200,7 +200,7 @@
             // 
             this.steeringtxtbx.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.steeringtxtbx.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.steeringtxtbx.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.steeringtxtbx.Font = new System.Drawing.Font("Garamond", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.steeringtxtbx.Location = new System.Drawing.Point(514, 139);
             this.steeringtxtbx.Multiline = true;
             this.steeringtxtbx.Name = "steeringtxtbx";
@@ -212,7 +212,7 @@
             // 
             this.fueltypetxtbx.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.fueltypetxtbx.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.fueltypetxtbx.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fueltypetxtbx.Font = new System.Drawing.Font("Garamond", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fueltypetxtbx.Location = new System.Drawing.Point(514, 79);
             this.fueltypetxtbx.Multiline = true;
             this.fueltypetxtbx.Name = "fueltypetxtbx";
@@ -224,7 +224,7 @@
             // 
             this.Bodytypetxtbx.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Bodytypetxtbx.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Bodytypetxtbx.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bodytypetxtbx.Font = new System.Drawing.Font("Garamond", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Bodytypetxtbx.Location = new System.Drawing.Point(514, 19);
             this.Bodytypetxtbx.Multiline = true;
             this.Bodytypetxtbx.Name = "Bodytypetxtbx";
@@ -236,7 +236,7 @@
             // 
             this.lblMake.AutoSize = true;
             this.lblMake.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblMake.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMake.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMake.Location = new System.Drawing.Point(2, 0);
             this.lblMake.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMake.Name = "lblMake";
@@ -249,7 +249,7 @@
             // 
             this.lblModel.AutoSize = true;
             this.lblModel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblModel.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblModel.Location = new System.Drawing.Point(2, 60);
             this.lblModel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblModel.Name = "lblModel";
@@ -262,7 +262,7 @@
             // 
             this.lblYear.AutoSize = true;
             this.lblYear.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblYear.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblYear.Location = new System.Drawing.Point(2, 120);
             this.lblYear.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblYear.Name = "lblYear";
@@ -275,7 +275,7 @@
             // 
             this.lblTransmission.AutoSize = true;
             this.lblTransmission.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblTransmission.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTransmission.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTransmission.Location = new System.Drawing.Point(2, 180);
             this.lblTransmission.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTransmission.Name = "lblTransmission";
@@ -288,7 +288,7 @@
             // 
             this.lblBodyType.AutoSize = true;
             this.lblBodyType.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblBodyType.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBodyType.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBodyType.Location = new System.Drawing.Point(364, 0);
             this.lblBodyType.Margin = new System.Windows.Forms.Padding(2, 0, 7, 0);
             this.lblBodyType.Name = "lblBodyType";
@@ -301,7 +301,7 @@
             // 
             this.lblFuelType.AutoSize = true;
             this.lblFuelType.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblFuelType.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFuelType.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFuelType.Location = new System.Drawing.Point(364, 60);
             this.lblFuelType.Margin = new System.Windows.Forms.Padding(2, 0, 7, 0);
             this.lblFuelType.Name = "lblFuelType";
@@ -314,7 +314,7 @@
             // 
             this.lblColour.AutoSize = true;
             this.lblColour.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblColour.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblColour.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblColour.Location = new System.Drawing.Point(364, 120);
             this.lblColour.Margin = new System.Windows.Forms.Padding(2, 0, 7, 0);
             this.lblColour.Name = "lblColour";
@@ -327,7 +327,7 @@
             // 
             this.lblEngine.AutoSize = true;
             this.lblEngine.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblEngine.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEngine.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEngine.Location = new System.Drawing.Point(364, 180);
             this.lblEngine.Margin = new System.Windows.Forms.Padding(2, 0, 7, 0);
             this.lblEngine.Name = "lblEngine";
@@ -340,7 +340,7 @@
             // 
             this.modeltxtbx.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.modeltxtbx.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.modeltxtbx.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modeltxtbx.Font = new System.Drawing.Font("Garamond", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.modeltxtbx.Location = new System.Drawing.Point(157, 79);
             this.modeltxtbx.Margin = new System.Windows.Forms.Padding(7, 3, 3, 3);
             this.modeltxtbx.Multiline = true;
@@ -353,7 +353,7 @@
             // 
             this.yeartxtbx.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.yeartxtbx.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.yeartxtbx.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.yeartxtbx.Font = new System.Drawing.Font("Garamond", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.yeartxtbx.Location = new System.Drawing.Point(157, 139);
             this.yeartxtbx.Margin = new System.Windows.Forms.Padding(7, 3, 3, 3);
             this.yeartxtbx.Multiline = true;
@@ -366,7 +366,7 @@
             // 
             this.maketxtbx.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.maketxtbx.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.maketxtbx.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maketxtbx.Font = new System.Drawing.Font("Garamond", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maketxtbx.Location = new System.Drawing.Point(157, 19);
             this.maketxtbx.Margin = new System.Windows.Forms.Padding(7, 3, 3, 3);
             this.maketxtbx.Multiline = true;
@@ -379,11 +379,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(50, 22);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 24);
+            this.label1.Size = new System.Drawing.Size(44, 22);
             this.label1.TabIndex = 14;
             this.label1.Text = "VIN";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -392,7 +392,7 @@
             // 
             this.VINtxtbx.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.VINtxtbx.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.VINtxtbx.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VINtxtbx.Font = new System.Drawing.Font("Garamond", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.VINtxtbx.Location = new System.Drawing.Point(159, 22);
             this.VINtxtbx.Margin = new System.Windows.Forms.Padding(7, 3, 3, 3);
             this.VINtxtbx.Multiline = true;
@@ -445,6 +445,16 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(642, 89);
             this.panel3.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(272, 57);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel1
             // 
@@ -516,16 +526,6 @@
             // Downloadnotifyicon
             // 
             this.Downloadnotifyicon.Visible = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(272, 57);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // VehicleDetailsForm
             // 

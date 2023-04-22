@@ -21,11 +21,6 @@ namespace Jamcheck
         {
             InitializeComponent();
         }
-        public VehicleDetailsForm( UserInfoes useraccess)
-        {
-            InitializeComponent();
-            
-        }
 
         public VehicleDetailsForm(ViewVehicles vehicle, LoginUserRole userRole)
         {
@@ -39,8 +34,6 @@ namespace Jamcheck
             steeringtxtbx.Text = vehicle.Steering;
             yeartxtbx.Text = vehicle.year.ToString();
             VINtxtbx.Text = vehicle.VIN;
-            IDlbl.Text = vehicle.id.ToString();
-
             var pic = vehicle.Picture;
             MemoryStream ms = new MemoryStream(pic);
             DisplayPicture.Image = Image.FromStream(ms);

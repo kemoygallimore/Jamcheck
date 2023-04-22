@@ -66,8 +66,9 @@ namespace Jamcheck
             // 
             // addVehiclesToolStripMenuItem
             // 
+            this.addVehiclesToolStripMenuItem.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addVehiclesToolStripMenuItem.Name = "addVehiclesToolStripMenuItem";
-            this.addVehiclesToolStripMenuItem.Size = new System.Drawing.Size(86, 22);
+            this.addVehiclesToolStripMenuItem.Size = new System.Drawing.Size(90, 22);
             this.addVehiclesToolStripMenuItem.Text = "Add Vehicles";
             this.addVehiclesToolStripMenuItem.Click += new System.EventHandler(this.addVehiclesToolStripMenuItem_Click);
             // 
@@ -76,66 +77,73 @@ namespace Jamcheck
             this.manageVehiclesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.recentToolStripMenuItem,
             this.allVehiclesToolStripMenuItem});
+            this.manageVehiclesToolStripMenuItem.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.manageVehiclesToolStripMenuItem.Name = "manageVehiclesToolStripMenuItem";
-            this.manageVehiclesToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.manageVehiclesToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.manageVehiclesToolStripMenuItem.Text = "Manage Vehicles";
             // 
             // recentToolStripMenuItem
             // 
             this.recentToolStripMenuItem.Name = "recentToolStripMenuItem";
             this.recentToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.R)));
-            this.recentToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.recentToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
             this.recentToolStripMenuItem.Text = " Recent Vehicles";
             this.recentToolStripMenuItem.Click += new System.EventHandler(this.recentToolStripMenuItem_Click);
             // 
             // allVehiclesToolStripMenuItem
             // 
             this.allVehiclesToolStripMenuItem.Name = "allVehiclesToolStripMenuItem";
-            this.allVehiclesToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.allVehiclesToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
             this.allVehiclesToolStripMenuItem.Text = "All Vehicles";
             this.allVehiclesToolStripMenuItem.Visible = false;
             this.allVehiclesToolStripMenuItem.Click += new System.EventHandler(this.allVehiclesToolStripMenuItem_Click);
             // 
             // dealerToolStripMenuItem
             // 
+            this.dealerToolStripMenuItem.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dealerToolStripMenuItem.Name = "dealerToolStripMenuItem";
-            this.dealerToolStripMenuItem.Size = new System.Drawing.Size(79, 22);
+            this.dealerToolStripMenuItem.Size = new System.Drawing.Size(85, 22);
             this.dealerToolStripMenuItem.Text = "Dealerships";
             this.dealerToolStripMenuItem.Click += new System.EventHandler(this.dealerToolStripMenuItem_Click);
             // 
             // manufacturerAndBodytypeToolStripMenuItem
             // 
+            this.manufacturerAndBodytypeToolStripMenuItem.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.manufacturerAndBodytypeToolStripMenuItem.Name = "manufacturerAndBodytypeToolStripMenuItem";
-            this.manufacturerAndBodytypeToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.manufacturerAndBodytypeToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.manufacturerAndBodytypeToolStripMenuItem.Text = "Manufacturer and Bodytype";
             this.manufacturerAndBodytypeToolStripMenuItem.Click += new System.EventHandler(this.manufacturerAndBodytypeToolStripMenuItem_Click);
             // 
             // manageUsersToolStripMenuItem
             // 
+            this.manageUsersToolStripMenuItem.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.manageUsersToolStripMenuItem.Name = "manageUsersToolStripMenuItem";
             this.manageUsersToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.M)));
-            this.manageUsersToolStripMenuItem.Size = new System.Drawing.Size(93, 22);
+            this.manageUsersToolStripMenuItem.Size = new System.Drawing.Size(99, 22);
             this.manageUsersToolStripMenuItem.Text = "Manage Users";
             this.manageUsersToolStripMenuItem.Click += new System.EventHandler(this.manageUsersToolStripMenuItem_Click);
             // 
             // CustomerProfileStripMenuItem
             // 
+            this.CustomerProfileStripMenuItem.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CustomerProfileStripMenuItem.Name = "CustomerProfileStripMenuItem";
-            this.CustomerProfileStripMenuItem.Size = new System.Drawing.Size(108, 22);
+            this.CustomerProfileStripMenuItem.Size = new System.Drawing.Size(110, 22);
             this.CustomerProfileStripMenuItem.Text = "Customer Profile";
             this.CustomerProfileStripMenuItem.Click += new System.EventHandler(this.CustomerProfileStripMenuItem_Click);
             // 
             // helpToolStripMenuItem1
             // 
+            this.helpToolStripMenuItem1.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.helpToolStripMenuItem1.Name = "helpToolStripMenuItem1";
-            this.helpToolStripMenuItem1.Size = new System.Drawing.Size(44, 22);
+            this.helpToolStripMenuItem1.Size = new System.Drawing.Size(45, 22);
             this.helpToolStripMenuItem1.Text = "Help";
             // 
             // exitToolStripMenuItem2
             // 
+            this.exitToolStripMenuItem2.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitToolStripMenuItem2.Name = "exitToolStripMenuItem2";
             this.exitToolStripMenuItem2.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.E)));
-            this.exitToolStripMenuItem2.Size = new System.Drawing.Size(38, 22);
+            this.exitToolStripMenuItem2.Size = new System.Drawing.Size(39, 22);
             this.exitToolStripMenuItem2.Text = "Exit";
             this.exitToolStripMenuItem2.Click += new System.EventHandler(this.exitToolStripMenuItem2_Click);
             // 

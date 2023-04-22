@@ -149,7 +149,6 @@ warning 6002: The table/view 'jampractice.dbo.ViewDealerships' does not have a p
 warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="ViewVehicles">
           <Key>
-            <PropertyRef Name="id" />
             <PropertyRef Name="Picture" />
             <PropertyRef Name="Make" />
             <PropertyRef Name="Model" />
@@ -166,7 +165,6 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
             <PropertyRef Name="Importer" />
             <PropertyRef Name="ImportDate" />
           </Key>
-          <Property Name="id" Type="int" Nullable="false" />
           <Property Name="Picture" Type="varbinary(max)" Nullable="false" />
           <Property Name="Make" Type="nvarchar" MaxLength="30" Nullable="false" />
           <Property Name="Model" Type="nvarchar" MaxLength="30" Nullable="false" />
@@ -326,7 +324,6 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
           </EntitySet>
           <EntitySet Name="ViewVehicles" EntityType="Self.ViewVehicles" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
-    [ViewVehicles].[id] AS [id], 
     [ViewVehicles].[Picture] AS [Picture], 
     [ViewVehicles].[Make] AS [Make], 
     [ViewVehicles].[Model] AS [Model], 
@@ -415,7 +412,6 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
             <End Role="Roles" EntitySet="Roles" />
             <End Role="users" EntitySet="users" />
           </AssociationSet>
-          <EntitySet Name="ViewVehicles" EntityType="jampracticeModel.ViewVehicles" />
           <EntitySet Name="Vehicles" EntityType="jampracticeModel.Vehicles" />
           <AssociationSet Name="FK__Vehicles__fuelid__52593CB8" Association="jampracticeModel.FK__Vehicles__fuelid__52593CB8">
             <End Role="Fuel" EntitySet="Fuel" />
@@ -442,6 +438,7 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
             <End Role="Vehicles" EntitySet="Vehicles" />
           </AssociationSet>
           <EntitySet Name="UserInfoes" EntityType="jampracticeModel.UserInfoes" />
+          <EntitySet Name="ViewVehicles" EntityType="jampracticeModel.ViewVehicles" />
         </EntityContainer>
         <ComplexType Name="AllVehicles_pr_Result">
           <Property Type="Int32" Name="id" Nullable="false" />
@@ -623,43 +620,6 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityType Name="ViewVehicles">
-          <Key>
-            <PropertyRef Name="id" />
-            <PropertyRef Name="Picture" />
-            <PropertyRef Name="Make" />
-            <PropertyRef Name="Model" />
-            <PropertyRef Name="Fuel" />
-            <PropertyRef Name="ChassisNo" />
-            <PropertyRef Name="VIN" />
-            <PropertyRef Name="year" />
-            <PropertyRef Name="Mileage" />
-            <PropertyRef Name="Seating" />
-            <PropertyRef Name="Steering" />
-            <PropertyRef Name="BodyType" />
-            <PropertyRef Name="Transmission" />
-            <PropertyRef Name="ImportFrom" />
-            <PropertyRef Name="Importer" />
-            <PropertyRef Name="ImportDate" />
-          </Key>
-          <Property Name="id" Type="Int32" Nullable="false" />
-          <Property Name="Picture" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
-          <Property Name="Make" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
-          <Property Name="Model" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
-          <Property Name="Fuel" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
-          <Property Name="ChassisNo" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="VIN" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="year" Type="Int32" Nullable="false" />
-          <Property Name="Mileage" Type="Int32" Nullable="false" />
-          <Property Name="Seating" Type="Int32" Nullable="false" />
-          <Property Name="Steering" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
-          <Property Name="BodyType" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
-          <Property Name="Transmission" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
-          <Property Name="ImportFrom" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Importer" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="ImportDate" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="Report" Type="Binary" MaxLength="Max" FixedLength="false" />
-        </EntityType>
         <EntityType Name="Vehicles">
           <Key>
             <PropertyRef Name="id" />
@@ -778,6 +738,41 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
           <Property Name="Role" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="Company" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
         </EntityType>
+        <EntityType Name="ViewVehicles">
+          <Key>
+            <PropertyRef Name="Picture" />
+            <PropertyRef Name="Make" />
+            <PropertyRef Name="Model" />
+            <PropertyRef Name="Fuel" />
+            <PropertyRef Name="ChassisNo" />
+            <PropertyRef Name="VIN" />
+            <PropertyRef Name="year" />
+            <PropertyRef Name="Mileage" />
+            <PropertyRef Name="Seating" />
+            <PropertyRef Name="Steering" />
+            <PropertyRef Name="BodyType" />
+            <PropertyRef Name="Transmission" />
+            <PropertyRef Name="ImportFrom" />
+            <PropertyRef Name="Importer" />
+            <PropertyRef Name="ImportDate" />
+          </Key>
+          <Property Name="Picture" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <Property Name="Make" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Model" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Fuel" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="ChassisNo" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="VIN" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="year" Type="Int32" Nullable="false" />
+          <Property Name="Mileage" Type="Int32" Nullable="false" />
+          <Property Name="Seating" Type="Int32" Nullable="false" />
+          <Property Name="Steering" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="BodyType" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Transmission" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="ImportFrom" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Importer" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ImportDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Report" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -891,29 +886,6 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="ViewVehicles">
-            <EntityTypeMapping TypeName="jampracticeModel.ViewVehicles">
-              <MappingFragment StoreEntitySet="ViewVehicles">
-                <ScalarProperty Name="Report" ColumnName="Report" />
-                <ScalarProperty Name="ImportDate" ColumnName="ImportDate" />
-                <ScalarProperty Name="Importer" ColumnName="Importer" />
-                <ScalarProperty Name="ImportFrom" ColumnName="ImportFrom" />
-                <ScalarProperty Name="Transmission" ColumnName="Transmission" />
-                <ScalarProperty Name="BodyType" ColumnName="BodyType" />
-                <ScalarProperty Name="Steering" ColumnName="Steering" />
-                <ScalarProperty Name="Seating" ColumnName="Seating" />
-                <ScalarProperty Name="Mileage" ColumnName="Mileage" />
-                <ScalarProperty Name="year" ColumnName="year" />
-                <ScalarProperty Name="VIN" ColumnName="VIN" />
-                <ScalarProperty Name="ChassisNo" ColumnName="ChassisNo" />
-                <ScalarProperty Name="Fuel" ColumnName="Fuel" />
-                <ScalarProperty Name="Model" ColumnName="Model" />
-                <ScalarProperty Name="Make" ColumnName="Make" />
-                <ScalarProperty Name="Picture" ColumnName="Picture" />
-                <ScalarProperty Name="id" ColumnName="id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Vehicles">
             <EntityTypeMapping TypeName="jampracticeModel.Vehicles">
               <MappingFragment StoreEntitySet="Vehicles">
@@ -949,6 +921,28 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
                 <ScalarProperty Name="Username" ColumnName="Username" />
                 <ScalarProperty Name="Last_Name" ColumnName="Last Name" />
                 <ScalarProperty Name="First_Name" ColumnName="First Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ViewVehicles">
+            <EntityTypeMapping TypeName="jampracticeModel.ViewVehicles">
+              <MappingFragment StoreEntitySet="ViewVehicles">
+                <ScalarProperty Name="Report" ColumnName="Report" />
+                <ScalarProperty Name="ImportDate" ColumnName="ImportDate" />
+                <ScalarProperty Name="Importer" ColumnName="Importer" />
+                <ScalarProperty Name="ImportFrom" ColumnName="ImportFrom" />
+                <ScalarProperty Name="Transmission" ColumnName="Transmission" />
+                <ScalarProperty Name="BodyType" ColumnName="BodyType" />
+                <ScalarProperty Name="Steering" ColumnName="Steering" />
+                <ScalarProperty Name="Seating" ColumnName="Seating" />
+                <ScalarProperty Name="Mileage" ColumnName="Mileage" />
+                <ScalarProperty Name="year" ColumnName="year" />
+                <ScalarProperty Name="VIN" ColumnName="VIN" />
+                <ScalarProperty Name="ChassisNo" ColumnName="ChassisNo" />
+                <ScalarProperty Name="Fuel" ColumnName="Fuel" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="Make" ColumnName="Make" />
+                <ScalarProperty Name="Picture" ColumnName="Picture" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
