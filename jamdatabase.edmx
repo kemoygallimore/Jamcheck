@@ -119,14 +119,12 @@
 warning 6002: The table/view 'jampractice.dbo.UserInfoes' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="UserInfoes">
           <Key>
-            <PropertyRef Name="id" />
             <PropertyRef Name="First Name" />
             <PropertyRef Name="Last Name" />
             <PropertyRef Name="Username" />
             <PropertyRef Name="Email" />
             <PropertyRef Name="Password" />
           </Key>
-          <Property Name="id" Type="int" Nullable="false" />
           <Property Name="First Name" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="Last Name" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="Username" Type="nvarchar" MaxLength="40" Nullable="false" />
@@ -309,7 +307,6 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
           <EntitySet Name="VehicleType" EntityType="Self.VehicleType" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UserInfoes" EntityType="Self.UserInfoes" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
-    [UserInfoes].[id] AS [id], 
     [UserInfoes].[First Name] AS [First Name], 
     [UserInfoes].[Last Name] AS [Last Name], 
     [UserInfoes].[Username] AS [Username], 
@@ -767,14 +764,12 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
         </Association>
         <EntityType Name="UserInfoes">
           <Key>
-            <PropertyRef Name="id" />
             <PropertyRef Name="First_Name" />
             <PropertyRef Name="Last_Name" />
             <PropertyRef Name="Username" />
             <PropertyRef Name="Email" />
             <PropertyRef Name="Password" />
           </Key>
-          <Property Name="id" Type="Int32" Nullable="false" />
           <Property Name="First_Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="Last_Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="Username" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
@@ -954,7 +949,6 @@ warning 6002: The table/view 'jampractice.dbo.ViewVehicles' does not have a prim
                 <ScalarProperty Name="Username" ColumnName="Username" />
                 <ScalarProperty Name="Last_Name" ColumnName="Last Name" />
                 <ScalarProperty Name="First_Name" ColumnName="First Name" />
-                <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

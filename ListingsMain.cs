@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,6 +18,7 @@ namespace Jamcheck
         public ListingsMain()
         {
             InitializeComponent();
+            jamdb = new jampracticeEntities();
         }
         public ListingsMain(LoginUserRole userRole)
         {
@@ -28,6 +30,7 @@ namespace Jamcheck
         private void UpdateView()
         {
             CatalogueGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.LimeGreen;
+            
             var testing = jamdb.ViewVehicles.Select(v => new
             {
                 Image = v.Picture,
@@ -35,13 +38,12 @@ namespace Jamcheck
                 Model = v.Model,
                 year = v.year,
                 VIN = v.VIN,
-                BodyType = v.BodyType,
-                v.id
+                BodyType = v.BodyType                
             }).ToList();
             CatalogueGridView.DataSource = testing;
 
             CatalogueGridView.Columns[5].HeaderText = "Body Type";
-            CatalogueGridView.Columns[6].Visible = false;
+            
 
             CatalogueGridView.Columns[0].HeaderCell.Style.ForeColor = Color.LimeGreen;
 
@@ -52,8 +54,7 @@ namespace Jamcheck
 
         private void ListingsMain_Load(object sender, EventArgs e)
         {
-            UpdateView();
-            
+            UpdateView();            
         }
 
         private void BtnExit_Click(object sender, EventArgs e)
@@ -67,21 +68,16 @@ namespace Jamcheck
         }
         private void CatalogueGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            var num = (int)CatalogueGridView.SelectedRows[0].Cells["id"].Value;
+            var vinnum = (string)CatalogueGridView.SelectedRows[0].Cells["VIN"].Value;
 
-            var car = jamdb.ViewVehicles.FirstOrDefault(a => a.id == num);
+            var car = jamdb.ViewVehicles.FirstOrDefault(a => a.VIN == vinnum);
 
             var UserRole = new LoginUserRole();
             
             UserRole.roletype = label1.Text;
             VehicleDetailsForm detailsForm = new VehicleDetailsForm(car, UserRole);
-            /*detailsForm.MdiParent = this.MdiParent;
-            detailsForm.Dock = DockStyle.Fill;
-            this.Hide();*/
+
             detailsForm.ShowDialog();
-            //this.Close();
-
-
         }
     }
 }

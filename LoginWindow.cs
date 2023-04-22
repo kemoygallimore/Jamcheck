@@ -13,16 +13,40 @@ namespace Jamcheck
     public partial class LoginForm : Form
     {
         private readonly jampracticeEntities jamCheckDB = new jampracticeEntities();
+
         
         public LoginForm()
         {
             InitializeComponent();           
         }
+        private void ClearStatus()
+        {
+
+            LoginSSlbl.Text = "";
+            LoginSSlbl.BackColor = Color.White;
+            LoginStatusStrip.BackColor = Color.White;
+        }
 
         private void txtbxUsername_TextChanged(object sender, EventArgs e)
         {
-
-        }
+            bool containsIntegers = false;
+            foreach (char c in txtbxUsername.Text)
+            {
+                if (Char.IsDigit(c))
+                {
+                    containsIntegers = true;
+                    break;
+                }
+            }
+            if (containsIntegers)
+            {
+                usernamevallbl.Visible = true;
+            }
+            else
+            {
+                usernamevallbl.Visible = false;
+            }
+        }     
 
         private void txtbxPassword_TextChanged(object sender, EventArgs e)
         {
@@ -31,49 +55,19 @@ namespace Jamcheck
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            //JamCheck main = new JamCheck();
+            
             var username = txtbxUsername.Text;
             var password = txtbxPassword.Text;
 
-            /*try
-            {
-                if (username == "Admin" && password == "Password1")
-                {
-                    MessageBox.Show("You have been logged in successfully");
-                    Parentform parentform = new Parentform();
-                    this.Hide();
-                    parentform.ShowDialog();
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Your email address or password is incorrect");
-                    txtbxPassword.Clear();
-                    txtbxUsername.Clear();
-                    //txtbxUsername.Focus();
-                }
-            }
-            catch (Exception login)
-            {
-
-                 MessageBox.Show(login.Message + login.Source);
-            }*/
-
-
             var user = jamCheckDB.UserInfoes.FirstOrDefault(a => a.Username == username && a.Password == password);
-            /*FrmAddVehicle addVehicle = new FrmAddVehicle();
-            addVehicle.MdiParent = this.MdiParent;
-            addVehicle.Dock = DockStyle.Fill;
-            addVehicle.Show();
-            this.Hide();*/
-
+            
             if (user != null)
             {
                 MessageBox.Show("You have been logged in successfully");
                 LoginUserRole userRole = new LoginUserRole();
                 userRole.roletype = user.Role;
                 Parentform parentform = new Parentform(userRole);
-                //VehicleDetailsForm vehicleDetails = new VehicleDetailsForm(LoginUserRole);
+                
                 this.Hide();
                 parentform.ShowDialog();
                 this.Close();
@@ -112,6 +106,32 @@ namespace Jamcheck
         private void CustomsLoginFrm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtbxUsername_MouseHover(object sender, EventArgs e)
+        {
+            LoginSSlbl.Text = "ENTER YOUR USERNAME GIVEN BY ADMIN";
+            LoginSSlbl.BackColor = Color.LimeGreen;
+            LoginStatusStrip.BackColor = Color.LimeGreen;
+
+        }
+
+        private void txtbxUsername_MouseLeave(object sender, EventArgs e)
+        {
+            ClearStatus();
+        }
+
+        private void txtbxPassword_MouseHover(object sender, EventArgs e)
+        {
+            LoginSSlbl.Text = "ENTER YOUR PASSWORD!!";
+            LoginSSlbl.BackColor = Color.LimeGreen;
+            LoginStatusStrip.BackColor = Color.LimeGreen;
+
+        }
+
+        private void txtbxPassword_MouseLeave(object sender, EventArgs e)
+        {
+            ClearStatus();
         }
     }
 }

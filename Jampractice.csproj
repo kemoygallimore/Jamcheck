@@ -76,6 +76,7 @@
     <Compile Include="BodyTypeAndMfr.Designer.cs">
       <DependentUpon>BodyTypeAndMfr.cs</DependentUpon>
     </Compile>
+    <Compile Include="DatabaseConnection.cs" />
     <Compile Include="Dealerships.cs">
       <DependentUpon>jamdatabase.tt</DependentUpon>
     </Compile>

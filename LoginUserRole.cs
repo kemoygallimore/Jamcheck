@@ -8,6 +8,7 @@ namespace Jamcheck
 {
     public class LoginUserRole
     {
+        
         public string roletype { get; set; }
     }
 }

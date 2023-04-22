@@ -34,6 +34,7 @@ namespace Jamcheck
             InitializeComponent();
             jamdb = new jampracticeEntities();
         }
+
         private void FrmAddVehicle_Load(object sender, EventArgs e)
         {
 
@@ -153,59 +154,71 @@ namespace Jamcheck
                 //pictureBox1.ImageLocation = openFile.FileName.ToString();
             }
         }
+        private string fueltype()
+        {
+            string result = (rtbnPetrol.Checked) ? "Petrol" : (rbtnDiesel.Checked) ? "Diesel" : (rbtnElectric.Checked) ? "Electric" : "Hybrid";
+
+            return result;
+        }
+
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            Vehicles vehicle = new Vehicles();
-
-            var make = Convert.ToInt32( cobxMake.SelectedValue);
-            var model = txtbxModel.Text;
-            var year = Convert.ToInt32(numYear.Value);
-            var Fuel = (rtbnPetrol.Checked) ? "Petrol" : (rbtnDiesel.Checked) ? "Diesel" : (rbtnElectric.Checked) ? "Electric" : "Hybrid";
-            var FuelID = (rtbnPetrol.Checked) ? 2 : (rbtnDiesel.Checked) ? 3 : (rbtnElectric.Checked) ? 4 : 5;
-            var Chassis = txtbxChassisNo.Text;
-            var VIN = txtbxVIN.Text;
-            var mileage = Convert.ToInt32( numMileage.Value);
-            var Seating = Convert.ToInt32(numSeating.Value);
-            var Steering = (rbtnLHand.Checked) ? "Left Hand" : "Right Hand";
-            var Steeringid = (rbtnLHand.Checked) ? 1 : 2;
-            var bodytype = Convert.ToInt32( cobxVehicleType.SelectedValue);
-            var trans = (rbtnAuto.Checked) ? 2 : (rbtnManual.Checked) ? 3 : 4;
-            var Source = Convert.ToInt32(cobxImporter.SelectedValue);
-            var importer = txtbxImportFrom.Text;
-            var importdate = dateTimePicker1.Value;
-            //var pic = Convert.ToByte( pictureBox1.Image);
-            
-            using (MemoryStream ms = new MemoryStream())
+            try
             {
-                pictureBox1.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Bmp);
-                vehicle.Picture = ms.ToArray();
+                Vehicles vehicle = new Vehicles();
+
+                var make = Convert.ToInt32(cobxMake.SelectedValue);
+                var model = txtbxModel.Text;
+                var year = Convert.ToInt32(numYear.Value);
+                var Fuel = fueltype();
+                var FuelID = (rtbnPetrol.Checked) ? 2 : (rbtnDiesel.Checked) ? 3 : (rbtnElectric.Checked) ? 4 : 5;
+                var Chassis = txtbxChassisNo.Text.ToUpper();
+                var VIN = txtbxVIN.Text.ToUpper();
+                var mileage = Convert.ToInt32(numMileage.Value);
+                var Seating = Convert.ToInt32(numSeating.Value);
+                var Steering = (rbtnLHand.Checked) ? "Left Hand" : "Right Hand";
+                var Steeringid = (rbtnLHand.Checked) ? 1 : 2;
+                var bodytype = Convert.ToInt32(cobxVehicleType.SelectedValue);
+                var trans = (rbtnAuto.Checked) ? 2 : (rbtnManual.Checked) ? 3 : 4;
+                var Source = Convert.ToInt32(cobxImporter.SelectedValue);
+                var importer = txtbxImportFrom.Text;
+                var importdate = dateTimePicker1.Value;
+                //var pic = Convert.ToByte( pictureBox1.Image);
+
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    pictureBox1.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Bmp);
+                    vehicle.Picture = ms.ToArray();
+                }
+
+                //var imageData = ImageToByteArray(pictureBox1.Image);
+                vehicle.makeid = make;
+                vehicle.Model = model;
+                vehicle.year = year;
+                vehicle.fuelid = FuelID;
+                vehicle.ChassisNo = Chassis;
+                vehicle.VinNum = VIN;
+                vehicle.Mileage = mileage;
+                vehicle.Seating = Seating;
+                vehicle.steeringid = Steeringid;
+                vehicle.bodytypeid = bodytype;
+                vehicle.transmissionid = trans;
+                vehicle.ImportfromID = Source;
+                vehicle.Importer = importer;
+                vehicle.ImportDate = importdate;
+
+
+                jamdb.Vehicles.Add(vehicle);
+                jamdb.SaveChanges();
+                MessageBox.Show("Entry has been added");
+                cleartextboxes();
+                txtbxModel.Focus();
             }
-
-            //var imageData = ImageToByteArray(pictureBox1.Image);
-            vehicle.makeid = make;
-            vehicle.Model = model;
-            vehicle.year = year;
-            vehicle.fuelid = FuelID;
-            vehicle.ChassisNo = Chassis;
-            vehicle.VinNum = VIN;
-            vehicle.Mileage = mileage;
-            vehicle.Seating = Seating;
-            vehicle.steeringid = Steeringid;
-            vehicle.bodytypeid = bodytype;
-            vehicle.transmissionid = trans;
-            vehicle.ImportfromID = Source;
-            vehicle.Importer = importer;
-            vehicle.ImportDate = importdate;
-            
-
-            jamdb.Vehicles.Add(vehicle);
-            jamdb.SaveChanges();
-            MessageBox.Show("Entry has been added");
-            cleartextboxes();
-            txtbxModel.Focus();
-
-
+            catch (Exception errors)
+            {
+                MessageBox.Show(errors.Message);
+            }
         }
     }
 }

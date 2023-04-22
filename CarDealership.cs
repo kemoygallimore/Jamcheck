@@ -78,7 +78,11 @@ namespace Jamcheck
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            dataGridView1.DataSource = jamdb.ViewDealerships.ToList();
+            dataGridView1.Columns[0].HeaderText = "Name";
+            dataGridView1.Columns[1].HeaderText = "Telephone";
+            dataGridView1.Columns[2].HeaderText = "Address";
+            dataGridView1.Columns[3].HeaderText = "Parish";
         }
 
         private void CarDealership_Load(object sender, EventArgs e)

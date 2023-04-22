@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VehicleDetailsForm));
             this.DisplayPicture = new System.Windows.Forms.PictureBox();
             this.Downloadbtn = new System.Windows.Forms.Button();
@@ -61,6 +62,8 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.IDlbl = new System.Windows.Forms.Label();
+            this.Downloadnotifyicon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DisplayPicture)).BeginInit();
             this.tblLayPanCarDetails.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -432,6 +435,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.btnAddReport);
             this.panel3.Controls.Add(this.Downloadbtn);
             this.panel3.Controls.Add(this.filenametxtbx);
@@ -509,6 +513,20 @@
             this.IDlbl.Text = "label3";
             this.IDlbl.Visible = false;
             // 
+            // Downloadnotifyicon
+            // 
+            this.Downloadnotifyicon.Visible = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(272, 57);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // VehicleDetailsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -572,5 +590,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label IDlbl;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.NotifyIcon Downloadnotifyicon;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -26,6 +26,7 @@ namespace Jamcheck
             InitializeComponent();
             
         }
+
         public VehicleDetailsForm(ViewVehicles vehicle, LoginUserRole userRole)
         {
             InitializeComponent();
@@ -52,15 +53,14 @@ namespace Jamcheck
             }
             if (vehicle.Report == null)
                 Downloadbtn.Visible = false;
-
         }
 
         private void btnAddReport_Click(object sender, EventArgs e)
         {
             //Converts the id value to an int and store into a variable
-            var id = int.Parse(IDlbl.Text);
+            var id = VINtxtbx.Text;
             //query the database for the first id that matches the id variable declared above
-            var editcar = jamdb.Vehicles.FirstOrDefault(a=>a.id == id);
+            var editcar = jamdb.Vehicles.FirstOrDefault(a=>a.VinNum == id);
 
             //accepts the new details into the database cells that matches the query above
             editcar.Model= modeltxtbx.Text;
@@ -112,18 +112,40 @@ namespace Jamcheck
 
                     // Open the file using the default program associated with its file type
                     System.Diagnostics.Process.Start(saveFileDialog1.FileName);
+
+                    Downloadnotifyicon.Text = $"Report for {maketxtbx.Text} {modeltxtbx.Text} been downloaded onto your computer";
+                    Downloadnotifyicon.BalloonTipText = "Your download has been completed";
+                    Downloadnotifyicon.BalloonTipTitle = "Download Complete";
+                    Downloadnotifyicon.Icon = SystemIcons.Application;
+                    Downloadnotifyicon.ShowBalloonTip(1000);
+                    Downloadnotifyicon.BalloonTipIcon = ToolTipIcon.None;
                 }
             }
             else
                 MessageBox.Show("There is no file linked to this vehicle.\nClose this popup and click the upload button to add a car report");
         }
 
-        private void VehicleDetailsForm_Load(object sender, EventArgs e)
+        private bool ShowDownloadButton()
         {
             var id = Convert.ToInt32(IDlbl.Text);
             var v = jamdb.Vehicles.FirstOrDefault(a => a.id == id);
-            if (v.Report != null)
+            return v.Report == null;
+        }
+
+        private void VehicleDetailsForm_Load(object sender, EventArgs e)
+        {            
+            if (!ShowDownloadButton())
                 Downloadbtn.Visible = false;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Downloadnotifyicon.Text = $"Report for {maketxtbx.Text} {modeltxtbx.Text} been downloaded onto your computer";
+            Downloadnotifyicon.BalloonTipText = "Your download has been completed";
+            Downloadnotifyicon.BalloonTipTitle = "Download Complete";
+            Downloadnotifyicon.Icon = SystemIcons.Application;
+            Downloadnotifyicon.ShowBalloonTip(1000);
+            Downloadnotifyicon.BalloonTipIcon = ToolTipIcon.None;
         }
     }
 }

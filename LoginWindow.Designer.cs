@@ -35,6 +35,7 @@ namespace Jamcheck
             this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.usernamevallbl = new System.Windows.Forms.Label();
             this.seepassword = new System.Windows.Forms.PictureBox();
             this.txtbxPassword = new System.Windows.Forms.TextBox();
             this.txtbxUsername = new System.Windows.Forms.TextBox();
@@ -42,11 +43,14 @@ namespace Jamcheck
             this.btnExit = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.LoginStatusStrip = new System.Windows.Forms.StatusStrip();
+            this.LoginSSlbl = new System.Windows.Forms.ToolStripStatusLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.seepassword)).BeginInit();
+            this.LoginStatusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -61,6 +65,7 @@ namespace Jamcheck
             resources.ApplyResources(this.tableLayoutPanel1, "tableLayoutPanel1");
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.LoginStatusStrip, 0, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             // 
             // label3
@@ -77,6 +82,7 @@ namespace Jamcheck
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.usernamevallbl);
             this.panel1.Controls.Add(this.seepassword);
             this.panel1.Controls.Add(this.txtbxPassword);
             this.panel1.Controls.Add(this.txtbxUsername);
@@ -86,6 +92,12 @@ namespace Jamcheck
             this.panel1.Controls.Add(this.label1);
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
+            // 
+            // usernamevallbl
+            // 
+            resources.ApplyResources(this.usernamevallbl, "usernamevallbl");
+            this.usernamevallbl.ForeColor = System.Drawing.Color.Red;
+            this.usernamevallbl.Name = "usernamevallbl";
             // 
             // seepassword
             // 
@@ -103,6 +115,8 @@ namespace Jamcheck
             this.txtbxPassword.Name = "txtbxPassword";
             this.txtbxPassword.UseSystemPasswordChar = true;
             this.txtbxPassword.TextChanged += new System.EventHandler(this.txtbxPassword_TextChanged);
+            this.txtbxPassword.MouseLeave += new System.EventHandler(this.txtbxPassword_MouseLeave);
+            this.txtbxPassword.MouseHover += new System.EventHandler(this.txtbxPassword_MouseHover);
             // 
             // txtbxUsername
             // 
@@ -110,6 +124,8 @@ namespace Jamcheck
             resources.ApplyResources(this.txtbxUsername, "txtbxUsername");
             this.txtbxUsername.Name = "txtbxUsername";
             this.txtbxUsername.TextChanged += new System.EventHandler(this.txtbxUsername_TextChanged);
+            this.txtbxUsername.MouseLeave += new System.EventHandler(this.txtbxUsername_MouseLeave);
+            this.txtbxUsername.MouseHover += new System.EventHandler(this.txtbxUsername_MouseHover);
             // 
             // btnLogin
             // 
@@ -137,6 +153,18 @@ namespace Jamcheck
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
             // 
+            // LoginStatusStrip
+            // 
+            resources.ApplyResources(this.LoginStatusStrip, "LoginStatusStrip");
+            this.LoginStatusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.LoginSSlbl});
+            this.LoginStatusStrip.Name = "LoginStatusStrip";
+            // 
+            // LoginSSlbl
+            // 
+            resources.ApplyResources(this.LoginSSlbl, "LoginSSlbl");
+            this.LoginSSlbl.Name = "LoginSSlbl";
+            // 
             // LoginForm
             // 
             this.AcceptButton = this.btnLogin;
@@ -157,6 +185,8 @@ namespace Jamcheck
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.seepassword)).EndInit();
+            this.LoginStatusStrip.ResumeLayout(false);
+            this.LoginStatusStrip.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -174,5 +204,8 @@ namespace Jamcheck
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox seepassword;
+        private System.Windows.Forms.Label usernamevallbl;
+        private System.Windows.Forms.StatusStrip LoginStatusStrip;
+        private System.Windows.Forms.ToolStripStatusLabel LoginSSlbl;
     }
 }

@@ -7,37 +7,60 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
-
+using System.Data.SqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Jamcheck
 {
     public partial class ManageUsers : Form
     {
-
         private readonly jampracticeEntities jamdb;
+        private readonly SqlConnection conn = new SqlConnection("server=.\\sqlexpress; Initial Catalog=jampractice; Integrated Security=True");
         public ManageUsers()
         {
             InitializeComponent();
             jamdb = new jampracticeEntities();
         }
-        private void Recallroles(int id)
+        private void PopulateFields(int id)
         {
-            switch(id)
-            {
-                case 1:
+            txtbxFname.Text = dataGridView1.Rows[id].Cells[0].Value.ToString();
+            txtbxLname.Text = dataGridView1.Rows[id].Cells[1].Value.ToString();
+            txtbxUsername.Text = dataGridView1.Rows[id].Cells[2].Value.ToString();
+            txtbxEmail.Text = dataGridView1.Rows[id].Cells[3].Value.ToString();
+            combxRole.Text = dataGridView1.Rows[id].Cells[5].Value.ToString();
+        }
+        private bool CheckIfUserExists()
+        {
+            var checkuser = jamdb.users.FirstOrDefault(a => a.username == txtbxUsername.Text);
+            var checkemail = jamdb.users.FirstOrDefault(a => a.email == txtbxEmail.Text);
+            return checkuser != null || checkemail != null;
+        }
 
-                    break; 
-                case 2:
-                    combxRole.Text = "Manage";
-                    break;
-                case 3:
-                    combxRole.Text = "Staff";
-                    break;
-                case 4:
-                    combxRole.Text = "Admin";
-                    break;
-            }
+        private void AddEdit()
+        {
+            
+        }
+        private void Showusers()
+        {
+            conn.Open();
+            SqlCommand display = new SqlCommand("select fname [First Name], lname [Last Name],Username,Email,Password,R.roletype [Role],o.company [Company]from users u left join Roles r on u.roletypeid = r.id left join Org o on u.companyid = o.id",conn);
+            SqlDataAdapter da = new SqlDataAdapter(display);
+            DataTable ds = new DataTable();
+            da.Fill(ds);
+            dataGridView1.DataSource = ds;
+            conn.Close();
+        }
+
+        private void ClearFields()
+        {
+            txtbxEmail.Clear();
+            txtbxFname.Clear();
+            txtbxLname.Clear();
+            txtbxPassword.Clear();
+            txtbxUsername.Clear();
+            combxRole = null;
+            combxOrg = null;
         }
 
         private void ManageUsers_Load(object sender, EventArgs e)
@@ -59,16 +82,11 @@ namespace Jamcheck
             combxOrg.ValueMember = "id";
             //call the source of the list which was referenced above
             combxOrg.DataSource = com;
-
-            dataGridView1.DataSource = jamdb.UserInfoes.ToList();
-            dataGridView1.Columns[0].Visible= false;
-                       
+            Showusers();
         }
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            
-
             var fname = txtbxFname.Text;
             var lname = txtbxLname.Text;
             var email = txtbxEmail.Text;
@@ -77,61 +95,63 @@ namespace Jamcheck
             var role = combxRole.Text;
             var password = txtbxPassword.Text;
 
-            if(Convert.ToString(role)=="Choose a role")
+            if(BtnAdd.Text=="Add User")
             {
-                MessageBox.Show("Please choose a role");
-            }
-            else
-            {
-                /*MessageBox.Show($"Name: {fname} {lname}" +
-                $"\nEmail: {email}" +
-                $"\nUsername: {username}" +
-                $"\nCompany: {org} " +
-                $"\nRole: {role}\n");*/
-                MessageBox.Show("Records have been added");
 
-                users user = new users();
-                user.fname = fname;
-                user.lname = lname;
-                user.email = email;
-                user.username = username;
-                user.password = password;
-                user.companyid = Convert.ToInt32(combxOrg.SelectedValue);
-                user.roletypeid = Convert.ToInt32(combxRole.SelectedValue);
+                if (CheckIfUserExists())
+                {
+                    MessageBox.Show("Username or Email already exists");
+                }
 
-                jamdb.users.Add(user);
-                jamdb.SaveChanges();
+                else
+                {
+                    if (Convert.ToString(role) == "Choose a role")
+                    {
+                        MessageBox.Show("Please choose a role");
+                    }
+                    else
+                    {
+                        users AddUser = new users();
+
+                        AddUser.fname = fname;
+                        AddUser.lname = lname;
+                        AddUser.email = email;
+                        AddUser.username = username;
+                        AddUser.password = password;
+                        AddUser.companyid = Convert.ToInt32(combxOrg.SelectedValue);
+                        AddUser.roletypeid = Convert.ToInt32(combxRole.SelectedValue);
+
+                        jamdb.users.Add(AddUser);
+                        jamdb.SaveChanges();
+
+                        MessageBox.Show("Records have been added");
+                        ClearFields();
+                        Showusers();
+                    }
+                }
                 
-
-                txtbxEmail.Clear();
-                txtbxFname.Clear();
-                txtbxLname.Clear();
-                txtbxPassword.Clear();
-                txtbxUsername.Clear();
-                combxRole = null;
-                combxOrg = null;
-
-
-
+            }
+            if (BtnAdd.Text=="Update User")
+            {
+                var LocateUsername = jamdb.users.FirstOrDefault(u => u.username == username);
+                LocateUsername.fname = fname;
+                LocateUsername.lname = lname;
+                LocateUsername.email = email;
+                LocateUsername.username = username;
+                LocateUsername.roletypeid = Convert.ToInt32(combxRole.SelectedValue);
+                jamdb.SaveChanges();
+                BtnAdd.Text = "Add User";
+                Showusers();
             }
         }
         private void dataGridView1_CellDoubleClick_1(object sender, DataGridViewCellEventArgs e)
-        {
+        {            
             var id = dataGridView1.SelectedRows[0].Index;
-            //var user = new users();
-
-           /* var user = jamdb.UserInfoes.FirstOrDefault(a => a.id == id);
-            txtbxEmail.Text = user.email;
-            txtbxFname.Text = user.fname;
-            txtbxLname.Text = user.lname;
-            txtbxUsername.Text = user.username;
-            Recallroles(user.);
-            //combxRole.*/
-
-
-            //txtbxFname.Text = "fire";
+            var user = jamdb.users.FirstOrDefault(a => a.id == id);
+            PopulateFields(id);
+            BtnAdd.Text = "Update User";
         }
-       
+
         private void combxRole_SelectedIndexChanged(object sender, EventArgs e)
         {
             

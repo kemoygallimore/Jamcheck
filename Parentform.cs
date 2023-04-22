@@ -19,8 +19,6 @@ namespace Jamcheck
                 ActiveMdiChild.Close();
         }
 
-
-
         public Parentform()
         {
             InitializeComponent();
@@ -51,7 +49,6 @@ namespace Jamcheck
                 CustomerProfileStripMenuItem.Visible = false;
                 manageUsersToolStripMenuItem.Visible = false;
             }
-
         }
 
         private void addVehiclesToolStripMenuItem_Click(object sender, EventArgs e)
