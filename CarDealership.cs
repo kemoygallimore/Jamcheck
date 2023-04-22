@@ -16,6 +16,7 @@ namespace Jamcheck
         public CarDealership()
         {
             InitializeComponent();
+            //initial the dasebase for this form
             jamdb = new jampracticeEntities();
         }
 
@@ -43,6 +44,7 @@ namespace Jamcheck
         {
 
         }
+        //clear all the fields of this form
         private void ClearFields()
         {
             tbxName.Clear();
@@ -55,7 +57,60 @@ namespace Jamcheck
             ClearFields();
         }
 
-        private void btnadd_Click(object sender, EventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
+        }
+
+        private void CarDealership_Load(object sender, EventArgs e)
+        {
+            //the form loads up with the dealership information from the database
+            CarDealership carDealership = new CarDealership();
+            dataGridView1.DataSource = carDealership;
+            dataGridView1.DataSource = jamdb.ViewDealerships.ToList();
+
+            combxParish.DataSource = jamdb.parishes.ToList();
+            combxParish.DisplayMember = "Name";
+            combxParish.ValueMember = "id";
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                var id = e.RowIndex;
+                
+                tbxName.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+                txbAddress.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+                tbxTelephone.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+                combxParish.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
+                btnAdd.Text = "Update";
+            }
+            catch (Exception dealer)
+            {
+                MessageBox.Show("Unable to populate fields from the database\n"+dealer.Message + "\n\n" + dealer.Source);
+            }            
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //searches the dealership table for an entry that has the samee name that is in the tbxname and store the entire entry as an object 
+                var DeleteItem = jamdb.Dealerships.FirstOrDefault(dealer => dealer.name == tbxName.Text);
+                //removes that object from the database
+                jamdb.Dealerships.Remove(DeleteItem);
+                jamdb.SaveChanges();
+                ClearFields();
+                dataGridView1.DataSource = jamdb.ViewDealerships.ToList();
+            }
+            catch (Exception DealerRemove)
+            {
+                MessageBox.Show($"Unable to locate {tbxName} in the database. It may have already been removed\n\n{DealerRemove.Message} \n\n{DealerRemove.Source}");
+            }
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
         {
             var name = tbxName.Text;
             var tel = tbxTelephone.Text;
@@ -77,38 +132,6 @@ namespace Jamcheck
             MessageBox.Show(name + " has been added");
 
             dataGridView1.DataSource = jamdb.ViewDealerships.ToList();
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-           /* dataGridView1.DataSource = jamdb.ViewDealerships.ToList();
-            dataGridView1.Columns[0].HeaderText = "Name";
-            dataGridView1.Columns[1].HeaderText = "Telephone";
-            dataGridView1.Columns[2].HeaderText = "Address";
-            dataGridView1.Columns[3].HeaderText = "Parish";*/
-        }
-
-        private void CarDealership_Load(object sender, EventArgs e)
-        {
-            CarDealership carDealership = new CarDealership();
-            dataGridView1.DataSource = carDealership;
-
-            combxParish.DataSource = jamdb.parishes.ToList();
-
-            combxParish.DisplayMember = "Name";
-            combxParish.ValueMember = "id";
-
-            dataGridView1.DataSource = jamdb.ViewDealerships.ToList();
-        }
-
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            tbxName.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
-            txbAddress.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
-            tbxTelephone.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
-            combxParish.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
-            btnadd.Text = "Update";
         }
     }
 }

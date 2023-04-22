@@ -77,9 +77,9 @@ namespace Jamcheck
                     txtbxPassword.Clear();
                 }
             }
-            catch (Exception ex)
+            catch (Exception login)
             {
-                MessageBox.Show(ex.Message + "\n\n" + ex.Source);   
+                MessageBox.Show(login.Message + "\n\n" + login.Source);   
             }
         }
 

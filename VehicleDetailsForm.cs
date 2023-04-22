@@ -90,8 +90,8 @@ namespace Jamcheck
             try
             {
 
-                var id = Convert.ToInt32(VINtxtbx.Text);
-                var vehicle = jamdb.Vehicles.FirstOrDefault(a => a.id == id);
+                var id = (VINtxtbx.Text);
+                var vehicle = jamdb.Vehicles.FirstOrDefault(a => a.VinNum == id);
                 if (vehicle != null)
                 {
                     // Get the file data as a byte array
@@ -109,6 +109,7 @@ namespace Jamcheck
                         // Open the file using the default program associated with its file type
                         System.Diagnostics.Process.Start(saveFileDialog1.FileName);
 
+                        //this allows the user to be able to download the report that was attached to this entry
                         Downloadnotifyicon.Text = $"Report for {maketxtbx.Text} {modeltxtbx.Text} been downloaded onto your computer";
                         Downloadnotifyicon.BalloonTipText = "Your download has been completed";
                         Downloadnotifyicon.BalloonTipTitle = "Download Complete";
