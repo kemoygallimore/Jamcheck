@@ -87,35 +87,43 @@ namespace Jamcheck
         //This functions will open the pdf file attached
         private void Openbtn_Click(object sender, EventArgs e)
         {
-            var id = int.Parse(IDlbl.Text);
-            var vehicle = jamdb.Vehicles.FirstOrDefault(a => a.id == id);
-            if (vehicle != null)
+            try
             {
-                // Get the file data as a byte array
-                byte[] fileData = vehicle.Report;
 
-                // Prompt the user to save the file
-                SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-                saveFileDialog1.Filter = "PDF Files (*.pdf)|*.pdf|All Files (*.*)|*.*";
-                saveFileDialog1.FileName = vehicle.Report_Name;
-                if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                var id = Convert.ToInt32(VINtxtbx.Text);
+                var vehicle = jamdb.Vehicles.FirstOrDefault(a => a.id == id);
+                if (vehicle != null)
                 {
-                    // Save the file to the user's computer
-                    File.WriteAllBytes(saveFileDialog1.FileName, fileData);
+                    // Get the file data as a byte array
+                    byte[] fileData = vehicle.Report;
 
-                    // Open the file using the default program associated with its file type
-                    System.Diagnostics.Process.Start(saveFileDialog1.FileName);
+                    // Prompt the user to save the file
+                    SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+                    saveFileDialog1.Filter = "PDF Files (*.pdf)|*.pdf|All Files (*.*)|*.*";
+                    saveFileDialog1.FileName = vehicle.Report_Name;
+                    if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                    {
+                        // Save the file to the user's computer
+                        File.WriteAllBytes(saveFileDialog1.FileName, fileData);
 
-                    Downloadnotifyicon.Text = $"Report for {maketxtbx.Text} {modeltxtbx.Text} been downloaded onto your computer";
-                    Downloadnotifyicon.BalloonTipText = "Your download has been completed";
-                    Downloadnotifyicon.BalloonTipTitle = "Download Complete";
-                    Downloadnotifyicon.Icon = SystemIcons.Application;
-                    Downloadnotifyicon.ShowBalloonTip(1000);
-                    Downloadnotifyicon.BalloonTipIcon = ToolTipIcon.None;
+                        // Open the file using the default program associated with its file type
+                        System.Diagnostics.Process.Start(saveFileDialog1.FileName);
+
+                        Downloadnotifyicon.Text = $"Report for {maketxtbx.Text} {modeltxtbx.Text} been downloaded onto your computer";
+                        Downloadnotifyicon.BalloonTipText = "Your download has been completed";
+                        Downloadnotifyicon.BalloonTipTitle = "Download Complete";
+                        Downloadnotifyicon.Icon = SystemIcons.Application;
+                        Downloadnotifyicon.ShowBalloonTip(1000);
+                        Downloadnotifyicon.BalloonTipIcon = ToolTipIcon.None;
+                    }
                 }
+                else
+                    MessageBox.Show("There is no file linked to this vehicle.\nClose this popup and click the upload button to add a car report");
             }
-            else
-                MessageBox.Show("There is no file linked to this vehicle.\nClose this popup and click the upload button to add a car report");
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + "\n\n" + ex.Source);                
+            }
         }
 
         private bool ShowDownloadButton()
