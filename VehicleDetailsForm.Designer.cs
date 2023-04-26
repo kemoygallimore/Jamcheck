@@ -90,7 +90,7 @@
             this.Downloadbtn.AutoSize = true;
             this.Downloadbtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Downloadbtn.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Downloadbtn.Location = new System.Drawing.Point(468, 1);
+            this.Downloadbtn.Location = new System.Drawing.Point(450, 1);
             this.Downloadbtn.Name = "Downloadbtn";
             this.Downloadbtn.Size = new System.Drawing.Size(183, 32);
             this.Downloadbtn.TabIndex = 4;
@@ -124,7 +124,7 @@
             this.btnAddReport.AutoSize = true;
             this.btnAddReport.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnAddReport.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddReport.Location = new System.Drawing.Point(468, 48);
+            this.btnAddReport.Location = new System.Drawing.Point(450, 48);
             this.btnAddReport.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddReport.Name = "btnAddReport";
             this.btnAddReport.Size = new System.Drawing.Size(162, 32);
