@@ -57,7 +57,6 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -114,9 +113,9 @@
             this.Uploadbtn.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Uploadbtn.Location = new System.Drawing.Point(23, 48);
             this.Uploadbtn.Name = "Uploadbtn";
-            this.Uploadbtn.Size = new System.Drawing.Size(87, 32);
+            this.Uploadbtn.Size = new System.Drawing.Size(157, 32);
             this.Uploadbtn.TabIndex = 2;
-            this.Uploadbtn.Text = "Upload";
+            this.Uploadbtn.Text = "Upload Report";
             this.Uploadbtn.UseVisualStyleBackColor = true;
             this.Uploadbtn.Click += new System.EventHandler(this.Uploadbtn_Click);
             // 
@@ -435,7 +434,6 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.btnAddReport);
             this.panel3.Controls.Add(this.Downloadbtn);
             this.panel3.Controls.Add(this.filenametxtbx);
@@ -445,16 +443,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(642, 89);
             this.panel3.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(272, 57);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel1
             // 
@@ -591,6 +579,5 @@
         private System.Windows.Forms.Label IDlbl;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.NotifyIcon Downloadnotifyicon;
-        private System.Windows.Forms.Button button1;
     }
 }

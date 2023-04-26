@@ -140,14 +140,6 @@ namespace Jamcheck
                 Downloadbtn.Visible = false;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Downloadnotifyicon.Text = $"Report for {maketxtbx.Text} {modeltxtbx.Text} been downloaded onto your computer";
-            Downloadnotifyicon.BalloonTipText = "Your download has been completed";
-            Downloadnotifyicon.BalloonTipTitle = "Download Complete";
-            Downloadnotifyicon.Icon = SystemIcons.Application;
-            Downloadnotifyicon.ShowBalloonTip(1000);
-            Downloadnotifyicon.BalloonTipIcon = ToolTipIcon.None;
-        }
+        
     }
 }
