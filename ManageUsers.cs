@@ -53,6 +53,7 @@ namespace Jamcheck
             da.Fill(ds);
             dataGridView1.DataSource = ds;
             conn.Close();
+            dataGridView1.Columns[4].Visible = false;
         }
 
         //this method clears all the fields after being called

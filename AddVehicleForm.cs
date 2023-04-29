@@ -25,7 +25,7 @@ namespace Jamcheck
             txtbxVIN.Clear();
             numMileage.Value = 0;
             numSeating.Value = 0;
-            numYear.Value = 1;
+            numYear.Value = 2000;
             pictureBox1.Image = null;
             RadioButton radioButton = new RadioButton();
             radioButton.Checked = false;
@@ -204,6 +204,11 @@ namespace Jamcheck
         {
             //closes the form
             this.Close();
+        }
+
+        private void btnclear_Click(object sender, EventArgs e)
+        {
+            cleartextboxes();
         }
     }
 }

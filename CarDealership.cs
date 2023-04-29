@@ -78,8 +78,7 @@ namespace Jamcheck
         {
             try
             {
-                var id = e.RowIndex;
-                
+                var id = e.RowIndex;                
                 tbxName.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
                 txbAddress.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
                 tbxTelephone.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
@@ -106,7 +105,7 @@ namespace Jamcheck
             }
             catch (Exception DealerRemove)
             {
-                MessageBox.Show($"Unable to locate {tbxName} in the database. It may have already been removed\n\n{DealerRemove.Message} \n\n{DealerRemove.Source}");
+                MessageBox.Show($"Unable to locate {tbxName.Text} in the database. It may have already been removed\n\n{DealerRemove.Message} \n\n{DealerRemove.Source}");
             }
         }
 

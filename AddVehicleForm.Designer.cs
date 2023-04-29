@@ -100,6 +100,7 @@ namespace Jamcheck
             this.panel15 = new System.Windows.Forms.Panel();
             this.btnUpload = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnclear = new System.Windows.Forms.Button();
             this.tableLayoutPanel10.SuspendLayout();
             this.panel12.SuspendLayout();
             this.Header.SuspendLayout();
@@ -157,6 +158,7 @@ namespace Jamcheck
             // panel12
             // 
             this.panel12.Controls.Add(this.btnAdd);
+            this.panel12.Controls.Add(this.btnclear);
             this.panel12.Controls.Add(this.btnExit);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel12.Location = new System.Drawing.Point(0, 480);
@@ -175,7 +177,7 @@ namespace Jamcheck
             this.btnAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(320, 20);
+            this.btnAdd.Location = new System.Drawing.Point(260, 20);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(120, 40);
             this.btnAdd.TabIndex = 12;
@@ -186,14 +188,15 @@ namespace Jamcheck
             // btnExit
             // 
             this.btnExit.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnExit.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnExit.BackColor = System.Drawing.Color.DarkRed;
             this.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnExit.FlatAppearance.BorderSize = 3;
             this.btnExit.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
             this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(640, 20);
+            this.btnExit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnExit.Location = new System.Drawing.Point(710, 20);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(120, 40);
             this.btnExit.TabIndex = 12;
@@ -296,7 +299,7 @@ namespace Jamcheck
             this.FourthRow.Name = "FourthRow";
             this.FourthRow.RowCount = 1;
             this.FourthRow.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.FourthRow.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.FourthRow.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
             this.FourthRow.Size = new System.Drawing.Size(819, 80);
             this.FourthRow.TabIndex = 10;
             // 
@@ -1096,6 +1099,24 @@ namespace Jamcheck
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // btnclear
+            // 
+            this.btnclear.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnclear.BackColor = System.Drawing.Color.Yellow;
+            this.btnclear.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnclear.FlatAppearance.BorderSize = 3;
+            this.btnclear.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
+            this.btnclear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
+            this.btnclear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnclear.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnclear.Location = new System.Drawing.Point(490, 20);
+            this.btnclear.Name = "btnclear";
+            this.btnclear.Size = new System.Drawing.Size(120, 40);
+            this.btnclear.TabIndex = 12;
+            this.btnclear.Text = "CLEAR";
+            this.btnclear.UseVisualStyleBackColor = false;
+            this.btnclear.Click += new System.EventHandler(this.btnclear_Click);
+            // 
             // FrmAddVehicle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1240,5 +1261,6 @@ namespace Jamcheck
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.Button btnUpload;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnclear;
     }
 }
