@@ -40,7 +40,9 @@ namespace Jamcheck
             //check if the logged in user is a Admin to decide what items they or cannot access
             if (role == "Admin")
             {
-                addVehiclesToolStripMenuItem.Visible = false;                
+                addVehiclesToolStripMenuItem.Visible = false;  
+                CustomerProfileStripMenuItem.Visible = false;
+
             }
             else
             {

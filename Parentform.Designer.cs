@@ -30,7 +30,7 @@ namespace Jamcheck
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Parentform));
-            this.MainMenu = new System.Windows.Forms.MenuStrip();
+            this.useridlbl = new System.Windows.Forms.Label();
             this.addVehiclesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageVehiclesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.recentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -38,27 +38,20 @@ namespace Jamcheck
             this.dealerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manufacturerAndBodytypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.CustomerProfileStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.useridlbl = new System.Windows.Forms.Label();
+            this.MainMenu = new System.Windows.Forms.MenuStrip();
             this.MainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
-            // MainMenu
+            // useridlbl
             // 
-            this.MainMenu.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.MainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addVehiclesToolStripMenuItem,
-            this.manageVehiclesToolStripMenuItem,
-            this.dealerToolStripMenuItem,
-            this.manufacturerAndBodytypeToolStripMenuItem,
-            this.manageUsersToolStripMenuItem,
-            this.exitToolStripMenuItem2});
-            this.MainMenu.Location = new System.Drawing.Point(0, 0);
-            this.MainMenu.Name = "MainMenu";
-            this.MainMenu.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
-            this.MainMenu.Size = new System.Drawing.Size(913, 24);
-            this.MainMenu.TabIndex = 1;
-            this.MainMenu.Text = "menuStrip1";
+            this.useridlbl.AutoSize = true;
+            this.useridlbl.Location = new System.Drawing.Point(705, 173);
+            this.useridlbl.Name = "useridlbl";
+            this.useridlbl.Size = new System.Drawing.Size(35, 13);
+            this.useridlbl.TabIndex = 3;
+            this.useridlbl.Text = "label1";
             // 
             // addVehiclesToolStripMenuItem
             // 
@@ -119,6 +112,14 @@ namespace Jamcheck
             this.manageUsersToolStripMenuItem.Text = "Manage Users";
             this.manageUsersToolStripMenuItem.Click += new System.EventHandler(this.manageUsersToolStripMenuItem_Click);
             // 
+            // CustomerProfileStripMenuItem
+            // 
+            this.CustomerProfileStripMenuItem.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CustomerProfileStripMenuItem.Name = "CustomerProfileStripMenuItem";
+            this.CustomerProfileStripMenuItem.Size = new System.Drawing.Size(110, 22);
+            this.CustomerProfileStripMenuItem.Text = "Customer Profile";
+            this.CustomerProfileStripMenuItem.Click += new System.EventHandler(this.CustomerProfileStripMenuItem_Click);
+            // 
             // exitToolStripMenuItem2
             // 
             this.exitToolStripMenuItem2.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -128,14 +129,23 @@ namespace Jamcheck
             this.exitToolStripMenuItem2.Text = "Exit";
             this.exitToolStripMenuItem2.Click += new System.EventHandler(this.exitToolStripMenuItem2_Click);
             // 
-            // useridlbl
+            // MainMenu
             // 
-            this.useridlbl.AutoSize = true;
-            this.useridlbl.Location = new System.Drawing.Point(705, 173);
-            this.useridlbl.Name = "useridlbl";
-            this.useridlbl.Size = new System.Drawing.Size(35, 13);
-            this.useridlbl.TabIndex = 3;
-            this.useridlbl.Text = "label1";
+            this.MainMenu.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.MainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addVehiclesToolStripMenuItem,
+            this.manageVehiclesToolStripMenuItem,
+            this.dealerToolStripMenuItem,
+            this.manufacturerAndBodytypeToolStripMenuItem,
+            this.manageUsersToolStripMenuItem,
+            this.CustomerProfileStripMenuItem,
+            this.exitToolStripMenuItem2});
+            this.MainMenu.Location = new System.Drawing.Point(0, 0);
+            this.MainMenu.Name = "MainMenu";
+            this.MainMenu.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
+            this.MainMenu.Size = new System.Drawing.Size(913, 24);
+            this.MainMenu.TabIndex = 1;
+            this.MainMenu.Text = "menuStrip1";
             // 
             // Parentform
             // 
@@ -160,16 +170,16 @@ namespace Jamcheck
         }
 
         #endregion
-
-        private System.Windows.Forms.MenuStrip MainMenu;
+        private System.Windows.Forms.Label useridlbl;
         private System.Windows.Forms.ToolStripMenuItem addVehiclesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manageVehiclesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem dealerToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem manageUsersToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem manufacturerAndBodytypeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem recentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem allVehiclesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dealerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem manufacturerAndBodytypeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem manageUsersToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem CustomerProfileStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem2;
-        private System.Windows.Forms.Label useridlbl;
+        private System.Windows.Forms.MenuStrip MainMenu;
     }
 }
