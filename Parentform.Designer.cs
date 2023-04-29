@@ -38,8 +38,6 @@ namespace Jamcheck
             this.dealerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manufacturerAndBodytypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.CustomerProfileStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.useridlbl = new System.Windows.Forms.Label();
             this.MainMenu.SuspendLayout();
@@ -54,8 +52,6 @@ namespace Jamcheck
             this.dealerToolStripMenuItem,
             this.manufacturerAndBodytypeToolStripMenuItem,
             this.manageUsersToolStripMenuItem,
-            this.CustomerProfileStripMenuItem,
-            this.helpToolStripMenuItem1,
             this.exitToolStripMenuItem2});
             this.MainMenu.Location = new System.Drawing.Point(0, 0);
             this.MainMenu.Name = "MainMenu";
@@ -123,21 +119,6 @@ namespace Jamcheck
             this.manageUsersToolStripMenuItem.Text = "Manage Users";
             this.manageUsersToolStripMenuItem.Click += new System.EventHandler(this.manageUsersToolStripMenuItem_Click);
             // 
-            // CustomerProfileStripMenuItem
-            // 
-            this.CustomerProfileStripMenuItem.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CustomerProfileStripMenuItem.Name = "CustomerProfileStripMenuItem";
-            this.CustomerProfileStripMenuItem.Size = new System.Drawing.Size(110, 22);
-            this.CustomerProfileStripMenuItem.Text = "Customer Profile";
-            this.CustomerProfileStripMenuItem.Click += new System.EventHandler(this.CustomerProfileStripMenuItem_Click);
-            // 
-            // helpToolStripMenuItem1
-            // 
-            this.helpToolStripMenuItem1.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.helpToolStripMenuItem1.Name = "helpToolStripMenuItem1";
-            this.helpToolStripMenuItem1.Size = new System.Drawing.Size(45, 22);
-            this.helpToolStripMenuItem1.Text = "Help";
-            // 
             // exitToolStripMenuItem2
             // 
             this.exitToolStripMenuItem2.Font = new System.Drawing.Font("Helvetica", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -184,12 +165,10 @@ namespace Jamcheck
         private System.Windows.Forms.ToolStripMenuItem addVehiclesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manageVehiclesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dealerToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem CustomerProfileStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manageUsersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manufacturerAndBodytypeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem recentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem allVehiclesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem2;
         private System.Windows.Forms.Label useridlbl;
     }
